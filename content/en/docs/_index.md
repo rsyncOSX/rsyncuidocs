@@ -1,28 +1,29 @@
 ---
-title: Documentation
-linkTitle: Docs
-menu: {main: {weight: 20}}
+title: RsyncUI - a GUI for rsync
+linkTitle: Documentation
+menu: { main: { weight: 20 } }
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+{{< alert color="warning" >}}
 
-This section is where the user documentation for your project lives - all the
-information your users need to understand and successfully use your project.
+From version 2.4.1, the \`—delete\` parameter is no longer set as a default parameter when adding *new* tasks.  If you are new to `rsync`, I strongly recommend reading the *Important*  section as a minimum. 
 
-For large documentation sets we recommend adding content under the headings in
-this section, though if some or all of them don’t apply to your project feel
-free to remove them or add your own. You can see an example of a smaller Docsy
-documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which
-lives in the [Docsy theme
-repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to
-copy its docs section.
+{{< /alert >}}
 
-Other content such as marketing material, case studies, and community updates
-should live in the [About](/about/) and [Community](/community/) pages.
+*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is *digitally signed* and *notarized* by Apple. RsyncUI is 100% open-source software and will remain absolutely free for all time.
 
-Find out how to use the Docsy theme in the [Docsy User
-Guide](https://docsy.dev/docs/). You can learn more about how to organize your
-documentation (and how we organized this site) in [Organizing Your
-Content](https://docsy.dev/docs/best-practices/organizing-content/).
+#### Privacy statement
+
+RsyncUI is a desktop application only, there is no server component. It does not generate any logs that are transmitted from your Mac. Data pertaining to tasks and logs is stored locally on your Mac as files. You can backup all files created by RsyncUI to the Document Catalog on your Mac from the Settings view. The sole data transferred from your Mac to a server occurs only if you enable tasks with a remote server destination. You bear sole responsibility for securing your own data if synchronized to a remote server.
+
+#### Changelog and Installation
+
+For the most up-to-date information, please refer to the [changelog](/blog/). RsyncUI is constructed as a Universal macOS Binary, ensuring native execution on Apple Silicon and Intel-based Mac computers.
+
+RsyncUI can be installed via Homebrew or download from GitHub (https://github.com/rsyncOSX/RsyncUI/releases).
+
+```bash
+brew install --cask rsyncui
+```
+
+If installed via Homebrew, the SHA-256 hash is automatically verified. For downloads from GitHub, please verify the SHA-256 hash manually.
