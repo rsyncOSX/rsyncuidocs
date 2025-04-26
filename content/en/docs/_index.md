@@ -4,13 +4,13 @@ linkTitle: Documentation
 menu: { main: { weight: 20 } }
 ---
 
+*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is *digitally signed* and *notarized* by Apple. RsyncUI is 100% open-source software and will remain absolutely free for all time.
+
 {{< alert color="warning" >}}
 
-From version 2.4.1, the \`—delete\` parameter is no longer set as a default parameter when adding *new* tasks.  If you are new to `rsync`, I strongly recommend reading the *Important*  section as a minimum. 
+As a safety precaution, the \`—delete\` parameter is not set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the \`—delete\` parameter must be enabled. If you are new to \`rsync\`, I strongly recommend reading the "Important" section as a minimum. 
 
 {{< /alert >}}
-
-*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is *digitally signed* and *notarized* by Apple. RsyncUI is 100% open-source software and will remain absolutely free for all time.
 
 #### Privacy statement
 
