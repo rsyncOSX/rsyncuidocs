@@ -102,13 +102,13 @@ params:
 
   # A link to latest version of the docs. Used in the "version-banner" partial to
   # point people to the main doc site.
-  url_latest_version: https://github.com/rsyncOSX/mydocsy
+  url_latest_version: https://github.com/rsyncOSX/rsyncuidocs
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo: https://github.com/rsyncOSX/mydocsy
+  github_repo: https://github.com/rsyncOSX/rsyncuidocs
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo: https://github.com/rsyncOSX/mydocsy
+  github_project_repo: https://github.com/rsyncOSX/rsyncuidocs
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
@@ -153,11 +153,11 @@ params:
       # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
       'yes': >-
         Glad to hear it! Please <a
-        href="https://github.com/rsyncOSX/mydocsy/issues/new">tell us how we can
+        href="https://github.com/rsyncOSX/rsyncuidocs/issues/new">tell us how we can
         improve</a>.
       'no': >-
         Sorry to hear that. Please <a
-        href="https://github.com/rsyncOSX/mydocsy/issues/new">tell us how we can
+        href="https://github.com/rsyncOSX/rsyncuidocs/issues/new">tell us how we can
         improve</a>.
 
     # Adds a reading time to the top of each doc.
