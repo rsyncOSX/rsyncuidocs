@@ -8,7 +8,7 @@ menu: { main: { weight: 20 } }
 
 {{< alert color="warning" >}}
 
-As a safety precaution, the \`—delete\` parameter is not set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the \`—delete\` parameter must be enabled. If you are new to \`rsync\`, I strongly recommend reading the "Important" section as a minimum. 
+As a safety precaution, the `—delete` parameter is not set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the `—delete` parameter must be *enabled*. If you are new to `rsync`, I strongly recommend reading the "Important" section as a minimum. 
 
 {{< /alert >}}
 

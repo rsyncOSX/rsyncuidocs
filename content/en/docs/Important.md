@@ -22,17 +22,11 @@ For instructions on executing an estimation run, refer to the *New tasks* or *Ge
 
 #### The delete parameter
 
-From version 2.4.1, this parameter is no longer set as a parameter when adding *new tasks*. 
+The `—delete` parameter, herein referred to as the *parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
 
-{{< alert color="warning" >}}
+Therefore, it is crucial to ascertain whether the *parameter* is enabled or disabled. Enabling the *parameter* ensures complete synchronization between the source and destination directories.
 
-The \`—delete\` parameter enables rsync to maintain 100% synchronization between the source and destination. When a file is deleted from the source, the \`—delete\` parameter instructs rsync to delete the corresponding file from the destination. Conversely, if the \`—delete\` parameter is disabled, the destination  will contain additional data after deleting files from the source.
-
-Therefore, it is essential to determine whether the \`—delete\` parameter is enabled or disabled. Enabling the \`—delete\` parameter ensures complete synchronization between the source and destination directories.
-
-{{< /alert >}}
-
-ChatGPT about the `--delete` parameter as a default parameter to rsync: *The --delete parameter in rsync is not enabled by default to prevent accidental data loss. It deletes files in the destination that are no longer present in the source, which can be risky if used unintentionally. To use it, you must explicitly include --delete in your command.*
+ChatGPT about the *parameter* as a default parameter to rsync: *The --delete parameter in rsync is not enabled by default to prevent accidental data loss. It deletes files in the destination that are no longer present in the source, which can be risky if used unintentionally. To use it, you must explicitly include --delete in your command.*
 
 ##### How to disable and enable the delete parameter
 
