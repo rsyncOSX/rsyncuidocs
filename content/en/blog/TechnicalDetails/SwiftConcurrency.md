@@ -81,4 +81,19 @@ func somefunction() {
 }
 ```
 
-The above code snippet presents an unstructured concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function is completed. 
+The above code snippet presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function is completed.  Most concurrent functions within RsyncUI are structured by using `async let`.
+
+```swift
+func somereadconfigurations() {
+    
+    Task {
+        ....
+      	async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
+            rsyncUIdata.configurations = await readconfigurations
+                .readjsonfilesynchronizeconfigurations(selectedprofile,
+                                                       SharedReference.shared.monitornetworkconnection,
+                                                       SharedReference.shared.sshport)
+        ....
+	}
+}
+```
