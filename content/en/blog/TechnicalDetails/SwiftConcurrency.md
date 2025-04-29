@@ -44,7 +44,38 @@ In Swift, concurrency can be categorized as unstructured or structured. While I 
 
 These tasks are executed on other threads than the`@MainActor`. Asynchronous execution of these tasks ensures that GUI updates on the main thread are not blocked. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which, to my understanding, guarantees their execution on the global executor and prevents blocking of the main thread.
 
+##### Structured concurrency
+
+Most concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed concurrent. When all concurrent tasks are completed, the calling function or parent, will evaluate the result and continue execution. 
+
+```swift
+func readconfigurations() {
+    
+    Task {
+        ....
+      	async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
+            rsyncUIdata.configurations = await readconfigurations
+                .readjsonfilesynchronizeconfigurations(selectedprofile,
+                                                       SharedReference.shared.monitornetworkconnection,
+                                                       SharedReference.shared.sshport)
+        ....
+	}
+}
+```
+
 ##### Unstructured concurrency
+
+The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function, the parent,  is completed.  Upon the function's return, the UI is notified on the main thread if there is a new version available.
+
+```swift
+func somefunction() {
+    ....
+    Task {
+      newversion.notifynewversion = await GetversionofRsyncUI().getversionsofrsyncui()
+	}
+    ....
+}
+```
 
 ```swift
 actor GetversionofRsyncUI {
@@ -71,35 +102,7 @@ actor GetversionofRsyncUI {
 }
 ```
 
-The execution of the calling function is suspended until the function `getversionsofrsyncui()` returns. Upon the function's return, the UI is notified on the main thread if there is a new version available.
 
-```swift
-func somefunction() {
-    ....
-    Task {
-      newversion.notifynewversion = await GetversionofRsyncUI().getversionsofrsyncui()
-	}
-    ....
-}
-```
 
-The above code snippet presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function is completed.  
 
-##### Structured concurrency
 
-Most concurrent functions within RsyncUI are structured by using `async let`.
-
-```swift
-func readconfigurations() {
-    
-    Task {
-        ....
-      	async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
-            rsyncUIdata.configurations = await readconfigurations
-                .readjsonfilesynchronizeconfigurations(selectedprofile,
-                                                       SharedReference.shared.monitornetworkconnection,
-                                                       SharedReference.shared.sshport)
-        ....
-	}
-}
-```
