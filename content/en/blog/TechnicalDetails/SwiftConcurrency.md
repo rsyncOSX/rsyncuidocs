@@ -19,9 +19,9 @@ are executed on the main thread.
 
 #### Swift concurrency and asynchronous execution
 
-Concurrency and asynchronous execution are important parts in Swift. The latest version of Swift simplifies the writing of asynchronous code using Swift `async` and `await` keywords, as well as the `actor` protocol for executing work on other threads not blocking the main thread. The Swift concurrency model is intricate, and it requires, at least for me, dedicated time and study to grasp its fundamentals. 
+Concurrency and asynchronous execution are important parts in Swift. The latest version of Swift simplifies the writing of asynchronous code using Swift `async` and `await` keywords, as well as the `actor` protocol for executing work on other threads not blocking the main thread. The Swift concurrency model is intricate, and it requires, at least for me, dedicated time and study to understand its fundamentals. 
 
-RsyncUI does not requiere concurrency, but concurrency is automatically introduced by using `actors` , `async` and `await` keywords. It is an objective to execute most work synchronous on the main thread as long as it does not block GUI updates, which are performed on the main thread.
+RsyncUI does not require concurrency, but concurrency is automatically introduced by using `actors` , `async` and `await` keywords. It is an objective to execute most work synchronous on the main thread as long as it does not block GUI updates, which are performed on the main thread.
 
 #### Swift version 6 and the new concurrency model
 
@@ -43,6 +43,8 @@ In Swift, concurrency can be categorized as unstructured or structured. While I 
 - checking for updates to RsyncUI
 
 These tasks are executed on other threads than the`@MainActor`. Asynchronous execution of these tasks ensures that GUI updates on the main thread are not blocked. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which, to my understanding, guarantees their execution on the global executor and prevents blocking of the main thread.
+
+##### Unstructured concurrency
 
 ```swift
 actor GetversionofRsyncUI {
@@ -81,10 +83,14 @@ func somefunction() {
 }
 ```
 
-The above code snippet presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function is completed.  Most concurrent functions within RsyncUI are structured by using `async let`.
+The above code snippet presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function is completed.  
+
+##### Structured concurrency
+
+Most concurrent functions within RsyncUI are structured by using `async let`.
 
 ```swift
-func somereadconfigurations() {
+func readconfigurations() {
     
     Task {
         ....
