@@ -46,7 +46,7 @@ These tasks are executed on other threads than the`@MainActor`. Asynchronous exe
 
 ##### Structured concurrency
 
-Most concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed concurrent. When all concurrent tasks are completed, the calling function or parent, will evaluate the result and continue execution. 
+Some concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed in parallel or concurrent. When all `async let` tasks are completed, the calling function or parent, will evaluate the result and continue execution. 
 
 ```swift
 func readconfigurations() {
@@ -65,9 +65,10 @@ func readconfigurations() {
 
 ##### Unstructured concurrency
 
-The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` may be completed after the execution of the calling function, the parent,  is completed.  Upon the function's return, the UI is notified on the main thread if there is a new version available.
+The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` *may* be completed after the execution of the calling function, the parent,  is completed.  Upon the function's return, the UI is notified on the main thread if there is a new version available.
 
 ```swift
+@MainActor
 func somefunction() {
     ....
     Task {
