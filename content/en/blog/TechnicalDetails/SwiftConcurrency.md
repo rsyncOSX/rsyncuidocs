@@ -6,22 +6,21 @@ tags = ["swift concurrency", "asynchronous"]
 categories = ["technical details"]
 +++
 
-To commence, I must acknowledge that my comprehension of Swift concurrency is limited. RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, certain resource-intensive tasks are performed on separate threads, excluding the main thread. 
+To commence, I must acknowledge that my comprehension of Swift concurrency is limited. RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on separate threads, excluding and not blocking the main thread. 
 
-The most important works: 
+The most important work are executed on the main thread. By default, SwiftUI makes sure all UI-updates are performed on the main thread. Below are other tasks executed on the main thread:
 
-- execution of `rsync` synchronize tasks
+- preparing of and execution of `rsync` synchronize tasks
 - monitoring progress and termination of tasks
 - write operations of logdata of synchronize tasks to storage
-    - caution: write operation of synchronized data is taken care of by rsync itself
 
-are executed on the main thread.
+All read and write operations, transmission of the synchronized data is outside control of RsyncUI and taken care of by `rsync` itself.
 
 #### Swift concurrency and asynchronous execution
 
-Concurrency and asynchronous execution are important parts in Swift. The latest version of Swift simplifies the writing of asynchronous code using Swift `async` and `await` keywords, as well as the `actor` protocol for executing work on other threads not blocking the main thread. The Swift concurrency model is intricate, and it requires, at least for me, dedicated time and study to understand its fundamentals. 
+Concurrency and asynchronous execution are important parts in Swift. The latest version of Swift simplifies the writing of asynchronous code using Swift `async` and `await` keywords, as well as the `actor` protocol. RsyncUI does not require concurrency, but concurrency is automatically introduced by using `actors` , `async` and `await` keywords. It is an objective to execute most work synchronous on the main thread as long as it does not block the GUI.
 
-RsyncUI does not require concurrency, but concurrency is automatically introduced by using `actors` , `async` and `await` keywords. It is an objective to execute most work synchronous on the main thread as long as it does not block GUI updates, which are performed on the main thread.
+The Swift concurrency model is intricate, and it requires, at least for me, dedicated time and study to understand its fundamentals. 
 
 #### Swift version 6 and the new concurrency model
 
@@ -29,11 +28,11 @@ Swift version 6 introduced strict concurrency checking. By enabling *Swift 6 lan
 
 Quote swift.org: *"More formally, a data race occurs when one thread accesses memory while the same memory is being modified by another thread. The Swift 6 language mode eliminates these issues by preventing data races at compile time."*
 
-RsyncUI adheres to the new concurrency model of Swift 6. The majority of its work is performed on the `@MainActor`, which corresponds to the main thread. 
+RsyncUI adheres to the new concurrency model of Swift 6.
 
 #### Other threads and RsyncUI
 
-In Swift, concurrency can be categorized as unstructured or structured. While I am not an expert in this field, I will refrain from delving into the intricacies of the distinction between the two.  The following tasks are executed on a single isolated thread, adhering to the `actor` protocol:
+In Swift, concurrency is either unstructured or structured. While I am not an expert in this field, I will refrain from delving into the intricacies of the distinction between the two.  The following tasks are executed on a single isolated thread, adhering to the `actor` protocol:
 
 - reading operations
 - data decoding and encoding
@@ -42,7 +41,9 @@ In Swift, concurrency can be categorized as unstructured or structured. While I 
 - preparing data from the logfile, not logrecords, for display
 - checking for updates to RsyncUI
 
-These tasks are executed on other threads than the`@MainActor`. Asynchronous execution of these tasks ensures that GUI updates on the main thread are not blocked. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which, to my understanding, guarantees their execution on the global executor and prevents blocking of the main thread.
+Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. 
+
+The above mentioned tasks are executed on other threads than the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which, to my understanding, guarantees their execution on the global executor and prevents blocking of the main thread.
 
 ##### Structured concurrency
 
