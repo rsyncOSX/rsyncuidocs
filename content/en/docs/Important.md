@@ -18,7 +18,11 @@ RsyncUI is a complimentary and open-source application. Kindly review the MIT li
 
 Before executing a new task in RsyncUI, please perform an estimation run, a `--dry-run`, and inspect the result. If you inadvertently set an empty catalog as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
 
-For instructions on executing an estimation run, refer to the *New tasks* or *Getting started* section.
+{{< alert >}}
+
+For instructions on executing an estimation run, refer to the *Getting started* or *New tasks*  section.
+
+{{</alert >}}
 
 #### The delete parameter
 
@@ -44,7 +48,9 @@ For selected task above, the delete parameter is disabled and backup switch togg
 
 {{< alert >}}
 
-There are a two options to automatically save changes to a file when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  Using *snapshots* require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
+There are a two options to automatically save changes to a file when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  
+
+Using *snapshots*, the second option,  require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
 
 {{< /alert >}}
 
