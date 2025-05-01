@@ -26,7 +26,11 @@ The `—delete` parameter, herein referred to as the *parameter*, enables rsync 
 
 Therefore, it is crucial to ascertain whether the *parameter* is enabled or disabled. Enabling the *parameter* ensures complete synchronization between the source and destination directories.
 
+{{< alert >}}
+
 ChatGPT about the *parameter* as a default parameter to rsync: *The --delete parameter in rsync is not enabled by default to prevent accidental data loss. It deletes files in the destination that are no longer present in the source, which can be risky if used unintentionally. To use it, you must explicitly include --delete in your command.*
+
+{{< /alert >}}
 
 ##### How to disable and enable the delete parameter
 
@@ -36,17 +40,13 @@ Select the *Rsync parameters* from the main sidebar menu.  Select the task for w
 
 For selected task above, the delete parameter is disabled and backup switch toggled.
 
-#### Some options to save changes
+##### Two options to save changes
 
-There are a two options to automatically save changes to a file when it is changed or deleted.
+{{< alert >}}
 
-##### The backup option
+There are a two options to automatically save changes to a file when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  Using *snapshots* require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
 
-Rsync supports a backup flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want. See figure above.
-
-##### The snapshot option
-
-Using snapshots requiere that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
+{{< /alert >}}
 
 #### Remote servers
 
