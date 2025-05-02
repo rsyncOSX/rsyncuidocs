@@ -65,7 +65,7 @@ func readconfigurations() async {
 }
 ```
 
-The above code as unstructured concurrency, the behaviour is as far as I understand equal for both
+The below code is unstructured concurrency, the behaviour is as far as I understand equal for both.
 
 ```swift
 func readconfigurations() async {
