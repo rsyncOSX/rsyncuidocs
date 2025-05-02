@@ -47,19 +47,34 @@ The above mentioned tasks are executed on other threads than the`@MainActor`. Th
 
 ##### Structured concurrency
 
-Some concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed in parallel or concurrent. When all `async let` tasks are completed, the calling function or parent, will evaluate the result and continue execution. 
+Some concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed in parallel or concurrent. When all `async let` tasks are completed, the root task or parent task, will continue execution. 
 
 ```swift
-func readconfigurations() {
-    
-    Task {
+func readconfigurations() async {
         ....
       	async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
-            rsyncUIdata.configurations = await readconfigurations
-                .readjsonfilesynchronizeconfigurations(selectedprofile,
-                                                       SharedReference.shared.monitornetworkconnection,
-                                                       SharedReference.shared.sshport)
+     	rsyncUIdata.configurations = await readconfigurations
+         	.readjsonfilesynchronizeconfigurations(selectedprofile,
+                                                   SharedReference.shared.monitornetworkconnection,
+                                                   SharedReference.shared.sshport)
+    
+    	// after the await is completed, the root task will continue
+    	// the structured concurrency is actually not needed here, only one async let
+		....
+	}
+}
+```
+
+The above code as unstructured concurrency, the behaviour is as far as I understand equal for both
+
+```swift
+func readconfigurations() async {
         ....
+     	rsyncUIdata.configurations = await ActorReadSynchronizeConfigurationJSON()
+         	.readjsonfilesynchronizeconfigurations(selectedprofile,
+                                                   SharedReference.shared.monitornetworkconnection,
+                                                   SharedReference.shared.sshport)
+		....
 	}
 }
 ```
