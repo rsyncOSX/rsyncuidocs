@@ -6,9 +6,18 @@ tags = ["swift concurrency", "asynchronous"]
 categories = ["technical details"]
 +++
 
-To commence, I must acknowledge that my comprehension of Swift concurrency is limited. RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on other threads managed by the cooperative thread pool, excluding and not blocking the main thread. 
+{{< alert >}}
 
-The most important work are executed on the main thread. By default, SwiftUI makes sure all UI-updates are performed on the main thread. Below are other tasks executed on the main thread:
+To begin, I must admit that my knowledge of Swift concurrency is limited. I have a basic understanding of the subject, and if you are reading this blog and seeking further details about the topic, I recommend conducting a search and reading articles from other sources that provide a more comprehensive understanding of Swift concurrency.
+
+{{< /alert >}}
+
+RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on other threads managed by the other executors and the cooperative thread pool (CTP), excluding and not blocking the main thread. How to the executors and CTP works and interacts is details I dont know about, and it is managed by the Swift runtime. 
+
+- the Main Executor manage jobs on the Main Thread
+- the global concurrent and serial executor, both executes jobs on threads from the CTP
+
+The most important work are executed on the Main Thread. By default, SwiftUI makes sure all UI-updates are performed on the Main Thread. Below are other tasks executed on the Main Thread:
 
 - preparing of and execution of `rsync` synchronize tasks
 - monitoring progress and termination of tasks
@@ -20,8 +29,6 @@ All read and write operations, transmission of the synchronized data is outside 
 
 Concurrency and asynchronous execution are important parts in Swift. The latest version of Swift simplifies the writing of asynchronous code using Swift `async` and `await` keywords, as well as the `actor` protocol. RsyncUI does not require concurrency, but concurrency is automatically introduced by using `actors` , `async` and `await` keywords. It is an objective to execute most work synchronous on the main thread as long as it does not block the GUI.
 
-The Swift concurrency model is intricate, and it requires, at least for me, dedicated time and study to understand its fundamentals. 
-
 #### Swift version 6 and the new concurrency model
 
 Swift version 6 introduced strict concurrency checking. By enabling *Swift 6 language mode*  and *strict concurrency checking*, Xcode assists in identifying and resolving possible data races at compile time.
@@ -30,9 +37,9 @@ Quote swift.org: *"More formally, a data race occurs when one thread accesses me
 
 RsyncUI adheres to the new concurrency model of Swift 6.
 
-#### Cooperative thread pool
+#### Cooperative thread pool (CTP)
 
-The following tasks are executed asynchronous on threads managed by the cooperative thread pool, adhering to the `actor` protocol:
+The following tasks are executed asynchronous on threads from the CTP, adhering to the `actor` protocol:
 
 - reading operations
 - data decoding and encoding
@@ -41,9 +48,9 @@ The following tasks are executed asynchronous on threads managed by the cooperat
 - preparing data from the logfile, not logrecords, for display
 - checking for updates to RsyncUI
 
-Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. 
+Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are three types of executors, which manages jobs and put jobs on threads for execution. 
 
-The above mentioned tasks are executed on other threads than the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads managed by the cooperative thread pool and prevents blocking the main thread.
+The above mentioned tasks are executed on threads from the CTP, and not on the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads from the CTP.
 
 ##### Structured concurrency
 
