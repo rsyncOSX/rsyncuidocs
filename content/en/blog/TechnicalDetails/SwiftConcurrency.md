@@ -6,7 +6,7 @@ tags = ["swift concurrency", "asynchronous"]
 categories = ["technical details"]
 +++
 
-To commence, I must acknowledge that my comprehension of Swift concurrency is limited. RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on separate threads, excluding and not blocking the main thread. 
+To commence, I must acknowledge that my comprehension of Swift concurrency is limited. RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on other threads managed by the cooperative thread pool, excluding and not blocking the main thread. 
 
 The most important work are executed on the main thread. By default, SwiftUI makes sure all UI-updates are performed on the main thread. Below are other tasks executed on the main thread:
 
@@ -30,9 +30,9 @@ Quote swift.org: *"More formally, a data race occurs when one thread accesses me
 
 RsyncUI adheres to the new concurrency model of Swift 6.
 
-#### Other threads and RsyncUI
+#### Cooperative thread pool
 
-In Swift, concurrency is either unstructured or structured. While I am not an expert in this field, I will refrain from delving into the intricacies of the distinction between the two.  The following tasks are executed on a single isolated thread, adhering to the `actor` protocol:
+The following tasks are executed asynchronous on threads managed by the cooperative thread pool, adhering to the `actor` protocol:
 
 - reading operations
 - data decoding and encoding
@@ -43,7 +43,7 @@ In Swift, concurrency is either unstructured or structured. While I am not an ex
 
 Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. 
 
-The above mentioned tasks are executed on other threads than the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which, to my understanding, guarantees their execution on the global executor and prevents blocking of the main thread.
+The above mentioned tasks are executed on other threads than the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads managed by the cooperative thread pool and prevents blocking the main thread.
 
 ##### Structured concurrency
 
