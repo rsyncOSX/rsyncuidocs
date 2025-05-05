@@ -1,16 +1,23 @@
 +++
 author = "Thomas Evensen"
-title = "Version 2.5.0"
-date = "2025-05-02"
-tags = ["changelog","version 2.5.0"]
+title = "Version 2.5.1"
+date = "2025-05-05"
+tags = ["changelog","version 2.5.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.0 (build 142) - work in progress
+### Version 2.5.1 (build 143) -release candidate
 
-The development of a scheduler is working as a beta version. The scheduler is an easy to use and simple timer based trigger for synchronize data. The synchronize of data is triggered by the same method, URL-action, as for executing a synchronize data either by Widget or by external URL.
+This will most likely stay as a release candidate for some weeks. I need some feedback on the Calendar part before making it a release.
 
-If you want to try out the scheduler, please drop me an e-mail. You may find my e-mail in the About section.
+Major updates in this rc are:
+
+- a new calendar for schedule actions, please read about the scheduler below before commence using it
+    - to remove a schedule, just select it and press the back space button
+- German and Norwegian localization are removed
+- the Verify a remote function is slightly changed
+
+The scheduler is an easy to use and simple timer based trigger for synchronize data. The synchronize of data is triggered by the same method, URL-action, as for executing a synchronize data either by Widget or by external URL.
 
 {{< alert >}}
 
@@ -21,9 +28,6 @@ Its primary function is to automate selected synchronization tasks as long as Rs
 RsyncUI may be minimized or not the active window and the timer will work. But if you leave your Mac and it goes to sleep, the timer will not work.
 
 {{< /alert >}}
-
-
-During the spring and summer months, I prioritize capturing bird photographs. There is some development during these periods, but the plan remains to release a new version later in summer. It is also beneficial to periodically cease development and allow for catch-up. 
 
 The Norwegian and German localization are also been removed from this version. Regrettably, due to my limited proficiency in German, I am unable to provide a comprehensive translation in German. From this version, RsyncUI speaks English only. 
 
