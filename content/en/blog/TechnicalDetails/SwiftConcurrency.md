@@ -57,32 +57,30 @@ The above mentioned tasks are executed on threads from the CTP, and not on the`@
 Some concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed in parallel or concurrent. When all `async let` tasks are completed, the root task or parent task, will continue execution. 
 
 ```swift
-func readconfigurations() async {
-        ....
-      	async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
-     	rsyncUIdata.configurations = await readconfigurations
+func readconfigurations() {
+    Task {
+        async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
+     	let data = await readconfigurations
          	.readjsonfilesynchronizeconfigurations(selectedprofile,
                                                    SharedReference.shared.monitornetworkconnection,
                                                    SharedReference.shared.sshport)
-    
-    	// after the await is completed, the root task will continue
+        // after the await is completed, the root task will continue
     	// the structured concurrency is actually not needed here, only one async let
-		....
-	}
+        rsyncUIdata.configurations = data
+    }
 }
 ```
 
-The below code is unstructured concurrency, the behaviour is as far as I understand equal for both.
+The below code is *unstructured* concurrency. The root function `readconfigurations()` may be completed before the asynchronous code within the `Task {}`.
 
 ```swift
-func readconfigurations() async {
-        ....
-     	rsyncUIdata.configurations = await ActorReadSynchronizeConfigurationJSON()
+func readconfigurations() {
+    Task {
+        rsyncUIdata.configurations = await ActorReadSynchronizeConfigurationJSON()
          	.readjsonfilesynchronizeconfigurations(selectedprofile,
                                                    SharedReference.shared.monitornetworkconnection,
                                                    SharedReference.shared.sshport)
-		....
-	}
+    }
 }
 ```
 
@@ -93,13 +91,13 @@ The code snippet below presents an *unstructured* concurrency.  The code within 
 ```swift
 @MainActor
 func somefunction() {
-    ....
     Task {
       newversion.notifynewversion = await GetversionofRsyncUI().getversionsofrsyncui()
 	}
-    ....
 }
 ```
+
+Access to properties within an actor must be performed asynchronously, that is why the `Task  { ... }` above is requiered. The Swift runtime makes sure that only one thread a time get access to properties within an actor.  The code below is probably not an OK example.  The main reason for make this an actor is to execute it on a thread from the CTP for not block the Main Thread. 
 
 ```swift
 actor GetversionofRsyncUI {
