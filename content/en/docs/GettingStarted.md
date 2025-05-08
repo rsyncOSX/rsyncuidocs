@@ -38,7 +38,7 @@ A verification of a new task can also be executed by opening the Tasks or Rsync 
 
 **Verify a task in Tasks**
 
-After adding a task, select the task and press the `play`button on the toolbar which are marked with an red arrow in screen dump below. 
+After adding a task, select the task and press the *play* button on the toolbar marked with a red arrow in the screen dump below. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
 
 {{< figure src="/images/verifyatask/verifytask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -46,7 +46,7 @@ After adding a task, select the task and press the `play`button on the toolbar w
 
 **Verify a task in Rsync parameters**
 
-After adding parameters, select the task and press the `play`button on the toolbar which are marked with an red arrow in screen dump below.
+After adding parameters, select the task and press the *play* button on the toolbar marked with a red arrow in the screen dump below. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
 
 {{< figure src="/images/verifyatask/verifyparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
