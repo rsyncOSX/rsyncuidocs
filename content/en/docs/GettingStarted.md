@@ -36,6 +36,22 @@ A verification of a new task can also be executed by opening the Tasks or Rsync 
 
 {{< /alert >}}
 
+**Verify a task in Tasks**
+
+After adding a task, select the task and press the `play`button on the toolbar which are marked in screen dump below. 
+
+{{< figure src="/images/verifyatask/verifytask.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+*Note: The Add and Update button is in next version (not yet released) moved to view from the toolbar.*
+
+**Verify a task in Rsync parameters**
+
+After adding parameters, select the task and press the `play`button on the toolbar which are marked in screen dump below.
+
+{{< figure src="/images/verifyatask/verifyparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+*Note: The Add  button is in next version (not yet released) moved to view from the toolbar.*
+
 ##### Aborting tasks
 
 Please note that this is an external task not controlled by RsyncUI, which executes the command-line tool `rsync`. RsyncUI monitors the task for progress and termination.
@@ -50,21 +66,4 @@ There are three Sidebar menu options that are contingent upon the properties of 
 - *Restore*: this option is only available for synchronize- and snapshot tasks where *the destination* is located on a *remote server*
 - *Verify remote*: this option is only available for synchronize tasks where *the destination* is located on a *remote server*
 
-##### Minimum Sidebar Menu
-
-This is the minimum. If you exclusively utilize RsyncUI for synchronizing tasks to local attached disks. There are no remote servers and no snapshot task. The only remote server, see column Server, is a server named `raspberrypi`, which is halted.
-
-{{< figure src="/images/started/minimumoptions.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-##### Snapshot and restore
-
-This is snapshot and restore, a snapshot task with destination on a remote server. That is why the restore menu is avaliable as well. The *Verify remote* is only for synchronization tasks with destination on a remote server. That is why it is not present.
-
-{{< figure src="/images/started/snapshotandrestore.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-##### Full Sidebar Menu
-
-This is all menu options, a snapshot task and synchronize task, both with destination on a remote server.
-
-{{< figure src="/images/started/allmenuoptions.png" alt="" position="center" style="border-radius: 8px;" >}}
 

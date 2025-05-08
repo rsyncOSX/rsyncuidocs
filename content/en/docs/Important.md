@@ -42,7 +42,7 @@ Select the *Rsync parameters* from the main sidebar menu.  Select the task for w
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-For selected task above, the delete parameter is disabled and backup switch toggled.
+*Note: The Add  button is in next version (not yet released) moved to view from the toolbar.*
 
 ##### Two options to save changes
 
