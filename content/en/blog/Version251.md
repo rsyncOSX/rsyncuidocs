@@ -57,9 +57,15 @@ The computed rsync command includes spaces, no escape characters needed. The onl
 
 {{< figure src="/images/251/space2.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Nr 2
+#### Nr 2 - update in code
 
-If I put double quotes around the directory name under Tasks, then for some reason the tool adds a trailing / even if this option is turned off for the Task (and the option is uneditable after the task is created, and undiscernible in Dark mode - that is, it's impossible to tell what you chose just by looking at the greyed out checkbox). 2. With 1 and 2 in mind, I am not able to identify why a "synchronization" task passes both Estimate and Verify tasks, but a syncremote task passes Estimate but fails Verify due to rsync errors. I'm also not able to determine where do I find the rsync errors from the Verify action? Are they in a log somewhere? 
+*If I put double quotes around the directory name under Tasks, then for some reason the tool adds a trailing / even if this option is turned off for the Task (and the option is uneditable after the task is created, and undiscernible in Dark mode - that is, it's impossible to tell what you chose just by looking at the greyed out checkbox). 2. With 1 and 2 in mind, I am not able to identify why a "synchronization" task passes both Estimate and Verify tasks, but a syncremote task passes Estimate but fails Verify due to rsync errors. I'm also not able to determine where do I find the rsync errors from the Verify action? Are they in a log somewhere?*
+
+- Double quotes are not allowed in catalog names, they are now removed in code
+- RsyncUI does ALLOW spaces in catalognames, no need for either double quote or escape character
+- manually creating a catalog on a remote Linux server requiere using escape character
+
+Need some development to take care of the trailing "/", should be able to remove it by update.
 
 #### Nr 3 - fixed
 
@@ -79,13 +85,17 @@ If I put double quotes around the directory name under Tasks, then for some reas
 - The "play button" in Tasks and Rsync parameters (selection Sidebar menu) always includes the "--dry-run"  parameter
 - A "--dry-run" switch on main synchronize view will destroy how RsyncUI works, user sometimes want to estimate and synchronize data by one click
 
-#### Nr 5
+#### Nr 5 - no update
 
-Why are the backup switch and SSH parameter options tied together with a toggle? Why does the SSH parameter need a switch at all, and it doesn't seem like the switch affects the SSH parameter or the port.
+*Why are the backup switch and SSH parameter options tied together with a toggle? Why does the SSH parameter need a switch at all, and it doesn't seem like the switch affects the SSH parameter or the port.*
 
-#### Nr 6
+This is due not enough space in view. The toggle is not relevan for the SSH parameters as the section heading indicates. The toggle is only for adding backup parameters to rsync.
 
-Why do I need to "hack" extra SSH options in the task specific SSH field? (such as -o StrictHostKeyChecking=no) It's especially confusing since that field appears to have an annoying validation when you first start typing in it (a modal popup).
+#### Nr 6 - investigating needed
+
+*Why do I need to "hack" extra SSH options in the task specific SSH field? (such as -o StrictHostKeyChecking=no) It's especially confusing since that field appears to have an annoying validation when you first start typing in it (a modal popup).*
+
+I need to investigate this issue. I wll change to Alert, modal popup, but the parameters are originally only for user selected SSH-key and SSH-port number. I will investiate if possible to add other SSH options, and the modal popup will be changed.
 
 #### Nr 7 - no updates needed
 
@@ -109,9 +119,11 @@ Selection a row presents the output from rsync. Blue numbers indicates there are
 
 {{< figure src="/images/251/estimatedetails.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Nr 8
+#### Nr 8 - to be updated
 
-Why would the "Don't add /" be non-editable for Tasks after they are created? I understand the decision behind keeping sync/syncremote non editable after create.
+*Why would the "Don't add /" be non-editable for Tasks after they are created? I understand the decision behind keeping sync/syncremote non editable after create.*
+
+See answer to nr 2
 
 #### Nr 9 - no updates 
 
@@ -119,9 +131,11 @@ Why would the "Don't add /" be non-editable for Tasks after they are created? I 
 
 See answer to nr 4.
 
-#### Nr 10
+#### Nr 10 - to be updated
 
-Instead of popups, possibly you could look to web forms as an inspiration. Fields that don't "validate" could be marked with a red border, and maybe even a small note underneath (like "this needs to be formatted starting with ~/". As long as fields don't validate, then the "submit" type actions would not proceed.
+*Instead of popups, possibly you could look to web forms as an inspiration. Fields that don't "validate" could be marked with a red border, and maybe even a small note underneath (like "this needs to be formatted starting with ~/". As long as fields don't validate, then the "submit" type actions would not proceed.*
+
+See answer to nr 6, the modal popup to be changed as adviced. 
 
 
 
