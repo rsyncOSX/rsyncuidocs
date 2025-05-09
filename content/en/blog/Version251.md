@@ -62,16 +62,22 @@ The computed rsync command includes spaces, no escape characters needed. The onl
 If I put double quotes around the directory name under Tasks, then for some reason the tool adds a trailing / even if this option is turned off for the Task (and the option is uneditable after the task is created, and undiscernible in Dark mode - that is, it's impossible to tell what you chose just by looking at the greyed out checkbox). 2. With 1 and 2 in mind, I am not able to identify why a "synchronization" task passes both Estimate and Verify tasks, but a syncremote task passes Estimate but fails Verify due to rsync errors. I'm also not able to determine where do I find the rsync errors from the Verify action? Are they in a log somewhere? 
 
 #### Nr 3 - fixed
-What are we supposed to do for synchronization vs syncremote? Should we flip the directories or not under "Tasks"? If I don't flip them, the rsync command with the user and IP does not produce correctly.
+
+*What are we supposed to do for synchronization vs syncremote? Should we flip the directories or not under "Tasks"? If I don't flip them, the rsync command with the user and IP does not produce correctly.*
 
 - This is **fixed**, in current release the Catalog parameters are flipped by RsyncUI - the fix now does the flipping hided for the user. Within the Tasks view
 - Local Catalog is **always** the **first Catalog** in Tasks view
 - Remote Catalog is **always** the **second Catalog** in Tasks view
 - A syncremote pull data from a remote which require that Catalog parameters compared to a normal synchronize task are flipped. RsyncUI now flip this catalog hided for the user.
 
-#### Nr 4
+#### Nr 4 - user doc is updated
 
-It is not clear that --dry-run is automatically imposed IF I don't hit "play", but it is excluded if I hit "play". Grok had to explain it to me. There's a neato "--dry-run" toggle under Restore, and I wonder why you didn't implement that for the main sync tool sections.
+*It is not clear that --dry-run is automatically imposed IF I don't hit "play", but it is excluded if I hit "play". Grok had to explain it to me. There's a neato "--dry-run" toggle under Restore, and I wonder why you didn't implement that for the main sync tool sections.*
+
+- There are several methods to estimate ("--dry-run") and execute task, please read the user documentation section "Synchronize data"
+    - either the first double click on a task is a "--dry-run" or choosing the "magic wand" on toolbar is a "--dry-run"
+- The "play button" in Tasks and Rsync parameters (selection Sidebar menu) always includes the "--dry-run"  parameter
+- A "--dry-run" switch on main synchronize view will destroy how RsyncUI works, user sometimes want to estimate and synchronize data by one click
 
 #### Nr 5
 
@@ -81,17 +87,37 @@ Why are the backup switch and SSH parameter options tied together with a toggle?
 
 Why do I need to "hack" extra SSH options in the task specific SSH field? (such as -o StrictHostKeyChecking=no) It's especially confusing since that field appears to have an annoying validation when you first start typing in it (a modal popup).
 
-#### Nr 7
+#### Nr 7 - no updates needed
 
-Please consolidate the logs in one place. There is a log button in Synchronize that leads to a window where latest updates are at the bottom and have to be scrolled down to. Also this log just smashes together output for all Tasks, and doesn't separate by Tasks. There's no log for Verify or Estimate. Every flow should just have a log so that we can troubleshoot rsync responses, as well as what the file sync actions or determinations are.
+*Please consolidate the logs in one place. There is a log button in Synchronize that leads to a window where latest updates are at the bottom and have to be scrolled down to. Also this log just smashes together output for all Tasks, and doesn't separate by Tasks. There's no log for Verify or Estimate. Every flow should just have a log so that we can troubleshoot rsync responses, as well as what the file sync actions or determinations are.*
+
+RsyncUI only create log records AFTER a sucessfull synchronization of data. It is not possible to store *every* output from rsync, output from rsync might be huge. And by any command in RsyncUI it is possibe to inspect to output from RsyncUI. If there are discovered errors in output, an error is thrown and the user can inspect the output.
+
+The logview always presents the most recent logs at top, not bottom. When opening the view and there are more than one task, the view show all log records. Most recent logs at top.
+
+{{< figure src="/images/251/alllogs.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+If a task is selected, only log records for that task is presented. Most recent at top.
+
+{{< figure src="/images/251/selectedlogs.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+How to inspect the output from rsync by an estimate run. The view is presented as part of en estimation run, please read the documentation section "Synchronize data"
+
+{{< figure src="/images/251/estimate.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Selection a row presents the output from rsync. Blue numbers indicates there are data to be synchronized.
+
+{{< figure src="/images/251/estimatedetails.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Nr 8
 
 Why would the "Don't add /" be non-editable for Tasks after they are created? I understand the decision behind keeping sync/syncremote non editable after create.
 
-#### Nr 9
+#### Nr 9 - no updates 
 
-Confirm Execute should be a default on, imo.
+*Confirm Execute should be a default on, imo.*
+
+See answer to nr 4.
 
 #### Nr 10
 
