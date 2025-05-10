@@ -6,11 +6,11 @@ tags = ["changelog","version 2.5.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.1 (build 143) -release candidate
+### Version 2.5.1 (build 143) - release candidate
 
 {{< alert >}}
 
-There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release. There has been several UI-updates and cleanups of the UI after the last release candidate, a new release candidate to be released sometime next week.
+There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release. There has been several UI-updates and cleanups of the UI within the latest release candidate.
 
 {{< /alert >}}
 
