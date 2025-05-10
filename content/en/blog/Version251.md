@@ -14,14 +14,20 @@ There are input from a user, see last on page. All input will be evaluated and a
 
 {{< /alert >}}
 
-This will stay as a release candidate for some weeks. I need some feedback on the Calendar part before making it a release, most likely in beginning of June 2025.
-
-Major updates in this rc are:
+Major updates in the new, not yet released, release candidate:
 
 - a new calendar for schedule actions, please read about the scheduler below before commence using it
     - to delete a schedule, just select it and press the back space button
+- the Verify Remote is now not enabled by default, enable in User settings
+      - the Verify Remote function is slightly changed as well
+- update changes in User settings is now manual update, the automated save seetings when changed did not work 100%
+- there is a new new for Verify Tasks
+    - the verify buttons, play icon,  in Tasks and Rsync parameters is removed
+    - the new view is very explicit about dry-run parameter is enabled
 - German and Norwegian localization are deleted
-- the Verify a remote function is slightly changed
+- the Tasks view is cleaned up, new help button for info about the --delete flag to rsync
+    - add or remove, by default not added when new tasks
+- the Rsync parameters view is cleaned up, new help button for info about the --delete flag to rsync
 
 The scheduler is an easy to use and simple timer based trigger for synchronize data. The synchronize of data is triggered by the same method, URL-action, as for executing a synchronize data either by Widget or by external URL.
 
