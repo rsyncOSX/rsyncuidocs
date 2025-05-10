@@ -14,7 +14,7 @@ There are input from a user, see last on page. All input will be evaluated and a
 
 {{< /alert >}}
 
-Major updates in the new, not yet released, release candidate:
+Major updates in the new **updated** release candidate May 10, 2025:
 
 - a new calendar for schedule actions, please read about the scheduler below before commence using it
     - to delete a schedule, just select it and press the back space button
