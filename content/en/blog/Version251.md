@@ -10,9 +10,7 @@ categories = ["changelog"]
 
 {{< alert >}}
 
-There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release.
-
-There has been several UI-updates and cleanups of the UI after the last release candidate, a new release candidate to be released sometime next week.
+There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release. There has been several UI-updates and cleanups of the UI after the last release candidate, a new release candidate to be released sometime next week.
 
 {{< /alert >}}
 
@@ -82,7 +80,8 @@ Need some development to take care of the trailing "/", should be able to remove
 
 *It is not clear that --dry-run is automatically imposed IF I don't hit "play", but it is excluded if I hit "play". Grok had to explain it to me. There's a neato "--dry-run" toggle under Restore, and I wonder why you didn't implement that for the main sync tool sections.*
 
-- There is a **new view** for Verify task, the play button is removed from both Tasks and Rsync parameters view. The new view is also state clearly an estimate includes --dry-run. 
+- There is a **new view** for Verify task, the play button is removed from both Tasks and Rsync parameters view. The new view is also state clearly an estimate includes --dry-run.
+- Adding a --dry-run toggle for the main synchronize tasks is not possible, please read the section "Synchronize data". Executing tasks, either by shortcut, by magic wand on toolbar ALWAYS start with an estimation run, requiered to make the progress bar work
 
 #### Nr 5 - updated
 
