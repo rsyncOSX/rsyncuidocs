@@ -57,7 +57,7 @@ The computed rsync command includes spaces, no escape characters needed. The onl
 
 {{< figure src="/images/251/space2.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Nr 2 - update in code
+#### Nr 2 - updated
 
 *If I put double quotes around the directory name under Tasks, then for some reason the tool adds a trailing / even if this option is turned off for the Task (and the option is uneditable after the task is created, and undiscernible in Dark mode - that is, it's impossible to tell what you chose just by looking at the greyed out checkbox). 2. With 1 and 2 in mind, I am not able to identify why a "synchronization" task passes both Estimate and Verify tasks, but a syncremote task passes Estimate but fails Verify due to rsync errors. I'm also not able to determine where do I find the rsync errors from the Verify action? Are they in a log somewhere?*
 
@@ -67,7 +67,7 @@ The computed rsync command includes spaces, no escape characters needed. The onl
 
 Need some development to take care of the trailing "/", should be able to remove it by update.
 
-#### Nr 3 - fixed
+#### Nr 3 - updated
 
 *What are we supposed to do for synchronization vs syncremote? Should we flip the directories or not under "Tasks"? If I don't flip them, the rsync command with the user and IP does not produce correctly.*
 
@@ -76,20 +76,18 @@ Need some development to take care of the trailing "/", should be able to remove
 - Remote Catalog is **always** the **second Catalog** in Tasks view
 - A syncremote pull data from a remote which require that Catalog parameters compared to a normal synchronize task are flipped. RsyncUI now flip this catalog hided for the user.
 
-#### Nr 4 - user doc is updated
+#### Nr 4 - updated 
 
 *It is not clear that --dry-run is automatically imposed IF I don't hit "play", but it is excluded if I hit "play". Grok had to explain it to me. There's a neato "--dry-run" toggle under Restore, and I wonder why you didn't implement that for the main sync tool sections.*
 
-- There are several methods to estimate ("--dry-run") and execute task, please read the user documentation section "Synchronize data"
-    - either the first double click on a task is a "--dry-run" or choosing the "magic wand" on toolbar is a "--dry-run"
-- The "play button" in Tasks and Rsync parameters (selection Sidebar menu) always includes the "--dry-run"  parameter
-- A "--dry-run" switch on main synchronize view will destroy how RsyncUI works, user sometimes want to estimate and synchronize data by one click
+- There is a **new view** for Verify task, the play button is removed from both Tasks and Rsync parameters view. The new view is also state clearly an estimate includes --dry-run. 
 
-#### Nr 5 - no update
+#### Nr 5 - updated
 
 *Why are the backup switch and SSH parameter options tied together with a toggle? Why does the SSH parameter need a switch at all, and it doesn't seem like the switch affects the SSH parameter or the port.*
 
-This is due not enough space in view. The toggle is not relevan for the SSH parameters as the section heading indicates. The toggle is only for adding backup parameters to rsync.
+- The view is cleaned up and the Backup switch is moved
+- There is also a new help button about the --delete parameter, 
 
 #### Nr 6 - investigating needed
 
@@ -131,11 +129,11 @@ See answer to nr 2
 
 See answer to nr 4.
 
-#### Nr 10 - to be updated
+#### Nr 10 - updated
 
 *Instead of popups, possibly you could look to web forms as an inspiration. Fields that don't "validate" could be marked with a red border, and maybe even a small note underneath (like "this needs to be formatted starting with ~/". As long as fields don't validate, then the "submit" type actions would not proceed.*
 
-See answer to nr 6, the modal popup to be changed as adviced. 
+- The popus are removed, values are marked with red text until validated OK
 
 
 
