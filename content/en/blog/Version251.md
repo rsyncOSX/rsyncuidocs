@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.1"
-date = "2025-05-05"
+date = "2025-05-10"
 tags = ["changelog","version 2.5.1"]
 categories = ["changelog"]
 +++
@@ -11,6 +11,8 @@ categories = ["changelog"]
 {{< alert >}}
 
 There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release.
+
+There has been several UI-updates and cleanups of the UI after the last release candidate, a new release candidate to be released sometime next week.
 
 {{< /alert >}}
 
