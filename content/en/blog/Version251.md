@@ -20,6 +20,7 @@ Major updates in the new **updated** release candidate May 10, 2025:
     - to delete a schedule, just select it and press the back space button
 - the Verify Remote is now not enabled by default, enable in User settings
       - the Verify Remote function is slightly changed as well
+      - please read about the function in section Verify Remote 
 - update changes in User settings is now manual update, the automated save settings when changed did not work 100%
 - there is a new view for Verify Tasks
     - the verify buttons, play icon, in Tasks and Rsync parameters are removed

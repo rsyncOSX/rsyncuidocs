@@ -6,6 +6,12 @@ tags = ["verify remote","synchronize"]
 categories = ["advanced features"]
 +++
 
+{{< alert color="warning" >}}
+
+The Verify remote function is a specialized tool designed when synchronizing two Mac computers to a single repository, excluding Git repositories. This functionality was developed by the author due to a personal need. The author utilizes two Macs for photo development and data synchronization to a remote catalog. The remote repository is not a Git server, necessitating a tool to determine whether to push or pull data.
+
+{{< /alert >}}
+
 Typically, a synchronize action operates in a *one-way* direction of data. Local data is synchronized to a backup media, such as an attached disc or a remote server. Restoring data, for instance, involves retrieving data from a backup when local data has become corrupted or inaccessible.  
 
 If you are using multiple Macs, as I do, and all Macs synchronize data to the same remote storage, there may be challenges maintaining synchronization
