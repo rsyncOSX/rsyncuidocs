@@ -67,7 +67,7 @@ Need some development to take care of the trailing "/", should be able to remove
 
 *Why do I need to "hack" extra SSH options in the task specific SSH field? (such as -o StrictHostKeyChecking=no) It's especially confusing since that field appears to have an annoying validation when you first start typing in it (a modal popup).*
 
-I need to investigate this issue. I wll change to Alert, modal popup, but the parameters are originally only for user selected SSH-key and SSH-port number. I will investiate if possible to add other SSH options, and the modal popup will be changed.
+I need to investigate this issue. I will change to Alert, modal popup, but the parameters are originally only for user selected SSH-key and SSH-port number. I will investiate if possible to add other SSH options, and the modal popup will be changed.
 
 #### Nr 7 - no updates needed
 
@@ -95,7 +95,8 @@ Selection a row presents the output from rsync. Blue numbers indicates there are
 
 *Why would the "Don't add /" be non-editable for Tasks after they are created? I understand the decision behind keeping sync/syncremote non editable after create.*
 
-- The trailing "/" is fixed. If you have a synchronize action and want to flip it to a syncremote, you have to create a new task. 
+- The trailing "/" is fixed.
+- If you have a synchronize action and want to flip it to a syncremote, you have to create a new task. 
 
 #### Nr 9 - no updates 
 
