@@ -126,11 +126,11 @@ Selection a row presents the output from rsync. Blue numbers indicates there are
 
 {{< figure src="/images/251/estimatedetails.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Nr 8 - to be updated
+#### Nr 8 - updated
 
 *Why would the "Don't add /" be non-editable for Tasks after they are created? I understand the decision behind keeping sync/syncremote non editable after create.*
 
-See answer to nr 2
+- The trailing "/" is fixed. If you have a synchronize action and want to flip it to a syncremote, you have to create a new task. 
 
 #### Nr 9 - no updates 
 
