@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 {{< alert >}}
 
-There has been several UI-updates and cleanups of the UI within the latest release candidate. See blog "Input from User"
+There has been *a lot of* UI-updates and cleanups of the UI within the latest release candidate. See blog "Input from User" All changes from version 2.4.1 to 2.5.2 rc are UI-related. There are no changes to the model part or the process part.
 
 {{< /alert >}}
 
@@ -20,13 +20,13 @@ Major updates in the new **updated** release candidate May 12, 2025. This is mos
     - to delete a schedule, just select it and press the back space button
 - the Verify Remote is now **not** enabled by default, enable in User settings
   - the Verify Remote function is slightly changed as well
-    - please read about the function in section Verify Remote 
+  - please read about the function in section Verify Remote 
 - update changes in User settings is now manual update, the automated save settings when changed did not work 100%
 - there is a new view for Verify Tasks
     - the verify buttons, play icon, in Tasks and Rsync parameters are removed
     - the new view is very explicit about dry-run parameter is enabled
 - German and Norwegian localization are deleted
-    - Regrettably, due to my limited proficiency in German, I am unable to provide a comprehensive translation in German. From this version, RsyncUI speaks English only. 
+    - regrettably, due to my limited proficiency in German, I am unable to provide a comprehensive translation in German. From this version, RsyncUI speaks English only
 - the Tasks view is cleaned up, new help button for info add and delete the --delete parameter to rsync
     - add or delete, by default not added when new tasks
 - the Rsync parameters view is cleaned up, new help button for info add and delete the --delete parameter to rsync
