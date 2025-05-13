@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.2"
-date = "2025-05-12"
+date = "2025-05-13"
 tags = ["changelog","version 2.5.2"]
 categories = ["changelog"]
 +++
@@ -11,6 +11,16 @@ categories = ["changelog"]
 {{< alert >}}
 
 There has been *a lot of* UI-updates and cleanups of the UI within the latest release candidate. See blog "Input from User" All changes from version 2.4.1 to 2.5.2 rc are UI-related. There are no changes to the model part or the process part.
+
+{{< /alert >}}
+
+{{< alert >}}
+
+Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Today, May 13, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
+
+By simply commenting out a single line of code, I can reproduce the hang. I have attempted to pinpoint the cause using Xcode, but Xcode remains silent and does not generate any errors. While I suspect a potential bug in MacOS, the most significant achievement is that I have successfully recreated the hang and identified the precise code fix.
+
+A new release is imminent, and the aforementioned fix will be included.
 
 {{< /alert >}}
 
