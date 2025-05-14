@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 {{< alert >}}
 
-There has been *a lot of* UI-updates and cleanups of the UI within the latest release.  There are no changes to the model part or the process part.
+There has been *a lot of* UI-updates and cleanups of the UI within the latest release.  There are no changes to the model part or the process part, except for the schedule function which is new.
 
 Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Yesterday, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
 
