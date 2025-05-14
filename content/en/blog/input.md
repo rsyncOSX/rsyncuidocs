@@ -10,7 +10,7 @@ categories = ["issues"]
 
 {{< alert >}}
 
-There are input from a user, see last on page. All input will be evaluated and a fix will be added as part of the developing the new release.
+There is input from [Johnny Sauce](https://github.com/sashemi). 
 
 {{< /alert >}}
 

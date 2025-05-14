@@ -18,7 +18,7 @@ By simply commenting out a single line of code, I can reproduce the hang. I have
 
 {{< /alert >}}
 
-Major updates in the this release are, a detailed changelog on the GitHub release page:
+Major updates in the this release are, a detailed changelog on the GitHub release page. And thanks very much to [Johnny Sauce](https://github.com/sashemi) for valuable input and feedback.
 
 - a fix for the above mentioned spinning beach ball
 - the Verify Remote is now **not** enabled by default, enable in User settings
