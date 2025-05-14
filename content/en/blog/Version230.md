@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.3.0"
-date = "2025-01-16"
+date = "2025-01-15"
 tags = ["changelog","version 2.3.0","deep links","widget"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.0 (build 130) - 15 January 2025
+### Version 2.3.0 (build 130) -  January 15, 2025
 
 This version is released somewhat sooner than anticipated. Rsync version 3.4.1, protocol version 32, has recently been released and a minor bug, causing a fallback to the default version in macOS when the new version of rsync is enabled, has been fixed.
 

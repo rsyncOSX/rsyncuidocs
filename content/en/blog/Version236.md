@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.3.6"
-date = "2025-03-06"
+date = "2025-03-07"
 tags = ["changelog","version 2.3.6"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.6 (build 136) - 7 March 2025
+### Version 2.3.6 (build 136) -  March 7, 2025
 
 *Please note that there are currently missing localizations in German and Norwegian. The next version will include updated localizations. Due to the urgency of the bug, it was prioritized to release a quick update rather than address the localization issues.*
 

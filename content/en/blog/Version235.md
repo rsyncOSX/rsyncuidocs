@@ -6,7 +6,7 @@ tags = ["changelog","version 2.3.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.5 (build 135) - 26 February 2025
+### Version 2.3.5 (build 135) -  February 26, 2025
 
 The release candidate, 23 February 2025,  is unchanged and is the next release.
 

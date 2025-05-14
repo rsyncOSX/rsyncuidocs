@@ -6,7 +6,7 @@ tags = ["changelog","version 2.3.7"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.7 (build 137) - 7 March 2025
+### Version 2.3.7 (build 137) -  March 7, 2025
 
 I sincerely apologize for the two consecutive updates on the same day. And issue is still not fixed in release. But the issue is fixed in code. There will be released a new version early next week, where localization issues are fixed and QA of bugfix is properly completed.
 

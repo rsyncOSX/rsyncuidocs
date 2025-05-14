@@ -1,33 +1,26 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.2"
-date = "2025-05-13"
+date = "2025-05-14"
 tags = ["changelog","version 2.5.2"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.2 (build 144) - release candidate
+### Version 2.5.2 (build 144) - May 14, 2025
 
 {{< alert >}}
 
-There has been *a lot of* UI-updates and cleanups of the UI within the latest release candidate. See blog "Input from User" All changes from version 2.4.1 to 2.5.2 rc are UI-related. There are no changes to the model part or the process part.
+There has been *a lot of* UI-updates and cleanups of the UI within the latest release.  There are no changes to the model part or the process part.
+
+Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Yesterday, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
+
+By simply commenting out a single line of code, I can reproduce the hang. I have attempted to pinpoint the cause using Xcode, but Xcode remains silent and does not generate any errors. While I suspect a potential bug in SwiftUI, the most significant achievement is that I have successfully recreated the hang and identified the precise code fix.
 
 {{< /alert >}}
 
-{{< alert >}}
+Major updates in the this release are, a detailed changelog on the GitHub release page:
 
-Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Today, May 13, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
-
-By simply commenting out a single line of code, I can reproduce the hang. I have attempted to pinpoint the cause using Xcode, but Xcode remains silent and does not generate any errors. While I suspect a potential bug in MacOS, the most significant achievement is that I have successfully recreated the hang and identified the precise code fix.
-
-A new release is imminent, and the aforementioned fix will be included.
-
-{{< /alert >}}
-
-Major updates in the new **updated** release candidate May 12, 2025. This is most likely last release candidate before a new release.
-
-- a new calendar for schedule actions, please read about the scheduler below before commence using it
-    - to delete a schedule, just select it and press the back space button
+- a fix for the above mentioned spinning beach ball
 - the Verify Remote is now **not** enabled by default, enable in User settings
   - the Verify Remote function is slightly changed as well
   - please read about the function in section Verify Remote 
@@ -43,6 +36,8 @@ Major updates in the new **updated** release candidate May 12, 2025. This is mos
 - the annoying popup when adding SSH-keys in Tasks and SSH-settings are removed and replaced
     - the values added are marked red text until values are compliant with validated input
     - example, if you add like `22d` in SSH port number, the text is marked red until the letter `d` is removed
+- a new calendar for schedule actions, please read about the scheduler below before commence using it
+    - to delete a schedule, just select it and press the back space button
 
 {{< alert >}}
 

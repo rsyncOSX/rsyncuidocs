@@ -1,9 +1,9 @@
 +++
 author = "Thomas Evensen"
 title = "Input from User"
-date = "2025-05-10"
-tags = ["changelog","version 2.5.1"]
-categories = ["changelog"]
+date = "2025-05-01"
+tags = ["changelog","issues"]
+categories = ["issues"]
 +++
 
 ### Input from user

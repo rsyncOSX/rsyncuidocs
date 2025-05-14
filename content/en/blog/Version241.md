@@ -6,7 +6,7 @@ tags = ["changelog","version 2.4.0"]
 categories = ["changelog"]
 +++
 
-### Version 2.4.1 (build 141) - 21 March 2025
+### Version 2.4.1 (build 141) -  March 21, 2025
 
 It is imperative that RsyncUI tags tasks with data to be synchronized correctly. If the tagging fails, there may be local data that is not synchronized. RsyncUI supports the latest version of rsync and the older default version of rsync included in macOS 14 and macOS 15. There is a new function for parsing output from rsync in version 2.4.1.
 

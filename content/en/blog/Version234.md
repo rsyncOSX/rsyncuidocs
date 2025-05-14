@@ -6,7 +6,7 @@ tags = ["changelog","version 2.3.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.4 (build 134) - 12 February 2025
+### Version 2.3.4 (build 134) -  February 12, 2025
 
 Version 2.3.3 and 2.3.4 are merged into one release, version 2.3.4. 
 

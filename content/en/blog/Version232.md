@@ -6,7 +6,7 @@ tags = ["changelog","version 2.3.2","widget","halt task"]
 categories = ["changelog"]
 +++
 
-### Version 2.3.2 (build 132) - 29 January 2025
+### Version 2.3.2 (build 132) -  January 29, 2025
 
 Updates within this release:
 
