@@ -36,6 +36,7 @@ Major updates in the this release are, a detailed changelog on the GitHub releas
 - the annoying popup when adding SSH-keys in Tasks and SSH-settings are removed and replaced
     - the values added are marked red text until values are compliant with validated input
     - example, if you add like `22d` in SSH port number, the text is marked red until the letter `d` is removed
+- the annoying popup adding your own path for rsync and restore path is also removed and replaced with red text until validated OK
 - a new calendar for schedule actions, please read about the scheduler below before commence using it
     - to delete a schedule, just select it and press the back space button
 
