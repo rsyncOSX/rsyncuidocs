@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
-title = "Version 2.5.2"
+title = "Version 2.5.3"
 date = "2025-05-14"
-tags = ["changelog","version 2.5.2"]
+tags = ["changelog","version 2.5.3"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.2 (build 144) - May 14, 2025
+### Version 2.5.3 (build 145) - May 14, 2025
 
 {{< alert >}}
 
