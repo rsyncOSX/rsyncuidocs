@@ -14,8 +14,6 @@ There is input from [Johnny Sauce](https://github.com/sashemi).
 
 {{< /alert >}}
 
-Below are valuable input from a user. All input will be evaluated and corrected as part of making a new release in June 2025. There are more inputs, and I will read and add more inputs as I read through them. Additionally, every fix in the code will have a comment below every input.
-
 #### Nr 1 - seems not to be an issue
 
 It isn't clear what the tool does with Catalogs with spaces in the name. If I add escapes (\\), then the Estimation and Verification tasks freak out because they apparently run their commands with the directory enclosed in quotes. But the Rsync parameters interface does not show quotes around the directory name, and the rsync command should fail as shown.
