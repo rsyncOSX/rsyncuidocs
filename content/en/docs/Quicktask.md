@@ -20,20 +20,22 @@ There are two types of quick tasks:
 
 - `synchronize`: Synchronize local files to remote.
 - `syncremote`: Synchronize remote files to local.
-
-If `syncremote`, the local directory in the form is the remote data, and the remote directory is the local data where the remote data will be stored when pulled.
+    - the below is fixed in code, to be released later as a maintenance release
+    - the local directory the *remote* data, and the remote directory is the *local* data where the remote data will be stored when *pulled*
 
 {{< figure src="/images/quicktask/quicktask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 After entering data, the default task is a `--dry-run` task. It is recommended to inspect the result before executing the actual run.
 
-#### Directory parameters
-- **Local directory**: a required field
-- **Remote directory**: a required field
+#### Folder parameters
+
+- **Local folder**: a required field
+- **Remote folder**: a required field
   - a `~` is expanded as the home directory with the full path by the remote operating system
   - the remote directory may also be specified by full path, depending on where the backup directory is located on the remote server
   - the backup directory may also be a local directory on a local attached disk
 
 #### Remote parameters
+
 - **Remote username**: the username for logging into the remote server
 - **Remote server**: either the server name or IP address for the remote server
