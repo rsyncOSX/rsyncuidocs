@@ -37,9 +37,8 @@ The following data pertains to tasks:
 
 ##### Folder Parameters
 
-- Local folder: Required field.
-- Remote folder: Required field.
-  - The backup folder may also be a local folder on a local attached disk.
+- Local folder: required field, the *source*
+- Remote folder: required field, the *destination*
 
 ##### Trailing /
 
