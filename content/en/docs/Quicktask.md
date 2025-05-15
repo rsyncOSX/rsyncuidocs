@@ -6,6 +6,14 @@ tags = ["quick task"]
 categories = ["synchronize"]
 lastmod = "2024-03-18"
 +++
+{{< alert color="warning" >}}
+
+Note: Be aware of if using syncremote, the *remote folder must be added first* and  the *local folder as second*. This is fixed in code which make RsyncUI to flip folders. To be relased later as a maintenance release. This only apply to the quick task. 
+
+There also seems to be an issue with GUI for selecting local folders. Please use drag and drop for local folders. The GUI for selecting folders are removed. To be relased later as a maintenance release. This only apply to the quick task. 
+
+{{< /alert >}}
+
 Use QuickTask for quickly copy or transfer files to either local or remote storage. QuickTask will save the last executed quick task as default values. Default values can be cleared by the toolbar function.
 
 There are two types of quick tasks:
