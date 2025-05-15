@@ -5,7 +5,7 @@ menu: { main: { weight: 20 } }
 ---
 {{< alert >}}
 
-There are a lot of UI updates in latest release version 2.5.3 (May 14, 2025). The user documentation will be updated in some days.
+There are a lot of UI updates in latest release version 2.5.3 (May 14, 2025). The update of documentation is commenced and there will be updates the next days.
 
 {{< /alert >}}
 

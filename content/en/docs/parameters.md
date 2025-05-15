@@ -6,10 +6,15 @@ tags = ["parameters"]
 categories = ["rsync parameters"]
 +++
 
-RsyncUI provides default parameters for data synchronization. However, the actual default parameters utilized in tasks are
-determined by whether the rsync operation is performed over a network connection or to a local attached disk.
+RsyncUI provides default parameters for data synchronization. However, the actual default parameters utilized in tasks are determined by whether the rsync operation is performed over a network connection or to a local attached disk.
 
 Users have the ability to modify default parameters as necessary. Parameters to rsync are stored in tasks, including a local ssh parameter if set. The local ssh parameter overrides a global ssh parameter if set.
+
+{{< alert color="warning" >}}
+
+Always verify the result of changing parameters to rsync  before executing. Select the "Verify tasks" from the primary Sidebar menu.
+
+{{< /alert >}}
 
 ##### Task-specific Parameters to rsync
 
@@ -36,6 +41,12 @@ Task-specific ssh parameters override global ssh parameters configured in the us
 - ssh-port: specify if ssh utilizes a port other than the default port 22
 - ssh-keypath and identity file: typically, these are `.ssh/id_rsa`, set only if alternative keypath and identity file are to be utilized by ssh
 
+{{< alert >}}
+
+The values are marked red until validated OK. See section "Tools passwordless login" for info about validated values.
+
+{{< /alert >}}
+
 ##### Backup Switch
 
 The `rsync` command allows you to instruct it to save modified and deleted files in a separate backup catalog prior to the synchronization process.
@@ -47,16 +58,3 @@ This feature can be enabled by setting the following parameters:
 The `RsyncUI` provides a default value for this parameter, but you can customize it as per your requirements.
 The default backup catalog for the `<catalog to synchronize>` relative to the synchronized catalog is `../backup_<catalog to synchronize>`.
 
-#### Verify Changes
-
-The resulting command-line string is dynamically updated when modifying parameters. The `Play` icon on the toolbar allows you to test new parameters before saving them. The `Play` executes a `--dry-run` task for verification of parameters.
-{{< alert color="warning" >}}
-
-The `Play` icon is context-sensitive. If the `verify` switch is selected, the `verify` command is executed.
-Similarly, the `synchronize` and `restore` switches execute the corresponding commands. A `verify` may 
-take long time to execute.  A verify forces a full checksum comparison on every file present on both systems.
-
-
-{{< /alert >}}
-
-{{< figure src="/images/rsyncparameters/verify.png" alt="" position="center" style="border-radius: 8px;" >}}

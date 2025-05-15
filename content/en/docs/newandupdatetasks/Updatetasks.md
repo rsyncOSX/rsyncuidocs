@@ -6,7 +6,7 @@ tags = ["update","profile"]
 categories = ["synchronize"]
 +++
 
-To update a task, select the task and then select the checkmark icon on the toolbar or press the Enter key, to write updates to storage.
+To update a task, select the task.  Press the update button to write updates to storage.
 
 {{< figure src="/images/add/update.png" alt="" position="center" style="border-radius: 8px;" >}}
 

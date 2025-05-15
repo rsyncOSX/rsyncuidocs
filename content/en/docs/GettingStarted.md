@@ -26,31 +26,17 @@ RsyncUI can synchronize your data to a local attached disk. If you only want to 
 
 If you want to synchronize data to a server, on the Internet, or your local LAN, there is some more setup to do. If you have enabled *passwordless login* by ssh-key, you only have to add *source*, *destination*, *login id*, and *servername* and you are ready to synchronize data. If you have *not* enabled passwordless login, there are some more actions required before your first task.
 
-##### Verify new tasks
-
-*Always* verify a new task. After adding a task, you can execute a `--dry-run` by double-clicking on the task in the main view. The second subsequent double-click will execute the real task, which is synchronize data from local to remote.
+**Verify tasks**
 
 {{< alert color="warning" >}}
 
-A verification of a new task can also be executed by opening the Tasks or Rsync parameters view from the main sidebar, selecting the task, and choosing the "play" icon on the toolbar. This action will execute an estimation run, a \`--dry-run\`, to verify the task.
+*Always* verify a new task. After adding a task, added your own or changed parameters to rsync , select the "Verify tasks" from the primary Sidebar menu. 
 
 {{< /alert >}}
 
-**Verify a task in Tasks**
-
-After adding a task, select the task and press the *play* button on the toolbar marked with a red arrow in the screen dump below. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
+ Select the task and press the *play* button on the toolbar. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
 
 {{< figure src="/images/verifyatask/verifytask.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-*Note: The Add and Update button is in next version (not yet released) moved to view from the toolbar.*
-
-**Verify a task in Rsync parameters**
-
-After adding parameters, select the task and press the *play* button on the toolbar marked with a red arrow in the screen dump below. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
-
-{{< figure src="/images/verifyatask/verifyparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-*Note: The Add  button is in next version (not yet released) moved to view from the toolbar.*
 
 ##### Aborting tasks
 

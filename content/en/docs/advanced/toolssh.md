@@ -8,6 +8,12 @@ categories = ["advanced features"]
 
 The following SSH tools are utilized: `ssh-keygen` and `ssh-copy-id`. RsyncUI primarily assists in establishing an RSA-based key.
 
+{{< alert >}}
+
+User selected SSH-key pairs are validated to conform to the form `~/.ssh_keypath/identityfile` for SSH keypath and identityfile and Integer value for the SSH-port number.
+
+{{< /alert >}}
+
 The SSH functions facilitate two methods:
 
 - private and public SSH-key pairs based on default SSH values for RSA keys (`~/.ssh/id_rsa`)
