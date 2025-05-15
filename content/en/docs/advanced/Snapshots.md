@@ -12,7 +12,7 @@ Utilizing snapshots is an effective method for restoring previous versions of da
 
 {{< /alert >}}
 
-In every snapshot task, RsyncUI stores the next available snapshot number for use. The snapshot number is a sequential number incremented by one after each snapshot task execution. The rsync command automatically creates the next snapshot catalog by number and stores the next snapshot number to use on the task. The snapshot number is displayed as part of the log timestamp.
+In every snapshot task, RsyncUI stores the next available snapshot number for use. The snapshot number is a sequential number incremented by one after each snapshot task execution. The rsync command automatically creates the next snapshot directory by number and stores the next snapshot number to use on the task. The snapshot number is displayed as part of the log timestamp.
 
 If a file named "file.txt" is saved in the initial snapshot and remains unchanged or deleted, the file "file.txt" in the latest snapshot is a hardlink to the original file in the first snapshot.
 
@@ -22,7 +22,7 @@ In RsyncUI, even if all snapshots are marked for deletion, the first and last sn
 
 ### Definition of a Snapshot:
 
-A snapshot is a saved state or backup of data at a specific point in time. Each snapshot is synchronized with the local catalog at the time of creation.
+A snapshot is a saved state or backup of data at a specific point in time. Each snapshot is synchronized with the local directory at the time of creation.
 
 Previous versions of files can be restored from a snapshot using the `--link-dest` parameter with rsync.
 
@@ -36,8 +36,8 @@ where
 
 - `n` is the number of next snapshot to be synchronized
 - `n-1` is the latest synchronized snapshot
-- `/Users/thomas/data/` is *the source* catalog, only read by rsync
-- `~/snapshots/` is *the destination* catalog where snapshots are synchronized
+- `/Users/thomas/data/` is *the source* directory, only read by rsync
+- `~/snapshots/` is *the destination* directory where snapshots are synchronized
 
 ##### Local attached disc
 
@@ -49,8 +49,8 @@ where
 
 - `n` is the number of next snapshot to be synchronized
 - `n-1` is the latest synchronized snapshot
-- `/Users/thomas/data/` is *the source* catalog, only read by rsync
-- `/Volume/backup/snapshots/` is *the destination* catalog where snapshots are synchronized
+- `/Users/thomas/data/` is *the source* directory, only read by rsync
+- `/Volume/backup/snapshots/` is *the destination* directory where snapshots are synchronized
 
 ##### Snapshot Creation
 

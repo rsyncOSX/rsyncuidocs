@@ -46,7 +46,7 @@ The user can also configure the new SSH keypath and identityfile in a terminal w
 
 The user can also apply local SSH keypath and identityfile and SSH port, which govern global settings, to each task.
 
-Ensure that the new SSH catalog has the appropriate permissions. Open a terminal window and execute the following command:
+Ensure that the new SSH directory has the appropriate permissions. Open a terminal window and execute the following command:
 
 ```bash
 chmod 700 ~/.ssh_rsyncosx

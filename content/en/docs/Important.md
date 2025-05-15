@@ -16,7 +16,7 @@ RsyncUI is a complimentary and open-source application. Kindly review the MIT li
 
 {{< /alert >}}
 
-Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty catalog as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
+Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
 
 {{< alert >}}
 

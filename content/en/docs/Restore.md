@@ -13,7 +13,7 @@ Data restoration from within RsyncUI is exclusively permitted for remote servers
 
 {{< figure src="/images/restore/restore_filter_all.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-Select either a file or a catalog to restore. Switching the command toggle reveals the actual restore command. Selecting "restore" displays a "--dry-run" of the restore operation. Switching the "--dry-run" toggle to "off" initiates the actual restore of files. After a restore, a view displaying the output from rsync will be presented.
+Select either a file or a directory to restore. Switching the command toggle reveals the actual restore command. Selecting "restore" displays a "--dry-run" of the restore operation. Switching the "--dry-run" toggle to "off" initiates the actual restore of files. After a restore, a view displaying the output from rsync will be presented.
 
 {{< figure src="/images/restore/restore_filter.png" alt="" position="center" style="border-radius: 8px;" >}}
 

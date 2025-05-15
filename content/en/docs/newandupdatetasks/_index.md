@@ -6,7 +6,7 @@ tags = ["new tasks","profile"]
 categories = ["synchronize"]
 +++
 
-A task requires a minimum of a local catalog, the source, and a remote catalog, the destination.
+A task requires a minimum of a local directory, the source, and a remote directory, the destination.
 
 {{< alert color="warning" >}}
 
@@ -30,16 +30,16 @@ The following data pertains to tasks:
 
 ##### Action
 
-- `synchronize`: default action for synchronize data from the source to the destination
+- `synchronize`: default action for synchronize data from a *source* to a *destination*
 - `snapshot`: saves changes and deletions prior to a synchronize operation
-- `syncremote`: synchronize data from a remote source to a local volume
+- `syncremote`: synchronize data from a remote *source* to a *local* folder
     - when adding a `syncremote` action, add the *local folder first* and the *remote folder as second*, RsyncUI will do the flip
 
-##### Catalog Parameters
+##### Folder Parameters
 
-- Local catalog: Required field.
-- Remote catalog: Required field.
-  - The backup catalog may also be a local catalog on a local attached disk.
+- Local folder: Required field.
+- Remote folder: Required field.
+  - The backup folder may also be a local folder on a local attached disk.
 
 ##### Trailing /
 

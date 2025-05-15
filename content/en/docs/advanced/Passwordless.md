@@ -28,7 +28,7 @@ To use my own SSH-key and SSH-keypath data, the following is added to RsyncUI in
 To configure SSH-keypath and Identityfile, refer to the user configuration located in the SSH settings. When enabling user-selected SSH-keypath and Identityfile, please ensure they adhere to the following format:
 
 ```bash
-~/.mynewsshcatalog/mynewkey
+~/.mynewsshdirectorylog/mynewkey
 ```
 
 like
@@ -39,13 +39,12 @@ like
 
 The prefix must be `~` followed by a `/`. RsyncUI will verify that the SSH-keypath begins with `~` and contains at least two `/` characters before saving the new SSH-keypath.
 
-The rsync command to synchronize my Documents catalog is set by RsyncUI to my Raspberry Pi server:
+The rsync command to synchronize my Documents directory is set by RsyncUI to my Raspberry Pi server:
 
 ```bash
 /opt/homebrew/bin/rsync --archive --verbose --compress \
 -e "ssh -i ~/.ssh_rsyncosx/rsyncosx -p 22" --stats \
 /Users/thomas/Documents/ thomas@raspberrypi:/backups/Documents/
 ```
-
 
 For more information on passwordless login, please refer to the *Tools passwordless login* section.

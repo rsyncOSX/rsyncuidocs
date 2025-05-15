@@ -29,7 +29,7 @@ If the version of `rsync` is not installed by Homebrew, set the path to `rsync`.
 
 #### Path for restore
 
-- Preset temporary path for restoring single files and catalogs
+- Preset temporary path for restoring single files and directory
 - Preset temporary path for a full restore
 
 #### Mark days after
@@ -39,6 +39,6 @@ Tasks with an execution date older than the number of days are marked red.
 #### Backup configurations
 
 You can backup the current setup, configurations, and logs, including all profiles, at any time by clicking the `wrench` button.
-The backup executes a copy to your Documents catalog and appends a timestamp `-month-day-year/hour/minute` to the copy.
+The backup executes a copy to your Documents directory and appends a timestamp `-month-day-year/hour/minute` to the copy.
 
-The backups are located in your Documents catalog: `$HOME/Documents/RsyncUIcopy-05-06-2024/08/21`
+The backups are located in your Documents directory: `$HOME/Documents/RsyncUIcopy-05-06-2024/08/21`

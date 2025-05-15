@@ -49,12 +49,12 @@ The values are marked red until validated OK. Refer to section *"Tools passwordl
 
 ##### Backup Switch
 
-The `rsync` command allows you to instruct it to save modified and deleted files in a separate backup catalog prior to the synchronization process.
+The `rsync` command allows you to instruct it to save modified and deleted files in a separate backup directory prior to the synchronization process.
 This feature can be enabled by setting the following parameters:
 
 - `--backup`: Enables the saving of modified files.
 - `--backup-dir`: Specifies the directory where modified or deleted files should be saved before synchronization.
 
 The `RsyncUI` provides a default value for this parameter, but you can customize it as per your requirements.
-The default backup catalog for the `<catalog to synchronize>` relative to the synchronized catalog is `../backup_<catalog to synchronize>`.
+The default backup directory for the `<directory to synchronize>` relative to the synchronized directory is `../backup_<directory to synchronize>`.
 
