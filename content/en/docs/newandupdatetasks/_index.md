@@ -14,7 +14,7 @@ Always verify the result of a new task before executing. Select the *"Verify tas
 
 {{< /alert >}}
 
-Pressing the `Enter` key will advance to the next field. Pressing the `Enter` key will automatically add a new task after the last input. Alternatively, you can click the `checkmark` icon on the toolbar to add a new task. Tasks are saved to permanent storage after each entry.
+Pressing the `Enter` key will advance to the next field. Pressing the `Enter` key will automatically add a new task after the last input. Tasks are saved to permanent storage after each entry.
 
 {{< figure src="/images/add/add.png" alt="" position="center" style="border-radius: 8px;" >}}
 
