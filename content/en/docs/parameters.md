@@ -12,7 +12,7 @@ Users have the ability to modify default parameters as necessary. Parameters to 
 
 {{< alert color="warning" >}}
 
-Always verify the result of changing parameters to rsync  before executing. Select the "Verify tasks" from the primary Sidebar menu.
+Always verify the result of changing parameters to rsync  before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
 
 {{< /alert >}}
 
@@ -39,11 +39,11 @@ If default ssh-key values are employed and no information regarding ssh-keys is 
 Task-specific ssh parameters override global ssh parameters configured in the user settings.
 
 - ssh-port: specify if ssh utilizes a port other than the default port 22
-- ssh-keypath and identity file: typically, these are `.ssh/id_rsa`, set only if alternative keypath and identity file are to be utilized by ssh
+- ssh-keypath and identity file: typically, these are `.ssh/id_rsa`, set only if alternative ssh-keypath and identity file are to be utilized by ssh
 
 {{< alert >}}
 
-The values are marked red until validated OK. See section "Tools passwordless login" for info about validated values.
+The values are marked red until validated OK. Refer to section *"Tools passwordless login"* for info about validated values.
 
 {{< /alert >}}
 

@@ -13,7 +13,7 @@ There are a lot of UI updates in latest release version 2.5.3 (May 14, 2025). Th
 
 {{< alert color="warning" >}}
 
-As a safety precaution, the `—delete` parameter is not set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the `—delete` parameter must be *enabled*. If you are new to `rsync`, I strongly recommend reading the "Important" section as a minimum. 
+As a safety precaution, the `—delete` parameter is not set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the `—delete` parameter must be *enabled*. If you are new to `rsync`, I strongly recommend reading the *"Important"* section as a minimum. 
 
 {{< /alert >}}
 
