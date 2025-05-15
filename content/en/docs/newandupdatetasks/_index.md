@@ -32,7 +32,7 @@ The following data pertains to tasks:
 
 - `synchronize`: default action for synchronize data from the source to the destination
 - `snapshot`: saves changes and deletions prior to a synchronize operation
-- `syncremote`: synchronize data from a remote source to a local volume
+- `syncremote`: synchronize data from a remote source to a local volume, when adding a syncremote action add the local catalog first and the remote catalog as second, RsyncUI will do the flip for yoy
 
 ##### Catalog Parameters
 
