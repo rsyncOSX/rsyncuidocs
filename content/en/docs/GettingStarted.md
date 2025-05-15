@@ -30,7 +30,7 @@ If you want to synchronize data to a server, on the Internet, or your local LAN,
 
 {{< alert color="warning" >}}
 
-*Always* verify a new task. After adding a task, added your own or changed parameters to rsync , select the *"Verify tasks"* from the primary Sidebar menu. 
+*Always* verify a new task. After adding a new task, changed a task, added your own or changed parameters to rsync , select the *"Verify tasks"* from the primary Sidebar menu. 
 
 {{< /alert >}}
 

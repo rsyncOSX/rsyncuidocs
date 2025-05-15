@@ -12,7 +12,7 @@ Users have the ability to modify default parameters as necessary. Parameters to 
 
 {{< alert color="warning" >}}
 
-Always verify the result of changing parameters to rsync  before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
+Always verify the result of changing parameters to rsync before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
 
 {{< /alert >}}
 

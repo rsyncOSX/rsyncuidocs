@@ -5,10 +5,9 @@ title =  "SSH settings"
 tags = ["ssh"]
 categories = ["usersettings"]
 +++
+After changing a setting, you have to save the changes to keep it next time you use RsyncUI.
 
-In this perspective, you can utilize RsyncUI to assist in creating an SSH key and setting up a global SSH keypath and identity file.
-SSH keys are required for passwordless logins to remote servers. You can either use the default values for SSH keys or set your own.
-For more information on passwordless logins, please refer to the documentation at *Passwordless login* section.
+In this perspective, you can utilize RsyncUI to assist in creating an SSH key and setting up a global SSH keypath and identity file. SSH keys are required for passwordless logins to remote servers. You can either use the default values for SSH keys or set your own. For more information on passwordless logins, please refer to the documentation at *Passwordless login* section.
 
 {{< figure src="/images/usersettings/ssh.png" alt="" position="center" style="border-radius: 8px;" >}}
 

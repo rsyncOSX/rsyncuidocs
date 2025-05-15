@@ -20,7 +20,7 @@ Before executing a new task in RsyncUI, please perform an estimation run, a --dr
 
 {{< alert >}}
 
-For instructions on executing an estimation run, refer to the *Getting started* or *New tasks*  section.
+For instructions how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks*  section. 
 
 {{</alert >}}
 

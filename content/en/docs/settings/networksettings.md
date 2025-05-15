@@ -6,7 +6,7 @@ tags = ["monitoring and logging"]
 categories = ["usersettings"]
 +++
 
-Changes to settings are automatically saved. A green thumb up notify when saving is completed.
+After changing a setting, you have to save the changes to keep it next time you use RsyncUI.
 
 {{< figure src="/images/usersettings/network.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -39,9 +39,9 @@ Changes to settings are automatically saved. A green thumb up notify when saving
 
 - after an estimate, by selecting the Magic Wand on toolbar Synchronize task view, always present the summarized view
 
-  **Hide Verify remote:**
+**Hide Verify remote:**
 
-  - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
+- refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
 **Confirm Execution:**
 

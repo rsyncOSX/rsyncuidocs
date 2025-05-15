@@ -6,8 +6,7 @@ tags = ["rsyncui settings"]
 categories = ["usersettings"]
 +++
 
-There are several settings that can be adjusted. These settings are saved to a permanent storage location.
-Users can access their settings by default using the shortcut `⌘,`.
+There are several settings that can be adjusted. After changing a setting, you have to save the changes to keep it next time you use RsyncUI. Users can access their settings by default using the shortcut `⌘,`.
 
 - **Rsync and Path:** - Settings for rsync and path
 - **Monitor and Log:** - Settings for monitoring and logging
