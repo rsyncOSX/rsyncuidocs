@@ -38,7 +38,12 @@ ChatGPT about the *parameter* as a default parameter to rsync: *The --delete par
 
 ##### How to remove and add the delete parameter
 
-Select the *Rsync parameters* from the primary Sidebar menu.  Select the task for which you want to remove the `--delete` parameter. And then toggle the *Add --delete parameter, ON is added* . After toggle, *remember to update the task*.
+Select the *Rsync parameters* from the primary Sidebar menu.  Select the task for which you want to add or remove the `--delete` parameter. And then toggle the *Add --delete parameter, ON is added* . After toggle, *remember to update the task*.
+
+- if ON, the --delete parameter is included
+- if off, the --delete parameter is removed
+
+The complete rsync string is updatet when parameters are changed. 
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
