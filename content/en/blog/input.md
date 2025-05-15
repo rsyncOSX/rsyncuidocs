@@ -22,11 +22,7 @@ It isn't clear what the tool does with Catalogs with spaces in the name. If I ad
 - To create a Remote catalog with space on Debian requiere the following command : `mkdir Blackmagic\ Design`.
 - The local Catalog also includes cataloges with space, the remote accepts spaces with no special actions.
 
-{{< figure src="/images/251/space.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 The computed rsync command includes spaces, no escape characters needed. The only escape character needed is if you explicit are creating a destination catalog  on the Linux host including a space in catalog name. 
-
-{{< figure src="/images/251/space2.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Nr 2 - updated
 
@@ -71,23 +67,13 @@ I need to investigate this issue. I will change to Alert, modal popup, but the p
 
 *Please consolidate the logs in one place. There is a log button in Synchronize that leads to a window where latest updates are at the bottom and have to be scrolled down to. Also this log just smashes together output for all Tasks, and doesn't separate by Tasks. There's no log for Verify or Estimate. Every flow should just have a log so that we can troubleshoot rsync responses, as well as what the file sync actions or determinations are.*
 
-RsyncUI only create log records AFTER a sucessfull synchronization of data. It is not possible to store *every* output from rsync, output from rsync might be huge. And by any command in RsyncUI it is possibe to inspect to output from RsyncUI. If there are discovered errors in output, an error is thrown and the user can inspect the output.
+RsyncUI only create log records AFTER a successful synchronization of data. It is not possible to store *every* output from rsync, output from rsync might be huge. And by any command in RsyncUI it is possible to inspect to output from RsyncUI. If there are discovered errors in output, an error is thrown and the user can inspect the output.
 
 The logview always presents the most recent logs at top, not bottom. When opening the view and there are more than one task, the view show all log records. Most recent logs at top.
 
-{{< figure src="/images/251/alllogs.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 If a task is selected, only log records for that task is presented. Most recent at top.
 
-{{< figure src="/images/251/selectedlogs.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 How to inspect the output from rsync by an estimate run. The view is presented as part of en estimation run, please read the documentation section "Synchronize data"
-
-{{< figure src="/images/251/estimate.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-Selection a row presents the output from rsync. Blue numbers indicates there are data to be synchronized.
-
-{{< figure src="/images/251/estimatedetails.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Nr 8 - updated
 

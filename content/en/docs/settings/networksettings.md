@@ -39,6 +39,10 @@ Changes to settings are automatically saved. A green thumb up notify when saving
 
 - after an estimate, by selecting the Magic Wand on toolbar Synchronize task view, always present the summarized view
 
+  **Hide Verify remote:**
+
+  - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
+
 **Confirm Execution:**
 
 - See below.

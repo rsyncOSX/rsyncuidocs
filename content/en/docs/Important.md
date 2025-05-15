@@ -16,7 +16,7 @@ RsyncUI is a complimentary and open-source application. Kindly review the MIT li
 
 {{< /alert >}}
 
-Before executing a new task in RsyncUI, please perform an estimation run, a `--dry-run`, and inspect the result. If you inadvertently set an empty catalog as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
+Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty catalog as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
 
 {{< alert >}}
 
@@ -26,7 +26,7 @@ For instructions on executing an estimation run, refer to the *Getting started* 
 
 #### The delete parameter
 
-The `—delete` parameter, herein referred to as the *parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
+The --delete parameter, herein referred to as the *parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
 
 Therefore, it is crucial to ascertain whether the *parameter* is enabled or disabled. Enabling the *parameter* ensures complete synchronization between the source and destination directories.
 
@@ -43,7 +43,7 @@ Select the *Rsync parameters* from the primary Sidebar menu.  Select the task fo
 - if ON, the --delete parameter is included
 - if off, the --delete parameter is removed
 
-The complete rsync string is updatet when parameters are changed. 
+The complete rsync string is updated when parameters are changed. 
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -61,7 +61,7 @@ Using *snapshots*, the second option,  require that the latest version 3.x of `r
 
 #### Remote servers
 
-RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter `-e ssh` to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
+RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter -e ssh to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
 
 Through the SSH tunnel, the transfer is encrypted when transmitted over a network connection.
 

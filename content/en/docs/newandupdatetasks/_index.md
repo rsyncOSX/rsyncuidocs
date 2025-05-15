@@ -10,7 +10,7 @@ A task requires a minimum of a local catalog, the source, and a remote catalog, 
 
 {{< alert color="warning" >}}
 
-Always verify the result of a new task before executing. Select the "Verify tasks" from the primary Sidebar menu.
+Always verify the result of a new task before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
 
 {{< /alert >}}
 

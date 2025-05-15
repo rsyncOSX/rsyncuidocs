@@ -93,7 +93,3 @@ YXcstpoguax
         `--- u: The u slot is reserved for future use.
          `-- a: The ACL information changed
 ```
-
-{{< figure src="/images/verify/verifycompleted.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-RsyncUI indicates remote is more updated. However, this is merely an advisory. I must verify this independently to ensure my certainty.

@@ -34,7 +34,7 @@ If you want to synchronize data to a server, on the Internet, or your local LAN,
 
 {{< /alert >}}
 
- Select the task and press the *play* button on the toolbar. Executing the *play* button includes the `--dry-run` parameter for rsync, which is an estimation run.
+ Select the task and press the *play* button on the toolbar. Executing the *play* button includes the --dry-run parameter for rsync, which is an estimation run.
 
 {{< figure src="/images/verifyatask/verifytask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
