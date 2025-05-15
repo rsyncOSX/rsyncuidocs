@@ -47,11 +47,13 @@ The complete rsync string is updatet when parameters are changed.
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-##### Two options to save changes
+##### Two options to save updates to data
+
+This options applies to the data which is synchronized by RsyncUI.
 
 {{< alert >}}
 
-There are a two options to automatically save changes to a file when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  
+There are a two options to automatically save changes to data when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  
 
 Using *snapshots*, the second option,  require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
 
