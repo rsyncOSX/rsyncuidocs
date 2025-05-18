@@ -24,4 +24,3 @@ This will be a maintenance release, and it is likely to be released by the end o
     - the issue occurs if there is selected a task in the main Synchronize view, switch to Rsync parameters view, selecting the task will not enable adding parameters to rsync
     - workaround, deselect task in main Synchronize view and return to Rsync parameters view
     - the issue is caused due to the fix for situation where RsyncUI become unresponsive with a bouncing beach ball, see comments for blog about version 2.5.3
-    - there will some kind of fix, the straight forward fix also makes RsyncUI crash, so another fix to be developed
