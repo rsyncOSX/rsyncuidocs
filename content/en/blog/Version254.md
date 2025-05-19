@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.4"
-date = "2025-05-18"
+date = "2025-05-19"
 tags = ["changelog","version 2.5.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.4 (build 146) - not yet released
+### Version 2.5.4 (build 146) - May 19, 2025 release candidate
 
 This will be a maintenance release, and it is likely to be released by the end of May 2025. In the latest release, there were several UI updates and some minor updates that were not included in the latest release. For the next few weeks, I will conduct some quality assurance testing of the UI and update this blog with information about any minor issues that are found and updates.
 
