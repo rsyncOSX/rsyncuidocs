@@ -36,7 +36,7 @@ To be released by end of May 2025. It is a new version number to include notific
 - I did read a blog about Picker and nil values and how to deal with optional values
     - a Picker is like the profile selector and optional values may be `nil`
     - when a new user commence using RsyncUI, there are no profiles but only the default path
-    - a profile is only a folder and RsyncUI stores data for that profile in that folder (or directory)
+    - a profile is only a folder and RsyncUI stores data for profile in folder (or directory), profile name is name of folder
 - if you have ON *"Observe mounting of external drives"* in settings, RsyncUI will automatically load profile if mounted volume path in destination
     - when unmounting the volume, RsyncUI now also automatically load default profile
     - the automated selection of profile is only valid if there is created one or more profiles
