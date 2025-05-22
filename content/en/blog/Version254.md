@@ -24,6 +24,10 @@ This will be a maintenance release, and it is likely to be released by the end o
     - the issue occurs if there is selected a task in the main Synchronize view, switch to Rsync parameters view, selecting the task will not enable adding parameters to rsync
     - workaround, deselect task in main Synchronize view and return to Rsync parameters view
     - the issue is caused due to the fix for situation where RsyncUI become unresponsive with a bouncing beach ball, see comments for blog about version 2.5.3
+- the global replace function, in Tasks view, select the Globus on the toolbar
+    - left textfield part of text to be replaced
+    - right textfield replaced with what
+    - any part of word may be replaced, as soon as you start ype in the *replace field* the view is dynamically updated
 
 #### Version 2.5.5 (build 147) - to be released as maintenance release
 
@@ -32,7 +36,7 @@ To be released by end of May 2025. It is a new version number to include notific
 - I did read a blog about Picker and nil values and how to deal with optional values
     - a Picker is like the profile selector and optional values may be `nil`
     - when a new user commence using RsyncUI, there are no profiles but only the default path
-    - a profile is only a catalog and RsyncUI stores data for that profile in that catalog
+    - a profile is only a folder and RsyncUI stores data for that profile in that folder (or directory)
 - if you have ON *"Observe mounting of external drives"* in settings, RsyncUI will automatically load profile if mounted volume path in destination
     - when unmounting the volume, RsyncUI now also automatically load default profile
-    - the automated selection of profile is only valid if there is created one or more profile
+    - the automated selection of profile is only valid if there is created one or more profiles
