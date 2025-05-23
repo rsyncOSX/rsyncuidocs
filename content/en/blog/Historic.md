@@ -1,15 +1,22 @@
 +++
 author = "Thomas Evensen"
 title = "Historic releases"
-date = "2024-06-11"
+date = "2025-03-21"
 tags = ["changelog","historic"]
 categories = ["changelog"]
 +++
 
 ### Previous releases
 
-Dates and version only
+Version and dates only:
 
+- Version 2.4.1 - 2025-03-21
+- Version 2.3.9 - 2025-03-09
+- Version 2.3.7 - 2025-03-07
+- Version 2.3.5 - 2025-02-26
+- Version 2.3.4 - 2025-02-12
+- Version 2.3.2 - 2025-01-29
+- Version 2.3.0 - 2025-01-15
 - Version 2.2.5 - 2025-01-08
 - Version 2.2.3 - 2024-12-20
 - Version 2.2.1 - 2024-11-30

@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "URLs Notepad"
-date = "2025-01-07"
+date = "2025-03-01"
 tags = ["url commands","deep links"]
 categories = ["synchronize"]
 +++
