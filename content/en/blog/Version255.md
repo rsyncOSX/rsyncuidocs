@@ -23,7 +23,6 @@ This is  a maintenance release. In the latest release, there were several UI upd
     - Quicktask is also only valid if there is a remote server involved, for local attached volumes use the macOS Finder
 - there is a minor issue selecting a task for adding parameters to rsync within the Rsync parameters view
     - the issue occurs if there is selected a task in the main Synchronize view, switch to Rsync parameters view, selecting the task will not enable adding parameters to rsync
-    - workaround, deselect task in main Synchronize view and return to Rsync parameters view
     - the issue is caused due to the fix for situation where RsyncUI become unresponsive with a bouncing beach ball, see comments for blog about version 2.5.3
 - the global replace function, in Tasks view, select the Globus on the toolbar
     - left text field part of text to be replaced
