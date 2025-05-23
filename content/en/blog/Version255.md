@@ -19,7 +19,6 @@ This is  a maintenance release. In the latest release, there were several UI upd
     - the automated selection of profile when mounting a volume is only valid if there is created one or more profiles
 - in Tasks, view for adding new tasks, pressing the Enter key does not jump to the next logical field in view
     - pressing Enter key automatically jumps to next input field and by end automatically adds new task
-    - workaround, manually select field to add value
 - in QuickTasks, RsyncUI flips local and remote when executing a syncremote task, aka pull data from remote to local
     - Quicktask is also only valid if there is a remote server involved, for local attached volumes use the macOS Finder
 - there is a minor issue selecting a task for adding parameters to rsync within the Rsync parameters view
@@ -27,6 +26,6 @@ This is  a maintenance release. In the latest release, there were several UI upd
     - workaround, deselect task in main Synchronize view and return to Rsync parameters view
     - the issue is caused due to the fix for situation where RsyncUI become unresponsive with a bouncing beach ball, see comments for blog about version 2.5.3
 - the global replace function, in Tasks view, select the Globus on the toolbar
-    - left textfield part of text to be replaced
-    - right textfield replaced with what
-    - any part of word may be replaced, as soon as you start ype in the *replace field* the view is dynamically updated
+    - left text field part of text to be replaced
+    - right text field replaced with what
+    - any part of word may be replaced, as soon as you start type in the *replace field* the view is dynamically updated
