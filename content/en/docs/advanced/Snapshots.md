@@ -20,13 +20,11 @@ If the "file.txt" is deleted from the initial snapshot, the filesystem handles t
 
 In RsyncUI, even if all snapshots are marked for deletion, the first and last snapshots are not deleted.
 
-### Definition of a Snapshot:
+### Snapshots
 
 A snapshot is a saved state or backup of data at a specific point in time. Each snapshot is synchronized with the local directory at the time of creation.
 
-Previous versions of files can be restored from a snapshot using the `--link-dest` parameter with rsync.
-
-##### Remote server
+#### Remote server
 
 The rsync parameter for next snapshot to synchronize to a *remote.server* is:
 
@@ -39,7 +37,7 @@ where
 - `/Users/thomas/data/` is *the source* directory, only read by rsync
 - `~/snapshots/` is *the destination* directory where snapshots are synchronized
 
-##### Local attached disc
+#### Local attached disc
 
 The above with a local attached disc, mounted as `/Volume/backup` is:
 
@@ -52,19 +50,19 @@ where
 - `/Users/thomas/data/` is *the source* directory, only read by rsync
 - `/Volume/backup/snapshots/` is *the destination* directory where snapshots are synchronized
 
-##### Snapshot Creation
+#### Snapshot Creation
 
 To create a snapshot task, select "snapshot" as the action in the *Add tasks* section. Do not copy and paste the command for execution within a terminal window. RsyncUI automatically saves the snapshot number "n" to the task. This number represents the next available snapshot number and is used to calculate the rsync parameter. The value of "n" is retrieved from the configuration.
 
-##### Snapshot Administration
+#### Snapshot Administration
 
 Snapshot administration is crucial to maintain an organized and efficient backup system. It involves deleting unnecessary or irrelevant snapshots to prevent clutter and simplify the management of the backup space. Regularly reviewing and deleting snapshots is essential to ensure that only the most relevant data is retained.
 
-##### Deleting Snapshots
+#### Deleting Snapshots
 
 Deleting snapshots is a destructive operation that should be performed with caution. It is important to have a plan in place to determine which snapshots to keep and which to delete. RsyncUI provides a simple plan for deleting and keeping snapshots.
 
-##### The Plan for Keep and Delete
+#### The Plan for Keep and Delete
 
 Selecting the "Tag" button evaluates all snapshots based on the date within the log record. Based on the selected plan and date, snapshots are either tagged with "keep" or "delete." Snapshots tagged with "delete" are also preselected for deletion. To delete the marked snapshots, select the "Delete" button.
 
