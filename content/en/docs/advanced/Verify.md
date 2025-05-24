@@ -8,9 +8,9 @@ categories = ["advanced features"]
 
 {{< alert color="warning" >}}
 
-The Verify remote function is a specialized tool designed when synchronizing two Mac computers to a single repository, excluding Git repositories. This functionality was developed by the developer due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git server, necessitating a tool to determine whether to push or pull data.
-
 The Verify remote function is not enabled by default. To enable it, please navigate to Settings and toggle the corresponding option. Before utilizing this function, kindly refer to its documentation to ensure you make the appropriate decision.  
+
+The Verify remote function is a specialized tool designed when synchronizing two Mac computers to a single repository, excluding Git repositories. This functionality was developed by the developer due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git server, necessitating a tool to determine whether to push or pull data.
 
 {{< /alert >}}
 
@@ -58,6 +58,14 @@ The outcome is as follows:
 - If the number of rows is equal, it is *likely* that the local repository is more up-to-date than the remote repository.
 
 If there are zero rows, most likely, local  and remote repository are in sync. 
+
+{{% pageinfo color="info" %}}
+
+I utilize this function on a regular basis. I frequently travel to my mountain cabin, capture photographs of the wildlife, and develop images on my MacBook Pro during my stays. At home, I primarily use my MacMini 4 with a large monitor. Subsequently, I employ this function to synchronize my Macs with the photographs. As usual, I recall which Mac is most current. Occasionally, both the pull and push view contain data after a dry run, making it challenging to determine the appropriate course of action. I do recall which Mac is most current and include the delete parameter to synchronize. However, without remembering which Mac is most updated, it may be difficult to determine the correct action.
+
+Therefore, my advice is to ensure that you are aware of which Mac is updated. Furthermore, avoid making changes on both Macs and synchronizing changes to the repository, as this may result in data loss. 
+
+{{< /pageinfo >}}
 
 #### Itemized output - push or pull
 
