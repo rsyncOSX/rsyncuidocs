@@ -24,7 +24,7 @@ For instructions how to *verify a task*, new or changed tasks, refer to the *Get
 
 {{</alert >}}
 
-#### The delete parameter
+### The delete parameter
 
 The --delete parameter, herein referred to as the *parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
 
@@ -36,7 +36,7 @@ ChatGPT about the *parameter* as a default parameter to rsync: *The --delete par
 
 {{< /alert >}}
 
-##### How to remove and add the delete parameter
+#### How to remove and add the delete parameter
 
 Select the *Rsync parameters* from the primary Sidebar menu.  Select the task for which you want to add or remove the `--delete` parameter. And then toggle the *Add --delete parameter, ON is added* . After toggle, *remember to update the task*.
 
@@ -47,7 +47,7 @@ The complete rsync string is updated when parameters are changed.
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-##### Two options to save updates to data
+#### Two options to save updates to data
 
 This options applies to the data which is synchronized by RsyncUI.
 
@@ -59,7 +59,15 @@ Using *snapshots*, the second option,  require that the latest version 3.x of `r
 
 {{< /alert >}}
 
-#### Remote servers
+### Long running tasks and sleep
+
+Upon each Mac sleep, RsyncUI synchronization tasks cease. An active rsync process does not prevent Mac sleep. If Mac sleeps during a synchronization task, rsync likely generates an error, halting the task. The sole method to resume synchronization is to restart it via RsyncUI. RsyncUI will resume and synchronize data not yet transferred. Rsync is adept and resumes from its previous state.
+
+If the above occurs, RsyncUI will not generate any logs. RsyncUI logs only upon detecting a termination signal from rsync. If Mac enters sleep during data synchronization, there will be no termination signal and no logging by RsyncUI.
+
+You may modify your Mac's sleep settings to control when it sleeps.
+
+### Remote servers
 
 RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter -e ssh to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
 
@@ -67,7 +75,7 @@ Through the SSH tunnel, the transfer is encrypted when transmitted over a networ
 
 Refer to the *Passwordless login* section for further information on SSH and SSH-keys. This feature cannot be disabled.
 
-#### Aborting Tasks
+### Aborting Tasks
 
 Please be cognizant that this is an external task not under the control of RsyncUI. It executes the command-line tool `rsync`.
 RsyncUI monitors the task for progress and termination.
