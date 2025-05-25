@@ -8,7 +8,7 @@ categories = ["technical details"]
 
 ### The Timer and Calendar
 
-The Calendar and schedules are developed by utilzing the Timer library. The actual synchronize task is kicked off when the scheduler writes the profile name to an observed value monitored by RsyncUI. The profile name is added to the schedule itself, the callback does the update of the observed value when the timer is kicked off. 
+The Calendar and schedules is developed by utilizing the Timer library. The actual synchronize task is kicked off when the scheduler writes the profile name to an observed value monitored by RsyncUI. The profile name is added to the schedule itself, the callback does the update of the observed value when the timer is kicked off. 
 
 When RsyncUI observes that the value is updated, it trigger a URL-function in RsyncUI by using the profile name, the URL-function then kick off the actual synchronization task.  
 
