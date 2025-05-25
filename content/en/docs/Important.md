@@ -59,14 +59,6 @@ Using *snapshots*, the second option,  require that the latest version 3.x of `r
 
 {{< /alert >}}
 
-### Long running tasks and sleep
-
-Upon each Mac sleep, RsyncUI synchronization tasks cease. An active rsync process does not prevent Mac sleep. If Mac sleeps during a synchronization task, rsync likely generates an error, halting the task. The sole method to resume synchronization is to restart it via RsyncUI. RsyncUI will resume and synchronize data not yet transferred. Rsync is adept and resumes from its previous state.
-
-If the above occurs, RsyncUI will not generate any logs. RsyncUI logs only upon detecting a termination signal from rsync. If Mac enters sleep during data synchronization, there will be no termination signal and no logging by RsyncUI.
-
-You may modify your Mac's sleep settings to control when it sleeps.
-
 ### Remote servers
 
 RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter -e ssh to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
@@ -74,10 +66,3 @@ RsyncUI compels data transfer via SSH if the destination is a remote server. The
 Through the SSH tunnel, the transfer is encrypted when transmitted over a network connection.
 
 Refer to the *Passwordless login* section for further information on SSH and SSH-keys. This feature cannot be disabled.
-
-### Aborting Tasks
-
-Please be cognizant that this is an external task not under the control of RsyncUI. It executes the command-line tool `rsync`.
-RsyncUI monitors the task for progress and termination.
-
-The user has the authority to abort a task at any juncture. Please permit the abort to complete and execute any necessary cleanup operations before initiating a new task. This process may take a few seconds. If not, RsyncUI may become unresponsive.

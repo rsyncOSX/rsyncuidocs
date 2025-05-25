@@ -52,17 +52,5 @@ There are three Sidebar menu options that are contingent upon the properties of 
 - *Restore*: this option is only available for synchronize- and snapshot tasks where *the destination* is located on a *remote server*
 - *Verify remote*: this option is only available for synchronize tasks where *the destination* is located on a *remote server*
 
-#### The Calendar
 
-A note about the Calendar and schedule of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the blog *Timer and Calendar* for more detailed info about the Timer.
-
-Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. But if you leave your Mac and it goes to sleep, the timer will *not work*.
-
-{{< alert >}}
-
-The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."* 
-
-{{< /alert >}}
-
-The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
 
