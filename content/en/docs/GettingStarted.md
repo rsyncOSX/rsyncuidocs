@@ -58,7 +58,7 @@ A note about the Calendar and schedule of actions. There are limitations of how 
 
 Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. But if you leave your Mac and it goes to sleep, the timer will *not work*.
 
-{{{< alert >}}
+{{< alert >}}
 
 The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."* 
 
