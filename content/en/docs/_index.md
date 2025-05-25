@@ -14,7 +14,7 @@ As a safety precaution, the --delete parameter is *not* set as a default paramet
 
 {{< alert >}}
 
-A note about the Calendar function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. The schedule will only fire as long as your Mac is "awake". Please read the Changelog for version 2.5.3 at bottom of blog.
+A note about the Calendar function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. The schedule will only fire as long as your Mac is *awake*. Refer to the *Getting started* bottom of page about the Calendar. 
 
 {{< /alert >}}
 
