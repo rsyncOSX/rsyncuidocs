@@ -16,7 +16,16 @@ If RsyncUI is alive, any update of the observed value will commence a synchroniz
 
 #### The Timer code
 
-To be updated.
+The Timer is a Global static class with one task only, keep track of one timer which is the first timer to kick off. It also executes the callback function when the timer is kicked off. There are one other major part of the Calendar function, the object which calculates next time and display futures timers when there is an update.
+
+The Calenderview asks the calendear object when the user views this and futures months. The Calendar view is dynamically updated, based on the input within the calendar table view.
+
+The Global static timer only keeps track of one timer. 
+
+To wrap it up, the Timer itself is very easy but with limitations. The calendar object is somewhat more complex, with two major tasks: 
+
+- compute the next timer to execute and update the Global static timer
+- provide the Calenderview with future times, computed only when the user browse the calendar
 
 ```swift
 //
