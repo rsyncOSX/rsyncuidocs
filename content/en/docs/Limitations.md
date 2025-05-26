@@ -6,7 +6,7 @@ tags = ["limitations"]
 categories = ["general information"]
 +++
 
-There are a few limitations or constraints when using RsyncUI. It might be important to be aware of them. But either of them will get you in some kind of trouble or corrupt any data. But they might stop an ongoing synchronization of data if you are not aware. 
+There are a few limitations or constraints to be aware of when using RsyncUI. NONE of these limitations can result in data corruption or trouble. However, they may inadvertently halt an ongoing synchronization process.
 
 ### Long running tasks and sleep
 

@@ -47,9 +47,9 @@ The complete rsync string is updated when parameters are changed.
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Two options to save updates to data
+### Two options to save updates to data
 
-This options applies to the data which is synchronized by RsyncUI.
+This option applies to the data synchronized by RsyncUI. By enabling either of these options, you can save changes to data, such as deletions or updates, prior to a synchronization task.
 
 {{< alert >}}
 
