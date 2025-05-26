@@ -20,6 +20,8 @@ Almost every day I do some development in RsyncUI. The development are motivated
 
 The development builds maintain the same version number while updating the build number. The changelog will meticulously document changes and the corresponding build numbers. Eventually, the development will be released as a new version later this summer. 
 
+All development builds are signed and notarized by Apple.
+
 Build 148, May 26:
 
 - fixed updating profile picker when RsyncUI discover new mounts and automatically loads profile
