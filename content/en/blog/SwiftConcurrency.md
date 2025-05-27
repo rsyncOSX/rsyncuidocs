@@ -6,11 +6,11 @@ tags = ["swift concurrency", "asynchronous"]
 categories = ["technical details"]
 +++
 
-{{< alert >}}
+{{% pageinfo color="info" %}}
 
 To begin, I must admit that my knowledge of Swift concurrency is limited. I have a basic understanding of the subject, and if you are reading this blog and seeking further details about the topic, I recommend conducting a search and reading articles from other sources that provide a more comprehensive understanding of Swift concurrency.
 
-{{< /alert >}}
+{{< /pageinfo >}}
 
 RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on other threads managed the cooperative thread pool (CTP), excluding and not blocking the main thread. How to the executors and CTP works and interacts is details I dont know about, and it is managed by the Swift runtime. There are three kinds of executors:
 
