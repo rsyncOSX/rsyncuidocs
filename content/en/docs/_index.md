@@ -18,11 +18,11 @@ A note about the Calendar function: the schedule is implemented by using the Tim
 
 {{< /alert >}}
 
-#### Privacy statement
+### Privacy statement
 
 RsyncUI is a desktop application only, there is no server component. It does not generate any logs that are transmitted from your Mac. Data pertaining to tasks and logs is stored locally on your Mac as files. You can backup all files created by RsyncUI to the Document directory on your Mac from the Settings view. The sole data transferred from your Mac to a server occurs only if you enable tasks with a remote server destination. You bear sole responsibility for securing your own data if synchronized to a remote server.
 
-#### Changelog and Installation
+### Changelog and Installation
 
 For the most up-to-date information, please refer to the [changelog](/blog/). RsyncUI is constructed as a Universal macOS Binary, ensuring native execution on Apple Silicon and Intel-based Mac computers.
 
