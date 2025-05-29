@@ -22,6 +22,14 @@ The development builds maintain the same version number while updating the build
 
 All development builds are signed and notarized by Apple.
 
+Build 149, not yet built: blog updated May 29
+
+- if only one task, either selected or in configuration, when pressing *Magic Wand* for estimating task  within main Synchronize view, default progress view is presented and not number of tasks completed
+- in Profile view, now correct updating the profile picker when adding or delete profiles
+    - the correct profile is actually loaded, but profile picker is not correctly set
+- internal refactor, every time a "/", forward slash, is added, using the library function `.appending(_other: some StringProtocol)`
+    - before used the `+` sign, like `string + "/"`, after refactor  `string.appending("/")`
+
 Build 148, May 26:
 
 - fixed updating profile picker when RsyncUI discover new mounts and automatically loads profile
