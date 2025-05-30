@@ -39,4 +39,4 @@ All development builds are signed and notarized by Apple.
     - the correct profile is actually loaded
 - removed the weekly option from Calendar, only once and daily are schedule options
 - within the Verify remote view, changed the toggle for delete parameter in pull and push
-    - when choosing either pull or push, the delete parameter is included as deafult
+    - when choosing either pull or push, the delete parameter is included as default
