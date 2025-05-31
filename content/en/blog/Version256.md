@@ -29,6 +29,8 @@ All development builds are signed and notarized by Apple.
     - if more than one task, the progress view presents the number of tasks estimate is completed
 - in Profile view, now correct updating the profile picker when adding or delete profiles
     - the correct profile is actually loaded, but profile picker is not correctly set
+- removed profile name from most tables, display profile name in heading view
+    - makes more room for display other info in tables
 - internal refactor, every time a "/", forward slash, is added, using the library function `.appending(_other: some StringProtocol)`
     - before used the `+` sign, like `string + "/"`, after refactor  `string.appending("/")`
 
