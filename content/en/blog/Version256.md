@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.6"
-date = "2025-05-29"
+date = "2025-05-31"
 tags = ["changelog","version 2.5.6"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.6 (build 148) - May 26, 2025 a development release
+### Version 2.5.6 (build 149) - May 31, 2025 a development release
 
 Almost every day I do some development in RsyncUI. The development are motivated by:
 
@@ -22,7 +22,7 @@ The development builds maintain the same version number while updating the build
 
 All development builds are signed and notarized by Apple.
 
-#### Build 149, not yet built: blog updated May 29
+#### Build 149, May 31:
 
 - if only one task, either selected or in configuration, when pressing *Magic Wand* for estimating task  within main Synchronize view, default progress view is presented and not number of tasks estimate is completed
     - the default progress view is a spinning circular image
