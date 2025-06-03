@@ -8,23 +8,13 @@ categories = ["changelog"]
 
 ### Version 2.5.6 (build 150) - June 3, 2025 a development release
 
-Almost every day I do some development in RsyncUI. The development are motivated by:
-
-- issues and feedback from users
-    - reporting issues and feedback is important
-    - I am not an UX designer and I need feedback on the UI part when users find the UI difficult to use and understand
-- updating the UI when I discover parts which, in my opinion, need to be changed
-- fixing minor bugs, like the bug for profile picker below
-- reading blogs about SwiftUI and Swift which make me do some refactor of code
-- refactor old code
-
 The development builds maintain the same version number while updating the build number. The changelog will meticulously document changes and the corresponding build numbers. Eventually, the development will be released as a new version later this summer. 
 
 All development builds are signed and notarized by Apple.
 
 #### Build 150, June 3:
 
-This is most likely the last development build before a new maintenance release.
+This is most likely the last development build before a new maintenance release. If no issues are reported this will be released as version 2.5.7 build 151 by a end of this week.
 
 - there was an issue with progress view during synchronization of a task by using "double click"
     - the first double click executes an estimate run, a -dry-run
