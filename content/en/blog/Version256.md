@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.6"
-date = "2025-05-31"
+date = "2025-06-03"
 tags = ["changelog","version 2.5.6"]
 categories = ["changelog"]
 +++
@@ -21,6 +21,17 @@ Almost every day I do some development in RsyncUI. The development are motivated
 The development builds maintain the same version number while updating the build number. The changelog will meticulously document changes and the corresponding build numbers. Eventually, the development will be released as a new version later this summer. 
 
 All development builds are signed and notarized by Apple.
+
+#### Build 150, June 3:
+
+This is most likely the last development build before a new maintenance release.
+
+- there was an issue with progress view during synchronization of a task by using "double click"
+    - the first double click executes an estimate run, a -dry-run
+    - the next double click executes the real synchronization of data
+    - the bug causes the progress view is a spinning circular image and not the real progress
+
+The bug was caused by a mistake in not assigning data within a concurrent code. The root function, the calling function of the concurrent code, was completed before the concurrent code was completed. The assignment of data is now part of the concurrent code, and the assignment is executed when the asynchronous function is completed. Concurrency in code really require to be aware what is happening and to understand the basics.
 
 #### Build 149, May 31:
 
