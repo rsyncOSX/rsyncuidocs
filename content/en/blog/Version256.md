@@ -6,7 +6,7 @@ tags = ["changelog","version 2.5.6"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.6 (build 149) - May 31, 2025 a development release
+### Version 2.5.6 (build 150) - June 3, 2025 a development release
 
 Almost every day I do some development in RsyncUI. The development are motivated by:
 
