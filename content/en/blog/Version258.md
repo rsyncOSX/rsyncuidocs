@@ -38,3 +38,5 @@ There are quite a few minor updates:
 - removed the weekly option from Calendar, only once and daily are schedule options
 - within the Verify remote view, changed the toggle for delete parameter in pull and push
     - when choosing either pull or push, the delete parameter is included as default
+ 
+The blog "Number of files" presents the number of files in RsyncUI. Within this release there are 228 Swift files and 17,880 lines of code.

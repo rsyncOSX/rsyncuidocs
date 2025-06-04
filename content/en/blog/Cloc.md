@@ -6,32 +6,32 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: May 23, 2025, version 2.5.5
+Numbers updated: June 4, 2025, version 2.5.8
 
 There is a very nice and excellent tool, cloc (https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
 cloc DecodeEncodeGeneric ParseRsyncOutput RsyncArguments RsyncUI RsyncUIDeepLinks SSHCreateKey
-          314 text files.
-     281 unique files.                                          
-      70 files ignored.
+     312 text files.
+     279 unique files.                                          
+      61 files ignored.
 
-github.com/AlDanial/cloc v 2.04  T=0.08 s (3376.8 files/s, 555122.6 lines/s)
+github.com/AlDanial/cloc v 2.04  T=0.12 s (2251.8 files/s, 372665.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Text                             6             12              0          21921
-Swift                          229           2361           2690          17892
-XML                             25              0              0            593
+Swift                          228           2369           2704          17880
+XML                             24              0              0            564
 C                                2             36             72            254
 JSON                             8              0              0            180
 make                             1             22              2             59
-Markdown                         6             33              0             48
+Markdown                         6             33              0             47
 YAML                             2              0              0             12
 Bourne Shell                     1              0              1              2
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           281           2465           2768          40961
+SUM:                           279           2473           2782          40919
 -------------------------------------------------------------------------------
 ```
 
