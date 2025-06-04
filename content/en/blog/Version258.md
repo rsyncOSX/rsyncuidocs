@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.5.8 (build 152) - June 4, 2025  release candidate
 
-This is a release candidate, but if issues reported it will be changed to next release without any updates. Please download the release candidate and test it out. *To be released by end of this week.* 
+This is a release candidate, but if no issues reported it will be changed to next release without any updates. Please download the release candidate and test it out. *To be released by end of this week.* 
 
 In this release, I have decided to incorporate an internal refactor and a merge of two files. Consequently, the version number will be updated to 2.5.8 build 152. While the refactor is not extensive, it does involve modifying numerous files. The merged object and file now maintain an estimate, its actual result, and provide the real synchronization tasks with the progress bar values.
 
