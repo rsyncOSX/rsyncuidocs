@@ -16,7 +16,7 @@ There are quite a few minor updates:
 - there was an issue with progress view during synchronization of a task by using "double click"
     - the first double click executes an estimate run, a -dry-run
     - the next double click executes the real synchronization of data
-    - the bug causes the progress view is a spinning circular image and not the real progress
+    - the bug caused the progress view is a spinning circular image and not the real progress
 - if only one task, either selected or in configuration, when pressing *Magic Wand* for estimating task  within main Synchronize view, default progress view is presented and not number of tasks estimate is completed
     - the default progress view is a spinning circular image
     - if more than one task, the progress view presents the number of tasks estimate is completed
