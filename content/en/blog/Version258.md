@@ -8,13 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.5.8 (build 152) - June 5, 2025 
 
-This is a maintenance release.
-
-In this release, I have decided to incorporate an internal refactor, a merge of two objects. Consequently, the version number will be updated to 2.5.8 build 152. While the refactor is not extensive, it does involve modifying numerous files. The merged object now maintain estimates, its actual results, and provide the real synchronization tasks with the max values to the progress bar. The capture of progress itself is done by the Process object.
-
-The release is signed and notarized by Apple.
-
-#### Changes within this release
+This is a maintenance release. The release is signed and notarized by Apple.
 
 There are quite a few minor updates:
 
@@ -39,4 +33,4 @@ There are quite a few minor updates:
 - within the Verify remote view, changed the toggle for delete parameter in pull and push
     - when choosing either pull or push, the delete parameter is included as default
  
-The blog "Number of files" presents the number of files in RsyncUI. Within this release there are 228 Swift files and 17,880 lines of code.
+The blog "Number of files" presents the number of files in RsyncUI. Within this release there are 228 Swift files and 17,900 lines of code.

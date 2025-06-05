@@ -12,26 +12,26 @@ There is a very nice and excellent tool, cloc (https://github.com/AlDanial/cloc)
 
 ```
 cloc DecodeEncodeGeneric ParseRsyncOutput RsyncArguments RsyncUI RsyncUIDeepLinks SSHCreateKey
-     312 text files.
-     279 unique files.                                          
-      61 files ignored.
+     313 text files.
+     280 unique files.                                          
+      70 files ignored.
 
-github.com/AlDanial/cloc v 2.04  T=0.12 s (2251.8 files/s, 372665.2 lines/s)
+github.com/AlDanial/cloc v 2.04  T=0.14 s (2073.8 files/s, 342443.1 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Text                             6             12              0          21921
-Swift                          228           2369           2704          17880
-XML                             24              0              0            564
+Swift                          228           2378           2690          17922
+XML                             25              0              0            593
 C                                2             36             72            254
-JSON                             8              0              0            180
+JSON                             8              0              0            176
 make                             1             22              2             59
-Markdown                         6             33              0             47
+Markdown                         6             33              0             48
 YAML                             2              0              0             12
 Bourne Shell                     1              0              1              2
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           279           2473           2782          40919
+SUM:                           280           2482           2768          40987
 -------------------------------------------------------------------------------
 ```
 
