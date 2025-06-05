@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 This is a release candidate, but if no issues reported it will be changed to next release without any updates. Please download the release candidate and test it out. *To be released by end of this week.* 
 
-In this release, I have decided to incorporate an internal refactor and a merge of two objects. Consequently, the version number will be updated to 2.5.8 build 152. While the refactor is not extensive, it does involve modifying numerous files. The merged object now maintain an estimate, its actual result, and provide the real synchronization tasks with the progress bar values.
+In this release, I have decided to incorporate an internal refactor, a merge of two objects. Consequently, the version number will be updated to 2.5.8 build 152. While the refactor is not extensive, it does involve modifying numerous files. The merged object now maintain estimates, its actual results, and provide the real synchronization tasks with the max values to the progress bar. The capture of progress itself is done by the Process object.
 
 The release candidate is signed and notarized by Apple.
 
@@ -18,7 +18,7 @@ The release candidate is signed and notarized by Apple.
 
 There are quite a few minor updates:
 
-- refactor, internal, see above
+- refactor, internal, merge of two objects for monitoring progress of estimation and the real synchronization task
 - there was an issue with progress view during synchronization of a task by using "double click"
     - the first double click executes an estimate run, a -dry-run
     - the next double click executes the real synchronization of data
