@@ -1,18 +1,18 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.8"
-date = "2025-06-04"
+date = "2025-06-05"
 tags = ["changelog","version 2.5.8"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.8 (build 152) - June 4, 2025  release candidate
+### Version 2.5.8 (build 152) - June 5, 2025 
 
-This is a release candidate, but if no issues reported it will be changed to next release without any updates. Please download the release candidate and test it out. *To be released by end of this week.* 
+This is a maintenance release.
 
 In this release, I have decided to incorporate an internal refactor, a merge of two objects. Consequently, the version number will be updated to 2.5.8 build 152. While the refactor is not extensive, it does involve modifying numerous files. The merged object now maintain estimates, its actual results, and provide the real synchronization tasks with the max values to the progress bar. The capture of progress itself is done by the Process object.
 
-The release candidate is signed and notarized by Apple.
+The release is signed and notarized by Apple.
 
 #### Changes within this release
 
