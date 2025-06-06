@@ -129,7 +129,7 @@ actor GetversionofRsyncUI {
 There was a bug within RsyncUI prior to version 2.5.8. The bug caused only a circular rotating wheel for the progress when executing the real synchronization task when using double click on task. The synchronization of data was executed, but there was no progress bar. The bug was caused because of the allocation `if let remotedatanumbers { ... } ` was *after* the `Task { ... }` and not *within* as shown below.  The calling function was  completed before the `Task { ... }` and the actual output from rsync was not allocated to the `remotedatanumbers` object. And when the user executes the second double click, the real output from rsync was not set.
 
 ```swift
-func processtermination(stringoutputfromrsync: \[String]?, hiddenID \_: Int?) {
+func processtermination(stringoutputfromrsync: [String]?, hiddenID: Int?) {
 	...
     
 	Task {
