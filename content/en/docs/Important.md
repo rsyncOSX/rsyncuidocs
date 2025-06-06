@@ -47,9 +47,9 @@ The complete rsync string is updated when parameters are changed.
 
 {{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-### Temporary suspending tasks
+### Temporary halt tasks
 
-A task can be temporarily suspended. Within the primary Synchronize view, select the task and right-click. Suspending a task will retain the type of task that was suspended when the task is resumed. An halted task displays a red stop sign in the action column.
+A task can be temporarily halted. Within the primary Synchronize view, select the task and right-click. Halting a task will retain the type of task that was halted when the task is resumed. An halted task displays a red stop sign in the action column.
 
 {{< figure src="/images/important/halttask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
