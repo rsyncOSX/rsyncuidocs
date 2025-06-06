@@ -10,14 +10,6 @@ categories = ["changelog"]
 
 {{% pageinfo color="info" %}}
 
-A note about the term *folder* and *directory*.  Quote ChatGPT: *"Both "folder" and "directory" refer to the same concept: a container used to organise files on a computer. "Folder" is more commonly used in graphical user interfaces, while "directory" is often used in command-line environments. They are interchangeable in meaning, with the context determining which term is preferred.*
-
-As my native language isn't English, I sometimes struggle with word distinctions. Currently, RsyncUI uses  the term "folder," and the RsyncUI documentation uses both terms "folder" and "directory." I might change "folder" to "directory" in the RsyncUI, but I'd appreciate native English speakers' guidance to ensure accuracy and clarity.
-
-{{< /pageinfo >}}
-
-{{% pageinfo color="info" %}}
-
 There has been *a lot of* UI-updates and cleanups of the UI within the latest release.  There are no changes to the model part or the process part, except for the schedule function which is new.
 
 Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Yesterday, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
