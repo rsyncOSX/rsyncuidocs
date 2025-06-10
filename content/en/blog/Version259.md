@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 This blog serves as a notification regarding the upcoming version of RsyncUI. In the previous released version I implemented a refactoring of the profile picker to enable the handling of nil values, following a tutorial I discovered. Upon further examination of the code, I conducted additional cleanup and eliminated unnecessary code. 
 
-Another major refactor is combining all objects for preparing, estimation and execution of tasks. *Prepare* is collect either all tasks, selected tasks or estimated tasks with data to synchronize. The combined object stores a stack of *prepared tasks*. During estimation and execution, the object pops the first task of the stack, computes arguments and init a Process object for execute of the command  `rsync`. When a process termination is observed, the next tasks is popped of the stack and the process is repeated until the stack is empty. 
+Another internal refactor is combining all objects for preparing, estimation and execution of tasks. *Prepare* is collect either all tasks, selected tasks or estimated tasks with data to synchronize. The combined object stores a stack of *prepared tasks*. During estimation and execution, the object pops the first task of the stack, computes arguments and initiates a Process object for execute of the command  `rsync`. When a process termination is observed, the next tasks is popped of the stack and the process is repeated until the stack is empty. 
 
 By combining the above objects it is easier to read the code and eliminated unnecessary code.
 
