@@ -14,8 +14,8 @@ Another major refactor is combining all objects for preparing, estimation and ex
 
 By combining the above objects it is easier to read the code and eliminated unnecessary code.
 
-The code within the most recent released version adheres to the expected behavior. However, whenever possible, I strive to achieve the same result with lesser code.
+The code within the most recent released version adheres to the expected behavior. However, whenever possible, I strive to achieve the same result with lesser code. Lesser code is better code.
 
-The above is one example of cleanup. And this is the major work in next version, cleanup of code. And there *may* be some minor enhancements as well. To be released sometime in July 2025. 
+ Cleanup of code is the major work in next version. And there *will* be some minor fixes well. To be released sometime in July 2025. 
 
 The GitHub repository is updated. You may browse changes in code by view  [latest release](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.5.8). The main repository is committed with latest changes.
