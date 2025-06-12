@@ -10,12 +10,11 @@ Included in Swift 5 is a unified logging feature called `OSLog`. This feature pr
 
 OSLog information in Xcode. The logging displays commands and arguments as shown below. This feature facilitates the verification that RsyncUI is executing the correct command.
 
-
 {{< figure src="/images/console/logger.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 And the OSLogs might be read by using the Console app. Be sure to set:
 
 - the Action in Console app menu to `Include Info Messages`
--  enter `no.blogspot.RsyncUI` as subsystem within the Search field
+- enter `no.blogspot.RsyncUI` as subsystem within the Search field
 
 {{< figure src="/images/console/console.png" alt="" position="center" style="border-radius: 8px;" >}}
