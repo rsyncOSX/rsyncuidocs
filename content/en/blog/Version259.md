@@ -14,8 +14,8 @@ The following are changes in this release:
 
 - a few internal refactors
     - three objects for estimation and execution are merged into one object, cleaner code and easier to read
-    - two objects for montoring state within estimate and execute are removed, the Process object which executes the external rsync task is reporting when a the external task is sending a ProcessTermination signal
-        - by this we know when a process starts, when it is in progress and when it is completed, dont need any state object for monitoring progress
+    - two objects for montoring state for estimate and execute are removed, the Process object which executes the external rsync task is reporting when the external task is sending a ProcessTermination signal
+        - by the above we know when a process *starts*, when it is in *progress* and when it is *completed*, dont need any state object for monitoring progress
     - removed not used properties like the profile name
         - the profile picker uses the UUID (the id) to compute the profile name when a new profile is selected
         - makes the code easier to read, less prone for errors when code is updated and less properties for RsyncUI to monitor
