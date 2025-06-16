@@ -1,20 +1,27 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.5.9"
-date = "2025-06-12"
+date = "2025-06-16"
 tags = ["changelog","version 2.5.9"]
 categories = ["changelog"]
 +++
 
-### Version 2.5.9 (build 153) - not yet released
+### Version 2.5.9 (build 153) - June 16, 2025 
 
-This blog serves as a notification regarding the upcoming version of RsyncUI. 
+This is as previous release, mostly a maintenance release. I have also, for test, compiled RsyncUI with the Xcode 26 beta. And it compiled with no errors as expected. There will be a new release when macOS Tahoa 26 and Xcode 26 with Swift version 6.2 is avaliable as release candidates. I dont know when this happens, but most likely in Sept or October sometime. And of course, if bugs are found a fix will be relased.
 
-The latest release, *version 2.5.8 b152* is *stable*. But very often, internal refactor, QA and cleaning of code causes more cleanup and refactors. And so far there has been several refactors and cleanups in code next version. The GitHub repository is updated. You may browse changes in code by view  [latest release](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.5.8). The main repository is committed with latest updates.
+The following are changes in this release:
 
-You may ask why are there refactors and cleanup? Almost every day, I spend some time review parts of my code. I get input by reading blogs and some blogs do inspire my to do some changes. One major objective is to get code which is effective, clean and easy to understand. And remove any code not used. There is a 20/80 rule, the Pareto principle, which suggest that approx 20% of the code accounts for 80% of the execution. What I am saying is, identify the most used code and make it as effective as possible. And not only effective, but easy to read and understand. 
+- a few internal refactors
+    - three objects for estimation and execution are merged into one object, cleaner code and easier to read
+    - two objects for montoring state within estimate and execute are removed, the Process object which executes the external rsync task is reporting when a the external task is sending a ProcessTermination signal
+        - by this we know when a process starts, when it is in progress and when it is completed, dont need any state object for monitoring progress
+    - removed not used properties like the profile name
+        - the profile picker uses the UUID (the id) to compute the profile name when a new profile is selected
+        - makes the code easier to read, less prone for errors when code is updated and less properties for RsyncUI to monitor
+- added a couple of more checks before executing tasks
+    - one check is if more than one task is selected, the double click function is disabled
+- a few UI updates as well
 
-RsyncUI does also heavily use the Apple Framework OSLog, for logging. The logging in RsyncUI produces logs at every major step. By using Xcode, I can observe every major step of what RsyncUI is doing. In total of about 17,8K lines of code there are 188 log statments in 55 files. 
-
-There will be a more detailed changelog when next release is ready for release by end of June 2025. 
+Less code is better code. 
 
