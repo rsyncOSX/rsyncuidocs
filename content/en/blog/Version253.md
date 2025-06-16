@@ -8,16 +8,6 @@ categories = ["changelog"]
 
 ### Version 2.5.3 (build 145) - May 14, 2025
 
-{{% pageinfo color="info" %}}
-
-There has been *a lot of* UI-updates and cleanups of the UI within the latest release.  There are no changes to the model part or the process part, except for the schedule function which is new.
-
-Recently, I encountered an unusual hang issue with RsyncUI, characterized by a spinning beach ball effect that caused RsyncUI to freeze. Yesterday, I was able to identify the specific cause and location of the problem, although the underlying reason remains unknown.
-
-By simply commenting out a single line of code, I can reproduce the hang. I have attempted to pinpoint the cause using Xcode, but Xcode remains silent and does not generate any errors. While I suspect a potential bug in SwiftUI, the most significant achievement is that I have successfully recreated the hang and identified the precise code fix.
-
-{{< /pageinfo >}}
-
 Major updates in the this release are, a detailed changelog on the GitHub release page. And thanks very much to [Johnny Sauce](https://github.com/sashemi) for valuable input and feedback.
 
 - a fix for the above mentioned spinning beach ball
@@ -39,11 +29,3 @@ Major updates in the this release are, a detailed changelog on the GitHub releas
 - the annoying popup adding your own path for rsync and restore path is also removed and replaced with red text until validated OK
 - a new calendar for schedule actions, please read about the scheduler below before commence using it
     - to delete a schedule, just select it and press the back space button
-
-{{% pageinfo color="info" %}}
-
-The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."*  The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
-
-Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. But if you leave your Mac and it goes to sleep, the timer will not work.
-
-{{< /pageinfo >}}

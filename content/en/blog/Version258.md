@@ -8,9 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.5.8 (build 152) - June 5, 2025 
 
-This is a maintenance release. The release is signed and notarized by Apple.
-
-There are quite a few minor updates:
+This is a maintenance release. The release is signed and notarized by Apple. There are quite a few minor updates:
 
 - refactor, internal, merge of two objects for monitoring progress of estimation and the real synchronization task
 - there was an issue with progress view during synchronization of a task by using "double click"
