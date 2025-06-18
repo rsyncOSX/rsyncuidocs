@@ -12,5 +12,5 @@ I have commenced development of next version by using Xcode 26 beta which includ
 
 I have applied changes to all actors in this branch, as well as converted and refactored the object for writing logfile to an actor. There will also be some new minor GUI enhancements to this version when released. 
 
-When Apple releases a *public beta* of macOS 26 Tahoe, I will install it and investigate if I should do adapt some Tahoe specific changes to RsyncUI. RsyncUI will still be supported for the last three versions of macOS. 
+When Apple releases a *public beta* of macOS 26 Tahoe, I will install it and investigate if I will adapt some  macOS 26 Tahoe specific changes to RsyncUI. RsyncUI will still be **supported** for the last three versions of macOS. 
 
