@@ -17,6 +17,7 @@ Changes June, 27:
     - there are added three colors for rows tagged for: delete, pull and push, it might assist in deciding push or pull
     - from the result of push and pull, go direct to either push or pull view
 - the Calendar function my by hidden from main Sidebar, on by default
+    - set in RsyncUI Settings
 - after an estimate run, the Estimate column within main Synchronize view is removed, the Synchronize ID is tagged with color instead
 - refactor of write and read to logfile as actor, writing and reading to logfile is now on a background thread
 - the Import function is refactored,  see File->Export & Import->Import
