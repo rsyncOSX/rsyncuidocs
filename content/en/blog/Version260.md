@@ -10,9 +10,11 @@ categories = ["changelog"]
 
 Build by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). I will from time to time release new builds of version 2.6.0 until macOS 26 Tahoe is released. The build is based upon the `version-2.6.0-xcode26` branch.
 
+There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. 
+
 Changes June, 27:
 
-- refactor of the Verify Remote, caution this is a special function and please read about it within the Documents
+- refactor of the Verify Remote function, caution this is a special function and please read about it within the Documentation,  refer to the *Verify remote* section.
     - the output, estimates, from both pull and push are now by default not adjusted
     - there are added three colors for rows tagged for: delete, pull and push, it might assist in deciding push or pull
     - from the result of push and pull, go direct to either push or pull view
