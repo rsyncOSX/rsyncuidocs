@@ -14,14 +14,15 @@ To begin, I must admit that my knowledge of Swift concurrency is limited. I have
 
 RsyncUI is a graphical user interface (GUI) application; the majority of its operations are executed on the main thread. However, some resource-intensive tasks are performed on other threads managed the cooperative thread pool (CTP), excluding and not blocking the main thread. How to the executors and CTP works and interacts is details I dont know about, and it is managed by the Swift runtime. There are three kinds of executors:
 
-- the Main Executor manage jobs on the Main Thread
-- the global concurrent executor and the serial executor, both executes jobs on threads from the CTP
+- the **main executor** manage jobs on the Main Thread
+- the **global concurrent executor** and the **serial executor**, both executes jobs on threads from the CTP
 
 The most important work are executed on the Main Thread. By default, SwiftUI makes sure all UI-updates are performed on the Main Thread. Below are other tasks on the Main Thread:
 
 - preparing of and execution of `rsync` synchronize tasks, preparing is computing the correct arguments for rsync 
 - monitoring progress and termination of the real rsync tasks
 - write operations of logdata of synchronize tasks to storage
+- write and read the logfile for RsyncUI
 
 All read and write operations, transmission of the synchronized data is outside control of RsyncUI and taken care of by `rsync` itself.
 
@@ -41,16 +42,17 @@ RsyncUI adheres to the new concurrency model of Swift 6.
 
 The following tasks are executed asynchronous on threads from the CTP, adhering to the `actor` protocol:
 
-- reading operations
+- all reading operations
 - data decoding and encoding
 - sorting log records
 - preparing output from rsync for display
 - preparing data from the logfile, not logrecords, for display
 - checking for updates to RsyncUI
+- write data to RsyncUI logfile
 
 Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are three types of executors, which manages jobs and put jobs on threads for execution. 
 
-The above mentioned tasks are executed on threads from the CTP, and not on the`@MainActor`. The runtime environment handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads from the CTP.
+The above mentioned tasks are executed on threads from the CTP, and not on the`@MainActor`. The Swift concurrency runtime handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads from the CTP.
 
 ##### Structured concurrency
 
