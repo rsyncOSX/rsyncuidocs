@@ -45,5 +45,5 @@ The GitHub Desktop now includes generating commit comments by GitHub Copilot. Fr
 
 I have tested installing, by Homebrew, the latest version of RsyncUI on a virtual macOS 26 Tahoe. I did also install the latest version of rsync by Homebrew. And by a short test only, both RsyncUI and the latest version of rsync did run as expected. 
 
-When Apple releases a *public beta* of macOS 26 Tahoe, I will install it and investigate if I will adapt some  macOS 26 Tahoe specific changes to RsyncUI. RsyncUI will still be **supported** for the last three versions of macOS.
+And I have commenced some testing and development on the virtual macOS 26 Tahoe and Xcode 26 beta. It might be some macOS 26 Tahoe specific changes to RsyncUI, but it will still **support**  for the last three versions of macOS. Any macOS 26 Tahoe specific changes are handled by compiler directives in code. 
 
