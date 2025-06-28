@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.0"
-date = "2025-06-27"
+date = "2025-06-28"
 tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
@@ -11,6 +11,15 @@ categories = ["changelog"]
 Build by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). I will from time to time release new builds of version 2.6.0 until macOS 26 Tahoe is released. The build is based upon the `version-2.6.0-xcode26` branch.
 
 There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. This means the development build is as stable as the released version. But changes might introduce some issues to the UI part only. 
+
+Changes in code, not yet released:
+
+- profile picker is hidden if only Default profile in use
+    - if a new profile is added, the profile picker is present
+    - also applies to profile picker if Sidebar menu is hidden
+- in Tasks view, buttons for saving URL strings are refactored
+    - the URL strings are added to Rsync Parameters view
+- text colors are now Colorscheme aware, black if light scheme and white if dark scheme
 
 Changes June, 27:
 
