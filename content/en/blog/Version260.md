@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 ### Version 2.6.0 (build 154) - development build
 
+Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
+
 Build by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). I will from time to time release new builds of version 2.6.0 until macOS 26 Tahoe is released. The build is based upon the `version-2.6.0-xcode26` branch.
 
 There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. This means the development build is as stable as the released version. But changes might introduce some issues to the UI part only. 
@@ -38,17 +40,7 @@ And there is a detailed changelog from the release page GitHub.
 
 #### Development in progress
 
-There is a new beta of Xcode and Swift 6, Xcode 26 and Swift 6.2. There are some new features regarding concurrency in Swift 6.2 and I have just started to read and learn more about them. There are three branches on the GitHub repository now. The Xcode 26 branch `version-2.6.0-xcode26` includes only some concurrency specific features. This branch require Xcode 26 to compile. All branches are apart from the concurrency specific parts, updated with latest development.
-
-Xcode 16.4 and Swift 6.1
-
-- `main` and `version-2-6-0`branch
-
-Xcode 26 and Swift 6.2 beta
-
-- `version-2.6.0-xcode26` branch
-
-The GitHub Desktop now includes generating commit comments by GitHub Copilot. From version 2.6.0 of RsyncUI there is more info about the commits. 
+There is a new beta of Xcode and Swift 6, Xcode 26 and Swift 6.2. There are some new features regarding concurrency in Swift 6.2 and I have just started to read and learn more about them. The GitHub Desktop now includes generating commit comments by GitHub Copilot. From version 2.6.0 of RsyncUI there is more info about the commits. 
 
 #### Macos 26 Tahoe
 
