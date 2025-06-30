@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.0"
-date = "2025-06-28"
+date = "2025-06-30"
 tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.0 (build 154) - development build
+### Version 2.6.0 (build 154) - development build 
 
 Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
 
@@ -14,7 +14,7 @@ Build by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Taho
 
 There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. This means the development build is as stable as the released version. But changes might introduce some issues to the UI part only. 
 
-Changes in code, not yet released:
+Changes June, 30:
 
 - profile picker is hidden if only Default profile in use
     - if a new profile is added, the profile picker is present
