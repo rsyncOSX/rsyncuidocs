@@ -16,6 +16,8 @@ There are not any updates or refactors to the main parts of RsyncUI, like estima
 
 Changes July, 3:
 
+There is one *minor* issue, to be fixed in the *release version*. If there are future schedules and hide schedule is switch *on* again, schedules are not deleted. Be aware of hide schedules are by default *on*. The fix will delete the shedules file. Workaround, delete any schedules before switch *on* again.
+
 - if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
     - the issue applies only if using Light Colorscheme
     - I was not aware of the issues, on both my Macs I was using Dark Colorscheme, now I am using Light Colorscheme on one of my Macs
