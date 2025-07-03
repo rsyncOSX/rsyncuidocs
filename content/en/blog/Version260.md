@@ -8,13 +8,11 @@ categories = ["changelog"]
 
 ### Version 2.6.0 (build 154) - development build 
 
-Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
+Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile. This is most likely the *last development build* for some time. The next release might be a new release when macOS Tahoe is a public release candidate.
 
-Built by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). I will from time to time release new builds of version 2.6.0 until macOS 26 Tahoe is released. 
+Built by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). 
 
-There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. This means the development build is as stable as the released version. But changes might introduce some issues to the UI part only. 
-
-This is most likely the last development build for some time. The next release might be a new release when macOS Tahoe is a public release candidate.
+There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process apart from some new concurrency keywords (Swift 6.2) added to the actors. This means the development build is as stable as the released version. 
 
 Changes July, 3:
 
