@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.0"
-date = "2025-06-30"
+date = "2025-07-03"
 tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
@@ -13,6 +13,14 @@ Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
 Built by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). I will from time to time release new builds of version 2.6.0 until macOS 26 Tahoe is released. 
 
 There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process and so on apart from some new concurrency keywords added to the actors. This means the development build is as stable as the released version. But changes might introduce some issues to the UI part only. 
+
+This is most likely the last development build for some time. The next release might be a new release when macOS Tahoe is a public release candidate.
+
+Changes July, 3:
+
+- if Colorscheme is light there are some issues with text colors, the last issue is resolved regarding text colors
+- the Calendar is renamed to Schedule, and there was an issue loading schedules for "Default" profile
+    - The Schedule is by default hidden, you may enable it in user settings
 
 Changes June, 30:
 
