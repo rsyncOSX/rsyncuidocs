@@ -18,9 +18,12 @@ This is most likely the last development build for some time. The next release m
 
 Changes July, 3:
 
-- if Colorscheme is light there are some issues with text colors, the last issue is resolved regarding text colors
+- if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
+    - the issue applies only if using Light Colorscheme
+    - I was not aware of the issues, on both my Macs I was using Dark Colorscheme, now I am using Light Colorscheme on one of my Macs
 - the Calendar is renamed to Schedule, and there was an issue loading schedules for "Default" profile
     - The Schedule is by default hidden, you may enable it in user settings
+- after an estimate run, the Estimate column within main Synchronize view is removed, the Synchronize ID is tagged with color instead and during estimation prefixed by an arrow
 
 Changes June, 30:
 
@@ -37,9 +40,7 @@ Changes June, 27:
     - the output, estimates, from both pull and push are now by default not adjusted
     - there are added three colors for rows tagged for: delete, pull and push, it might assist in deciding push or pull
     - from the result of push and pull, go direct to either push or pull view
-- the Calendar function my by hidden from main Sidebar, on by default
-    - set in RsyncUI Settings
-- after an estimate run, the Estimate column within main Synchronize view is removed, the Synchronize ID is tagged with color instead
+
 - refactor of write and read to logfile as actor, writing and reading to logfile is now on a background thread
 - the Import function is refactored,  see File->Export & Import->Import
 - added new concurrency keywords, new keywords included Swift version 6.2
