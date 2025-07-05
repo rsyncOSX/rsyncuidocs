@@ -10,9 +10,11 @@ categories = ["changelog"]
 
 Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile. This is most likely the *last development build* for some time. The next release might be a new release when macOS Tahoe is a public release candidate. Built by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). 
 
-Updates in the dev build (or releasec candidate):
+##### Minor issue Schedule
 
 There is one *minor* issue, to be fixed in the *release version*. If there are future schedules and hide schedule is switch *on* again, schedules are not deleted. Be aware of hide schedules are by default *on*. The fix will delete the shedules file. Workaround, delete any schedules before switch *on* again.
+
+##### Updates in the dev build (or release candidate):
 
 - if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
     - the issue applies only if using Light Colorscheme
