@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.0"
-date = "2025-07-03"
+date = "2025-07-08"
 tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
@@ -17,6 +17,7 @@ There is one *minor* issue, to be fixed in the *release version*. If there are f
 ##### Updates in the dev build (or release candidate):
 
 - if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
+    - *there was one last issue regarding Colorscheme, it seems to be resolved now in beta 4*
     - the issue applies only if using Light Colorscheme
     - I was not aware of the issues, on both my Macs I was using Dark Colorscheme, now I am using Light Colorscheme on one of my Macs
 - the Calendar is renamed to Schedule, and there was an issue loading schedules for "Default" profile
