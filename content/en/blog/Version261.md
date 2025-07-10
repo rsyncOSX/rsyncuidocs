@@ -12,7 +12,7 @@ Version 2.6.1 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
 
 ##### Updates in this release
 
-- if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
+- fixed issue with text colors if Colorscheme is Light, Colorscheme is Light, Dark or Auto (Apperance in macOS Settings)
     - the issue applies only if using Light Colorscheme
     - I was not aware of the issues, on both my Macs I was using Dark Colorscheme, now I am using Light Colorscheme on one of my Macs
 - the Calendar is renamed to Schedule, and there was an issue loading schedules for "Default" profile
