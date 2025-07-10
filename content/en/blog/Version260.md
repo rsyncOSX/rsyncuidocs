@@ -6,18 +6,13 @@ tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.0 (build 154) - development build 
+### Version 2.6.1 (build 155) - July 10, 2025 
 
-Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile. This is most likely the *last development build* for some time. The next release might be a new release when macOS Tahoe is a public release candidate. Built by *Xcode 26 beta 2, Swift 6.2* on *macOS 15.5 Sequoia* (not macOS 26 Tahoe). 
+Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile. 
 
-##### Minor issue Schedule
-
-There is one *minor* issue, to be fixed in the *release version*. If there are future schedules and hide schedule is switch *on* again, schedules are not deleted. Be aware of hide schedules are by default *on*. The fix will delete the shedules file. Workaround, delete any schedules before switch *on* again.
-
-##### Updates in the dev build (or release candidate):
+##### Updates in this release
 
 - if Colorscheme is Light there are some issues with text colors, the last issue is resolved regarding text colors
-    - *there was one last issue regarding Colorscheme, it seems to be resolved now in beta 4*
     - the issue applies only if using Light Colorscheme
     - I was not aware of the issues, on both my Macs I was using Dark Colorscheme, now I am using Light Colorscheme on one of my Macs
 - the Calendar is renamed to Schedule, and there was an issue loading schedules for "Default" profile
