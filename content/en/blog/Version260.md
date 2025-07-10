@@ -1,14 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.0"
-date = "2025-07-08"
+date = "2025-07-10"
 tags = ["changelog","version 2.6.0"]
 categories = ["changelog"]
 +++
 
 ### Version 2.6.1 (build 155) - July 10, 2025 
 
-Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile. 
+Version 2.6.1 of RsyncUI require Xcode 26 and Swift 6.2 to compile. 
 
 ##### Updates in this release
 
@@ -33,7 +33,7 @@ Version 2.6.0 of RsyncUI require Xcode 26 and Swift 6.2 to compile.
 - added new concurrency keywords
     - new keywords included Swift version 6.2
 
-And there is a detailed changelog from the release page GitHub. There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process apart from some new concurrency keywords (Swift 6.2) added to the actors. This means the development build is as stable as the released version. 
+And there is a detailed changelog from the release page GitHub. There are not any updates or refactors to the main parts of RsyncUI, like estimation, execution, process apart from some new concurrency keywords (Swift 6.2) added to the actors.
 
 #### New concurrency keywords and AI generated commit comments
 
