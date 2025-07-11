@@ -43,6 +43,10 @@ After changing a setting, you have to save the changes to keep it next time you 
 
 - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
+**Hide Schedule:**
+
+- refer to blog *"The Timer and Calendar"*, hide the Schedule, default **not** enabled
+
 **Confirm Execution:**
 
 - See below.
