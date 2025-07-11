@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
-title = "Timer and Calendar"
+title = "Timer and Schedule"
 date = "2025-03-01"
 tags = ["timer"]
 categories = ["technical details"]
 +++
 
-### The Timer and Calendar
+### The Timer and Schedule
 
 The Schedules is developed by utilizing the Timer library. The actual synchronize task is kicked off when the scheduler writes the profile name to an observed value monitored by RsyncUI. The profile name is added to the schedule itself, the callback does the update of the observed value when the timer is kicked off. 
 
