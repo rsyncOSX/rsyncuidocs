@@ -45,7 +45,7 @@ After changing a setting, you have to save the changes to keep it next time you 
 
 **Hide Schedule:**
 
-- refer to blog *"The Timer and Schedule"*, hide the Schedule, default **not** enabled
+- refer to section *"Schedule"*, hide the Schedule, default **not** enabled
 
 **Confirm Execution:**
 

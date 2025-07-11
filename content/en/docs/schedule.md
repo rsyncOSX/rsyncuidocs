@@ -1,8 +1,8 @@
 +++
 author = "Thomas Evensen"
 date = "2025-01-30"
-title =  "Calendar"
-tags = ["calendar","schedule"]
+title =  "Schedule"
+tags = ["schedule"]
 categories = ["synchronize"]
 +++
 {{% pageinfo color="info" %}}
