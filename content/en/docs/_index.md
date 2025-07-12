@@ -14,6 +14,14 @@ As a safety precaution, the --delete parameter is *not* set as a default paramet
 
 {{< alert >}}
 
+A note about the terms **source** and **target** vs  **local** and **remote**, the last is used in RsyncUI. ChatGPT says the following: *In rsync documentation and usage, the most common terms are **source** and **destination**. These clearly indicate where the data is coming from and where it is going. While local and remote can be used when specifying locations across different systems, source and destination are universally applicable for both local and remote transfers.*
+
+In future versions of RsyncUI, I may change the terms to **source** and **destination**.
+
+{{< /alert >}}
+
+{{< alert >}}
+
 A note about the Calendar function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. If you lock your Mac, the schedule will NOT fire.  The schedule will only fire as long as your Mac is "awake" and you are *logged* in. Refer to the *Limitations* section. 
 
 {{< /alert >}}
