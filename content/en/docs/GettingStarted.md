@@ -20,11 +20,11 @@ RsyncUI supports synchronizing data to:
 
 #### Local attached disk
 
-RsyncUI can synchronize your data to a local attached disk. If you only want to synchronize data to a local attached disk, connect the disk, add the source and destination, and you are ready for your first task.
+RsyncUI can synchronize your data to a local attached disk. If you only want to synchronize data to a local attached disk, connect the disk, add the *source* and *destination*, and you are ready for your first task.
 
 #### Remote server and passwordless login
 
-If you want to synchronize data to a server, on the Internet, or your local LAN, there is some more setup to do. If you have enabled *passwordless login* by ssh-key, you only have to add *source*, *destination*, *login id*, and *servername* and you are ready to synchronize data. If you have *not* enabled passwordless login, there are some more actions required before your first task.
+If you want to synchronize data to a server, on the Internet, or your local LAN, there is some more setup to do. If you have enabled *passwordless login* by ssh-key, you only have to add *source*, *destination*, *login id*, and *server name* and you are ready to synchronize data. If you have *not* enabled passwordless login, there are some more actions required before your first task.
 
 **Verify tasks**
 

@@ -10,9 +10,7 @@ The User Interface of RsyncUI may pose challenges for users unfamiliar with the 
 
 {{< alert color="warning" >}}
 
-Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions.
-
-RsyncUI is a complimentary and open-source application. Kindly review the MIT license.
+Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. *Kindly review the MIT license* before commence using RsyncUI.
 
 {{< /alert >}}
 

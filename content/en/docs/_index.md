@@ -4,7 +4,9 @@ linkTitle: Documentation
 menu: { main: { weight: 20 } }
 ---
 
-*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is *digitally signed* and *notarized* by Apple. RsyncUI is 100% open-source software and will remain absolutely free for all time.
+*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is 100% open-source software and will remain absolutely free for all time.
+
+RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security and preventing malicious code and tampering.
 
 {{< alert color="warning" >}}
 
@@ -22,7 +24,9 @@ In the next version, version 2.6.2, the terms have been revised to consecvent **
 
 {{< alert >}}
 
-A note about the Calendar function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. If you lock your Mac, the schedule will NOT fire.  The schedule will only fire as long as your Mac is "awake" and you are *logged* in. Refer to the *Limitations* section. 
+A note about the Schedule function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. If you lock your Mac, the schedule will NOT fire.  The schedule will only fire as long as your Mac is "awake" and you are *logged* in. Refer to the *Limitations* section. 
+
+The Schedule is by default a hidden feature, enable in user settings.
 
 {{< /alert >}}
 
