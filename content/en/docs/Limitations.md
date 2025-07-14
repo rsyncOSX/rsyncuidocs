@@ -22,9 +22,9 @@ You may modify your Mac's sleep settings to control when it sleeps.
 
 The above will also be true of you are using the Calendar function.
 
-#### The Calendar
+#### The Schedule
 
-A note about the Calendar and schedule of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the blog *Timer and Calendar* for more detailed info about the Timer.
+A note about the Schedule and scheduling of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the blog *Timer and Schedule* for more detailed info about the Timer.
 
 Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. 
 
@@ -37,8 +37,6 @@ If you leave your Mac and it goes to sleep, the timer will *not work*.
 {{< /alert >}}
 
 The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
-
-
 
 ### Aborting Tasks
 
