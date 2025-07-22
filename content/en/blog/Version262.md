@@ -19,3 +19,7 @@ There was a request to display the % of completed transfer pr file. It seems dif
     - the total number of files requiere an estimation run ahead of synchronization
     - the counter is displayed as part of the progress bar
 - consistent use of *source* and *destination*
+
+ChatGPT says the following: *In rsync documentation and usage, the most common terms are **source** and **destination**. These clearly indicate where the data is coming from and where it is going. While local and remote can be used when specifying locations across different systems, source and destination are universally applicable for both local and remote transfers.* 
+
+In version, version 2.6.2, the terms have been revised to consecvent **source** and **destination**. The term **remote** is now exclusively used to refer to **remote user** and **remote server**. 
