@@ -22,7 +22,7 @@ In RsyncUI, even if all snapshots are marked for deletion, the first and last sn
 
 ### Snapshots
 
-A snapshot is a saved state or backup of data at a specific point in time. Each snapshot is synchronized with the local directory at the time of creation.
+A snapshot is a saved state or backup of data at a specific point in time. Each snapshot is synchronized with the source at the time of creation.
 
 #### Remote server
 

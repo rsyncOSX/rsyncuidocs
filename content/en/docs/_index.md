@@ -16,9 +16,7 @@ As a safety precaution, the --delete parameter is *not* set as a default paramet
 
 {{< alert >}}
 
-A note about the terms **source** and **target** vs  **local** and **remote**. ChatGPT says the following: *In rsync documentation and usage, the most common terms are **source** and **destination**. These clearly indicate where the data is coming from and where it is going. While local and remote can be used when specifying locations across different systems, source and destination are universally applicable for both local and remote transfers.*
-
-In the next version, version 2.6.2, the terms have been revised to consecvent **source** and **destination**. The term **remote** is now exclusively used to refer to **remote user** and **remote server**. The user documentation to be updated as well.
+ChatGPT says the following: *In rsync documentation and usage, the most common terms are **source** and **destination**. These clearly indicate where the data is coming from and where it is going. While local and remote can be used when specifying locations across different systems, source and destination are universally applicable for both local and remote transfers.* In version, version 2.6.2, the terms have been revised to consecvent **source** and **destination**. The term **remote** is now exclusively used to refer to **remote user** and **remote server**. The user documentation to be updated as well.
 
 {{< /alert >}}
 

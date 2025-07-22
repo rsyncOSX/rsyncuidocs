@@ -10,7 +10,7 @@ categories = ["technical details"]
 
 {{% pageinfo color="info" %}}
 
-It is imperative that RsyncUI tags tasks with data to be synchronized correctly. If the tagging fails, there may be local data that is not synchronized. RsyncUI supports the latest version of rsync and the older default version of rsync included in macOS 14 and macOS 15.
+It is imperative that RsyncUI tags tasks with data to be synchronized correctly. If the tagging fails, there may be source data that is not synchronized. RsyncUI supports the latest version of rsync and the older default version of rsync included in macOS 14 and macOS 15.
 
 {{< /pageinfo >}}
 

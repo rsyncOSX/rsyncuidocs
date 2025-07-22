@@ -19,7 +19,7 @@ This is  a maintenance release. In the latest release, there were several UI upd
     - the automated selection of profile when mounting a volume is only valid if there is created one or more profiles
 - in Tasks, view for adding new tasks, pressing the Enter key does not jump to the next logical field in view
     - pressing Enter key automatically jumps to next input field and by end automatically adds new task
-- in QuickTasks, RsyncUI flips local and remote when executing a syncremote task, aka pull data from remote to local
+- in QuickTasks, RsyncUI flips source and destination when executing a syncremote task, aka pull data from destination to source
     - Quicktask is also only valid if there is a remote server involved, for local attached volumes use the macOS Finder
 - there is a minor issue selecting a task for adding parameters to rsync within the Rsync parameters view
     - the issue occurs if there is selected a task in the main Synchronize view, switch to Rsync parameters view, selecting the task will not enable adding parameters to rsync
