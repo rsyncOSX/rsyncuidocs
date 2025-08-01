@@ -18,7 +18,7 @@ I commenced the development of RsyncOSX in August 2016, which was archived and d
 
 I hold a master's degree in computing science, but I am not a professional developer. I completed my master's degree during the early 1990s, when Linux was released and the Internet became a public service. A few years prior to that, in 1989, the Web was invented at CERN. There is only one developer involved in the development of RsyncUI, and I am committed to ensuring its stability and user-friendliness. While I am not a UI designer, some users may find the UI complex and less user-friendly.
 
-The maintenance and development of RsyncUI are among my hobbies. If you find RsyncUI useful, I would appreciate it if you could consider giving me a star on the GitHub repository. Each star serves as motivation for me to continue developing RsyncUI. In May 2022, I retired from work at the age of 62. In my spare time, I am a passionate [photographer of birds](https://photosbythomas.netlify.app) and enjoy spending time in the Norwegian mountains. My grandchildren, photography, the development of RsyncUI, and cross-country skiing are some of the activities that keep me occupied.
+The maintenance and development of RsyncUI are among my hobbies. If you find RsyncUI useful, I would appreciate it if you could consider giving me a star on the GitHub repository. Each star serves as motivation for me to continue developing RsyncUI. In May 2022, I retired from work at the age of 62. In my spare time, I am a passionate [photographer of birds](https://birdsofprey.netlify.app) and enjoy spending time in the Norwegian mountains. My grandchildren, photography, the development of RsyncUI, and cross-country skiing are some of the activities that keep me occupied.
 
 {.text-center}
 
