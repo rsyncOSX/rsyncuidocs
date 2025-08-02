@@ -16,5 +16,5 @@ The following are updates, in code, for the next release:
 - in view of progress bar when synchronizing files, set fixed width of max number to transfer
 - refactor of the HomeCatalogs view in Add tasks
 
-{{< figure src="/images/263/home" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/263/home.png" alt="" position="center" style="border-radius: 8px;" >}}
 
