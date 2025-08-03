@@ -18,6 +18,7 @@ The following are updates, in code, for the next release. To be released before 
 - in this version a third method for observers is introduced, please refer to blog "Observers"
   - observing notifications is a key component of RsyncUI, if one method is deprecated it is secure to have two other methods if refactor is required
   - the third method is added after reading a blog by Majid Jabrayilov, a frequent blogger about Swift and SwiftUI
+  - this method seems to be the preferred method, *I will perform tests on macOS Tahoe 26 beta and macOS Sequoia before release of version 2.6.3*
 
 New updated icon:
 
