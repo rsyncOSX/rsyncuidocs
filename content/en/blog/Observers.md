@@ -13,23 +13,18 @@ A key feature of RsyncUI is observation for two notifications:
 
 Without observation and required actions when observed, RsyncUI becomes useless. Both observations are linked to the external task executing the actual rsync task.
 
-The first observation monitors when the external task generates output. To display the progress of a synchronization task, RsyncUI relies on monitoring the output from rsync. Therefore, the `—verbose` parameter to rsync is crucial. This parameter instructs rsync to output information during execution.
+## Notifications
 
-The second observation monitors when the task is completed, e.g. terminated. Typically, a termination indicates task completion. However, it may also be an abort action from the user, which then sends an interrupt signal to the external task. If RsyncUI fails to detect this signal, RsyncUI will not comprehend when a synchronization task is completed.
+The first notification, `NSNotification.Name.NSFileHandleDataAvailable`, monitors when the external task generates output. To display the progress of a synchronization task, RsyncUI relies on monitoring the output from rsync. Therefore, the `—verbose` parameter to rsync is crucial. This parameter instructs rsync to output information during execution.
 
-In RsyncUI, two methods for enabling observations have been introduced in the version 2.3.2. The preferred method is to utilize the declarative library Combine, developed by Apple. However, the future of Combine is somewhat uncertain. I consulted a developer working with Apple and with a deep understanding of Swift Concurrency, who informed me that Combine is not deprecated but may be in the future. 
+The second notification, `Process.didTerminateNotification`, monitors when the task is completed, e.g. terminated. Typically, a termination indicates task completion. However, it may also be an abort action from the user, which then sends an interrupt signal to the external task. If RsyncUI fails to detect this signal, RsyncUI will not comprehend when a synchronization task is completed.
 
-The second method involves utilizing a central Notification center. Observers for the two mentioned notifications are added to the Notification center, and the appropriate action is triggered when a signal is observed.
 
-In forthcoming versions of RsyncUI, both methods will be employed. However, if Combine is deprecated in the future, it is straightforward to replace it. In version 2.1.6, a significant refactoring of code utilizing Combine was implemented. 
+## Three methods 
 
-#### ChatGPT
+In RsyncUI, three methods for enabling observations of notifications have been introduced in the latest version 2.6.3. 
 
-ChatGPT about what is recommended of `NotificationCenter.default.publisher` and  `NotificationCenter.default.addObserver`. *In Swift, using NotificationCenter.default.publisher(for:) with the Combine framework is generally preferred for observing notifications, as it offers a more modern, type-safe, and declarative approach compared to the traditional addObserver method. The Combine-based method allows for better memory management and cleaner code, reducing the risk of retain cycles and the need for manual unsubscription. For more details, refer to Apple's documentation on NotificationCenter publishers.*
-
-Until I gain further insights into Apple's future plans for Combine, `NotificationCenter.default.publisher(for:)` remains the preferred solution in RsyncUI.
-
-#### Combine, Publisher and Asynchronous Execution
+## Combine and Publisher
 
 The Combine framework is exclusively utilized within the `Process` object, which is responsible for initiating external tasks,
 such as the `rsync` synchronize task. Combine is employed to monitor two specific notifications.
@@ -39,7 +34,7 @@ such as the `rsync` synchronize task. Combine is employed to monitor two specifi
 
 and act when they are observed. The `rsync` synchronize task is completed when the last notification is observed. By using Combine, a publisher is added to the Notification center. Every time the Notification center discover one of the notifications, it publish a message. 
 
-```bash
+```swift
 // Combine, subscribe to NSNotification.Name.NSFileHandleDataAvailable
 NotificationCenter.default.publisher(
   for: NSNotification.Name.NSFileHandleDataAvailable)
@@ -56,11 +51,11 @@ NotificationCenter.default.publisher(
     }.store(in: &subscriptons)
 ```
 
-#### Observers and Asynchronous Execution
+## NotificationCenter and addObserver
 
-As previously mentioned, the second method for observing notifications involves adding Observers to the Notification center. Upon the discovery of a notification, the completion handler is executed. The Process object is annotated to execute on the main thread. It appears that the addObserver closure is marked as Sendable, indicating that mutating properties within the closure must be asynchronous. This is due to *the Swift 6 language mode* and *strict concurrency checking*.
+The second method for observing notifications involves adding Observers to the Notification center. Upon the discovery of a notification, the completion handler is executed. The Process object is annotated to execute on the main thread. It appears that the addObserver closure is marked as Sendable, indicating that mutating properties within the closure must be asynchronous. This is due to *the Swift 6 language mode* and *strict concurrency checking*.
 
-```bash
+```swift
 // Observers
 var notificationsfilehandle: NSObjectProtocol?
 var notificationstermination: NSObjectProtocol?
@@ -84,4 +79,83 @@ notificationstermination =
                     await self.termination()
                 }
         }
+```
+
+Upon task completion, the Observers must be released to prevent a retain cycle and memory leak.
+
+```swift
+func termination() async {
+        processtermination(output, config?.hiddenID)
+        // Log error in rsync output to file
+        if errordiscovered, let config {
+            Task {
+                await ActorLogToFile(command: config.backupID,
+                                     stringoutputfromrsync: output)
+            }
+        }
+        SharedReference.shared.process = nil
+        NotificationCenter.default.removeObserver(notificationsfilehandle as Any,
+                                                  name: NSNotification.Name.NSFileHandleDataAvailable,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(notificationstermination as Any,
+                                                  name: Process.didTerminateNotification,
+                                                  object: nil)
+        Logger.process.info("ProcessRsyncObserving: process = nil and termination discovered")
+    }
+```
+
+## NotificationCenter.Notifications and AsyncSequence
+
+Quote Apple documentation: *"An asynchronous sequence of notifications generated by a notification center."* The for await loops iterates over the notifications and acts upon receiving. When the termination signal is observed, the tasks must also be canceled and Observers removed. 
+
+```swift
+// AsyncSequence
+let sequencefilehandler = NotificationCenter.default.notifications(named: NSNotification.Name.NSFileHandleDataAvailable, object: nil)
+let sequencetermination = NotificationCenter.default.notifications(named: Process.didTerminateNotification, object: nil)
+// Tasks
+var sequenceFileHandlerTask: Task<Void, Never>?
+var sequenceTerminationTask: Task<Void, Never>?
+....
+sequenceFileHandlerTask = Task {
+            for await _ in sequencefilehandler {
+                await self.datahandle(pipe)
+            }
+        }
+        
+sequenceTerminationTask = Task {
+            for await _ in sequencetermination {
+                Task {
+                    try await Task.sleep(seconds: 0.5)
+                    await self.termination()
+                }
+            }
+        }
+```
+
+Upon task completion, the Observers must be released, and corresponding Tasks must be canceled to prevent a retain cycle and memory leak.
+
+```swift
+func termination() async {
+        processtermination(output, config?.hiddenID)
+        // Log error in rsync output to file
+        if errordiscovered, let config {
+            Task {
+                await ActorLogToFile(command: config.backupID,
+                                     stringoutputfromrsync: output)
+            }
+        }
+        SharedReference.shared.process = nil
+        // Remove observers
+        NotificationCenter.default.removeObserver(sequencefilehandler as Any,
+                                                  name: NSNotification.Name.NSFileHandleDataAvailable,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(sequencetermination as Any,
+                                                  name: Process.didTerminateNotification,
+                                                  object: nil)
+        // Cancel Tasks
+        sequenceFileHandlerTask?.cancel()
+        sequenceTerminationTask?.cancel()
+        
+        Logger.process.info("ProcessRsyncAsyncSequence: process = nil and termination discovered")
+    }
 ```

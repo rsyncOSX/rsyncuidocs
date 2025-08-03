@@ -15,6 +15,9 @@ The following are updates, in code, for the next release. To be released before 
   - the icon is slightly redesigned, new cloud and new numbers as layers in Icon Composer
 - in view of progress bar when synchronizing files, set fixed width of max number to transfer
 - refactor of the Home catalogs view in Tasks
+- in this version a third method for observers is introduced, please refer to blog "Observers"
+  - observing notifications is a key component of RsyncUI, if one method is deprecated it is secure to have two other methods if refactor is required
+  - the third method is added after reading a blog by Majid Jabrayilov, a frequent blogger about Swift and SwiftUI
 
 New updated icon:
 
