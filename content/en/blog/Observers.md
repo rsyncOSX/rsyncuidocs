@@ -26,13 +26,7 @@ In RsyncUI, three methods for enabling observations of notifications have been i
 
 ## Combine and Publisher
 
-The Combine framework is exclusively utilized within the `Process` object, which is responsible for initiating external tasks,
-such as the `rsync` synchronize task. Combine is employed to monitor two specific notifications.
-
-- `NSNotification.Name.NSFileHandleDataAvailable`
-- `Process.didTerminateNotification`
-
-and act when they are observed. The `rsync` synchronize task is completed when the last notification is observed. By using Combine, a publisher is added to the Notification center. Every time the Notification center discover one of the notifications, it publish a message. 
+The Combine framework is utilized within the `ProcessRsync` and `ProcessCommand` objects, which is responsible for initiating external tasks, such as the `rsync` synchronize task. The `rsync` synchronize task is completed when the last notification is observed. By using Combine, a publisher is added to the Notification center. Every time the Notification center discover one of the notifications, it publish a message. 
 
 ```swift
 // Combine, subscribe to NSNotification.Name.NSFileHandleDataAvailable
