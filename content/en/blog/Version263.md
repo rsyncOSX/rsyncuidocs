@@ -12,7 +12,7 @@ Here are the code updates for the upcoming release, scheduled to be released bef
 
 #### Dev build #1 - August 4
 
-- the RsyncUI application icon has been updated using the new Apple Icon Composer
+- the RsyncUI application icon has been updated using the new Icon Composer tool
  	- this update supports icons in the new macOS Tahoe 26 and incorporates layered icons, the icon has also undergone a slight redesign, featuring a new cloud and numbers as layers in Icon Composer
 - the progress bar displayed during file synchronization has been set to have a fixed width, limiting the maximum number of transferred files
 - the Home catalogs view in the Tasks application has undergone a refactor
