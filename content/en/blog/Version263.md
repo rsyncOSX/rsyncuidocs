@@ -34,3 +34,14 @@ Assist in adding new catalogs, refactored to use pickers:
 {{< figure src="/images/263/home.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 
+#### Dev build #2 - not yet released
+
+Within Tasks, the option for trailing slash is refactored:
+
+- *Add* trailing slash, add a trailing slash to source and destination
+- *Do not add* trailing slash, don’t add or if added remove
+- *Do not check*, accept whatever is added, slash or no slash on either
+
+Either source or destination is allowed to be empty.
+
+{{< figure src="/images/263/slash.png" alt="" position="center" style="border-radius: 8px;" >}}
