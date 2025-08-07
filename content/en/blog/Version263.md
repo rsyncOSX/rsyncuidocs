@@ -16,7 +16,7 @@ Here are the code updates for the upcoming release, scheduled to be released bef
 	- *Add* trailing slash, add a trailing slash to source and destination
 	- *Do not add* trailing slash, don’t add or if added remove
 	- *Do not check*, accept whatever is added, slash or no slash on either
-- within Tasks, the values for *Action* and *Trailing /* is saved during the session
+- within Tasks, the values for *Action* and *Trailing /* is saved during the session if set to other than default values 
 	- values “survive" Add, Update and change profile
     - values are temporary saved in UserDefaults
     - when RsyncUI restarts, the above values is set to default values
