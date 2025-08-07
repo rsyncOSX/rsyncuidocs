@@ -6,9 +6,24 @@ tags = ["changelog","version 2.6.3"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.3 (build 157) - August 4, 2025
+### Version 2.6.3 (build 157) - August 7, 2025
 
 Here are the code updates for the upcoming release, scheduled to be released before the end of August 2025:
+
+#### Dev build #2 - August 7
+
+- within Tasks, the option for trailing slash is refactored:
+	- *Add* trailing slash, add a trailing slash to source and destination
+	- *Do not add* trailing slash, don’t add or if added remove
+	- *Do not check*, accept whatever is added, slash or no slash on either
+- within Tasks, the values for *Action* and *Trailing /* is saved during the session
+	- values “survive" Add, Update and change profile
+    - values are temporary saved in UserDefaults
+    - when RsyncUI restarts, the above values is set to default values
+
+Either source or destination is allowed to be empty.
+
+{{< figure src="/images/263/slash.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Dev build #1 - August 4
 
@@ -32,19 +47,3 @@ The total number, like `9 068` below, is fixed on line:
 Assist in adding new catalogs, refactored to use pickers:
 
 {{< figure src="/images/263/home.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-
-#### Dev build #2 - August 7
-
-- within Tasks, the option for trailing slash is refactored:
-	- *Add* trailing slash, add a trailing slash to source and destination
-	- *Do not add* trailing slash, don’t add or if added remove
-	- *Do not check*, accept whatever is added, slash or no slash on either
-- within Tasks, the values for *Action* and *Trailing /* is saved during the session
-	- values “survive" Add, Update and change profile
-    - values are temporary saved in UserDefaults
-    - when RsyncUI restarts, the above values is set to default values
-
-Either source or destination is allowed to be empty.
-
-{{< figure src="/images/263/slash.png" alt="" position="center" style="border-radius: 8px;" >}}
