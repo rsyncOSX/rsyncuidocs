@@ -12,7 +12,7 @@ Updates for the Upcoming Release (Scheduled for Release Before the End of August
 
 #### Dev build #3 - not yet released
 
-In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form offers a more streamlined and user-friendly interface. Additionally, data is now saved by default in UserSettings on macOS. When views are reentered, the data is automatically restored.
+In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quick task is reentered, the data is automatically restored.
 
 #### Dev build #2 - August 7
 
