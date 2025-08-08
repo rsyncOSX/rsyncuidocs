@@ -1,16 +1,16 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.3"
-date = "2025-08-07"
+date = "2025-08-08"
 tags = ["changelog","version 2.6.3"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.3 (build 157) - August 7, 2025
+### Version 2.6.3 (build 157) - August 8, 2025
 
 Updates for the Upcoming Release (Scheduled for Release Before the End of August 2025):
 
-#### Dev build #3 - not yet released
+#### Dev build #3 - August 8
 
 In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quick task is reentered, the data is automatically restored.
 
