@@ -11,27 +11,22 @@ Numbers updated: August 8, 2025, version 2.63
 There is a very nice and excellent tool, cloc (https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
-cloc DecodeEncodeGeneric ParseRsyncOutput RsyncArguments RsyncUI RsyncUIDeepLinks SSHCreateKey
-     311 text files.
-     278 unique files.                                          
-      68 files ignored.
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources
+     190 text files.
+     189 unique files.                                          
+      10 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.11 s (2482.1 files/s, 419275.0 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.05 s (3822.1 files/s, 406985.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Text                             6             12              0          21921
-Swift                          226           2453           2770          18538
-XML                             25              0              0            593
+Swift                          183           2111           2316          15273
 C                                2             36             72            254
-JSON                             8              0              0            137
-make                             1             22              2             59
-Markdown                         6             31              0             41
-YAML                             2              0              0             12
-Bourne Shell                     1              0              1              2
+XML                              2              0              0             53
+JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           278           2555           2848          41557
+SUM:                           189           2148           2391          15586
 -------------------------------------------------------------------------------
 ```
 
