@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.6.3 (build 157) - August 8, 2025
 
-Updates for the Upcoming Release (Scheduled for Release Before the End of August 2025). There are four major updates:
+Updates for the upcoming release, scheduled for release before the end of August 2025. There are four major updates:
 
 - method for observers, based on AsyncSequence, has been applied, please refer to the blog post *Observers* for more details
 - in Tasks, options for trailing slash is refactored
