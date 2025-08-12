@@ -6,27 +6,27 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: August 8, 2025, version 2.63
+Numbers updated: August 12, 2025, version 2.6.3
 
 There is a very nice and excellent tool, cloc (https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
 cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources
-     190 text files.
-     189 unique files.                                          
-      10 files ignored.
+     192 text files.
+     191 unique files.                                          
+       4 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.05 s (3822.1 files/s, 406985.2 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.07 s (2637.9 files/s, 278295.3 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          183           2111           2316          15273
+Swift                          185           2103           2342          15280
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           189           2148           2391          15586
+SUM:                           191           2140           2417          15593
 -------------------------------------------------------------------------------
 ```
 
