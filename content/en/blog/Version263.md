@@ -1,23 +1,29 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.6.3"
-date = "2025-08-08"
+date = "2025-08-12"
 tags = ["changelog","version 2.6.3"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.3 (build 157) - August 8, 2025
+### Version 2.6.3 (build 157) - August 12, 2025
 
-Updates for the upcoming release, scheduled for release before the end of August 2025. There are four major updates:
+Updates for the upcoming release, scheduled for release before the end of August 2025. The build #4 is the last dev build before release. *If no bugs are reported, this will become the next release by next week.*
+
+There are four major updates:
 
 - method for observers, based on AsyncSequence, has been applied, please refer to the blog post *Observers* for more details
 - in Tasks, options for trailing slash is refactored
 - some views are refactored by using Form, Form provides a more streamlined and user-friendly interface
 - some data in some views are saved by using default UserSettings
 
+#### Dev build #4 - August 12
+
+Some minor user interface updates have been implemented, including enhanced headings in the Tasks section and Rsync parameters to enhance visual distinction. 
+
 #### Dev build #3 - August 8
 
-In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quick task is reentered, the data is automatically restored.
+In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quicktask is reentered, the data is automatically restored.
 
 #### Dev build #2 - August 7
 
