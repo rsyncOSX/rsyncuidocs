@@ -42,11 +42,11 @@ RsyncUI adheres to the new concurrency model of Swift 6.
 
 The following tasks are executed asynchronous on threads from the CTP, adhering to the `actor` protocol:
 
-- all reading operations
-- data decoding and encoding
-- sorting log records
+- read tasks from file
+- JSON data decoding and encoding
+- read and sort log records
 - preparing output from rsync for display
-- preparing data from the logfile, not logrecords, for display
+- preparing data from the logfile for display
 - checking for updates to RsyncUI
 - write data to RsyncUI logfile
 
@@ -61,14 +61,14 @@ Some concurrent functions within RsyncUI are structured by using `async let`. Yo
 ```swift
 func readconfigurations() {
     Task {
-        async let readconfigurations = ActorReadSynchronizeConfigurationJSON()
-     	let data = await readconfigurations
-         	.readjsonfilesynchronizeconfigurations(selectedprofile,
-                                                   SharedReference.shared.monitornetworkconnection,
-                                                   SharedReference.shared.sshport)
-        // after the await is completed, the root task will continue
-    	// the structured concurrency is actually not needed here, only one async let
-        rsyncUIdata.configurations = data
+       	let monitornetworkconnection = SharedReference.shared.monitornetworkconnection
+        let sshport = SharedReference.shared.sshport
+        let actorReadSynchronizeConfigurationJSON = ActorReadSynchronizeConfigurationJSON()
+        async let data = actorReadSynchronizeConfigurationJSON
+                    .readjsonfilesynchronizeconfigurations(nil,
+                                                           monitornetworkconnection,
+                                                           sshport)
+        rsyncUIdata.configurations = await data
     }
 }
 ```
@@ -77,12 +77,14 @@ The below code is *unstructured* concurrency. The root function `readconfigurati
 
 ```swift
 func readconfigurations() {
+   ...some operations on @MainActor
     Task {
         rsyncUIdata.configurations = await ActorReadSynchronizeConfigurationJSON()
          	.readjsonfilesynchronizeconfigurations(selectedprofile,
                                                    SharedReference.shared.monitornetworkconnection,
                                                    SharedReference.shared.sshport)
     }
+  ...some operations on @MainActor
 }
 ```
 
