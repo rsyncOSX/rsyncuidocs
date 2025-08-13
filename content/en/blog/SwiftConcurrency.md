@@ -58,6 +58,8 @@ The above mentioned tasks are executed on threads from the CTP, and not on the`@
 
 Some concurrent functions within RsyncUI are structured by using `async let`. You may have several `async let`, and they will all be executed in *parallel* or *concurrent*. When all `async let` tasks are completed, the root task or parent task, will continue execution. 
 
+Structured concurrency might also dictate the order of execution. The keyword `await` is a suspension where execution waits until the asynchronous function is completed before continuing the execution. If there are several `await` after each other, the next one will be executed when the current asynchronous task is completed.
+
 ```swift
 func readconfigurations() {
     Task {
@@ -75,7 +77,7 @@ func readconfigurations() {
 
 ##### Unstructured concurrency
 
-The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` *may* be completed after the execution of the calling function, the parent,  is completed.  Upon the function's return, the UI is notified on the main thread if there is a new version available.
+The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` does not have a parent/child relationship to the caller. And it *may* be completed either before or after the execution of the calling function, the parent,  is completed.
 
 ```swift
 @MainActor
@@ -87,7 +89,6 @@ func somefunction() {
   // Some code
 }
 ```
-
 Access to properties within an actor must be performed asynchronously, that is why the `Task  { ... }` above is requiered. The Swift runtime makes sure that only one thread a time get access to properties within an actor.  The code below is probably not an OK example.  The main reason for make this an actor is to execute it on a thread from the CTP for not block the Main Thread. 
 
 ```swift
