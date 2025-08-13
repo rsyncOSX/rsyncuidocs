@@ -45,15 +45,12 @@ The following tasks are executed asynchronous on threads from the CTP, adhering 
 
 - read tasks from file
 - JSON data decoding and encoding
-	- the decode and encode functions inherits the thread from the calling function
 - read and sort log records
 - preparing *output from rsync* for display
 - preparing *data from the logfile* for display
 - checking for updates to RsyncUI
 
-Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are three types of executors, which manages jobs and put jobs on threads for execution. 
-
-The Swift concurrency runtime handles scheduling and execution, guaranteeing that all functions within an actor are  `nonisolated func`, which to my understanding, guarantees asynchronous execution on threads from the CTP.
+Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously.
 
 ##### Structured concurrency
 
@@ -78,7 +75,7 @@ func readconfigurations() {
 
 ##### Unstructured concurrency
 
-The code snippet below presents an *unstructured* concurrency.  The code within the `Task  { ... }` does not have a parent/child relationship to the caller. And it *may* be completed either before or after the execution of the calling function, the parent,  is completed.
+The code snippet below presents an *unstructured* concurrency.  The code within the `Task {}` does not have a parent/child relationship to the caller. And it *may* be completed either before or after the execution of the calling function, the parent,  is completed.
 
 ```swift
 @MainActor
@@ -90,7 +87,7 @@ func somefunction() {
   // Some code
 }
 ```
-Access to properties within an actor must be performed asynchronously, that is why the `Task` above is requiered. The Swift runtime makes sure that only one thread a time get access to properties within an actor. The main reason for make this an actor is to execute it on a thread from the CTP for not block the Main Thread. The calling function is running on the Main Thread, but the async function is running on a background thread. 
+Access to properties within an actor must be performed asynchronously, that is why the `Task {}` above is required. The Swift runtime makes sure that only one thread a time get access to properties within an actor. The main reason for make this an actor is to execute it on a thread from the CTP for not block the Main Thread. The calling function is running on the Main Thread, but the async function is running on a background thread. 
 
 ```swift
 actor GetversionofRsyncUI {
