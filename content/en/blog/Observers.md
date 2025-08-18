@@ -19,7 +19,7 @@ The initial notification, `NSNotification.Name.NSFileHandleDataAvailable`, monit
 
 The second notification, `Process.didTerminateNotification`, monitors the termination of the task, such as an abrupt halt. Typically, a termination signifies task completion. However, it can also indicate an abort action from the user, which subsequently sends an interrupt signal to the external task. If RsyncUI fails to detect this signal, it will be unable to discern when a synchronization task has been completed.
 
-In the latest version of RsyncUI (2.6.3), a new method for observing notifications have been introduced. After some investigation and recommendation, the AsyncSequence method emerges as the preferred approach. By applying this the Combine Framework and depended code is removed.
+In the latest version of RsyncUI (2.6.4), a new method for observing notifications have been introduced. After some investigation and recommendation, the AsyncSequence method emerges as the preferred approach. By applying this the Combine Framework and depended code is removed.
 
 ## NotificationCenter.Notifications and AsyncSequence
 
