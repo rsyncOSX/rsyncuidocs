@@ -1,44 +1,33 @@
 +++
 author = "Thomas Evensen"
-title = "Version 2.6.3"
-date = "2025-08-12"
-tags = ["changelog","version 2.6.3"]
+title = "Version 2.6.4"
+date = "2025-08-18"
+tags = ["changelog","version 2.6.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.6.3 (build 157) - August 12, 2025
+### Version 2.6.4 (build 158) - August 18, 2025
 
-Updates for the upcoming release, scheduled for release before the end of August 2025. The build #4 is the last dev build before release. *If no bugs are reported, this will become the next release by next week.*
-
-There are four major updates:
+There are four major updates within this release:
 
 - method for observers, based on AsyncSequence, has been applied, please refer to the blog post *Observers* for more details
 - in Tasks, options for trailing slash is refactored
 - some views are refactored by using Form, Form provides a more streamlined and user-friendly interface
 - some data in some views are saved by using default UserSettings
 
-#### Dev build #4 - August 12
-
 Some minor user interface updates have been implemented, including enhanced headings in the Tasks section and Rsync parameters to enhance visual distinction. 
-
-#### Dev build #3 - August 8
 
 In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quicktask is reentered, the data is automatically restored.
 
-#### Dev build #2 - August 7
-
 Within the Tasks section, the trailing slash option is refactored as follows:
 
-* **Add trailing slash:** Add a trailing slash to both the source and destination.
-* **Do not add trailing slash:** Do not add a trailing slash, or if added, remove it.
-* **Do not check:** Accept the trailing slash regardless of whether it is present on either the source or destination.
+- *Add trailing slash* Add a trailing slash to both the source and destination.
+- *Do not add trailing slash* Do not add a trailing slash, or if added, remove it.
+- *Do not check* Accept the trailing slash regardless of whether it is present on either the source or destination.
 
 Additionally, the values for the *Action* and *Trailing /* options are saved during the session if set to values other than the default. These values persist across Add, Update, and Profile changes. They are temporarily saved in UserDefaults and are reset to default values when RsyncUI restarts.
 
 Either source or destination is allowed to be empty.
-
-
-#### Dev build #1 - August 4
 
 - The RsyncUI application icon has been updated using the new Icon Composer tool.
 - This update supports icons in the new macOS Tahoe 26 and incorporates layered icons. The icon has also undergone a slight redesign, featuring a new cloud and numbers as layers in Icon Composer.
