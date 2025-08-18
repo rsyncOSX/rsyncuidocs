@@ -10,14 +10,16 @@ categories = ["changelog"]
 
 There are four major updates within this release:
 
-- method for observers, based on AsyncSequence, has been applied, please refer to the blog post *Observers* for more details
+- method for observers, based on *AsyncSequence*, has been applied, please refer to the blog post *Observers* for more details
 - in Tasks, options for trailing slash is refactored
 - some views are refactored by using Form, Form provides a more streamlined and user-friendly interface
-- some data in some views are saved by using default UserSettings
+- some data in some views are saved by using default *UserDefaults*
 
 Some minor user interface updates have been implemented, including enhanced headings in the Tasks section and Rsync parameters to enhance visual distinction. 
 
-In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in UserSettings on macOS. When Quicktask is reentered, the data is automatically restored.
+#### Tasks 
+
+Additionally, the values for the *Action* and *Trailing /* options are saved during the session if set to values other than the default. These values persist across Add, Update, and Profile changes. They are temporarily saved by *UserDefaults* and are reset to default values when RsyncUI restarts.
 
 Within the Tasks section, the trailing slash option is refactored as follows:
 
@@ -25,15 +27,11 @@ Within the Tasks section, the trailing slash option is refactored as follows:
 - *Do not add trailing slash* Do not add a trailing slash, or if added, remove it.
 - *Do not check* Accept the trailing slash regardless of whether it is present on either the source or destination.
 
-Additionally, the values for the *Action* and *Trailing /* options are saved during the session if set to values other than the default. These values persist across Add, Update, and Profile changes. They are temporarily saved in UserDefaults and are reset to default values when RsyncUI restarts.
+#### Home Catalog (Tasks) and Quick task
 
-Either source or destination is allowed to be empty.
+In both Home Catalogs and Quick task, the views have been refactored to utilize Form. Form provides a more streamlined and user-friendly interface. Furthermore, data added within Quicktask is now saved by default in *UserDefaults*. When Quicktask is reentered, the data is automatically restored.
+
+#### RsyncUI application icon
 
 - The RsyncUI application icon has been updated using the new Icon Composer tool.
 - This update supports icons in the new macOS Tahoe 26 and incorporates layered icons. The icon has also undergone a slight redesign, featuring a new cloud and numbers as layers in Icon Composer.
-- The progress bar displayed during file synchronization has been set to have a fixed width, limiting the maximum number of transferred files.
-- The Home catalogs view in the Tasks application has undergone a refactor.
-	- Select the Home catalogs on the Toolbar in Tasks.
-- A third method for observers, based on AsyncSequence, has been applied. Please refer to the blog post *Observers* for more details.
-	- This method is recommended for observing notifications, a crucial component of RsyncUI.
-	- The third method was inspired by a blog post by Majid Jabrayilov, a frequent blogger about Swift and SwiftUI.
