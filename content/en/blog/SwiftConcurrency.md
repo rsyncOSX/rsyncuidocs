@@ -43,14 +43,15 @@ Asynchronous execution can be performed on both the main thread and background t
 
 The following tasks are executed asynchronous on threads from the CTP, adhering to the `actor` protocol:
 
-- read tasks from file
-- JSON data decoding and encoding
+- read synchronize tasks from file
+	- JSON data *decoding*, the decoding inherits the thread from the actor reading data which is NOT the main thread
+    - JSON data *encoding* is synchronous execution on the main thread 
 - read and sort log records
 - preparing *output from rsync* for display
 - preparing *data from the logfile* for display
 - checking for updates to RsyncUI
 
-Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously.
+Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are only five actors in RsyncUI. There are more asynchronous functions, some are running on the main thread as well.
 
 ##### Structured concurrency
 
