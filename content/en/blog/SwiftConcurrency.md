@@ -41,17 +41,17 @@ Asynchronous execution can be performed on both the main thread and background t
 
 #### Cooperative thread pool (CTP)
 
-The following tasks are executed asynchronous on threads from the CTP, adhering to the `actor` protocol:
+The following tasks are executed *asynchronous* on threads from the CTP, adhering to the actor protocol:
 
 - read synchronize tasks from file
-	- JSON data *decoding*, the decoding inherits the thread from the actor reading data which is NOT the main thread
-    - JSON data *encoding* is synchronous execution on the main thread 
+	- JSON data *decoding*, asynchronous decoding which inherits the thread from the actor reading data
+    - JSON data *encoding*, synchronous encoding on the *main thread* 
 - read and sort log records
 - preparing *output from rsync* for display
 - preparing *data from the logfile* for display
 - checking for updates to RsyncUI
 
-Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are only five actors in RsyncUI. There are more asynchronous functions, some are running on the main thread as well.
+Adhering to the actor protocol, all access to properties within an actor must be performed asynchronously. There are only five actors in RsyncUI. But there are more asynchronous functions, some are running on the main thread as well.
 
 ##### Structured concurrency
 
@@ -66,7 +66,7 @@ func readconfigurations() {
         let sshport = SharedReference.shared.sshport
         let actorReadSynchronizeConfigurationJSON = ActorReadSynchronizeConfigurationJSON()
         async let data = actorReadSynchronizeConfigurationJSON
-                    .readjsonfilesynchronizeconfigurations(nil,
+                    .readjsonfilesynchronizeconfigurations(profile,
                                                            monitornetworkconnection,
                                                            sshport)
         rsyncUIdata.configurations = await data

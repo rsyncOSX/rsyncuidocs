@@ -21,9 +21,9 @@ Some minor UI updates have been implemented, including enhanced headings in the 
 
 Within the Tasks section, the trailing slash option is refactored as follows:
 
-- *Add trailing slash* Add a trailing slash to both the source and destination
-- *Do not add trailing slash* Do not add a trailing slash, or if added, remove it
-- *Do not check* Accept the trailing slash regardless of whether it is present on either the source or destination
+- *Add trailing slash* - add a trailing slash to both the source and destination
+- *Do not add trailing slash* - do not add a trailing slash, or if added, remove it
+- *Do not check* - do not check for trailing slash or not on either the source or destination
 
 Additionally, the values for the *Action* and *Trailing /* options are saved during the session if set to values other than the default. These values persist across Add, Update, and Profile changes. They are temporarily saved by *UserDefaults* and are reset to default values when RsyncUI restarts.
 
