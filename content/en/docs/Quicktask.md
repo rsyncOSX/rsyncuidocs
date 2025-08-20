@@ -6,13 +6,6 @@ tags = ["quick task"]
 categories = ["synchronize"]
 lastmod = "2024-03-18"
 +++
-{{< alert color="warning" >}}
-
-Note: Be aware of if using syncremote, the *destination must be added first* and  the *source as second*. This is fixed in code which make RsyncUI to flip folders. To be released later as a maintenance release. This only apply to the quick task. 
-
-There also seems to be an issue with GUI for selecting source. Please use drag and drop for source. The GUI for selecting folders are removed. This only apply to the quick task. 
-
-{{< /alert >}}
 
 Use QuickTask for quickly copy or transfer files to either source or destination. QuickTask will save the last executed quick task as default values. Default values can be cleared by the toolbar function.
 
