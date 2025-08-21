@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 {{< alert >}}
 
-The Quick task function in this release is not working as it should, my fault. It is a minor function and only valid for remote servers. But if you sometimes use it, there is a new upload version 2.6.5 for download which fixes the issue. If you don’t need Quick task, don’t bother to download.
+The Quick task function in this release is not working as it should, my fault. It is a minor function and only valid for remote servers. But if you sometimes use it, there is a new version 2.6.5 for download which fixes the issue. If you don’t need Quick task, don’t bother to download.
 
 {{< /alert >}}
 
