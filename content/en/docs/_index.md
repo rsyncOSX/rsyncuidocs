@@ -8,19 +8,19 @@ menu: { main: { weight: 20 } }
 
 RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security and preventing malicious code and tampering.
 
+{{< alert color=“warning" >}}
+
+**Important Note:** RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can create a complete image of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
+
+{{< /alert >}}
+
 {{< alert color="warning" >}}
 
 As a safety precaution, the --delete parameter is *not* set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the --delete parameter must be *enabled*. If you are new to `rsync`, I strongly recommend reading the *"Important"*  and *"Limitations"* sections as a minimum. 
 
 {{< /alert >}}
 
-{{< alert >}}
 
-A note about the Schedule function: the schedule is implemented by using the Timer library. If your Mac goes to sleep, the schedule will NOT fire. If you lock your Mac, the schedule will NOT fire.  The schedule will only fire as long as your Mac is "awake" and you are *logged* in. Refer to the *Limitations* section. 
-
-The Schedule is by default a hidden feature, enable in user settings.
-
-{{< /alert >}}
 
 ### Privacy statement
 

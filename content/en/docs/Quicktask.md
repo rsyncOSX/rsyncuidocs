@@ -9,7 +9,7 @@ lastmod = "2024-03-18"
 
 {{< alert >}}
 
-The Quick task function in version 2.6.4 is not working as it should, my fault. It is a minor function and only valid for remote servers. But if you sometimes use it, there is a new version 2.6.5 for download which fixes the issue. If you don’t need Quick task, don’t bother to download.
+The Quick task function in this release is not functioning as intended due to an oversight on my part. Although it is a minor function and only applicable to remote servers, if you occasionally utilize it, there is a newer version, version 2.6.5, available for download that addresses the issue. If you do not require the Quick task function, there is no need to download the updated version.
 
 {{< /alert >}}
 
