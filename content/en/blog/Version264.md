@@ -8,6 +8,12 @@ categories = ["changelog"]
 
 ### Version 2.6.4 (build 158) - August 18, 2025
 
+{{< alert >}}
+
+The Quick task function in this release is not working as it should, my fault. It is a minor function and only valid for remote servers. But if you sometimes use it, there is a new upload version 2.6.5 for download which fixes the issue. If you don’t need Quick task, don’t bother to download.
+
+{{< /alert >}}
+
 There are four major updates within this release:
 
 - method for observers, based on *AsyncSequence*, has been applied, please refer to the blog post *Observers* for more details
