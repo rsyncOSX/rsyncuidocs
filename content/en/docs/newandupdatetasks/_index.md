@@ -30,28 +30,30 @@ The following data pertains to tasks:
 
 ##### Action
 
-- `synchronize`: default action for synchronize data from a *source* to a *destination*
-- `snapshot`: saves changes and deletions prior to a synchronize operation
-- `syncremote`: synchronize data from a remote *source* to a *local* folder
+- *synchronize* - default action for synchronize data from a *source* to a *destination*
+- *snapshot* - saves changes and deletions prior to a synchronize operation
+- *syncremote* - synchronize data from a remote *source* to a *local* folder
     - when adding a `syncremote` action, add the *local folder first* and the *remote folder as second*, RsyncUI will do the flip
 
 ##### Folder Parameters
 
-- Local folder: required field, the *source*
-- Remote folder: required field, the *destination*
+- *Source folder* - required field
+- *Destination folder* - required field
 
 ##### Trailing /
 
-- Dont´t add `/`: by default a trailing `/` is added to both source and destination
+- *Add trailing slash* - add a trailing slash to both the source and destination
+- *Do not add trailing slash* - do not add a trailing slash, or if added, remove it
+- *Do not check* - do not check for trailing slash or not on either the source or destination
 
 ##### Synchronize ID
 
-- Synchronize ID: Informal tag for the task.
+- *Synchronize ID* - informal tag for the task
 
 ##### Remote Parameters
 
-- Remote username: Username for login to the remote server.
-- Remote server: Either server name or IP address for the remote server.
+- *Remote username* -  username for login to the remote server
+- *Remote server* - either server name or IP address for the remote server
 
 ### Copy and Paste Tasks
 

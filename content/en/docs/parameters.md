@@ -25,10 +25,10 @@ To add a parameter to rsync, enter it in the corresponding field. RsyncUI suppor
 Parameters to rsync are typically constructed as follows. The following are examples only, `rsync` supports a ton of parameters.
 
 - parameter=value
-	- `--exclude-from=/Volumes/home/user/exclude-list.txt`: Exclude list for rsync.
+	- `--exclude-from=/Volumes/home/user/exclude-list.txt` - exclude list for rsync
 - parameters only
-    - `--stats`: Enables the display of statistics during the synchronization process.
-    - `--dry-run`: Executes a simulated synchronization without modifying the files.
+    - `--stats`  - enables the display of statistics during the synchronization process
+    - `--dry-run` - executes a simulated synchronization without modifying the files
 
 For a comprehensive list of parameters for `rsync`, please refer to the official rsync documentation.
 
