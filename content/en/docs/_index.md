@@ -10,7 +10,7 @@ RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security an
 
 {{< alert color="warning" >}}
 
-**Important Note:** RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can create a complete image of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
+RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can create a complete image of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
 
 {{< /alert >}}
 
