@@ -43,7 +43,7 @@ Select the *Rsync parameters* from the primary Sidebar menu.  Select the task fo
 
 The complete rsync string is updated when parameters are changed. 
 
-{{< figure src="/images/important/deleteparameter.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/rsyncparameters/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Temporary halt tasks
 
