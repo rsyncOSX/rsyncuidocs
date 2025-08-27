@@ -42,8 +42,8 @@ The following data pertains to tasks:
 
 ##### Trailing /
 
-- *Add trailing slash* - add a trailing slash to both the source and destination
-- *Do not add trailing slash* - do not add a trailing slash, or if added, remove it
+- *Add*  - add a trailing slash to both the source and destination
+- *Do not add* - do not add a trailing slash, or if added remove it
 - *Do not check* - do not check for trailing slash or not on either the source or destination
 
 ##### Synchronize ID
