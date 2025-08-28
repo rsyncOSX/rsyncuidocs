@@ -8,12 +8,6 @@ categories = ["changelog"]
 
 ### Version 2.6.4 (build 158) - August 18, 2025
 
-{{< alert >}}
-
-The Quick task function in this release is not functioning as intended due to an oversight on my part. Although it is a minor function and only applicable to remote servers, if you occasionally utilize it, there is a newer version, version 2.6.5, available for download that addresses the issue. If you do not require the Quick task function, there is no need to download the updated version.
-
-{{< /alert >}}
-
 There are four major updates within this release:
 
 - method for observers, based on *AsyncSequence*, has been applied, please refer to the blog post *Observers* for more details
