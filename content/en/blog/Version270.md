@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.0"
-date = "2025-08-30"
+date = "2025-08-31"
 tags = ["changelog","version 2.7.0"]
 categories = ["changelog"]
 +++
@@ -18,9 +18,13 @@ As development is still in its early stages, I welcome any ideas you may have. P
 
 {{< figure src="/images/v270/chart.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v270/bar.png" alt="" position="center" style="border-radius: 8px;" >}}
+Some multiple dates, select date where number of files is greatest.
 
-{{< figure src="/images/v270/line.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v270/barfiles.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Some multiple dates, select date where size of transfer is greatest.
+
+{{< figure src="/images/v270/barsize.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### JottaUI
 
