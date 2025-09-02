@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.0"
-date = "2025-08-31"
+date = "2025-09-02"
 tags = ["changelog","version 2.7.0"]
 categories = ["changelog"]
 +++
@@ -12,9 +12,9 @@ The next version, 2.7.0 build 161, will be released after macOS Tahoe 26 is rele
 
 #### Charts
 
-The log records of RsyncUI store the date, number of files transferred, seconds to transfer, and the amount of data transferred in MB. All data is retrieved from the output of rsyncUI. While it is uncertain whether any charts of this data are of interest, I have begun testing data extraction and presenting some charts. Currently, if more than one transfer occurs in a day, only the transfer with the most files is selected for that day. Similarly, the amount of data is selected. Additionally, it will be possible to present only the 20 or any other number of dates with the most files or the most data from the entire dataset.
+Development is progressing.
 
-As development is still in its early stages, I welcome any ideas you may have. Please feel free to contact me via email thomeven@gmail.com.
+The log records of RsyncUI store the date, number of files transferred and the amount of data transferred in MB. All data is retrieved from the output of rsyncUI. While it is uncertain whether any charts of this data are of interest, I have begun testing data extraction and presenting some charts. As development is still in its early stages, I welcome any ideas you may have. Please feel free to contact me via email thomeven@gmail.com.
 
 {{< figure src="/images/v270/chart.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -25,6 +25,10 @@ Some multiple dates, select date where number of files is greatest.
 Some multiple dates, select date where size of transfer is greatest.
 
 {{< figure src="/images/v270/barsize.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+In bar charts, selecting a row in the data table highlights the corresponding row in the chart.
+
+{{< figure src="/images/v270/selectbardata.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### JottaUI
 
