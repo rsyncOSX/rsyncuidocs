@@ -12,6 +12,23 @@ The next version, 2.7.x build 16x, will be released **after** macOS Tahoe 26 is 
 
 Currently, there are no plans to add any macOS Tahoe 26-specific features, such as Liquid Glass properties for buttons. The next version will be compiled with Xcode 26 on macOS Tahoe 26 and will adapt any default UI settings by the running version of macOS. However, there may be some macOS Tahoe 26-specific properties in future version 2.7.x of RsyncUI.
 
+### Some observations about macOS Tahoe 26
+
+One of my MacBooks is installed and updated with the latest developer release of macOS Tahoe. However, there are still some minor, non-critical bugs with RsyncUI on macOS 26. The color of the charts is not displayed as expected on macOS Tahoe. SwiftUI handles plurals by applying the inflect keyword. On macOS Sequoia 15.x, plurals are displayed correctly as Colors in charts as well.
+
+The following code for handeling plurals demonstrates this:
+
+```swift
+.confirmationDialog("Delete ^[\(selectedloguuids.count) log](inflect: true)",
+                                    isPresented: $confirmdelete)
+                {
+                    Button("Delete", role: .destructive) {
+                        deletelogs(selectedloguuids)
+                    }
+                }
+```
+Pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. 
+
 #### Charts
 
 Development is progressing. The rc was updated September 5. 
@@ -24,16 +41,12 @@ I utilize RsyncUI on a daily basis to secure data changes and updates, including
 
 You can also configure the number of records to display in the chart. For instance, if you have approximately 500 log records and set the number to 10, the chart data selects the 10 dates with the highest data volume, either in terms of the number of files or the maximum transferred data.
 
-{{< figure src="/images/v270/chart.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v270/charts.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-Some multiple dates, select date where number of files is greatest.
+Bar chart by number of files.
 
-{{< figure src="/images/v270/barfiles.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v270/byfiles.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-Some multiple dates, select date where size of transfer is greatest.
+Bar chart by size of transfer.
 
-{{< figure src="/images/v270/barsize.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-In bar charts, selecting a row in the data table highlights the corresponding row in the chart.
-
-{{< figure src="/images/v270/selectbardata.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v270/bytransferred.png" alt="" position="center" style="border-radius: 8px;" >}}
