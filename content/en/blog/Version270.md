@@ -14,9 +14,9 @@ Currently, there are no plans to add any macOS Tahoe 26-specific features, such 
 
 ### Some observations about macOS Tahoe 26
 
-One of my MacBooks is installed and updated with the latest developer release of macOS Tahoe. However, there are still some minor, non-critical bugs with RsyncUI on macOS 26. The color of the charts is not displayed as expected on macOS Tahoe. SwiftUI handles plurals by applying the inflect keyword. On macOS Sequoia 15.x, plurals are displayed correctly as Colors in charts as well.
+One of my Macs is currently installed and updated with the latest developer release of macOS Tahoe. However, there are still some minor, non-critical bugs with RsyncUI on macOS 26. Specifically, the color of the charts is not displayed as expected, and plurals are not handled correctly. On macOS Sequoia 15.x, plurals are displayed correctly and colors in the charts.
 
-The following code for handeling plurals demonstrates this:
+Swift handles plurals by applying the `inflect` keyword. The following code for handling plurals demonstrates this:
 
 ```swift
 .confirmationDialog("Delete ^[\(selectedloguuids.count) log](inflect: true)",
@@ -27,7 +27,7 @@ The following code for handeling plurals demonstrates this:
                     }
                 }
 ```
-Pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. 
+On macOS Tahoe 26, pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. I assume these bugs will be fixed before release of the new macOS.
 
 #### Charts
 
