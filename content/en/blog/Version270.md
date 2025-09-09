@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.0"
-date = "2025-09-05"
+date = "2025-09-09"
 tags = ["changelog","version 2.7.0"]
 categories = ["changelog"]
 +++
@@ -29,6 +29,8 @@ Swift handles plurals by applying the `inflect` keyword.
 ```
 
 In *Log listings* view, as an example, selection two logs for delete. On macOS Tahoe 26, pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. I assume these bugs will be fixed before release of the new macOS.
+
+**Update 9 September:** Apple has released release candidates (RC1) for macOS Tahoe 26 and Xcode 26, but the issue above remains unresolved.
 
 #### Charts
 
