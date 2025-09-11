@@ -26,4 +26,8 @@ When utilizing the default version of rsync, openrsync, it is observed that no d
 
 ### Openrsync
 
-The default `/usr/bin/rsync` on macOS Sonoma vs macOS Sequoia and macOS Tahoe differ in their versions. All versions adhere to protocol 29 of version 2.6.9, but the licenses for these versions are distinct. Additionally, there may be variations in the code. In macOS Sonoma, the default version is version 2.6.9, released in November 2006. In macOS Sequoia and macOS Tahoe, the default version is a compatible rsync based on the BSD license. The command `/usr/bin/rsync --version` in macOS Sequoia and macOS Tahoe displays `openrsync: protocol version 29, rsync version 2.6.9 compatible`.
+The default `/usr/bin/rsync` on macOS Sonoma vs macOS Sequoia and macOS Tahoe differ in their versions. All versions adhere to protocol 29 of version 2.6.9, but the licenses for these versions are distinct. Additionally, there may be variations in the code. In macOS Sonoma, the default version is version 2.6.9, released in November 2006. 
+
+In macOS Sequoia and macOS Tahoe, the default version is a compatible rsync based on the BSD license. The command `/usr/bin/rsync --version` in macOS Sequoia and macOS Tahoe displays `openrsync: protocol version 29, rsync version 2.6.9 compatible`.
+
+When querying ChatGPT regarding Apple and openrsync, the following response may be obtained: "Apple adopted openrsync due to the original rsync's licensing under the GNU GPLv3, which Apple refrains from using in its system tools due to legal and compatibility considerations. Openrsync employs a permissive license, facilitating its integration into macOS without the constraints of GPLv3. Furthermore, it aligns more closely with Apple's emphasis on security and minimal dependencies."
