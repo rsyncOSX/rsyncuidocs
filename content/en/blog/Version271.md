@@ -12,9 +12,11 @@ The following are updates to be released sometime after release of version 2.7.0
 
 ### Some issues about default rsync version in macOS
 
-The default version of rsync in macOS is `openrsync`. There are some issues with this version and RsyncUI. Please read the blog post *Rsync versions*. 
+The default version of rsync in macOS is `openrsync`. There are some issues with this version and RsyncUI. Please refer to the blog post *Rsync versions*. 
 
 ### Adjusting output from rsync
+
+This application is applicable only to rsync version 3.x.
 
 The last **16 rows** for rsync version 3.x provide a summarized status of the task. The progress bar accurately reflects the current number of rows being processed during the rsync operation. The maximum number of files to be synchronized is in this version adjusted. 
 
@@ -25,5 +27,7 @@ The above makes the progress bar more accurate.
 ### Restrictions with openrsync
 
 Version 2.7.1 of RsyncUI will impose certain restrictions on the operations permitted when using the default version of rsync in macOS. These restrictions will only permit standard synchronization tasks and will prohibit snapshot or syncremote tasks.
+
+The adjustment of output is **not** applicable for openrsync.
 
 
