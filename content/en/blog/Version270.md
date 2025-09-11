@@ -18,7 +18,7 @@ The default version of rsync in macOS is `openrsync`. There are some issues with
 
 ### Some observations about macOS Tahoe 26
 
-**Update 9 September:** Apple has released release candidates (RC1) for macOS Tahoe 26 and Xcode 26, but the issue above remains unresolved. Hopefully Apple will fix the issues before the public release of macOS Tahoe 26.
+**Update 9 September:** Apple has released release candidates (RC1) for macOS Tahoe 26 and Xcode 26, but the issue below remains unresolved. Hopefully Apple will fix the issues before the public release of macOS Tahoe 26.
 
 One of my Macs is currently installed and updated with the latest developer release of macOS Tahoe. However, there are still some minor, non-critical bugs with RsyncUI on macOS 26. Specifically, the color of the charts is not displayed as expected, and plurals are not handled correctly. On macOS Sequoia 15.x, plurals are displayed correctly and colors in the charts.
 
