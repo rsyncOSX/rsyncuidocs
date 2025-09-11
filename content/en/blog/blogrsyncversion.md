@@ -10,7 +10,9 @@ Following the development of an adjusting output feature for rsync, I have ident
 
 {{< alert color="warning" >}}
 
-I strongly recommend that all users of RsyncUI install the latest version of rsync. There are several methods to install the latest version of rsync. One method is to use Homebrew. Please search for instructions on how to obtain and securely install the latest version of rsync. Homebrew is one option.
+I strongly recommend that all users of RsyncUI install the latest version of rsync. There are several methods to install the latest version of rsync. Please search for instructions on how to obtain and securely install the latest version of rsync. 
+
+Homebrew is one option.
 
 {{< /alert >}}
 
