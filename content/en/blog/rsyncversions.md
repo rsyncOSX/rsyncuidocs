@@ -6,11 +6,11 @@ tags = ["rsyncversions"]
 categories = ["technical details"]
 +++
 
-Following the development of an adjusting output feature for rsync, I have identified a critical issues concerning the *default version of rsync in macOS and RsyncUI*. A new version of RsyncUI, version 2.7.1, will be released, which will impose certain restrictions on the operations permitted when using the default version of rsync in macOS. These restrictions will only permit standard synchronization tasks and will prohibit snapshot or syncremote tasks.
+Following the development of an adjusting output feature for rsync, I have identified a critical issues concerning the *default version of rsync in macOS and RsyncUI*. A new version of RsyncUI, version 2.7.1, will be released, which will impose certain restrictions on the operations permitted when using the default version of rsync in macOS. These restrictions will only permit standard synchronization tasks and will prohibit *snapshot* or *syncremote* tasks.
 
 {{< alert color="warning" >}}
 
-I strongly recommend that all users of RsyncUI install the latest version of rsync. There are several methods to install the latest version of rsync. One method is to use Homebrew. Please search for instructions on how to obtain and securely install the latest version of rsync using Homebrew.
+I strongly recommend that all users of RsyncUI install the latest version of rsync. There are several methods to install the latest version of rsync. One method is to use Homebrew. Please search for instructions on how to obtain and securely install the latest version of rsync. Homebrew is one option.
 
 {{< /alert >}}
 
