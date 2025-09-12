@@ -48,9 +48,12 @@ The user can abort a task at any time. However, it is essential to allow the tas
 
 There are three Sidebar menu options that are contingent upon the properties of a task. It is sufficient as long as one of the tasks satisfies one of the prerequisites.
 
-- *Snapshot*: this option is exclusively available for snapshot tasks
-- *Restore*: this option is only available for synchronize- and snapshot tasks where *the destination* is located on a *remote server*
-- *Verify remote*: this option is only available for synchronize tasks where *the destination* is located on a *remote server*
+- *Snapshot*: this option is exclusively available for *snapshot* tasks
+	- require version 3.x of rsync
+- *Restore*: this option is only available for *synchronize* and *snapshot* tasks where *the destination* is located on a *remote server*	
+	- avaliable for openrsync as well, but only for synchronize tasks
+- *Verify remote*: this option is only available for *synchronize* tasks where *the destination* is located on a *remote server*
+	- require version 3.x of rsync
 
 {{< alert >}}
 
