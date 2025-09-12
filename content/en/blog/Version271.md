@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.7.1 (build 162) - release candidate
 
-This release is scheduled for a later date in September. I request that users download and test it prior to the official release.
+This release is scheduled for a later date in September. I request that some users download and test it prior to the official release. There are no changes to the model and basic parts, except for the changes for adjusting output from rsync version 3.x. Additionally, some logic is added prior to executing the actual task if rsync or openrsync is in use. The charts part is only an add on to the UI part.
 
 - *Snapshot*: this option is exclusively available for *snapshot* tasks
 	- require version 3.x of rsync
