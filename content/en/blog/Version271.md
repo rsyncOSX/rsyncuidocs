@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.7.1 (build 162) - release candidate
 
-This release is scheduled for later in September.I request that users download and test it prior to the official release.
+This release is scheduled for a later date in September. I request that users download and test it prior to the official release.
 
 - *Snapshot*: this option is exclusively available for *snapshot* tasks
 	- require version 3.x of rsync
@@ -19,7 +19,7 @@ This release is scheduled for later in September.I request that users download a
 
 The adjustment of output, see below, is **not** applicable for openrsync. Progress bar using openrsync is not changed.
 
-### Some issues about default rsync version in macOS
+### Some issues about openrsync in macOS
 
 The default version of rsync in macOS is `openrsync`. There are some issues with this version and RsyncUI. Please refer to the blog post *Rsync versions*. 
 
