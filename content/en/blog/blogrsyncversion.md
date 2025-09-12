@@ -6,7 +6,9 @@ tags = ["rsyncversions"]
 categories = ["technical details"]
 +++
 
-Following the development of an adjusting output feature for rsync, I have identified a critical issues concerning the *default version of rsync in macOS and RsyncUI*. A new version of RsyncUI, version 2.7.1, will be released, which will impose certain restrictions on the operations permitted when using the default version of rsync in macOS. These restrictions will only permit standard synchronization tasks and will prohibit *snapshot* or *syncremote* tasks.
+Following the development of an adjusting output feature for rsync, I have identified a critical issues concerning *the default openrsync in macOS and RsyncUI*. A new version of RsyncUI, version 2.7.1, will be released, which will impose certain restrictions on the operations permitted when using the default openrsync in macOS. 
+
+These restrictions, for the default openrsync, will only permit standard synchronization tasks and will prohibit *snapshot* or *syncremote* tasks.
 
 {{< alert color="warning" >}}
 
