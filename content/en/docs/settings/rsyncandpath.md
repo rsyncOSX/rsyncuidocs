@@ -24,7 +24,8 @@ If `rsync` is installed by Homebrew, the path is set to the default value or `rs
 If the version of `rsync` is not installed by Homebrew, set the path to `rsync`.
 
 - If `Rsync v3.x` is enabled, set the optional path if not installed by Homebrew.
-- Any version of `rsync` will work, but only versions 2.6.9 and the latest release of rsync have been tested and verified.
+- Any version of `rsync` will work, but only default versions in macOS and the latest release of rsync have been tested and verified.
+	- the test and verification is parsing correctly of the output from rsync 	
 
 #### Path for restore
 
