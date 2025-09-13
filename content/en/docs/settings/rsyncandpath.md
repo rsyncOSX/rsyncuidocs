@@ -12,20 +12,19 @@ After changing a setting, you have to save the changes to keep it next time you 
 
 #### Version rsync
 
-It is recommended to install the latest version of `rsync` using Homebrew. `RsyncUI` will determine the type of Mac you are using. The default path for Homebrew is:
+It is recommended to install the latest version of `rsync`. RsyncUI provides direct path support for Homebrew on both Apple Silicon and Intel Macs.. `RsyncUI` will determine the type of Mac you are using. The default path for Homebrew is:
 
 - Intel-based Mac: `/usr/local/bin`
 - Apple Silicon: `/opt/homebrew/bin`
 
 #### Path rsync
 
-If `rsync` is installed by Homebrew, the path is set to the default value or `rsync` if it is part of your macOS. The *snapshot* feature
-requires version 3.2.x of `rsync`.
+If `rsync` is installed by Homebrew, the path is set to the default value or `rsync` if it is part of your macOS. The *snapshot* and *syncremote* feature requires the latest version of `rsync`.
 
 If the version of `rsync` is not installed by Homebrew, set the path to `rsync`.
 
 - If `Rsync v3.x` is enabled, set the optional path if not installed by Homebrew.
-- Any version of `rsync` will work, but only versions 2.6.9 and the latest release of version 3.2.x have been tested and verified.
+- Any version of `rsync` will work, but only versions 2.6.9 and the latest release of rsync have been tested and verified.
 
 #### Path for restore
 
