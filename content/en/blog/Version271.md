@@ -1,14 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.1"
-date = "2025-09-12"
+date = "2025-09-16"
 tags = ["changelog","version 2.7.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.1 (build 162) - release candidate
+### Version 2.7.1 (build 162) - September 16, 2025
 
-This release is scheduled for a later date in September. I request that some users download and test it prior to the official release. There are no changes to the model and basic parts, except for the changes for adjusting output from rsync version 3.x. Additionally, some logic is added prior to executing the actual task if rsync or openrsync is in use. The charts part is only an add on to the UI part.
+There are no changes to the model and basic parts, except for the changes for adjusting output from rsync version 3.x. Additionally, some logic is added prior to executing the actual task if rsync or openrsync is in use. The charts part is only an add on to the UI part.
 
 - *Snapshot*: this option is exclusively available for *snapshot* tasks
 	- require version 3.x of rsync
@@ -35,7 +35,7 @@ The above makes the progress bar more accurate.
 
 ### Some observations about macOS Tahoe 26
 
-**Update 9 September:** Apple has released release candidates (RC1) for macOS Tahoe 26 and Xcode 26, but the issue below remains unresolved. Hopefully Apple will fix the issues before the public release of macOS Tahoe 26.
+**Update 16 September:** Apple has released release candidates (RC1) for macOS Tahoe 26 and Xcode 26, but the issue below remains unresolved. Hopefully Apple will fix the issues before the public release of macOS Tahoe 26.
 
 One of my Macs is currently installed and updated with the latest developer release of macOS Tahoe. However, there are still some minor, non-critical bugs with RsyncUI on macOS 26. Specifically, the color of the charts is not displayed as expected, and plurals are not handled correctly. On macOS Sequoia 15.x, plurals are displayed correctly and colors in the charts.
 
