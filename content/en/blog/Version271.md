@@ -51,7 +51,7 @@ There are still some minor, non-critical bugs with RsyncUI on macOS 26. Specific
                 }
 ```
 
-In *Log listings* view, as an example, selection two logs for delete. On macOS Tahoe 26, pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. I assume these bugs will be fixed before release of the new macOS.
+In *Log listings* view, as an example, selection two logs for delete. On macOS Tahoe 26, pop ups a dialog like `Delete ^[2 log](inflect: true)` which should be `Delete 2 logs`. I assume these issues will be fixed in a future update of macOS Tahoe.
 
 ### Charts
 
