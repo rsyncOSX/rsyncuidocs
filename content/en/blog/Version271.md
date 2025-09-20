@@ -37,6 +37,7 @@ The above makes the progress bar more accurate.
 
 ### Some observations about macOS Tahoe 26
 
+**Update 20 September:** All plurals by using the inflect keyword is in version 2.7.2 (next version) removed and plurals are handled manually. 
 **Update 16 September:** Apple has released macOS Tahoe 26 and Xcode 26, but the issue below remains unresolved.
 
 There are still some minor, non-critical bugs with RsyncUI on macOS 26. Specifically, the color of the charts is not displayed as expected, and plurals are not handled correctly. On macOS Sequoia 15.x, plurals are displayed correctly and colors in the charts. Swift handles plurals by applying the `inflect` keyword.
