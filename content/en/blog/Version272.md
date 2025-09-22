@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 In Swift 6.2 on macOS Tahoe 26, the issue with plurals and the `inflect` keyword has been resolved. Plurals are now managed manually. Additionally, there are some other GUI updates, including the display of minutes, hours, or days with correct plurals.
 
-For detailed information about the changes, please refer to the changelog.
+For detailed information about the changes, please refer to the files changed within the release page.
 
 The developer build will be periodically updated. New builds will be communicated through the changelog.
 
