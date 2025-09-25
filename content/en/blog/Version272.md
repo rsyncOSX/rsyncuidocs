@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 ### Version 2.7.2 (build 163), dev build 3 - September 25, 2025
 
+Update: There is one logical error in the min/hour/day variable, which has been corrected in *the code*. The plurals are now accurate. 
+
 There are no model or process updates within this build, only minor GUI updates and fix for the inflect keyword. For comprehensive details regarding the modifications, kindly consult the files that underwent changes within the [release page](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.2b3).
 
 
