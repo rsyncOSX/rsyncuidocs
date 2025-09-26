@@ -13,7 +13,7 @@ There are no model or process updates within this build, only minor GUI updates 
 New updates in code are:
 
 - version Xcode 26.01 is released, new build by updated Xcode
-- there logical error in the min/hour/day variable in dev builds are fixed, the plurals are now accurate
+- the logical error in the min/hour/day variable in dev builds is fixed, the plurals are now accurate
 - cleaning up and hiding details in *Tasks* and *Rsync parameters* view, hide distracting details
 	- details may be enabled by a toggle
     - objective is to keep views as clean and simple as possible
