@@ -25,3 +25,9 @@ Upon clicking the menu bar icon for the application, the main view is displayed.
 {{< figure src="/images/menuapp/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/menuapp/about.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Estimate and synchronize estimated.
+
+{{< figure src="/images/menuapp/estimated.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/menuapp/synchronize.png" alt="" position="center" style="border-radius: 8px;" >}}
