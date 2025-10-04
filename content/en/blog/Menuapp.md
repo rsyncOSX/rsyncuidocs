@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "RsyncUI menu bar"
-date = "2025-10-01"
+date = "2025-10-04"
 tags = ["changelog","menuapp"]
 categories = ["changelog"]
 +++
