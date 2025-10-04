@@ -24,7 +24,7 @@ The above will also be true of you are using the Calendar function.
 
 #### The Schedule
 
-A note about the Schedule and scheduling of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the blog *Timer and Schedule* for more detailed info about the Timer.
+A note about the Schedule and scheduling of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the section *Schedule* for more info about the function.
 
 Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. 
 

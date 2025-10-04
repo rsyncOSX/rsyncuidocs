@@ -10,13 +10,22 @@ categories = ["changelog"]
 
 **Not yet released as beta**. Having been away from my residence for approximately ten days. I anticipate returning home on Sunday, October 5th, and will commence more testing of the menu application upon my return. The core code, model, and process code of the application have been extensively validated. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
 
-I have commenced the development of a menu bar version of RsyncUI. The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization. 
+I have commenced the development of a menu bar version of RsyncUI. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
 
-There is no administrative task management. New tasks and profiles will be added by RsyncUI. There is no log views. Logs may be viewed by RsyncUI.
+To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. 
 
-The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application.
+#### Functions not within the menu app
 
-To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint.
+The following functions is *not* within the menu app:
+
+- there is no administrative task management
+	- new tasks and profiles will be added by RsyncUI.
+- there is no log views, logs may be viewed by RsyncUI
+	- logs are created by the menu app
+- there is no support for URL commands
+- there is no restore of data
+	- restore of data function is only valid for remote servers
+- there is no Quick function
 
 #### The main menu and about
 
