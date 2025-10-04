@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### RsyncUI menu bar app
 
-**Not yet released as beta**. I am uncertain about the exact release date, but if you are interested in testing the app, please contact me via email.
+**Not yet released as beta**. Having been away from my residence for approximately ten days. I anticipate returning home on Sunday, October 5th, and will commence more testing of the menu application upon my return. The core code, model, and process code of the application have been extensively validated. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
 
 I have commenced the development of a menu bar version of RsyncUI. The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization. 
 
