@@ -31,13 +31,15 @@ The following functions is *not* within the menu app:
 
 Upon clicking the menu bar icon for the application, the main view is displayed. Users can estimate and execute tasks, select tasks, double-click on tasks, and monitor the progress bar during task synchronization.
 
-The main view might also be detached from the menu bar.
+The primary view is independent of the menu bar, but clicking on the icon within the menu bar will either hide or reveal the application.
 
 {{< figure src="/images/menuapp/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/menuapp/about.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 Estimate and synchronize estimated.
+
+{{< figure src="/images/menuapp/estimating.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/menuapp/estimated.png" alt="" position="center" style="border-radius: 8px;" >}}
 
