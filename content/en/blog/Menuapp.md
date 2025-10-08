@@ -1,12 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "RsyncUI menu app"
-date = "2025-10-07"
+date = "2025-10-08"
 tags = ["changelog","menuapp"]
 categories = ["changelog"]
 +++
 
 ### RsyncUI menu app
+
+The beta version is scheduled to be released within the next two days.
 
 I have commenced the development of a menu bar version of RsyncUI. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
 
@@ -42,3 +44,27 @@ Estimate and synchronize estimated.
 {{< figure src="/images/menuapp/estimated.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/menuapp/synchronize.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+#### Number of lines of code
+
+RsyncUI comprises 191 files and 16,200 lines of code. The RsyncUI menu application encompasses less than 50% of the code compared to RsyncUI.
+
+```
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUImenu/RsyncUImenu
+      96 text files.
+      95 unique files.                              
+       4 files ignored.
+
+github.com/AlDanial/cloc v 2.06  T=0.03 s (3329.6 files/s, 330155.3 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Swift                           89            977           1288           6741
+C                                2             36             72            254
+XML                              2              0              0             42
+JSON                             1              0              0              6
+C/C++ Header                     1              1              3              0
+-------------------------------------------------------------------------------
+SUM:                            95           1014           1363           7043
+-------------------------------------------------------------------------------
+```
