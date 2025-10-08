@@ -12,7 +12,7 @@ The beta version is scheduled to be released within the next two days.
 
 I have commenced the development of a menu bar version of RsyncUI. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
 
-**Not yet released as beta**. The core code, model, and process code of the application have been validated through RsyncUI. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
+The core code, model, and process code of the application have been validated through RsyncUI. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
 
 To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. 
 
@@ -29,7 +29,7 @@ The following functions is *not* within the menu app:
 	- restore of data function is only valid for remote servers
 - there is no Quick function
 
-#### The main menu and about
+#### The main menu
 
 Upon clicking the menu bar icon for the application, the main view is displayed. Users can estimate and execute tasks, select tasks, double-click on tasks, and monitor the progress bar during task synchronization.
 
