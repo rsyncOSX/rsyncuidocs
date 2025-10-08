@@ -35,8 +35,6 @@ The primary view is independent of the menu bar, but clicking on the icon within
 
 {{< figure src="/images/menuapp/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/menuapp/about.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 Estimate and synchronize estimated.
 
 {{< figure src="/images/menuapp/estimating.png" alt="" position="center" style="border-radius: 8px;" >}}
