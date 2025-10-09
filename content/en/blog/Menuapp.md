@@ -8,13 +8,15 @@ categories = ["changelog"]
 
 ### RsyncUI menu app
 
-The beta version is released for test. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
+The beta version is released for test. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.*  As for RsyncUI the RsyncUI menu app is signed and notarized.
 
-As for RsyncUI the RsyncUI menu app is signed and notarized.
+{{% pageinfo color="info" %}}
 
-The core code, model, and process code of the application have been validated through RsyncUI. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
+The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. The core code, model, and process code of the application have been validated through RsyncUI. 
 
-To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. 
+{{< /pageinfo >}}
+
+Development efforts have primarily focused on the user interface. To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. 
 
 #### Functions not within the menu app
 
