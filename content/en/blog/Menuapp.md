@@ -14,6 +14,8 @@ The beta version is released for test. *The primary objective of this applicatio
 
 The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. The core code, model, and process code of the application have been validated through RsyncUI. 
 
+The further development of the RsyncUI menu application is contingent upon the presence of users who utilize the menu app application. Its significance will only become apparent over time. Nevertheless, I intend to continue developing the application until version 1.0.0 is prepared for release. 
+
 {{< /pageinfo >}}
 
 Development efforts have primarily focused on the user interface. To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. 
