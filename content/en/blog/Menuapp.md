@@ -1,16 +1,16 @@
 +++
 author = "Thomas Evensen"
 title = "RsyncUI menu app"
-date = "2025-10-08"
+date = "2025-10-09"
 tags = ["changelog","menuapp"]
 categories = ["changelog"]
 +++
 
 ### RsyncUI menu app
 
-The beta version is scheduled to be released within the next two days.
+The beta version is released for test. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
 
-I have commenced the development of a menu bar version of RsyncUI. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
+As for RsyncUI the RsyncUI menu app is signed and notarized.
 
 The core code, model, and process code of the application have been validated through RsyncUI. Development efforts have primarily focused on the user interface, and additional testing is required before the release of a beta version.
 
