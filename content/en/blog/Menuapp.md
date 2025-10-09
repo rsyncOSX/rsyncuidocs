@@ -22,7 +22,7 @@ Development efforts have primarily focused on the user interface. To the best of
 
 #### Functions not within the menu app
 
-The following functions is *not* within the menu app:
+The following functions are **not available** in the menu application:
 
 - there is no administrative task management
 	- new tasks and profiles will be added by RsyncUI.
