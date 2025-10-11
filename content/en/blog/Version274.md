@@ -10,6 +10,10 @@ categories = ["changelog"]
 
 Minor updates to RsyncUI have commenced and will be released later in October 2025. Regular updates will be provided as RC releases. The following are the current code changes:
 
+#### October 11, 2025 (in code, not yet released as rc)
+
+The schedule is currently in development and some parts has not yet been released. Dates added to the schedule are validated, and the next schedule added must be *x minutes* ahead of the previous schedule. The Schedule view highlights invalid dates in *red font* and does not display popups if not validated. If a date is not validated, it is not added to the schedule. 	
+
 #### October 11, 2025
 
 - in Settings view, all toggles are changed to `.toggleStyle(.switch)`
