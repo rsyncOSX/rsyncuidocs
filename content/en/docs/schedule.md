@@ -5,6 +5,13 @@ title =  "Schedule"
 tags = ["schedule"]
 categories = ["synchronize"]
 +++
+
+{{% pageinfo color="info" %}}
+
+In the forthcoming release of RsyncUI version 2.7.4, there have been modifications to the Schedule code. The Timer library, as previously mentioned, operates only when the Mac is in an awake state. To rectify this issue, the changes involve employing the Foundation library `NSBackgroundActivityScheduler`. This library is responsible for initiating scheduled backups that were not executed when the Mac resumed its active state. 
+
+{{< /pageinfo >}}
+
 {{% pageinfo color="info" %}}
 
 The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."*  The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
