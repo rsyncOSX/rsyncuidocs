@@ -8,11 +8,11 @@ categories = ["changelog"]
 
 ### Version 2.7.4 (build 165) - released as rc
 
-Minor updates to RsyncUI have commenced and will be released later in October 2025. Regular updates will be provided as RC releases. The following are the current code changes:
+Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
-#### October 11, 2025 (in code, not yet released as rc)
+#### October 12, 2025 - in code, not yet released as rc
 
-The schedule is currently in development and some parts has not yet been released. Dates added to the schedule are validated, and the next schedule added must be *x minutes* ahead of the previous schedule. The Schedule view highlights invalid dates in *red font* and no more popups if not validated. Only validated schedules are added. 	
+Dates added to the schedule are validated, and the next schedule added must be *x minutes* ahead of the previous schedule. The Schedule view highlights invalid dates in *red font* and no more popups if not validated. Only validated schedules are added to the schedule.	
 
 #### October 11, 2025
 
