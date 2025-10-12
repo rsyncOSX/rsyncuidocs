@@ -6,15 +6,15 @@ tags = ["changelog","menuapp"]
 categories = ["changelog"]
 +++
 
-### RsyncUI menu app
+### RsyncUI menu app - not yet released
 
-The beta version is released for test. *The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.*  As for RsyncUI the RsyncUI menu app is signed and notarized.
+*The primary objective of this application is to remain on the menu bar and provide effortless access to data synchronization.* 
 
 {{% pageinfo color="info" %}}
 
 The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. The core code, model, and process code of the application have been validated through RsyncUI. 
 
-The further development of the RsyncUI menu application is contingent upon the presence of users who utilize the menu app application. Its significance will only become apparent over time. Nevertheless, I intend to continue developing the application until version 1.0.0 is prepared for release. 
+The further development of the RsyncUI menu application is contingent upon the presence of users who utilize the menu app application. Its use will only become apparent over time. I intend to continue developing the application until version 1.0.0 is prepared for release. And then evaluate the number of users after release of version 1.0.0.
 
 {{< /pageinfo >}}
 
