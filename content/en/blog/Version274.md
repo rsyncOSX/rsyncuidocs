@@ -6,13 +6,26 @@ tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.4 (build 165) - released as rc
+### Version 2.7.4 (build 165)
 
 Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
-#### October 12, 2025 - in code, not yet released as rc
+#### October 12, 2025 - in code only
 
-Dates added to the schedule are validated, and the next schedule added must be *x minutes* ahead of the previous schedule. The Schedule view highlights invalid dates in *red font* and no more popups if not validated. Only validated schedules are added to the schedule.	
+Tasks added to the schedule are validated. The planned next task schedule added must either:
+
+- be *x minutes ahead* of the first schedule in queue
+	- the first schedule in queue is always ahead of now	
+- be *x minutes subtracted* from the first schedule in queue
+	- as above, the planned next schedule must also be greater than now
+
+The Schedule view visually distinguishes invalid dates in red font, eliminating the need for additional popups. Only validated task schedules are subsequently incorporated into the schedule.
+
+For the moment x is ten minutes.
+
+##### Sleep mode and queued tasks
+
+When the Mac enters sleep mode with scheduled tasks in queue, the last unexecuted task for the specified profile is executed upon the Mac’s subsequent wake-up. If there are multiple unexecuted tasks for a named profile, only the most recent task in the queue is executed. 
 
 #### October 11, 2025
 
