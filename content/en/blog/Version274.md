@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.4"
-date = "2025-10-11"
+date = "2025-10-12"
 tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
-#### October 12, 2025 - in code only
+#### October 12, 2025
 
 Tasks added to the schedule are validated. The planned next task schedule added must either:
 
@@ -19,7 +19,7 @@ Tasks added to the schedule are validated. The planned next task schedule added 
 - be *x minutes subtracted* from the first schedule in queue
 	- as above, the planned next schedule must also be greater than now
 
-The Schedule view visually distinguishes invalid dates in red font, eliminating the need for additional popups. Only validated task schedules are subsequently incorporated into the schedule.
+The Schedule view visually distinguishes invalid times in red font, eliminating the need for additional popups. Only validated task schedules are subsequently incorporated into the schedule.
 
 For the moment x is ten minutes.
 
