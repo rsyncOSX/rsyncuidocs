@@ -12,46 +12,27 @@ categories = ["changelog"]
 
 {{% pageinfo color="info" %}}
 
-The codebase has been minimized, and all *model* and *process* code is shared with RsyncUI. The core code, model, and process code of the application have been validated through RsyncUI. 
-
-The further development of the RsyncUI menu application is contingent upon the presence of users who utilize the menu app application. Its use will only become apparent over time. I intend to continue developing the application until version 1.0.0 is prepared for release. And then evaluate the number of users after release of version 1.0.0.
+The codebase has been streamlined, and all *model* and *process* code is shared with RsyncUI. The core code, model, and process code of the application have been validated through RsyncUI. I intend to continue updating the application until I believe it is ready for beta testing. After the beta release, I will evaluate the number of users to determine the next steps.
 
 {{< /pageinfo >}}
 
-Development efforts have primarily focused on the user interface. To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint. Tables and data lists are converted to Lists, which, in my opinion, appear more visually appealing on a menu bar application. 
-
-#### Functions not within the menu app
+Development efforts have primarily focused on the user interface. To the best of my ability, I have utilized the periphery tool to eliminate unused code. Additionally, there have been modifications to views to enhance their suitability for a menu bar application and minimize the memory footprint.
 
 The following functions are **not available** in the menu application:
 
 - there is no administrative task management
 	- new tasks and profiles will be added by RsyncUI.
 - there is no log views, logs may be viewed by RsyncUI
-	- logs are created by the menu app
+	- but logs are created by the menu app when executing tasks
 - there is no support for URL commands
+	- in RsyncUI URL commands are used to group together actions like estimate and execute tasks in one go 	 
 - there is no restore of data
 	- restore of data function is only valid for remote servers
 - there is no Quick function
 
-#### The main menu
-
-Upon clicking the menu bar icon for the application, the main view is displayed. Users can estimate and execute tasks, select tasks, double-click on tasks, and monitor the progress bar during task synchronization.
-
-The primary view is independent of the menu bar, but clicking on the icon within the menu bar will either hide or reveal the application.
-
-{{< figure src="/images/menuapp/main.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-Estimate and synchronize estimated.
-
-{{< figure src="/images/menuapp/estimating.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/menuapp/estimated.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/menuapp/synchronize.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 #### Number of lines of code
 
-RsyncUI comprises 191 files and 16,200 lines of code. The RsyncUI menu application encompasses less than 50% of the code compared to RsyncUI.
+The RsyncUI menu application encompasses less than 50% of the code compared to RsyncUI.
 
 ```
 cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUImenu/RsyncUImenu
