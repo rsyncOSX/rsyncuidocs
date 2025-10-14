@@ -8,7 +8,7 @@ categories = ["general information"]
 
 There are a few limitations or constraints to be aware of when using RsyncUI. NONE of these limitations can result in data corruption or trouble. However, they may inadvertently halt an ongoing synchronization process.
 
-### Long running tasks and sleep
+## Long running tasks and sleep
 
 Upon each Mac sleep, RsyncUI synchronization tasks cease. An active rsync process does not prevent Mac sleep. If Mac sleeps during a synchronization task, rsync likely generates an error, halting the task. The sole method to resume synchronization is to restart it via RsyncUI. RsyncUI will resume and synchronize data not yet transferred. Rsync is adept and resumes from its previous state.
 
@@ -22,7 +22,7 @@ You may modify your Mac's sleep settings to control when it sleeps.
 
 The above will also be true of you are using the Calendar function.
 
-#### The Schedule
+## The Schedule
 
 A note about the Schedule and scheduling of actions. There are limitations of how the scheduler works due to how the Timer library is developed. Refer to the section *Schedule* for more info about the function.
 
@@ -30,15 +30,11 @@ Its primary function is to automate selected synchronization of tasks as long as
 
 {{< alert >}}
 
-The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."* 
-
-If you leave your Mac and it goes to sleep, the timer will *not work*.
+Refer to the section *Schedule* for more info about the function.
 
 {{< /alert >}}
 
-The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
-
-### Aborting Tasks
+## Aborting Tasks
 
 Please be cognizant that this is an external task not under the control of RsyncUI. It executes the command-line tool `rsync`.
 RsyncUI monitors the task for progress and termination.
