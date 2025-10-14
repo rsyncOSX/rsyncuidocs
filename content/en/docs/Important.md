@@ -22,13 +22,13 @@ For instructions how to *verify a task*, new or changed tasks, refer to the *Get
 
 {{</alert >}}
 
-## The delete parameter
+### The delete parameter
 
 The --delete parameter, herein referred to as the *parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
 
 Therefore, it is crucial to ascertain whether the *parameter* is enabled or disabled. Enabling the *parameter* ensures complete synchronization between the source and destination directories.
 
-### How to remove and add the delete parameter
+#### How to remove and add the delete parameter
 
 Select the *Rsync parameters* from the primary Sidebar menu.  Select the task for which you want to add or remove the `--delete` parameter. And then toggle the *Add --delete parameter, ON is added* . After toggle, *remember to update the task*.
 
@@ -37,13 +37,13 @@ Select the *Rsync parameters* from the primary Sidebar menu.  Select the task fo
 
 {{< figure src="/images/rsyncparameters/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-## Temporary halt tasks
+### Temporary halt tasks
 
 A task can be temporarily halted. Within the primary Synchronize view, select the task and right-click. Halting a task will retain the type of task that was halted when the task is resumed. An halted task displays a red stop sign in the action column.
 
 {{< figure src="/images/important/halttask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-## Two options to save updates to data
+### Two options to save updates to data
 
 This option applies to the data synchronized by RsyncUI. By enabling either of these options, you can save changes to data, such as deletions or updates, prior to a synchronization task.
 
@@ -55,7 +55,7 @@ Using *snapshots*, the second option,  require that the latest version 3.x of `r
 
 {{< /alert >}}
 
-## Remote servers
+### Remote servers
 
 RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter `-e ssh` to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
 
