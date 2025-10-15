@@ -43,4 +43,10 @@ When the Mac enters sleep mode with scheduled tasks in queue, the last unexecute
 - every `.onAppear {...}` is replaced with `.task {...}` if the closure includes asynchronous code
 	- the .task modifier handles asynchronous functions directly
 - the Schedule function is enhanced to tolerate when the Mac goes to sleep
-	- when a scheduled task is not executed when the Mac enters sleep mode, the Schedule function retrieves the unexecuted task and executes it upon the Mac's subsequent wake-up	
+	- when a scheduled task is not executed when the Mac enters sleep mode, the Schedule function retrieves the unexecuted task and executes it upon the Mac's subsequent wake-up
+
+#### Issues when testing awake on Mac
+
+During the testing of the revised code, I encountered an issue with the Mac's behavior when it returns from being asleep and an external attached disc is present. Upon waking, the Mac ejects the attached volume, which subsequently disrupts the synchronization process of RsyncUI. You may test this yourself to verify if there is an issue regarding this.
+
+I asked ChatGPT about this and the answer was: *"Your Mac ejects external disks when waking from sleep due to a common bug or power management issue, where the system incorrectly unmounts the drive during the sleep-wake cycle. To fix this, you can update your macOS, adjust energy saver settings, check for issues with hubs or docks, or use a third-party app like Jettison to automatically unmount the drive before sleep and remount it upon waking."*
