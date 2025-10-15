@@ -6,11 +6,17 @@ tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.4 (build 165)
+### Version 2.7.4 (build 165) - not yet released as rc
 
 Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
 #### October 15, 2025
+
+{{< alert color="warning" >}}
+
+Despite ongoing discussions with AI, when I request code simplification for GlobalTimer.swift, I still encounter code modifications. I intend to apply these changes to the version 2.7.4 branch and conduct further testing before preparing a new release candidate. The previous release candidate has been removed, as it appears to function correctly, but the code in GlobalTimer.swift remains overly complex. 
+
+{{< /alert >}}
 
 I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the [GlobalTimer.swift](https://github.com/rsyncOSX/RsyncUI/blob/main/RsyncUI/Model/Global/GlobalTimer.swift) to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
 
