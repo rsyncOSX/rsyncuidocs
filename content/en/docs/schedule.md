@@ -8,7 +8,7 @@ categories = ["synchronize"]
 
 {{% pageinfo color="info" %}}
 
-In the forthcoming release of RsyncUI version 2.7.4, there have been modifications to the Schedule code. The Timer library, as previously mentioned, operates only when the Mac is in an awake state. To rectify this issue, the changes involve employing the Foundation library `NSBackgroundActivityScheduler`. This library is responsible for initiating scheduled backups that were not executed when the Mac resumed its active state. 
+In the upcoming release of RsyncUI version 2.7.4, modifications have been made to the Schedule code. As previously mentioned, the Timer library operates only when the Mac is in an awake state. To address this issue, RsyncUI by the Schedule monitors when the Mac enters sleep mode. When the Mac is awake, RsyncUI checks if there are scheduled tasks that have not been executed. If so, RsyncUI executes this task. If there are multiple tasks that have not been executed for a specific profile, RsyncUI executes only one task for that profile. If there are multiple tasks that have not been executed for various profiles, RsyncUI adds a 5-minute delay to the next task to prevent executing more than one task at a time.
 
 This update needs some more testing before new release.
 

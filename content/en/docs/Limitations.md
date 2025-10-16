@@ -28,11 +28,15 @@ A note about the Schedule and scheduling of actions. There are limitations of ho
 
 Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. 
 
-{{< alert >}}
+{{% pageinfo color="info" %}}
+
+In the upcoming release of RsyncUI version 2.7.4, modifications have been made to the Schedule code. As previously mentioned, the Timer library operates only when the Mac is in an awake state. To address this issue, RsyncUI by the Schedule monitors when the Mac enters sleep mode. When the Mac is awake, RsyncUI checks if there are scheduled tasks that have not been executed. If so, RsyncUI executes this task. If there are multiple tasks that have not been executed for a specific profile, RsyncUI executes only one task for that profile. If there are multiple tasks that have not been executed for various profiles, RsyncUI adds a 5-minute delay to the next task to prevent executing more than one task at a time.
+
+This update needs some more testing before new release.
 
 Refer to the section *Schedule* for more info about the function.
 
-{{< /alert >}}
+{{< /pageinfo >}}
 
 ### Aborting Tasks
 
