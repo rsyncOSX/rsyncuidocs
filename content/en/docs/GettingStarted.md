@@ -44,6 +44,29 @@ Please note that this is an external task not controlled by RsyncUI, which execu
 
 The user can abort a task at any time. However, it is essential to allow the task to complete and perform any necessary cleanup operations before starting a new task. This process may take a few seconds, and if not, the applications may become unresponsive.
 
+### There are errors in tagging data
+
+Sometimes you may get the error:
+
+```
+There are errors in tagging data
+for synchronize ID XXXX
+Most likely number of rows
+> 20 lines and no data to synchronize
+```
+
+The preceding message serves as a cautionary note and a confirmation that all data has been synchronized. RsyncUI provides an indication of whether there is data to be transferred. Typically, the output from rsync is less than 20 rows if no data synchronization is required. Please refer to the following for further clarification: RsyncUI analyzes the summary output from rsync to identify data that needs to be synchronized or not. Occasionally, RsyncUI may detect that the number of lines from rsync exceeds 20, yet it still tags the data as not needing synchronization. This message serves as a reminder to verify that all data has been successfully synchronized. 
+
+To clarify this message, select the task and execute it, or synchronize it, without providing an estimate. 
+
+Version 3.x of rsync:
+
+{{< figure src="/images/gettingstarted/linesver3x.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Version openrsync:
+
+{{< figure src="/images/gettingstarted/linesopenrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
+
 ### The Sidebar Menu options
 
 There are three Sidebar menu options that are contingent upon the properties of a task. It is sufficient as long as one of the tasks satisfies one of the prerequisites.
