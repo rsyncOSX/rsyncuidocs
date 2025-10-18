@@ -14,7 +14,7 @@ Minor updates to RsyncUI have commenced and will be released later in October 20
 
 I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame.
 
-I inquired with Copilot and Claude AI about optimizing the [GlobalTimer.swift](https://github.com/rsyncOSX/RsyncUI/blob/main/RsyncUI/Model/Global/GlobalTimer.swift) to enhance its reliability during sleep mode on macOS.
+I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS.
 
 I am genuinely impressed by the capabilities of AI in assisting with coding tasks. Both provide different answers, and the code does not always perform as expected. By interacting with AI code, I am able to resolve these some issues.
 
