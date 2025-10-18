@@ -18,7 +18,7 @@ Despite ongoing discussions with AI, when I request code simplification for Glob
 
 {{< /alert >}}
 
-I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the [GlobalTimer.swift](https://github.com/rsyncOSX/RsyncUI/blob/main/RsyncUI/Model/Global/GlobalTimer.swift) to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
+I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the Scheduling code to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
 
 #### October 12, 2025
 
