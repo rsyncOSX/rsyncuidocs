@@ -24,6 +24,8 @@ Today, I have resumed coding on the Schedule code to also reschedule tasks that 
 
 I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the Scheduling code to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
 
+{{</alert >}}
+
 #### October 12, 2025
 
 Tasks added to the schedule are validated. The planned next task schedule added must either:
