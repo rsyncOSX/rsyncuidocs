@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.7.4 (build 165) - not yet released as rc
 
-Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
+Updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
 #### October 17, 2025
 
