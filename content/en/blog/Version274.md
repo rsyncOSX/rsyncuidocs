@@ -1,28 +1,27 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.4"
-date = "2025-10-17"
+date = "2025-10-18"
 tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
 
 ### Version 2.7.4 (build 165) - not yet released as rc
 
-Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
+Minor updates to RsyncUI have commenced and will be released most likely by end of October 2025. The following are the current updates:
 
-#### October 17, 2025
+#### October 18, 2025
 
-I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame.
-
-I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS.
-
-I am genuinely impressed by the capabilities of AI in assisting with coding tasks. Both provide different answers, and the code does not always perform as expected. By interacting with AI code, I am able to resolve these some issues.
-
-Today, I have resumed coding on the Schedule code to also reschedule tasks that were not executed after the Mac wakes up after a sleep period. 
+I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame. I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS. I am genuinely impressed by the capabilities of AI in assisting with coding tasks.
 
 {{< alert color="warning" >}}
 
-I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the Scheduling code to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
+In the process of refactoring the Schedule code, I discovered that the code was actually too fragmented. Consequently, I have initiated the rewriting of most of the model code for Schedule. The UI component remains unchanged. The refactoring process will take a few days and will be completed in two stages:
+
+1. Refactoring the code as it currently functions in the present release, without any improvements for sleep and wakefulness.
+2. Refactoring the code to enhance its functionality for sleep and wakefulness.
+
+Additionally, I am employing artificial intelligence to review my code and make necessary enhancements.
 
 {{</alert >}}
 
