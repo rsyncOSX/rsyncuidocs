@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.4"
-date = "2025-10-15"
+date = "2025-10-17"
 tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
@@ -10,13 +10,17 @@ categories = ["changelog"]
 
 Minor updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
 
-#### October 15, 2025
+#### October 17, 2025
+
+I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame.
+
+I inquired with Copilot and Claude AI about optimizing the [GlobalTimer.swift](https://github.com/rsyncOSX/RsyncUI/blob/main/RsyncUI/Model/Global/GlobalTimer.swift) to enhance its reliability during sleep mode on macOS.
+
+I am genuinely impressed by the capabilities of AI in assisting with coding tasks. Both provide different answers, and the code does not always perform as expected. By interacting with AI code, I am able to resolve these some issues.
+
+Today, I have resumed coding on the Schedule code to also reschedule tasks that were not executed after the Mac wakes up after a sleep period. 
 
 {{< alert color="warning" >}}
-
-Despite ongoing discussions with AI, when I request code simplification for GlobalTimer.swift, I still encounter code modifications. I intend to apply these changes to the version 2.7.4 branch and conduct further testing before preparing a new release candidate. The previous release candidate has been removed, as it appears to function correctly, but the code in GlobalTimer.swift remains overly complex. 
-
-{{< /alert >}}
 
 I have commenced experimenting with AI in coding, specifically using Copilot (GPT-5), a service available on GitHub. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. I inquired with Copilot about optimizing the Scheduling code to enhance its reliability during sleep mode on macOS. I was genuinely impressed by the capabilities of AI in assisting with coding tasks. After engaging in a series of discussions with Copilot, I have come to the conclusion that the Schedule function has been improved in terms of reliability.
 
