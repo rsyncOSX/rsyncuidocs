@@ -21,7 +21,6 @@ In the process of refactoring the Schedule code, I discovered that the code was 
 - refactoring the code as it currently functions in the present release, without any improvements for sleep and wakefulness
 	- completed, still some more testing requiered
 - refactoring the code to enhance its functionality for sleep and wakefulness
-	- not yet commenced 
 
 Additionally, I am employing artificial intelligence to review my code and make necessary enhancements.
 
