@@ -27,6 +27,14 @@ Additionally, I am employing artificial intelligence to review my code and make 
 
 {{</alert >}}
 
+Several demonstration schedules are scheduled, with a one-minute interval between each. The lid is closed, and the Mac enters sleep mode.
+
+{{< figure src="/images/v274/before.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+After approximately two minutes, the Mac reawakens. Schedules that have not been executed are automatically transferred to a new table. Not yet decide how to handle not executed schedules.
+
+{{< figure src="/images/v274/after.png" alt="" position="center" style="border-radius: 8px;" >}}
+
 #### October 12, 2025
 
 Tasks added to the schedule are validated. The planned next task schedule added must either:
