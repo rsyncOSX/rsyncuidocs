@@ -8,14 +8,6 @@ categories = ["synchronize"]
 
 {{< alert >}}
 
-In the upcoming release of RsyncUI version 2.7.4, modifications have been made to the Schedule code. As previously mentioned, the Timer library operates only when the Mac is in an awake state. To address this issue, RsyncUI by the Schedule monitors when the Mac enters sleep mode. When the Mac is awake, RsyncUI checks if there are scheduled tasks that have not been executed. If so, RsyncUI executes this task. If there are multiple tasks that have not been executed for a specific profile, RsyncUI executes only one task for that profile. If there are multiple tasks that have not been executed for various profiles, RsyncUI adds a 5-minute delay to the next task to prevent executing more than one task at a time.
-
-This update needs some more testing before new release.
-
-{{< /alert >}}
-
-{{< alert >}}
-
 The scheduler is implemented by using the Timer library, quote Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."*  The timer has a strong reference to the run loop on the main thread. That also means that if the application goes to sleep, so does the run loop. And the timer is only active as long as RsyncUI is active. 
 
 {{< /alert >}}
