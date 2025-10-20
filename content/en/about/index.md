@@ -33,9 +33,7 @@ I am continuously learning and adapting to new releases of Swift, SwiftUI, and X
 
 **Why Not the App Store?**
 
-One crucial requirement for macOS applications on the Apple App Store, as outlined by Apple, is:
-*"To distribute a macOS app through the Mac App Store, you must enable the App Sandbox capability."*
-The App Sandbox imposes certain restrictions on the functionality of an application within its environment. While it is essential for enabling passwordless login via SSH to remote servers, it also causes some limitations with these features when enabled.
+One crucial requirement for macOS applications on the Apple App Store, as outlined by Apple, is: *"To distribute a macOS app through the Mac App Store, you must enable the App Sandbox capability."* The App Sandbox imposes certain restrictions on the functionality of an application within its environment. While it is essential for enabling passwordless login via SSH to remote servers, it also causes some limitations with these features when enabled.
 
 {.text-center}
 
@@ -45,10 +43,7 @@ The App Sandbox imposes certain restrictions on the functionality of an applicat
 
 **How are these pages constructed?**
 
-Hugo, a static site generator, serves as the web framework responsible for constructing these pages. The source code for this website is hosted on GitHub.
-Netlify, the web server, automatically detects changes made to the main branch and promptly rebuilds the server.
-The Hugo theme utilized is [docsy](https://github.com/google/docsy), another open-source project hosted on GitHub.
-Upon making modifications or additions to pages, I commit these changes to GitHub, and Netlify promptly constructs the new server within seconds.
+Hugo, a static site generator, serves as the web framework responsible for constructing these pages. The source code for this website is hosted on GitHub. Netlify, the web server, automatically detects changes made to the main branch and promptly rebuilds the server. The Hugo theme utilized is [docsy](https://github.com/google/docsy), another open-source project hosted on GitHub. Upon making modifications or additions to pages, I commit these changes to GitHub, and Netlify promptly constructs the new server within seconds.
 
 {.text-center}
 
