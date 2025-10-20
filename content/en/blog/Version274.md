@@ -30,9 +30,13 @@ Several demonstration schedules are scheduled, with a one-minute interval betwee
 
 {{< figure src="/images/v274/before.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-After approximately two minutes, the Mac reawakens. Schedules that have not been executed are automatically transferred to a new table. Not yet decide how to handle not executed schedules.
+Approximately 20 minutes after the Mac reawakens, any scheduled tasks that have not been executed are automatically transferred to a new table. Additionally, any pending tasks that were not executed upon awakening may be moved to the top of the queue for execution.
 
 {{< figure src="/images/v274/after.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Moved *not executed* tasks after awake to be executed.
+
+{{< figure src="/images/v274/move.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### October 12, 2025
 
