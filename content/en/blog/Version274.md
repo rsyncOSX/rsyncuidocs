@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 The following updates have been made, including some code cleanups. Apart from the majority of changes within the Schedule section, this release is a maintenance release.
 
-- there is details about [the changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4))
+- there is details about [the changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4)
 
 In the process of refactoring the Schedule code, I discovered that the model was too fragmented. Consequently, I have refactored most of the model code for Schedule. The UI component remains unchanged. The refactoring process is completed in two stages:
 
