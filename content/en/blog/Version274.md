@@ -8,12 +8,14 @@ categories = ["changelog"]
 
 ### Version 2.7.4 (build 165) - October 21, 2025
 
-The following are updated, including some other cleanups of code (please see [the details about changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4)):
+The following updates have been made, including some code cleanups. Apart from the majority of changes within the Schedule section, this release is a maintenance release.
+
+- there is details about [the changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4))
 
 In the process of refactoring the Schedule code, I discovered that the model was too fragmented. Consequently, I have refactored most of the model code for Schedule. The UI component remains unchanged. The refactoring process is completed in two stages:
 
-- refactoring the code as it currently functions in the present release, without any improvements for sleep and wakefulness
-- refactoring the code to enhance its functionality for sleep and wakefulness
+- refactoring the model code without any improvements for sleep and wakefulness
+- refactoring the model code to enhance its functionality for sleep and wakefulness
 
 Tasks added to the schedule are validated. The planned next task schedule added must either:
 
@@ -34,8 +36,6 @@ The Schedule view visually distinguishes invalid times in red font, eliminating 
 #### AI and RsyncUI
 
 I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame. I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS. I am genuinely impressed by the capabilities of AI in assisting with coding tasks.
-
-Additionally, I am employing artificial intelligence to review my code and make necessary enhancements.
 
 #### Issues when testing awake on Mac
 
