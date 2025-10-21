@@ -1,67 +1,41 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.4"
-date = "2025-10-19"
+date = "2025-10-21"
 tags = ["changelog","version 2.7.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.4 (build 165) - not yet released as rc
+### Version 2.7.4 (build 165) - October 21, 2025
 
-Updates to RsyncUI have commenced and will be released later in October 2025. The following are the current updates:
+The following are updated, including some other cleanups of code (please see [the details about changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4)):
 
-#### October 19, 2025
-
-I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame. I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS. I am genuinely impressed by the capabilities of AI in assisting with coding tasks.
-
-{{< alert color="warning" >}}
-
-In the process of refactoring the Schedule code, I discovered that the code was actually too fragmented. Consequently, I have initiated the rewriting of most of the model code for Schedule. The UI component remains unchanged. The refactoring process will take a few days and will be completed in two stages:
+In the process of refactoring the Schedule code, I discovered that the code was too fragmented. Consequently, I have refactored most of the model code for Schedule. The UI component remains unchanged. The refactoring process is completed in two stages:
 
 - refactoring the code as it currently functions in the present release, without any improvements for sleep and wakefulness
-	- completed, still some more testing requiered
 - refactoring the code to enhance its functionality for sleep and wakefulness
-
-Additionally, I am employing artificial intelligence to review my code and make necessary enhancements.
-
-{{</alert >}}
-
-Several demonstration schedules are scheduled, with a one-minute interval between each. The lid is closed, and the Mac enters sleep mode.
-
-{{< figure src="/images/v274/before.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-Approximately 20 minutes after the Mac reawakens, any scheduled tasks that have not been executed are automatically transferred to a new table. Additionally, any pending tasks that were not executed upon awakening may be moved to the top of the queue for execution.
-
-{{< figure src="/images/v274/after.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-Moved *not executed* tasks after awake to be executed.
-
-{{< figure src="/images/v274/move.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-#### October 12, 2025
 
 Tasks added to the schedule are validated. The planned next task schedule added must either:
 
-- be *x minutes ahead* of the first schedule in queue
+- be *10 minutes ahead* of the first schedule in queue
 	- the first schedule in queue is always ahead of now	
-- be *x minutes subtracted* from the first schedule in queue
+- be *10 minutes subtracted* from the first schedule in queue
 	- as above, the planned next schedule must also be greater than now
+- the Schedule function is enhanced to tolerate when the Mac goes to sleep
+	- when a scheduled task is not executed when the Mac enters sleep mode, the Schedule function retrieves unexecuted task and display the tasks in a table
+    - the user may move the unexecuted tasks to the schedule table
 
 The Schedule view visually distinguishes invalid times in red font, eliminating the need for additional popups. Only validated task schedules are subsequently incorporated into the schedule.
-
-For the moment x is ten minutes.
-
-##### Sleep mode and queued tasks
-
-When the Mac enters sleep mode with scheduled tasks in queue, the last unexecuted task for the specified profile is executed upon the Mac’s subsequent wake-up. If there are multiple unexecuted tasks for a named profile, only the most recent task in the queue is executed. 
-
-#### October 11, 2025
 
 - in Settings view, all toggles are changed to `.toggleStyle(.switch)`
 - every `.onAppear {...}` is replaced with `.task {...}` if the closure includes asynchronous code
 	- the .task modifier handles asynchronous functions directly
-- the Schedule function is enhanced to tolerate when the Mac goes to sleep
-	- when a scheduled task is not executed when the Mac enters sleep mode, the Schedule function retrieves the unexecuted task and executes it upon the Mac's subsequent wake-up
+
+#### AI and RsyncUI
+
+I have commenced experimenting with artificial intelligence (AI) in coding, specifically utilizing Copilot (GPT-5), a service accessible on GitHub and Claude AI by Anthropic. I am permitted to utilize Copilot for free due to the open-source nature of RsyncUI. Claude AI offers a free version with limitations on the number of questions asked within a specified time frame. I inquired with Copilot and Claude AI about optimizing the Schedule code to enhance its reliability during sleep mode on macOS. I am genuinely impressed by the capabilities of AI in assisting with coding tasks.
+
+Additionally, I am employing artificial intelligence to review my code and make necessary enhancements.
 
 #### Issues when testing awake on Mac
 
