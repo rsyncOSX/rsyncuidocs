@@ -26,9 +26,7 @@ The above will also be true of you are using the Calendar function.
 
 A note about the Schedule and scheduling of actions. There are some limitations of how the scheduler works due to how the Timer library is developed. Refer to the section *Schedule* for more info about the function.
 
-Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work.  RsyncUI may be minimized or not the active window and the timer will still work. 
-
-If scheduled tasks are not executed when the Mac enters sleep mode, they will be displayed within the Schedule view. 
+Its primary function is to automate selected synchronization of tasks as long as RsyncUI is alive and you are logged in. It *may* prove useful for users who require scheduled  synchronization of data during work. If there are scheduled tasks not executed when the Mac enters sleep mode, they will be explicit displayed within the Schedule view when the Mac is awake again. 
 
 ### Aborting Tasks
 
