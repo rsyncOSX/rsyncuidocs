@@ -20,12 +20,24 @@ If scheduled tasks are not executed when the Mac enters sleep mode, they will be
 
 To add a schedule, click on the date, set time and schedule. That is it. When a schedule is active the user is notified by the sidebar or the toolbar when the sidebar is hidden. By right click on a date will present schedules by date.
 
+Tasks added to the schedule are validated. The planned next task schedule added must either:
+
+- be *10 minutes ahead* of the first schedule in queue
+	- the first schedule in queue is always ahead of now	
+- be *10 minutes subtracted* from the first schedule in queue
+	- as above, the planned next schedule must also be greater than now
+- the Schedule function is enhanced to tolerate when the Mac goes to sleep
+	- when a scheduled task is not executed when the Mac enters sleep mode, the Schedule function retrieves unexecuted task and display the tasks in a table
+    - the user may move the unexecuted tasks to the schedule table
+
+The Schedule view visually distinguishes invalid times in red font. Only validated task schedules are subsequently incorporated into the schedule.
+
 {{< figure src="/images/calendar/addcalendar.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/calendar/hidesidebar.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Delete schedule
+#### Delete schedules
 
-Select the schedule and press the backspace.
+Select the schedules, one or more, and press the backspace.
 
 {{< figure src="/images/calendar/deletecalendar.png" alt="" position="center" style="border-radius: 8px;" >}}
