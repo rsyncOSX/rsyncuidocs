@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 The following are updated, including some other cleanups of code (please see [the details about changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.3...v2.7.4)):
 
-In the process of refactoring the Schedule code, I discovered that the code was too fragmented. Consequently, I have refactored most of the model code for Schedule. The UI component remains unchanged. The refactoring process is completed in two stages:
+In the process of refactoring the Schedule code, I discovered that the model was too fragmented. Consequently, I have refactored most of the model code for Schedule. The UI component remains unchanged. The refactoring process is completed in two stages:
 
 - refactoring the code as it currently functions in the present release, without any improvements for sleep and wakefulness
 - refactoring the code to enhance its functionality for sleep and wakefulness
