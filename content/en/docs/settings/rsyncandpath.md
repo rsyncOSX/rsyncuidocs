@@ -10,7 +10,7 @@ After changing a setting, you have to save the changes to keep it next time you 
 
 {{< figure src="/images/usersettings/settings.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### Version of rsync
+#### Version rsync
 
 It is recommended to install the latest version of `rsync`. RsyncUI provides direct path support for Homebrew on both Apple Silicon and Intel Macs. `RsyncUI` will determine the type of Mac you are using. The default path for Homebrew is:
 

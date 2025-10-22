@@ -49,9 +49,11 @@ This option applies to the data synchronized by RsyncUI. By enabling either of t
 
 {{< alert >}}
 
-There are a two options to automatically save changes to data when it is changed or deleted. Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  
+There are a two options to automatically save changes to data when it is changed or deleted. 
 
-Using *snapshots*, the second option,  require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
+Option 1: Rsync supports a *backup* flag. By, in RsyncUI, switching **on** RsyncUI adds the required parameters. You may change the backup directory to any location you want.  
+
+Option 2: Using *snapshots*, require that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section how to enable and use snapshots.
 
 {{< /alert >}}
 
