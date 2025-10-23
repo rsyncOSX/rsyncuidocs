@@ -14,7 +14,7 @@ categories = ["advanced features"]
 
 {{< alert color="warning" >}}
 
-The Verify remote function is not enabled by default. To enable it, please navigate to Settings and toggle the corresponding option. Before utilizing this function, kindly refer to its documentation to ensure you make the appropriate decision.  
+Before utilizing this function, kindly refer to its documentation to ensure you make the appropriate decision.  
 
 The Verify remote function is a specialized tool designed when synchronizing two Mac computers to a single repository, excluding Git repositories. This functionality was developed by the developer due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git server, necessitating a tool to determine whether to push or pull data.
 
