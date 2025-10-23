@@ -6,6 +6,12 @@ tags = ["verify remote","synchronize"]
 categories = ["advanced features"]
 +++
 
+{{< alert >}}
+
+ The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable.
+
+{{< /alert >}}
+
 {{< alert color="warning" >}}
 
 The Verify remote function is not enabled by default. To enable it, please navigate to Settings and toggle the corresponding option. Before utilizing this function, kindly refer to its documentation to ensure you make the appropriate decision.  

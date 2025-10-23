@@ -6,6 +6,12 @@ tags = ["schedule"]
 categories = ["synchronize"]
 +++
 
+{{< alert >}}
+
+ The schedule function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable.
+
+{{< /alert >}}
+
 Schedules are automatically saved to disk. RsyncUI loads the schedule file and reloads tasks that are due. Tasks scheduled to execute when the Mac is shut down are not loaded. If the Mac is put into sleep mode, RsyncUI will display unexecuted tasks in the Schedule view. There is *no automatic execution* of scheduled tasks that have not been executed. 
 
 {{< alert >}}
