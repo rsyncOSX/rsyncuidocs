@@ -12,9 +12,9 @@ I intend to refrain from releasing a new public version until sometime in Novemb
 
 Currently, there have been only a few UI updates. The graphical user interface (GUI) updates require a period of time to mature before they are finalized. The functions *Schedule* and *Verify remote* have been moved from the main sidebar to the toolbar. This modification enhances the cleanliness of the main sidebar by consolidating major functions. Additionally, there is an update to the progress bar.
 
-The primary sidebar retains its context sensitivity, but its functionality is limited to the "Snapshots" and "Restore" options, which are specifically tailored to certain tasks. For comprehensive information regarding the context-sensitive sidebar menu, please refer to the section titled *Getting started*, located at the bottom of the page.
+The primary sidebar retains its context sensitivity, but its functionality is limited to the *Snapshots* and *Restore* options, which are specifically tailored to certain tasks. For comprehensive information regarding the context-sensitive sidebar menu, please refer to the section titled *Getting started*.
 
-Additionally, I have initiated the process of incorporating macOS Tahoe-specific features into certain views. Whenever a macOS Tahoe-specific feature is introduced, a `if #available(macOS 26.0, *) {...} else {...}` clause is employed to ensure that RsyncUI remains available for the most recent three major versions of macOS.
+Additionally, I have initiated the process of incorporating macOS Tahoe-specific features into certain views. Whenever a macOS Tahoe specific feature is introduced, a `if #available(macOS 26.0, *) {...} else {...}` compiler directive is employed to ensure that RsyncUI remains available for the most recent three major versions of macOS.
 
 To display and access the toolbar actions for the two above mentioned functions, they must be enabled through the RsyncUI settings.
 
