@@ -1,14 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.5"
-date = "2025-10-25"
+date = "2025-10-26"
 tags = ["changelog","version 2.7.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.5 (build 166) - 25 October, 2025 release candidate (RC)
+### Version 2.7.5 (build 166) - 26 October, 2025 release candidate (RC)
 
-*Update 26 October*: even more glassy buttons are added to code, and a few more to add as well. And the glassy buttonstyle is also tweaked a little bit. A new rc with most buttons supporting glassy buttonstyle to be released in a day or two.    
+Even more glassy buttons are added to code, and a few more to add as well. And the glassy buttonstyle is also tweaked a little bit. *A new rc with most buttons supporting glassy buttonstyle to be released in a day or two.* Below are views of the schedule modale view, with glossy buttons for macOS Tahoe and buttons for the two previous major versions of macOS. 
 
 I intend to refrain from releasing a new public version until sometime in November 2025. However, I will release new RC versions when there are updates.
 
@@ -20,14 +20,23 @@ Additionally, I have initiated the process of incorporating macOS Tahoe-specific
 
 To display and access the toolbar actions for the two above mentioned functions, they must be enabled through the RsyncUI settings.
 
+##### The main view
+
+*Schedule* and *Verify remote* moved to the toolbar. 
+
 {{< figure src="/images/v275/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v275/schedule.png" alt="" position="center" style="border-radius: 8px;" >}}
+##### Glossy buttons
 
-{{< figure src="/images/v275/verify.png" alt="" position="center" style="border-radius: 8px;" >}}
+For macOS Tahoe.
 
-The progress bar has undergone a minor enhancement.
+{{< figure src="/images/v275/glossybuttons.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v275/progressview.png" alt="" position="center" style="border-radius: 8px;" >}}
+##### Not glossy Buttons
+
+For macOS Sonoma and macOS Sequoia.
+
+{{< figure src="/images/v275/buttons.png" alt="" position="center" style="border-radius: 8px;" >}}
+
 
 
