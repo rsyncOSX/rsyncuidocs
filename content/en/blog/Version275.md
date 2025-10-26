@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 ### Version 2.7.5 (build 166) - 25 October, 2025 release candidate (RC)
 
+*Update 26 October*: even more glassy buttons are added to code, and a few more to add as well. And the glassy buttonstyle is also tweaked a little bit. A new rc with most buttons supporting glassy buttonstyle to be released in a day or two.    
+
 I intend to refrain from releasing a new public version until sometime in November 2025. However, I will release new RC versions when there are updates.
 
 Currently, there have been only a few UI updates. The graphical user interface (GUI) updates require a period of time to mature before they are finalized. The functions *Schedule* and *Verify remote* have been moved from the main sidebar to the toolbar. This modification enhances the cleanliness of the main sidebar by consolidating major functions. Additionally, there is an update to the progress bar.
