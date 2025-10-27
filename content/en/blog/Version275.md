@@ -38,8 +38,4 @@ The primary sidebar retains its context sensitivity, but its functionality is li
 
 {{< figure src="/images/v275/remote.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v275/taskgl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/task.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 
