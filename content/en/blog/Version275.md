@@ -10,9 +10,9 @@ categories = ["changelog"]
 
 I intend to refrain from releasing a new public version until sometime in first week of November 2025. However, I will release new RC versions when there are updates.
 
-Almost every button is adapted to a GlossyButton style on macOS Tahoe. On *previous* macOS versions there is applied a `.buttonStyle(.borderedProminent)` which makes the buttons blue, please see below. I am not sure if I should keep this style or remove it. If there are any comments, please let me know.
+Almost every button is adapted to the new Liquid Glass style on macOS Tahoe. On *previous* macOS versions there is applied a `.buttonStyle(.borderedProminent)` which makes the buttons blue, please see below. I am not sure if I should keep this style or remove it. If there are any comments, please let me know.
 
-I think the applied GlossyButton on macOS Tahoe is very nice. In my opinion it makes the views more pleasant. Below are four views, with and without the updated button style.
+I think the applied Liquid Glass style on macOS Tahoe is very nice. In my opinion it makes the views more pleasant. Below are four views, with and without the updated button style.
 
 The functions *Schedule* and *Verify remote* have been moved from the main sidebar to the toolbar. This modification enhances the cleanliness of the main sidebar by consolidating major functions. Additionally, there is an update to the progress bar. To display and access the toolbar actions for the two above mentioned functions, they must be enabled through the RsyncUI settings.
 
@@ -24,11 +24,15 @@ The primary sidebar retains its context sensitivity, but its functionality is li
 
 {{< figure src="/images/v275/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-##### Glossy and not so glossy buttons side by side 
+##### Liquid Glass style and default button style side by side 
 
 {{< figure src="/images/v275/schedgl.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/v275/sched.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v275/verifygl.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v275/verify.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/v275/remotegl.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -38,7 +42,4 @@ The primary sidebar retains its context sensitivity, but its functionality is li
 
 {{< figure src="/images/v275/task.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v275/verifygl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/verify.png" alt="" position="center" style="border-radius: 8px;" >}}
 
