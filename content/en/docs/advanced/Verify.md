@@ -64,14 +64,6 @@ The outcome is as follows:
 
 If there are zero rows, most likely, *source*  and *destination* are in sync. 
 
-{{% pageinfo color="info" %}}
-
-I utilize this function on a regular basis. I frequently travel to my mountain cabin, capture photographs of the wildlife, and develop images on my MacBook Pro during my stays. At home, I primarily use my MacMini 4 with a large monitor. Subsequently, I employ this function to synchronize my Macs with the photographs. As usual, I recall which Mac is most current. Occasionally, both the pull and push view contain data after a dry run, making it challenging to determine the appropriate course of action. I do recall which Mac is most current and include the delete parameter to synchronize. However, without remembering which Mac is most updated, it may be difficult to determine the correct action.
-
-Therefore, my advice is to ensure that you are aware of which Mac is updated. Furthermore, avoid making changes on both Macs and synchronizing changes to the repository, as this may result in data loss. 
-
-{{< /pageinfo >}}
-
 #### Itemized output - push or pull
 
 The parameter `-i` or `--itemize-changes` produces details about each file. The format of the output is:
