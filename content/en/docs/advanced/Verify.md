@@ -8,26 +8,28 @@ categories = ["advanced features"]
 
 {{< alert >}}
 
- The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable.
+ The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable. This function also necessitates that the destination be located on a remote server.
 
 {{< /alert >}}
 
 {{< alert color="warning" >}}
 
-Before utilizing this function, kindly refer to its documentation to ensure you make the appropriate decision.  
+Prior to utilizing this function, kindly consult its documentation to ensure you make the appropriate decision.
 
-The Verify remote function is a specialized tool designed when synchronizing two Mac computers to a single repository, excluding Git repositories. This functionality was developed by the developer due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git server, necessitating a tool to determine whether to push or pull data.
+The Verify remote function is a specialized tool designed to assist in synchronizing multiple Mac computers to a single remote repository, excluding Git repositories. Additionally, it updates local data from the same remote repository.
+
+This functionality was developed by the developer due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git repository, necessitating a tool to determine whether to push or pull data.
+
+Important: Using the above method requires you to remember from which Mac the latest synchronization was executed. If not, you will most likely lose data. Additionally, you should establish a procedure for using this function. For instance, at home, I always use my Mac Mini M4 to edit photos. When traveling, I always use my MacBook Pro, and it is fully synchronized with my Mac Mini when I leave for travel.
 
 {{< /alert >}}
 
 Typically, a synchronize action operates in a *one-way* direction of data. Local data is synchronized to a backup media, such as an attached disc or a remote server. Restoring data, for instance, involves retrieving data from a backup when local data has become corrupted or inaccessible.  
 
 If you are using multiple Macs, as I do, and all Macs synchronize data to the same remote storage, there may be challenges maintaining synchronization
-and preventing data loss, particularly if the remote storage is **not** a Git server, such as GitHub and Gitea. If the remote destinations are stored on a Git server, regular `git push` and `pull` commands will suffice. 
+and preventing data loss, particularly if the remote storage is **not** a Git server, such as GitHub and Gitea. If the remote destinations are stored on a Git server, regular `git push` and `git pull` commands will suffice. 
 
 Git is a superior tool for version control. However, in certain situations, creating a Git repository may not be feasible, and this function may prove useful. As a reminder, the Verify function is designed for multiple Macs synchronizing data to a single remote server as a backup. It also assists in deciding whether to push or pull changes to keep the local repository updated.
-
-The verification applies only to remote destinations on servers
 
 {{< alert color="warning" >}}
 
@@ -41,10 +43,7 @@ The function is not intended to be automated. Users must verify their subsequent
 
 #### Synchronization of Multiple Macs to a Remote Server
 
-I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home.
-New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac,
-all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos.
-When I synchronize my changes, I need to transfer those changes to my second Mac.
+I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
 
 #### Arguments for rsync
 
