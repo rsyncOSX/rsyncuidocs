@@ -1,18 +1,16 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.5"
-date = "2025-10-27"
+date = "2025-10-28"
 tags = ["changelog","version 2.7.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.5 (build 166) - 27 October, 2025 release candidate (RC)
+### Version 2.7.5 (build 166) - 28 October, 2025
 
-I intend to refrain from releasing a new public version until sometime in first week of November 2025. However, I will release new RC versions when there are updates.
+Changes in this release are, UI changes only:
 
-Almost every button is adapted to the new Liquid Glass style on macOS Tahoe. On *previous* macOS versions there is applied a `.buttonStyle(.borderedProminent)` which makes the buttons blue, please see below. I am not sure if I should keep this style or remove it. If there are any comments, please let me know.
-
-I think the applied Liquid Glass style on macOS Tahoe is very nice. In my opinion it makes the views more pleasant. Below are four views, with and without the updated button style.
+Buttons on macOS Tahoe are adapted to the new Liquid Glass style. On *previous* macOS versions there is applied a `.buttonStyle(.borderedProminent)` which makes the buttons blue, please see below. I think the applied Liquid Glass style on macOS Tahoe is very nice. In my opinion it makes the views more pleasant. Below are four views, with and without the updated button style.
 
 The functions *Schedule* and *Verify remote* have been moved from the main sidebar to the toolbar. This modification enhances the cleanliness of the main sidebar by consolidating major functions. Additionally, there is an update to the progress bar. To display and access the toolbar actions for the two above mentioned functions, they must be enabled through the RsyncUI settings.
 
@@ -28,14 +26,6 @@ The primary sidebar retains its context sensitivity, but its functionality is li
 
 {{< figure src="/images/v275/schedgl.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v275/sched.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 {{< figure src="/images/v275/verifygl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/verify.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/remotegl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/remote.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 
