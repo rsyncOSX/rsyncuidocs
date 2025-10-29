@@ -14,11 +14,11 @@ This blog is how I am using the *Verify remote* function.
 
 I am backing up my bird photography on multiple devices:
 
-- A Raspberry Pi5 server located at a remote server, configured with two WD Red SA500 2.5" SSD 1TB drives set up as a mirrored ZFS pool.
-- To a remote cloud service (JottaCloud).
-- Lastly, two 1TB NVMe external SSD drives attached to my computer.
+- a Raspberry Pi5 server as remote server, configured with two WD Red SA500 2.5" SSD 1TB drives set up as a mirrored ZFS pool
+- to a remote cloud service (JottaCloud)
+- lastly, two 1TB NVMe external SSD drives attached to my computers
 
-The first two devices are updated whenever data is updated. Updating JottaCloud is managed by a service on my MacBooks. Updates to the Raspberry Pi5 server are performed using RsyncUI.
+The first two above are updated whenever data is updated. Updating JottaCloud is managed by a service running on my Macs. Updates to the Raspberry Pi5 server are performed using RsyncUI.
 
 Currently, my bird photography data consists of 140GB of data and 8000 files, including RAW and sidecar files. During travel, I utilize my MacBook Pro for photo editing, while at home, I use my Mac Mini M4. I always keep track of which Mac is updated and stores the most recent files and updates.
 
