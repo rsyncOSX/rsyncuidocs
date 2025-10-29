@@ -29,6 +29,9 @@ The issue appears to be that the termination and release of objects are sometime
 The updated part of code is now:
 
 ```
+let sequencefilehandler = NotificationCenter.default.notifications(named: NSNotification.Name.NSFileHandleDataAvailable, object: nil)
+    let sequencetermination = NotificationCenter.default.notifications(named: Process.didTerminateNotification, object: nil)
+    
 // Tasks
 var sequenceFileHandlerTask: Task<Void, Never>?
 var sequenceTerminationTask: Task<Void, Never>?
