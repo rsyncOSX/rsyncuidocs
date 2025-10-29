@@ -8,13 +8,15 @@ categories = ["changelog"]
 
 ### Version 2.7.6 (build 167) - 29 October, 2025 (not yet released)
 
-A few users have encountered a crash when estimating tasks. I was unable to identify the cause of the issue until today. Today, I successfully caused RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
+Several users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until today. Today, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
 
 Following the code update, I observed an improvement in the estimation speed. However, I require further testing to ensure that the fix is effective. If any users are willing to assist in testing, please contact me.
 
 {{< alert color="warning" >}}
 
 It is very important that the updated code works as expected. I would like some users to assist me in testing the updated code, please contact me by email: thomeven@gmail.com or comment the created issue.
+
+I need a day or two before making a test release. I will do some testing my self before making a test release.
 
 {{< /alert >}}
 
