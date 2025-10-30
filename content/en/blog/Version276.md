@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.7.6 (build 167) - 30 October, 2025 release candidate
 
-Please download an test.
+Please download and test the rc.
 
 A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until today. Today, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
 
