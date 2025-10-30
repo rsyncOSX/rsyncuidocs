@@ -10,11 +10,13 @@ categories = ["changelog"]
 
 Please download and test the rc.
 
-A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until today. Today, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
+A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until today. Yesterday, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
 
 {{< alert color="warning" >}}
 
-It is of utmost importance that the updated code functions as intended. A release candidate for testing purposes has been released. In addition to resolving the identified issue, the updated code introduces an enhancement in both data estimation and synchronization. The increased speed observed in RsyncUI’s data reading from the rsync process is not directly related to the actual synchronization of data, which is managed independently of RsyncUI.
+It is of utmost importance that the updated code functions as intended. A release candidate for testing purposes has been released. In addition to resolving the identified issue, the updated code introduces an enhancement in both data estimation and synchronization. 
+
+The increased speed observed in RsyncUI’s data reading from the rsync process is not directly related to the actual synchronization of data, which is managed independently of RsyncUI.
 
 {{< /alert >}}
 
