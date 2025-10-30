@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 Please download and test the rc.
 
-A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until today. Yesterday, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
+A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until yesterday. Yesterday, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
 
 {{< alert color="warning" >}}
 
