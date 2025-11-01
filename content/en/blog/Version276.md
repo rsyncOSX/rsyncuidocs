@@ -1,29 +1,26 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.6"
-date = "2025-10-31"
+date = "2025-11-1"
 tags = ["changelog","version 2.7.6"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.6 (build 167) - 31 October, 2025 
+### Version 2.7.6 (build 167) - 1 November, 2025 release candidate
 
-A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until yesterday. Yesterday, I successfully induced RsyncUI to crash with the same crash log as reported, which is a promising step towards resolving the issue.
-
-I anticipate finding a solution to this issue within the beginning of next week.
+A few users have experienced a crash when estimating tasks. I was unable to determine the cause of the issue until a couple of days ago. The rc fixes the issue, please test.
 
 {{< alert color="warning" >}}
 
-To date, I have not yet finalized the resolution of the issue reported but I am close.
+The update now does the following: 
 
-I have made progress in preventing RsyncUI from crashing when the termination signal is received before all data is read from the datahandle. 
-
-The process object also now determines if there is still data to be retrieved after the termination signal is discovered. Although the reason for this is unknown, it does sometimes happen and necessitates handling.
+- preventing RsyncUI from crashing when the termination signal is received before all data is read from the datahandle
+- the process object also now determines if there is still data to be retrieved after the termination signal is discovered
+	- although the reason for this is unknown, it does sometimes happen
 
 The main and version 2.7.6 repositories is updated.
 
 {{< /alert >}}
-
 
 #### AI
 
