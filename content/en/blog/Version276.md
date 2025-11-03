@@ -10,8 +10,6 @@ categories = ["changelog"]
 
 A few users have experienced a crash when estimating tasks. The release fixes the issue.
 
-{{< alert color="warning" >}}
-
 The update does the following: 
 
 - preventing RsyncUI from crashing when the termination signal is received before all data is read from the datahandle
@@ -20,6 +18,3 @@ The update does the following:
 - the estimation speed is increased
 	- the speed increase is due to more responsive handling of output from rsync and termination signal
     - the actual speed of synchronization of data is **not** changed, that is outside RsyncUI 
-
-{{< /alert >}}
-
