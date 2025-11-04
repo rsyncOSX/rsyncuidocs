@@ -16,19 +16,21 @@ The two last SPM are *RsyncProcess* and *ProcessCommand*. The test cases for the
 
 ##### Main Repository
 
-- RsyncUI (https://github.com/rsyncOSX/RsyncUI) - The primary repository for RsyncUI.
+- RsyncUI (https://github.com/rsyncOSX/RsyncUI) - the main repository for RsyncUI
 
 ##### Local RsyncUI packages (by SPM)
 
 SPM makes it easy to create local packages. And each package containes their own tests by Swift Testing, the new framwork for creating tests. All packages are created by me. 
 
-- RsyncArguments (https://github.com/rsyncOSX/RsyncArguments) - Generate parameters for `rsync` based on configurations.
-- sshCreateKey (https://github.com/rsyncOSX/sshCreateKey) - Assist in creating an SSH identity file and key using RsyncUI.
-	- Generate an RSA-based SSH key for default and user-defined keys, including the SSH port number.
-- DecodeEncodeGeneric (https://github.com/rsyncOSX/DecodeEncodeGeneric) - Generic code for decoding and encoding JSON data.
-- ParseRsyncOutput (https://github.com/rsyncOSX/ParseRsyncOutput) - Parse and extract numerical values from the output of `rsync`. This data is used to display details and log results for synchronized tasks.
+- RsyncArguments (https://github.com/rsyncOSX/RsyncArguments) - Generate parameters for `rsync` based on configurations
+- sshCreateKey (https://github.com/rsyncOSX/sshCreateKey) - Assist in creating an SSH identity file and key using RsyncUI
+	- generate an RSA-based SSH key for default and user-defined keys, including the SSH port number
+- DecodeEncodeGeneric (https://github.com/rsyncOSX/DecodeEncodeGeneric) - Generic code for decoding and encoding JSON data
+- ParseRsyncOutput (https://github.com/rsyncOSX/ParseRsyncOutput) - Parse and extract numerical values from the output of `rsync`
+	- this data is used to display details and log results for synchronized tasks
 - RsyncUIDeepLinks (https://github.com/rsyncOSX/RsyncUIDeepLinks) - parse end return valid URL deeplink for execute tasks direct within RsyncUI
-- RsyncProcess (https://github.com/rsyncOSX/RsyncProcess) - one minor package, but a core function of RsyncUI, listens for output from the rsync process as well as termination signal
+- RsyncProcess (https://github.com/rsyncOSX/RsyncProcess) - one minor package, but a core function of RsyncUI
+	- listens for output from the rsync process as well as termination signal
 - ProcessCommand (https://github.com/rsyncOSX/ProcessCommand) - as above, but for other commands than rsync
 
 #### AI
