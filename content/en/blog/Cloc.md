@@ -6,28 +6,27 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: November 1, 2025, version 2.7.6
+Numbers updated: November 4, 2025, version 2.7.7 (not yet released)
 
 There is a very nice and excellent tool, [cloc](https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
-cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/
-Sources
-          192 text files.
-     192 unique files.                                          
-       9 files ignored.
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources RsyncProcess/Sources ProcessCommand/Sources
+     191 text files.
+     191 unique files.                                          
+       5 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.08 s (2371.4 files/s, 269298.2 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.05 s (3895.2 files/s, 452859.5 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          186           2266           2474          16639
+Swift                          185           2307           2519          16955
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           192           2303           2549          16952
+SUM:                           191           2344           2594          17268
 -------------------------------------------------------------------------------
 ```
 
@@ -45,3 +44,5 @@ SPM, Swift Package Manager, makes it easy to create local packages. And each pac
 - DecodeEncodeGeneric (https://github.com/rsyncOSX/DecodeEncodeGeneric) - Generic code for decoding and encoding JSON data.
 - ParseRsyncOutput (https://github.com/rsyncOSX/ParseRsyncOutput) - Parse and extract numerical values from the output of `rsync`. This data is used to display details and log results for synchronized tasks.
 - RsyncUIDeepLinks (https://github.com/rsyncOSX/RsyncUIDeepLinks) - parse end return valid URL deeplink for execute tasks direct within RsyncUI
+- RsyncProcess (https://github.com/rsyncOSX/RsyncProcess) - one minor package, but a core function of RsyncUI, listens for output from the rsync process as well as termination signal
+- ProcessCommand (https://github.com/rsyncOSX/ProcessCommand) - as above, but for other commands than rsync
