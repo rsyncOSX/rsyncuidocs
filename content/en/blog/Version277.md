@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.7.7 (build 168) - not yet released
 
-*There will be a rc in a few days.*
+*There will be a rc in a few days.* All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits to main since this release. 
 
 The release is scheduled for late November or early December. I personally utilize this version daily and frequently compile new versions when there are code updates. Additionally, I employ AI tools such as Claude Code and GitHub Copilot to assist me in coding. While these tools are valuable resources, they occasionally encounter challenges in producing code that functions as intended. 
 
