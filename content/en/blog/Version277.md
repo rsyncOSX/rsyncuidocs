@@ -14,9 +14,9 @@ The release is scheduled for late November or early December. I personally utili
 
 The development of the next version has commenced. While there are no new features yet, the internal code is undergoing refactoring. Two minor, but crucial objects are being refactored as Swift Package Manager (SPM) objects. Refactoring to SPM isolates the code, making it easier to test. The two final objects to be refactored are responsible for executing tasks, such as the actual `rsync` command with arguments outside of RsyncUI. Both objects listen for output from the tasks and the termination signal. If they fail, RsyncUI also fails.
 
-### Continue hide distractions
+### Continue concealing distractions
 
-I am currently working on concealing distractions, and the next one will be located on the main toolbar. By utilizing the shortcut `⌘S` (for displaying or concealing) or by accessing the Task main menu, the Charts and Quick task will be presented. It is concealed by default. To reveal it, simply toggle the show or hide option using the shortcut.
+I am currently working on concealing even more *distractions*, and the next one will be located on the main toolbar. By utilizing the shortcut `⌘S` (for displaying or concealing) or by accessing the Task main menu, the Charts and Quick task will be presented. It is concealed by default. To reveal it, simply toggle the show or hide option using the shortcut.
 
 {{< figure src="/images/v277/toolbar1.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v277/toolbar2.png" alt="" position="center" style="border-radius: 8px;" >}}
