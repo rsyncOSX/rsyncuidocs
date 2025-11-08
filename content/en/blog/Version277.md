@@ -14,7 +14,30 @@ All changes in code since version 2.7.6 can be viewed [here](https://github.com/
 
 Two minor, but crucial objects has been refactored as Swift Package Manager (SPM) objects. Refactoring to SPM isolates the code, making it easier to test. The two objects are responsible for executing tasks, such as the actual `rsync` command with arguments outside of RsyncUI. Both objects listen for output from the tasks and the termination signal. If they fail, RsyncUI also fails. 
 
-Additionally, there are other refactors and ideas that have emerged from reading blogs about Swift, which I follow. 
+A significant modification introduced by utilizing SPM is the relocation of any local calls within the object to the outside of the SPM. This is achieved through the implementation of Dependency Injection (DI). The process object is dependent on calling other objects within RsyncUI, and these objects are subsequently fed into the process object. As an example:
+
+```
+let handlers = ProcessHandlers(
+            processtermination: processtermination_estimation,
+            filehandler: { _ in
+                Logger.process.info("ProcessRsync: You should not SEE this message")
+            },
+            rsyncpath: GetfullpathforRsync().rsyncpath,
+            checklineforerror: TrimOutputFromRsync().checkforrsyncerror,
+            updateprocess: SharedReference.shared.updateprocess,
+            propogateerror: { error in
+                SharedReference.shared.errorobject?.alert(error: error)
+            },
+            logger: { command, output in
+                _ = await ActorLogToFile(command, output)
+            },
+            checkforerrorinrsyncoutput: SharedReference.shared.checkforerrorinrsyncoutput,
+            rsyncversion3: SharedReference.shared.rsyncversion3,
+            environment: MyEnvironment()?.environment
+        )
+```
+
+The actual definition of the ProcessHandlers is within the [SPM](https://github.com/rsyncOSX/RsyncProcess).
 
 ### Continue concealing distractions
 
