@@ -6,11 +6,9 @@ tags = ["changelog","version 2.7.7"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.7 (build 168) - not yet released
+### Version 2.7.7 (build 168) - release candidate 1
 
-*There will be a rc in a few days.* All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits to main since this release. 
-
-The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
+All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits to main since this release.  The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
 
 ### Internal refactor
 
