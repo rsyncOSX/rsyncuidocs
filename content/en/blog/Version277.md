@@ -1,14 +1,23 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.7"
-date = "2025-11-07"
+date = "2025-11-12"
 tags = ["changelog","version 2.7.7"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.7 (build 168) - release candidate 1
+### Version 2.7.7 (build 168) - Release Candidate (RC)
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits to main since this release.  The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
+
+### Update Nov 12
+
+As of now, there are no updates to the RC. However, I have made some further enhancements to the [RsyncProcess Swift Package](https://github.com/rsyncOSX/RsyncProcess). New within the package is the ability to read the output from the rsync process in real-time. Within the summarized view, you will receive the output from each task estimated, but this view is completed after the task is finished.
+
+As of now, there are no updates to the RC. However, I have made some further enhancements to the [RsyncProcess Swift Package](https://github.com/rsyncOSX/RsyncProcess). New within the package is the ability to read the output from the rsync process in real-time. Within the summarized view, you will receive the output from each task estimated, but this view is completed after the task is finished.
+The real-time view of rsync output is not yet included in RsyncUI. However, there is a minor, menu-based version of RsyncUI called [RsyncUImenu](https://github.com/rsyncOSX/RsyncUImenu) that includes this feature. The model of the RsyncUImenu app is a clone of the model for RsyncUI. The only new development is the UI part. The RsyncUImenu app can be used in parallel with RsyncUI, but not simultaneously.
+
+You may consider testing [RsyncUImenu](https://github.com/rsyncOSX/RsyncUImenu). It has been in development for some time and should be as stable as RsyncUI. Please note that it remains active in the menu bar until explicitly closed.
 
 ### Internal refactor
 
