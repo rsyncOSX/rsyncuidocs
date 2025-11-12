@@ -6,9 +6,9 @@ tags = ["getting started"]
 categories = ["general information"]
 +++
 
-For new users, kindly refer to the *Important* section. Additionally, please find information about the latest version of rsync to install, refer to the *Latest version of rsync* section .
+For new users, kindly refer to the *Important* section. Additionally, please refer to the *Latest version of rsync* section for information about installing the latest version.
 
-The primary Sidebar menu is context-sensitive. The rationale behind a context-sensitive Sidebar menu is to conceal menu options that may be distracting to the user.  See last on this page about the sidebar menu options.
+The primary Sidebar menu is context-sensitive. The rationale behind a context-sensitive Sidebar menu is to conceal menu options that may be distracting to the user. See last on this page about the sidebar menu options.
 
 ### New Tasks and Verification
 
@@ -16,7 +16,7 @@ RsyncUI supports synchronizing data to:
 
 - local attached disk
 - remote servers on the Internet or local LAN
-    - requiere *passwordless login*  by ssh-key
+    - require *passwordless login* by ssh-key
 
 #### Local attached disk
 
@@ -30,11 +30,11 @@ If you want to synchronize data to a server, on the Internet, or your local LAN,
 
 {{< alert color="warning" >}}
 
-*Always* verify a new task. After adding a new task, changed a task, added your own or changed parameters to rsync , select the *"Verify tasks"* from the primary Sidebar menu. 
+*Always* verify a new task. After adding a new task, changing a task, or adding your own or changed parameters to rsync, select *"Verify tasks"* from the primary Sidebar menu. 
 
 {{< /alert >}}
 
- Select the task and press the *play* button on the toolbar. Executing the *play* button includes the --dry-run parameter for rsync, which is an estimation run.
+Select the task and press the *play* button on the toolbar. Executing the *play* button includes the --dry-run parameter for rsync, which is an estimation run.
 
 {{< figure src="/images/verifyatask/verifytask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -42,12 +42,11 @@ If you want to synchronize data to a server, on the Internet, or your local LAN,
 
 Please note that this is an external task not controlled by RsyncUI, which executes the command-line tool `rsync`. RsyncUI monitors the task for progress and termination.
 
-The user can abort a task at any time. However, it is essential to allow the task to complete and perform any necessary cleanup operations before starting a new task. This process may take a few seconds, and if not, the applications may become unresponsive.
+The user can abort a task at any time. However, it is essential to allow the task to complete and perform any necessary cleanup operations before starting a new task. This process may take a few seconds, and if you don't wait, the application may become unresponsive.
 
 ### There are errors in tagging data
 
 Sometimes you may get the error:
-
 ```
 There are errors in tagging data
 for synchronize ID XXXX
@@ -55,7 +54,9 @@ Most likely number of rows
 > 20 lines and no data to synchronize
 ```
 
-The preceding message serves as a cautionary note and a confirmation that all data has been synchronized. RsyncUI provides an indication of whether there is data to be transferred. Typically, the output from rsync is less than 20 rows if no data synchronization is required. Please refer to the following for further clarification: RsyncUI analyzes the summary output from rsync to identify data that needs to be synchronized or not. Occasionally, RsyncUI may detect that the number of lines from rsync exceeds 20, yet it still tags the data as not needing synchronization. This message serves as a reminder to verify that all data has been successfully synchronized. 
+The preceding message serves as a cautionary note and a confirmation that all data has been synchronized. RsyncUI provides an indication of whether there is data to be transferred. Typically, the output from rsync is less than 20 rows if no data synchronization is required. 
+
+Please refer to the following for further clarification: RsyncUI analyzes the summary output from rsync to identify data that needs to be synchronized or not. Occasionally, RsyncUI may detect that the number of lines from rsync exceeds 20, yet it still tags the data as not needing synchronization. This message serves as a reminder to verify that all data has been successfully synchronized. 
 
 To clarify this message, select the task and execute it, or synchronize it, without providing an estimate. 
 
@@ -72,17 +73,14 @@ Version openrsync:
 There are three Sidebar menu options that are contingent upon the properties of a task. It is sufficient as long as one of the tasks satisfies one of the prerequisites.
 
 - *Snapshot*: this option is exclusively available for *snapshot* tasks
-	- require version 3.x of rsync
+	- requires version 3.x of rsync
 - *Restore*: this option is only available for *synchronize* and *snapshot* tasks where *the destination* is located on a *remote server*	
-	- avaliable for openrsync as well, but only for synchronize tasks
+	- available for openrsync as well, but only for synchronize tasks
 - *Verify remote*: this option is only available for *synchronize* tasks where *the destination* is located on a *remote server*
-	- require version 3.x of rsync
+	- requires version 3.x of rsync
 
 {{< alert >}}
 
-The Sidebar menu may be hidden, either click on the Hide Sidebar icon top left or toggle ON  *Hide the Sidebar on startup* within the *RsyncUI settings*.
+The Sidebar menu may be hidden, either click on the Hide Sidebar icon top left or enable *Hide the Sidebar on startup* within the *RsyncUI settings*.
 
 {{< /alert >}}
-
-
-
