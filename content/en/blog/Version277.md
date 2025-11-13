@@ -16,7 +16,11 @@ An update to the rc has been released. A bug related to deleting schedules has b
 
 *In the current rc2 release, only schedules for the current month are permitted to be added. There are a few minor bugs in the schedule that have been fixed in the code but have not yet been released. In the next release, schedules will only be valid added for the current and the next month.This restriction is implemented to manage memory usage effectively, as every schedule includes the callback action, which is stored in memory. Schedules are automatically saved to a file and reloaded into memory upon startup. There is potential for refactoring the schedule in a future release.*
 
-Additionally, I have not yet made a decision regarding the inclusion of the real-time view of rsync output in RsyncUI. 
+#### Capture output real-time
+
+The forthcoming version of RsyncUI will incorporate real-time capture output from rsync. However, I must still include a user-defined option to enable or disable this feature due to the resource-intensive nature of capturing real-time output.
+
+{{< figure src="/images/v277/capture.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Update Nov 12
 
