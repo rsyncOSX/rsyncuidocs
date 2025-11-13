@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 ### Version 2.7.7 (build 168) - Release Candidate (RC2)
 
+**Note:** I initially believed that the next release version 2.7.7, would be a minor update. However, it appears to be a more significant update. While this is an improvement, the number of changes necessitates a release candidate or two before the final release.
+
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.7) - xxx commits. The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
 
 ### Update Nov 13
