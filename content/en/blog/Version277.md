@@ -14,6 +14,8 @@ All changes in code since version 2.7.6 can be viewed [here](https://github.com/
 
 An update to the rc has been released. A bug related to deleting schedules has been fixed, and upon request, the weekly schedule has been reinstated. However, it is important to note that I still need to conduct some quality assurance testing of the schedule function before a new release.
 
+*In the current rc2 release, only schedules for the current month are permitted to be added. There are a few minor bugs in the schedule that have been fixed in the code but have not yet been released. In the next release, schedules will only be valid for the current month and the next month.*
+
 Additionally, I have not yet made a decision regarding the inclusion of the real-time view of rsync output in RsyncUI. 
 
 ### Update Nov 12
