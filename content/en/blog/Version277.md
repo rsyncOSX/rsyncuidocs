@@ -10,9 +10,16 @@ categories = ["changelog"]
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits to main since this release.  The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
 
+### Update Nov 13
+
+An update to the rc has been released. A bug related to deleting schedules has been fixed, and upon request, the weekly schedule has been reinstated. However, it is important to note that I still need to conduct some quality assurance testing of the schedule function before a new release.
+
+Additionally, I have not yet made a decision regarding the inclusion of the real-time view of rsync output in RsyncUI. 
+
 ### Update Nov 12
 
 As of now, there are no updates to the RC. However, I have made some further enhancements to the [RsyncProcess Swift Package](https://github.com/rsyncOSX/RsyncProcess). New within the package is the ability to read the output from the rsync process in real-time. Within the summarized view, you will receive the output from each task estimated, but this view is completed after the task is finished.
+
 The real-time view of rsync output is not yet included in RsyncUI. However, there is a minor, menu-based version of RsyncUI called [RsyncUImenu](https://github.com/rsyncOSX/RsyncUImenu) that includes this feature. The model of the RsyncUImenu app is a clone of the model for RsyncUI. The only new development is the UI part. The RsyncUImenu app can be used in parallel with RsyncUI, but not simultaneously.
 
 You may consider testing [RsyncUImenu](https://github.com/rsyncOSX/RsyncUImenu). It has been in development for some time and should be as stable as RsyncUI. Please note that it remains active in the menu bar until explicitly closed.
