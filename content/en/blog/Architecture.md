@@ -12,6 +12,8 @@ Having retired from my professional career three and a half years ago, I have de
 
 I am consistently expanding my knowledge of Swift and SwiftUI through reading blogs and, in recent times, utilizing artificial intelligence in the development process.
 
+Why continue working on RsyncUI? My primary motivation stems from my passion for Swift development. As long as there are users globally utilizing RsyncUI, I will persist in maintaining and enhancing its functionality. Additionally, I personally use RsyncUI to secure my own data. The command-line tool rsync is a well-proven and stable synchronization tool, and building a GUI on top of rsync is a very grateful task.
+
 I inquired about an analysis of the RsyncUI GitHub repository from AI, specifically Warp and GPT 5.1 (Low reasoning). Below is the response, which is copied and pasted (no changes, only removal of some details).
 
 ### GPT 5.1 analyse of RsyncUI
