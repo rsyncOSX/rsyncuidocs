@@ -16,6 +16,8 @@ All changes in code since version 2.7.6 can be viewed [here](https://github.com/
 
 Real-time output from rsync is now included. You can find it within the "hidden" menu, accessible using the shortcut `⌘S` to reveal concealed toolbar options. The real-time view captures all output from rsync as it happens. The capture requires some additional CPU when activated, and it is automatically enabled and disabled when opening and closing the view. Additionally, the captured output is stored in memory and is cleared when the view is closed or by using the Clear button.
 
+The real-time output captures the rsync output by an actor without blocking the @MainActor and UI updates. However, the @Observable object monitoring updates is executed on the @MainActor and updates the real-time view.
+
 {{< figure src="/images/v277/capture1.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v277/capture2.png" alt="" position="center" style="border-radius: 8px;" >}}
 
