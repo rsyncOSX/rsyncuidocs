@@ -14,7 +14,7 @@ All changes in code since version 2.7.6 can be viewed [here](https://github.com/
 
 ### Update Nov 14
 
-The real-time output from rsync is included. You will find it within the “hidden” menu, use shortcut `⌘S` to show concealed toolbar options. The real-time view capture in real-time all output from rsync. The capture require some extra CPU when activated, and it si automatically enabled and disabled when opening and closing the view. It also stores, in memory, all captured output. The captured memory is cleared when view is closed or by the Clear button.
+The real-time output from rsync is included. You will find it within the “hidden” menu, and you can access it by using the shortcut ⌘S to reveal concealed toolbar options. The real-time view captures all output from rsync in real-time. The capture requires some additional CPU when activated, and it is automatically enabled and disabled when opening and closing the view. Additionally, the captured memory is stored in memory and is cleared when the view is closed or by using the Clear button.
 
 {{< figure src="/images/v277/capture1.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v277/capture2.png" alt="" position="center" style="border-radius: 8px;" >}}
