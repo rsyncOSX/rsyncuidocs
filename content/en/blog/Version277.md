@@ -8,13 +8,13 @@ categories = ["changelog"]
 
 ### Version 2.7.7 (build 168) - Release Candidate (RC3)
 
-**Note:** I initially believed that the next release version 2.7.7, would be a minor update. However, it appears to be a more significant update. This is most likely the last rc before a new release.
+**Note:** I initially believed that the next release version 2.7.7, would be a minor update. However, it appears to be a more significant release. This is most likely the last rc before a new release.
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits. The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
 
 ### Update Nov 14
 
-The real-time output from rsync is included. You will find it within the “hidden” menu, and you can access it by using the shortcut ⌘S to reveal concealed toolbar options. The real-time view captures all output from rsync in real-time. The capture requires some additional CPU when activated, and it is automatically enabled and disabled when opening and closing the view. Additionally, the captured memory is stored in memory and is cleared when the view is closed or by using the Clear button.
+The real-time output from rsync is included. You will find it within the “hidden” menu, and you can access it by using the shortcut ⌘S to reveal concealed toolbar options. The real-time view captures all output from rsync in real-time. The capture requires some additional CPU when activated, and it is automatically enabled and disabled when opening and closing the view. Additionally, the captured output is stored in memory and is cleared when the view is closed or by using the Clear button.
 
 {{< figure src="/images/v277/capture1.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v277/capture2.png" alt="" position="center" style="border-radius: 8px;" >}}
