@@ -1,28 +1,33 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.7"
-date = "2025-11-13"
+date = "2025-11-14"
 tags = ["changelog","version 2.7.7"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.7 (build 168) - Release Candidate (RC2)
+### Version 2.7.7 (build 168) - Release Candidate (RC3)
 
-**Note:** I initially believed that the next release version 2.7.7, would be a minor update. However, it appears to be a more significant update. While this is an improvement, the number of changes necessitates a release candidate or two more before the final release.
+**Note:** I initially believed that the next release version 2.7.7, would be a minor update. However, it appears to be a more significant update. This is most likely the last rc before a new release.
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6) - xxx commits. The release is scheduled for late November. I personally utilize this version daily and frequently compile new versions when there are code updates. 
+
+### Update Nov 14
+
+The real-time output from rsync is included. You will find it within the “hidden” menu, use shortcut `⌘S` to show concealed toolbar options. The real-time view capture in real-time all output from rsync. The capture require some extra CPU when activated, and it si automatically enabled and disabled when opening and closing the view. It also stores, in memory, all captured output. The captured memory is cleared when view is closed or by the Clear button.
+
+{{< figure src="/images/v277/capture1.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v277/capture2.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+Schedules will only be valid added for the current and the next month.This restriction is implemented to manage memory usage effectively, as every schedule includes the callback action, which is stored in memory. Schedules are automatically saved to a file and reloaded into memory upon startup.
 
 ### Update Nov 13
 
 An update to the rc has been released. A bug related to deleting schedules has been fixed, and upon request, the weekly schedule has been reinstated. However, it is important to note that I still need to conduct some quality assurance testing of the schedule function before a new release.
 
-*In the current rc2 release, only schedules for the current month are permitted to be added. There are a few minor bugs in the schedule that have been fixed in the code but have not yet been released. In the next release, schedules will only be valid added for the current and the next month.This restriction is implemented to manage memory usage effectively, as every schedule includes the callback action, which is stored in memory. Schedules are automatically saved to a file and reloaded into memory upon startup. There is potential for refactoring the schedule in a future release.*
-
 #### Capture output real-time
 
 The forthcoming version of RsyncUI will incorporate real-time capture output from rsync. However, I must still include a user-defined option to enable or disable this feature due to the resource-intensive nature of capturing real-time output.
-
-{{< figure src="/images/v277/capture.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Update Nov 12
 
