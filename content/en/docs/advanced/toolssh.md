@@ -1,53 +1,63 @@
 +++
 author = "Thomas Evensen"
 date = "2025-02-02"
-title = "Tools passwordless login"
+title = "Tools for passwordless login"
 tags = ["passwordless","ssh-key", "tools","remote servers"]
 categories = ["advanced features"]
 +++
 
-The following SSH tools are utilized: `ssh-keygen` and `ssh-copy-id`. RsyncUI primarily assists in establishing an RSA-based key.
+RsyncUI uses the standard SSH tools `ssh-keygen` and `ssh-copy-id` to help you establish passwordless login to remote servers via SSH key authentication.
 
 {{< alert >}}
 
-User selected SSH-key pairs are validated to conform to the form `~/.ssh_keypath/identityfile` for SSH keypath and identityfile and Integer value for the SSH-port number.
+Custom SSH key pairs must follow the format `~/.ssh_keypath/identityfile`, and the SSH port must be an integer value. RsyncUI validates these settings before saving.
 
 {{< /alert >}}
 
-The SSH functions facilitate two methods:
+## SSH Key Methods
 
-- private and public SSH-key pairs based on default SSH values for RSA keys (`~/.ssh/id_rsa`)
-- private and public SSH-key pairs based on user-selected values (`~/.ssh_rsyncosx/rsyncosx`)
+RsyncUI supports two approaches:
 
-If creating a new public SSH-key pair based on default SSH values for RSA keys, RsyncUI does not add any parameters to the rsync
-command because these are default values. SSH parameters are added to the rsync command only when the second method is selected.
+1. **Default SSH keys**: Uses the standard RSA key location (`~/.ssh/id_rsa`)
+2. **Custom SSH keys**: Uses a user-specified location (e.g., `~/.ssh_rsyncosx/rsyncosx`)
 
-The following commands for creating a new, alternative private and public SSH-key pair are provided:
+When using default keys, RsyncUI doesn't add extra SSH parameters to rsync commands. Custom keys require additional parameters to tell rsync where to find them.
 
+## Step-by-Step: Creating Custom SSH Keys
+
+### Step 1: Create the SSH Directory
 ```bash
 cd
 mkdir .ssh_rsyncosx
+```
+
+### Step 2: Generate the Key Pair
+```bash
 ssh-keygen -t rsa -N "" -f ~/.ssh_rsyncosx/rsyncosx
 ```
 
-where:
+**Parameters explained:**
+- `-t rsa` - Creates an RSA-based key pair
+- `-N ""` - Sets no password (empty passphrase)
+- `-f ~/.ssh_rsyncosx/rsyncosx` - Specifies where to save the keys
 
-- `-t rsa ""` generates a RSA-based key pair
-- `-N ""` sets no password
-- `~/.ssh_rsyncosx/rsyncosx` is set by the user
-
-The following command copies the newly created public key to the server:
-
+### Step 3: Copy Public Key to Server
 ```bash
-ssh-copy-id -i /Users/thomas/.ssh_rsyncosx/rsyncosx -p NN user@server
+ssh-copy-id -i ~/.ssh_rsyncosx/rsyncosx.pub -p NN user@server
 ```
 
-The user can also configure the new SSH keypath and identityfile in a terminal window and subsequently add them to the Userconfig. RsyncUI will automatically enable these settings when added to the Userconfig.
+Replace:
+- `NN` with your SSH port number (default is 22)
+- `user` with your remote username
+- `server` with your server address
 
-The user can also apply local SSH keypath and identityfile and SSH port, which govern global settings, to each task.
-
-Ensure that the new SSH directory has the appropriate permissions. Open a terminal window and execute the following command:
-
+### Step 4: Set Correct Permissions
 ```bash
 chmod 700 ~/.ssh_rsyncosx
 ```
+
+### Step 5: Configure RsyncUI
+
+Add your custom SSH keypath and identity file in RsyncUI's user configuration. RsyncUI will automatically apply these settings.
+
+You can also set custom SSH parameters for individual tasks, which will override the global settings.

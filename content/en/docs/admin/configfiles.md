@@ -6,30 +6,40 @@ tags = ["files", "JSON"]
 categories = ["general information"]
 +++
 
-RsyncUI read and store *configurations*, *log records* and *user settings* as JSON (https://en.wikipedia.org/wiki/JSON) files. The location of files is: `$HOME/.rsyncosx/macserialnumber`. RsyncUI get the computer mac serial number at startup. At startup RsyncUI reads the user settings and default configurations from JSON data. Log records are only loaded when viewing logs and when updating the logs after a synchronization task.
+RsyncUI stores all its data locally on your Mac in [JSON](https://en.wikipedia.org/wiki/JSON) format. This includes task configurations, log records, and user settings. Understanding the file structure can be helpful for backup or troubleshooting purposes.
 
-#### Configuration files
+## File Locations
 
-`$HOME/.rsyncosx/macserialnumber/configurations.json`
+All RsyncUI files are stored in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number. RsyncUI retrieves this serial number automatically at startup.
 
-If profile is utilized:
+At startup, RsyncUI reads the user settings and default configuration from JSON files. Log records are only loaded when viewing logs or when updating logs after a synchronization task.
 
-`$HOME/.rsyncosx/macserialnumber/profile/configurations.json`
+### Configuration Files
 
-#### Log records
+Task configurations are stored in:
 
-`$HOME/.rsyncosx/macserialnumber/<profile>/logrecords.json`
+`$HOME/.rsyncosx/<macserialnumber>/configurations.json`
 
-#### User settings
+If you use profiles, each profile has its own configuration file:
 
-The user settings are stored as:
+`$HOME/.rsyncosx/<macserialnumber>/<profile>/configurations.json`
 
-`$HOME/.rsyncosx/macserialnumber/rsyncuiconfig.json`
+### Log Records
 
-The user settings applies to all profiles.
+Synchronization logs are stored in:
 
-#### The logfile
+`$HOME/.rsyncosx/<macserialnumber>/<profile>/logrecords.json`
 
-The logfile is a text file and normally view within RsyncUI.
+### User Settings
 
-`$HOME/.rsyncosx/macserialnumber/rsyncui.txt`
+User settings are stored in:
+
+`$HOME/.rsyncosx/<macserialnumber>/rsyncuiconfig.json`
+
+User settings apply to all profiles.
+
+### The Log File
+
+The application log file is a text file that can be viewed within RsyncUI:
+
+`$HOME/.rsyncosx/<macserialnumber>/rsyncui.txt`
