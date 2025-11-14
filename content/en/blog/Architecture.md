@@ -8,11 +8,11 @@ categories = ["architecture"]
 
 Over the past five years, I have dedicated approximately 5,800 commits to the RsyncUI GitHub repository. This substantial number of commits demonstrates the significant learning curve I have experienced while developing RsyncUI. The foundation of RsyncUI was the now-archived project RsyncOSX. The primary distinction between these two projects lies in the adoption of SwiftUI, as well as the evolution and enhancement of Swift as a programming language to its current version.
 
-Having retired from my professional career three and a half years ago, I have dedicated myself to developing RsyncUI on a daily basis. While I also engage in various hobbies such as bird photography, training, cross-country skiing, and spending time with my children and grandchildren, the continuous development of RsyncUI remains a primary focus throughout the year.
+Having retired from my professional career three and a half years ago, I have dedicated myself to developing RsyncUI several days a week. While I also engage in various hobbies such as bird photography, training, cross-country skiing, and spending time with my children and grandchildren, the continuous development of RsyncUI remains a primary focus throughout the year.
 
 I am consistently expanding my knowledge of Swift and SwiftUI through reading blogs and, in recent times, utilizing artificial intelligence in the development process.
 
-I inquired about an analysis of the RsyncUI GitHub repository from AI, specifically Warp and GPT 5.1 (Low reasoning). Below is the response, which can copied and pasted (no changes, only removal of some details).
+I inquired about an analysis of the RsyncUI GitHub repository from AI, specifically Warp and GPT 5.1 (Low reasoning). Below is the response, which is copied and pasted (no changes, only removal of some details).
 
 ### GPT 5.1 analyse of RsyncUI
 
