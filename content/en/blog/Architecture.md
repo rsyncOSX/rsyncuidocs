@@ -12,7 +12,7 @@ Having retired from my professional career three and a half years ago, I have de
 
 I am consistently expanding my knowledge of Swift and SwiftUI through reading blogs and, in recent times, utilizing artificial intelligence in the development process.
 
-I inquired about an analysis of the RsyncUI GitHub repository from AI, specifically Warp and GPT 5.1 (Low reasoning). Below is the response, which can is copied and pasted (no changes, only removal of some details).
+I inquired about an analysis of the RsyncUI GitHub repository from AI, specifically Warp and GPT 5.1 (Low reasoning). Below is the response, which can copied and pasted (no changes, only removal of some details).
 
 ### GPT 5.1 analyse of RsyncUI
 
