@@ -14,9 +14,9 @@ All changes in code since version 2.7.6 can be viewed [here](https://github.com/
 
 ### Update Nov 15
 
-Following a Swift concurrency conference video, I implemented "Approachable Concurrency" in three Swift packages. Within RsyncUI, I utilized Swift Logger to display in Xcode Console whether a call is on the main thread or a background thread. Upon reviewing the logging, I discovered an excessive number of log statements. Consequently, in the next release build, logging statements are disabled for the release build, but they are enabled when running RsyncUI in Xcode only.
+Within RsyncUI, I utilize Swift Logger to display in Xcode Console whether a call is on the main thread or a background thread. Upon reviewing the logging, I discovered an excessive number of log statements. Consequently, in the next release build, logging statements are disabled for the release build, but they are enabled (by DEBUG flag) when running RsyncUI in Xcode only.
 
-I have removed numerous "boilerplate code" for log statements and instead enhanced the Logger with new functions. Replacing all logging statements in code applies to numerous files, but it specifically targets the "boilerplate code" for logging statements.
+I have removed numerous "boilerplate code" for log statements and instead enhanced the Logger (by extension Logger) with new functions. Replacing all logging statements in code applies to numerous files, but it specifically targets the "boilerplate code" for logging statements.
 
 ### Real-Time Output
 
