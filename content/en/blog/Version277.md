@@ -1,14 +1,16 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.7"
-date = "2025-11-15"
+date = "2025-11-16"
 tags = ["changelog","version 2.7.7"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.7 (build 168) - Release Candidate (RC3)
+### Version 2.7.7 (build 168) - Release Candidate (RC4)
 
-**Note:** I initially believed that the next release, version 2.7.7, would be a minor update. However, it appears to be a more significant release. This is most likely the last RC before the new release.
+**Note:** I initially believed that the next release, version 2.7.7, would be a minor update. However, it appears to be a more significant release.
+
+On November 16th, a new release candidate has been uploaded. Since the previous release candidate, there have been some updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, the make procedure (building a new release) omits all logger DEBUG statements.
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6). The release is scheduled for late November. I personally use this version daily and frequently compile new versions when there are code updates.
 
