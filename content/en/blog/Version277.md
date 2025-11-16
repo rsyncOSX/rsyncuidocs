@@ -24,9 +24,6 @@ Real-time output from rsync is now included. You can find it within the "hidden"
 
 The real-time output captures the rsync output by an actor without blocking the @MainActor and UI updates. However, the @Observable object monitoring updates is executed on the @MainActor and updates the real-time view.
 
-{{< figure src="/images/v277/capture1.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/v277/capture2.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 ### Schedules
 
 A bug related to deleting schedules has been fixed, and upon request, the weekly schedule has been reinstated. Schedules can only be added for the current and the next month. This restriction is implemented to manage memory usage effectively, as every schedule includes the callback action, which is stored in memory. Schedules are automatically saved to a file and reloaded into memory upon startup.
@@ -35,12 +32,9 @@ A bug related to deleting schedules has been fixed, and upon request, the weekly
 
 A bug in the charts has been fixed. The bug could cause RsyncUI to crash.
 
-### Continue Concealing Distractions
+### Concealing Distractions
 
-I am currently working on concealing even more *distractions*, and the next one will be located on the main toolbar. By using the shortcut `⌘S` (for showing or hiding) or by accessing the Task main menu, the Charts and Quick task will be displayed. They are concealed by default. To reveal them, simply toggle the show or hide option using the shortcut.
-
-{{< figure src="/images/v277/toolbar1.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/v277/toolbar2.png" alt="" position="center" style="border-radius: 8px;" >}}
+By using the shortcut `⌘S` (for showing or hiding) or by accessing the Task main menu, the Charts and Quick task will be displayed. They are concealed by default. To reveal them, simply toggle the show or hide option using the shortcut.
 
 ### Internal Refactor
 

@@ -17,17 +17,3 @@ The functions *Schedule* and *Verify remote* have been moved from the main sideb
 The primary sidebar retains its context sensitivity, but its functionality is limited to the *Snapshots* and *Restore* options, which are specifically tailored to certain tasks. For comprehensive information regarding the context-sensitive sidebar menu, please refer to the section titled *Getting started*.
 
 Additionally, there is an update to the progress bar.
-
-##### The main view
-
-*Schedule* and *Verify remote* moved to the toolbar. 
-
-{{< figure src="/images/v275/main.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-##### Liquid Glass style on Buttons
-
-{{< figure src="/images/v275/schedgl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v275/verifygl.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-
