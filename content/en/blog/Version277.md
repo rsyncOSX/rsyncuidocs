@@ -12,11 +12,11 @@ categories = ["changelog"]
 
 All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6). The release is scheduled for late November. I personally use this version daily and frequently compile new versions when there are code updates.
 
-### Update Nov 15
+### Logger
 
 Within RsyncUI, I utilize Swift Logger to display in Xcode Console whether a call is on the main thread or a background thread. Upon reviewing the logging, I discovered an excessive number of log statements. Consequently, in the next release build, logging statements are disabled for the release build, but they are enabled (by DEBUG flag) when running RsyncUI in Xcode only.
 
-I have removed numerous "boilerplate code" for log statements and instead enhanced the Logger (by extension Logger) with new functions. Replacing all logging statements in code applies to numerous files, but it specifically targets the "boilerplate code" for logging statements.
+I have removed numerous "boilerplate code" for log statements and instead enhanced the Logger (by extension Logger) with new functions. Replacing all logging statements in code applies to numerous files. 
 
 ### Real-Time Output
 
