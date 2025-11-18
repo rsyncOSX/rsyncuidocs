@@ -10,15 +10,11 @@ categories = ["technical details"]
 
 {{% pageinfo color="info" %}}
 
-It is imperative that RsyncUI correctly tags tasks with data to be synchronized. If the tagging fails, some source data may not be synchronized. RsyncUI supports both the latest version of rsync and the older default version included in macOS 14 and macOS 15.
+It is imperative that RsyncUI correctly tags tasks with data to be synchronized. If the tagging fails, some source data may not be synchronized. RsyncUI supports both the latest version of rsync and the older default version included in macOS.
 
 {{% /pageinfo %}}
 
 The tagging of data to be synchronized is computed within the ParseRsyncOutput package, a local Swift Package for RsyncUI.
-
-From version 2.4.0, there is verification of the tagging process. If the output from rsync exceeds 20 lines but no data is tagged for synchronization, RsyncUI displays an alert. Normally, if there is no data to synchronize, output from rsync is about 20 lines.
-
-As of version 2.4.0, extracting numbers from a string containing letters and digits is now a single-line operation.
 
 **Example:**
 
@@ -47,7 +43,7 @@ public func returnIntNumber(_ input: String) -> [Int] {
 
 The parsing of rsync output is not particularly complex, though it differs somewhat between the latest version of rsync and the default versions.
 
-### Latest Version of rsync
+### Version 3.4.x 
 
 The trailing output from the latest version of rsync (version 3.4.1) looks like:
 ```
@@ -69,7 +65,7 @@ sent 394,304 bytes  received 22,226 bytes  833,060.00 bytes/sec
 total size is 24,788,299  speedup is 59.51 (DRY RUN)
 ```
 
-### Default Version of rsync
+### Openrsync 
 
 The trailing output from the default version of rsync looks like:
 ```
