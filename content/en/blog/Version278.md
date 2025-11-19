@@ -1,18 +1,22 @@
 +++
 author = "Thomas Evensen"
-title = "Version 2.7.7"
+title = "Version 2.7.8"
 date = "2025-11-16"
-tags = ["changelog","version 2.7.7"]
+tags = ["changelog","version 2.7.8"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.7 (build 168) - Release Candidate (RC4)
+### Version 2.7.8 (build 16) - November 19, 2025
 
-**Note:** I initially believed that the next release, version 2.7.7, would be a minor update. However, it appears to be a more significant release.
+<div class="alert alert-danger" role="alert">
 
-On November 16th, a new release candidate has been uploaded. Since the previous release candidate, there have been some updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, the make procedure (building a new release) omits all logger DEBUG statements.
+**Note:** This is the next release, but the file informing about a new release is not yet updated. Before updating this file and disseminating update information to all users, I would like some users to download and test the new release. There have been updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, and the make procedure (building a new release) omits all logger DEBUG statements.
 
-All changes in code since version 2.7.6 can be viewed [here](https://github.com/rsyncOSX/RsyncUI/releases/tag/v2.7.6). The release is scheduled for late November. I personally use this version daily and frequently compile new versions when there are code updates.
+I am using this build myself every day, and no issues have been found. However, to ensure everything is functioning correctly, I will wait to notify all users about it. If no issues are found, the only change will be notifying all users. The build will remain unchanged. 
+
+I am also about to refactor the arguments for rsync SPM, but that will not be released before next version again. 
+
+</div>
 
 ### Logger
 
