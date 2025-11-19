@@ -6,7 +6,7 @@ tags = ["changelog","version 2.7.8"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.8 (build 16) - November 19, 2025
+### Version 2.7.8 (build 169) - November 19, 2025
 
 <div class="alert alert-danger" role="alert">
 
