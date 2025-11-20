@@ -14,7 +14,7 @@ I am also about to refactor the arguments for rsync SPM, but that will not be re
 
 ### Logger
 
-Within RsyncUI, I utilize Swift Logger to display in Xcode Console whether a call is on the main thread or a background thread. Upon reviewing the logging, I discovered an excessive number of log statements. Consequently, in the next release build, logging statements are disabled for the release build, but they are enabled (by DEBUG flag) when running RsyncUI in Xcode only.
+Within RsyncUI, I utilize Swift Logger to display in Xcode Console whether a call is on the main thread or a background thread. Upon reviewing the logging, I discovered an excessive number of log statements. Consequently, logging statements are disabled for the release build, but they are enabled (by DEBUG flag) when running RsyncUI in Xcode only.
 
 I have removed numerous "boilerplate code" for log statements and instead enhanced the Logger (by extension Logger) with new functions. Replacing all logging statements in code applies to numerous files. 
 
