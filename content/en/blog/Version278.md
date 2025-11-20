@@ -8,15 +8,9 @@ categories = ["changelog"]
 
 ### Version 2.7.8 (build 169) - November 19, 2025
 
-<div class="alert alert-danger" role="alert">
+There have been updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, and the make procedure (building a new release) omits all logger DEBUG statements.
 
-**Note:** This is the next release, but the file informing about a new release is not yet updated. Before updating this file and disseminating update information to all users, I would like some users to download and test the new release. There have been updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, and the make procedure (building a new release) omits all logger DEBUG statements.
-
-I am using this build myself every day, and no issues have been found. However, to ensure everything is functioning correctly, I will wait to notify all users about it. If no issues are found, the only change will be notifying all users. The build will remain unchanged. 
-
-I am also about to refactor the arguments for rsync SPM, but that will not be released before next version again. 
-
-</div>
+I am also about to refactor the arguments for rsync SPM, but that will not be released before next version 2.7.9 later in December. 
 
 ### Logger
 
