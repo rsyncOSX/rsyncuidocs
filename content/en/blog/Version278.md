@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 There have been updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, and the make procedure (building a new release) omits all logger DEBUG statements.
 
-I am also about to refactor the arguments for rsync SPM, but that will not be released before next version 2.7.9 later in December. 
+~~I am also about to refactor the arguments for rsync, RsyncArguments, but that will not be released before next version 2.7.9 later in December~~ The refactor has been completed. The next release version, 2.7.9, is scheduled for release in December. However, additional testing is required to ensure the reliability of the refactored RsyncArguments. All SPMs now have dedicated tests for each. 
 
 ### Logger
 
