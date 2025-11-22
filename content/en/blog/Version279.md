@@ -14,11 +14,13 @@ Therefore, there may still be undiscovered bugs.
 
 SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios. Nevertheless, it is crucial to remember that no code is entirely bug-free. 
 
-#### AI
+#### Artificial Intelligence (AI)
 
 In my experience, utilizing AI tools such as Claude Code and GitHub Copilot has proven to be highly effective in assisting me with refactoring all SPM packages. I primarily utilized the free version of Claude Code, and while the AI-suggested changes have been beneficial in most cases, there have been instances where they have not been successful. In such situations, I engage in discussions with the AI to identify the areas that are functioning correctly and those that are not. This interaction has been particularly impressive in demonstrating the capabilities of AI in supporting developers.
 
 Furthermore, Xcode incorporates AI functionality. Users can request the Xcode application to resolve compiler errors when they occur. However, I have found that I primarily rely on AI-powered online chat services integrated into my Safari browser for assistance.
+
+In discussing AI, it is imperative to acknowledge that I am utilizing AI to proofread all text on this web. Whenever I have text to review, I typically copy the text into Notepad (on macOS) and request proofreading assistance. Even in my native language, Norwegian, achieving precision in writing presents challenges. Consequently, my proficiency in English is even more limited. Therefore, seeking AI proofreading assistance proves invaluable for my English writing.
 
 #### Main Repository
 
@@ -26,7 +28,7 @@ Furthermore, Xcode incorporates AI functionality. Users can request the Xcode ap
 
 #### Swift Packages used by RsyncUI
 
-All SPM packages are refactored, updated, and checked into the main branch.n RsyncUI is a dependency for all packages, but the last one is not mandatory. SSH keys can be generated via command line.
+All SPM packages are refactored, updated, and checked into the main branch. RsyncUI is a depended on all packages, but the last one is not mandatory. SSH keys can be generated via command line.
 
 - *RsyncProcess* (https://github.com/rsyncOSX/RsyncProcess) - A minor package but a core function of RsyncUI
 	- listens for output from the rsync process as well as termination signal
