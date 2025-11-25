@@ -8,11 +8,11 @@ categories = ["synchronize"]
 
 A task requires a minimum of a local directory, the source, and a remote directory, the destination.
 
-{{< alert color="warning" >}}
+<div class="alert alert-danger" role="alert">
 
 Always verify the result of a new task before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
 
-{{< /alert >}}
+</div>
 
 Pressing the `Enter` key will advance to the next field. Pressing the `Enter` key will automatically add a new task after the last input. Tasks are saved to permanent storage after each entry.
 

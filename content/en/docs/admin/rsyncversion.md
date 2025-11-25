@@ -12,11 +12,11 @@ The default `/usr/bin/rsync` differs between macOS versions:
 - **macOS Sonoma**: Uses rsync version 2.6.9 (released November 2006)
 - **macOS Sequoia and Tahoe**: Use `openrsync`, a BSD-licensed implementation compatible with rsync protocol 29 and version 2.6.9
 
-{{< alert color="warning" >}}
+<div class="alert alert-secondary" role="alert">
 
 I strongly recommend installing the latest version of rsync (version 3.x) to take full advantage of RsyncUI's features.
 
-{{< /alert >}}
+</div>
 
 ### Installing rsync via Homebrew
 

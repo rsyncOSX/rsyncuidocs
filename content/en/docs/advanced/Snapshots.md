@@ -6,11 +6,11 @@ tags = ["snapshot"]
 categories = ["advanced features"]
 +++
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 Utilizing snapshots is an effective method for restoring previous versions of data and deleted files. Snapshots employ [hardlinks](https://en.wikipedia.org/wiki/Hard_link) to save copies of only modified and deleted files as separate files in a snapshot. Files that remain unchanged are hardlinks to the original file.
 
-{{< /alert >}}
+</div>
 
 In every snapshot task, RsyncUI stores the next available snapshot number. The snapshot number is a sequential number incremented by one after each snapshot task execution. The rsync command automatically creates the next snapshot directory by number, and RsyncUI updates the stored snapshot number for the next run. The snapshot number is displayed as part of the log timestamp.
 

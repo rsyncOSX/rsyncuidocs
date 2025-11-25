@@ -79,8 +79,8 @@ There are three Sidebar menu options that are contingent upon the properties of 
 - *Verify remote*: this option is only available for *synchronize* tasks where *the destination* is located on a *remote server*
 	- requires version 3.x of rsync
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 The Sidebar menu may be hidden, either click on the Hide Sidebar icon top left or enable *Hide the Sidebar on startup* within the *RsyncUI settings*.
 
-{{< /alert >}}
+</div>

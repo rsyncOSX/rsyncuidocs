@@ -47,7 +47,7 @@ A task can be temporarily halted. Within the primary Synchronize view, select th
 
 This option applies to the data synchronized by RsyncUI. By enabling either of these options, you can save changes to data, such as deletions or updates, prior to a synchronization task.
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 There are two options to automatically save changes to data when it is changed or deleted. 
 
@@ -55,7 +55,7 @@ There are two options to automatically save changes to data when it is changed o
 
 **Option 2:** Using *snapshots* requires that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section for information on how to enable and use snapshots.
 
-{{< /alert >}}
+</div>
 
 ### Remote servers
 

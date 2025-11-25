@@ -14,11 +14,11 @@ Upon each Mac sleep, RsyncUI synchronization tasks cease. An active rsync proces
 
 If the above occurs, RsyncUI will not generate any logs. RsyncUI logs only upon detecting a termination signal from rsync. If the Mac enters sleep during data synchronization, there will be no termination signal and no logging by RsyncUI.
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 You may modify your Mac's sleep settings to control when it sleeps.
 
-{{< /alert >}}
+</div>
 
 The above will also be true if you are using the Calendar function.
 
