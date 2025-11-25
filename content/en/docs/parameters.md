@@ -10,11 +10,11 @@ RsyncUI provides default parameters for data synchronization. However, the actua
 
 Users have the ability to modify default parameters as necessary. Parameters to rsync are stored in tasks, including a local ssh parameter if set. The local ssh parameter overrides a global ssh parameter if set.
 
-{{< alert color="warning" >}}
+<div class="alert alert-danger" role="alert">
 
 Always verify the result of changing parameters to rsync before executing. Select *"Verify tasks"* from the primary Sidebar menu.
 
-{{< /alert >}}
+</div>
 
 ### Task-Specific Parameters to rsync
 
@@ -41,11 +41,11 @@ Task-specific ssh parameters override global ssh parameters configured in the us
 - ssh-port: specify if ssh uses a port other than the default port 22
 - ssh-keypath and identity file: typically, these are `.ssh/id_rsa`; set only if alternative ssh-keypath and identity file are to be used by ssh
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 The values are marked red until validated OK. Refer to the *"Tools passwordless login"* section for information about validated values.
 
-{{< /alert >}}
+</div>
 
 ### Backup Switch
 
