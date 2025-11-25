@@ -8,11 +8,11 @@ categories = ["advanced features"]
 
 RsyncUI uses the standard SSH tools `ssh-keygen` and `ssh-copy-id` to help you establish passwordless login to remote servers via SSH key authentication.
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 Custom SSH key pairs must follow the format `~/.ssh_keypath/identityfile`, and the SSH port must be an integer value. RsyncUI validates these settings before saving.
 
-{{< /alert >}}
+</div>
 
 ## SSH Key Methods
 

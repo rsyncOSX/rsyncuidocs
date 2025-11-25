@@ -12,7 +12,7 @@ The Verify remote function is by default disabled. Please refer to section *Rsyn
 
 </div>
 
-{<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" role="alert">
 
 Prior to utilizing this function, kindly consult its documentation to ensure you make the appropriate decision.
 
