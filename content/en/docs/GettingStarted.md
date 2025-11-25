@@ -28,11 +28,11 @@ If you want to synchronize data to a server, on the Internet, or your local LAN,
 
 **Verify tasks**
 
-{{< alert color="warning" >}}
+<div class="alert alert-danger" role="alert">
 
 *Always* verify a new task. After adding a new task, changing a task, or adding your own or changed parameters to rsync, select *"Verify tasks"* from the primary Sidebar menu. 
 
-{{< /alert >}}
+</div>
 
 Select the task and press the *play* button on the toolbar. Executing the *play* button includes the --dry-run parameter for rsync, which is an estimation run.
 

@@ -6,13 +6,13 @@ tags = ["verify remote","synchronize"]
 categories = ["advanced features"]
 +++
 
-{{< alert >}}
+<div class="alert alert-secondary" role="alert">
 
 The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable. This function also necessitates that the destination be located on a remote server.
 
-{{< /alert >}}
+</div>
 
-{{< alert color="warning" >}}
+{<div class="alert alert-danger" role="alert">
 
 Prior to utilizing this function, kindly consult its documentation to ensure you make the appropriate decision.
 
@@ -22,7 +22,7 @@ This functionality was developed due to a personal need. The developer utilizes 
 
 Important: Using the above method requires you to remember from which Mac the latest synchronization was executed. If not, you will most likely lose data. Additionally, you should establish a procedure for using this function. For instance, at home, I always use my Mac Mini M4 to edit photos. When traveling, I always use my MacBook Pro, and it is fully synchronized with my Mac Mini when I leave for travel.
 
-{{< /alert >}}
+</div>
 
 Typically, a synchronize action operates in a *one-way* direction of data. Local data is synchronized to a backup media, such as an attached disc or a remote server. Restoring data, for instance, involves retrieving data from a backup when local data has become corrupted or inaccessible.  
 
@@ -31,7 +31,7 @@ and preventing data loss, particularly if the remote storage is **not** a Git se
 
 Git is a superior tool for version control. However, in certain situations, creating a Git repository may not be feasible, and this function may prove useful. As a reminder, the Verify function is designed for multiple Macs synchronizing data to a single remote server as a backup. It also assists in deciding whether to push or pull changes to keep the local repository updated.
 
-{{< alert color="warning" >}}
+<div class="alert alert-danger" role="alert">
 
 The user is solely responsible for determining the appropriate action. RsyncUI provides only advisory guidance, based on a rudimentary evaluation of a push and pull data comparison. Additionally, the function requires version 3.x of rsync to be installed and enabled.
 
@@ -39,7 +39,7 @@ The Verify process necessitates that one of the Macs be synchronized with the re
 
 The function is not intended to be automated. Users must verify their subsequent actions. 
 
-{{< /alert >}}
+</div>
 
 #### Synchronization of Multiple Macs to a Remote Server
 

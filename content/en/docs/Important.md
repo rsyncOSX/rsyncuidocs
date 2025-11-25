@@ -8,19 +8,19 @@ categories = ["general information"]
 
 The User Interface of RsyncUI may pose challenges for users unfamiliar with the `rsync` command. The primary objective is to simplify the usage of `rsync`, rather than providing a comprehensive introduction to `rsync` for macOS users. This scope is beyond the intended purpose of the interface. RsyncUI is a graphical layer atop the command-line tool `rsync`. It does not directly perform the underlying operations; `rsync` is responsible for the actual synchronization of data.
 
-{{< alert color="warning" >}}
+<div class="alert alert-danger" role="alert">
 
 Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. *Kindly review the MIT license* before commencing to use RsyncUI.
 
-{{< /alert >}}
+</div>
 
 Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
 
-{{< alert >}}
+<div class="alert alert-danger" role="alert">
 
 For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
 
-{{< /alert >}}
+</div>
 
 ### The delete parameter
 
