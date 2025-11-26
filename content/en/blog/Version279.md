@@ -1,26 +1,20 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.9"
-date = "2025-11-22"
+date = "2025-11-26"
 tags = ["changelog","version 2.7.9"]
 categories = ["changelog"]
 +++
 
 ### Version 2.7.9 (build 170) - in development and test
 
-Currently, the sole modification between this version and *version 2.7.8* (released version) is the utilization of the most recent refactored Swift Packages (SPM). It is important to note that this version is still under testing. All SPM packages include their own testing mechanisms, and all tests have been successfully passed. However, a test is only as reliable as the methodology employed to develop it. Testing SW is a science in itself, and test SW for all possible input is not possible. Nevertheless, Swift Testing and using SPM's are excellent tools for code quality and identifying potential bugs.
+Scheduled for release in about mid December 2025.
+
+Currently, the main modification between this version and *version 2.7.8* (released version) is the utilization of the most recent refactored Swift Packages (SPM). It is important to note that this version is still under testing. All SPM packages include their own testing mechanisms, and all tests have been successfully passed. However, a test is only as reliable as the methodology employed to develop it. Testing SW is a science in itself, and test SW for all possible input is not possible. Nevertheless, Swift Testing and using SPM's are excellent tools for code quality and identifying potential bugs.
 
 Therefore, there may still be undiscovered bugs.
 
 SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios. Nevertheless, it is crucial to remember that no code is entirely bug-free. 
-
-#### Artificial Intelligence (AI)
-
-In my experience, utilizing AI tools such as Claude Code and GitHub Copilot has proven to be highly effective in assisting me with refactoring all SPM packages. I primarily utilized the free version of Claude Code, and while the AI-suggested changes have been beneficial in most cases, there have been instances where they have not been successful. In such situations, I engage in discussions with the AI to identify the areas that are functioning correctly and those that are not. This interaction has been particularly impressive in demonstrating the capabilities of AI in supporting developers.
-
-Furthermore, Xcode incorporates AI functionality. Users can request the Xcode application to resolve compiler errors when they occur. However, I have found that I primarily rely on AI-powered online chat services integrated into my Safari browser for assistance.
-
-In discussing AI, it is imperative to acknowledge that I am utilizing AI to proofread all text on this web. Whenever I have text to review, I typically copy the text into Notepad (on macOS) and request proofreading assistance. Even in my native language, Norwegian, achieving precision in writing presents challenges. Consequently, my proficiency in English is even more limited. Therefore, seeking AI proofreading assistance proves invaluable for my English writing.
 
 #### Main Repository
 
