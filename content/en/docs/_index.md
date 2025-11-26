@@ -4,23 +4,13 @@ linkTitle: Documentation
 menu: { main: { weight: 20 } }
 ---
 
-*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. RsyncUI is 100% open-source software and will always remain free.
+*RsyncUI* is a macOS application developed using Swift and SwiftUI, designed for macOS Sonoma and subsequent versions. It leverages the command-line tool rsync for file synchronization. Notably, rsync executes the synchronization tasks, while RsyncUI provides a graphical user interface (GUI) on top of rsync. 
+
+RsyncUI is a complimentary and open-source application. Kindly review the MIT license before commencing to use RsyncUI. RsyncUI is 100% open-source software and will always remain free.
 
 <div class="alert alert-secondary" role="alert">
 
-RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security and preventing malicious code and tampering. However, RsyncUI is not sandboxed, which is a requirement for macOS applications on the Apple App Store. The App Sandbox imposes certain restrictions on the functionality of an application within its environment. A sandboxed app cannot read hidden directories such as `.ssh` or `.rsyncosx` from the user's home directory. Additionally, it cannot use rsync installed by Homebrew. Sandboxing RsyncUI would render it ineffective. 
-
-</div>
-
-<div class="alert alert-danger" role="alert">
-
-RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can create a complete image of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
-
-</div>
-
-<div class="alert alert-danger" role="alert">
-
-As a safety precaution, the --delete parameter is *not* set as a default parameter when adding new tasks. To ensure that the source and destination are in complete synchronization, the --delete parameter must be *enabled*. If you are new to `rsync`, I strongly recommend reading the *"Important"* and *"Limitations"* sections as a minimum. 
+RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security and preventing malicious code and tampering. However, RsyncUI is not sandboxed, which is a requirement for macOS applications on the Apple App Store. The App Sandbox imposes certain restrictions on the functionality of an application within its environment. A sandboxed app cannot read hidden directories such as `.ssh` or `.rsyncosx` from the user's home directory. Additionally, it cannot use rsync installed by Homebrew. Sandboxing RsyncUI would render it ineffective.
 
 </div>
 

@@ -6,27 +6,25 @@ tags = ["important"]
 categories = ["general information"]
 +++
 
-The User Interface of RsyncUI may pose challenges for users unfamiliar with the `rsync` command. The primary objective is to simplify the usage of `rsync`, rather than providing a comprehensive introduction to `rsync` for macOS users. This scope is beyond the intended purpose of the interface. RsyncUI is a graphical layer atop the command-line tool `rsync`. It does not directly perform the underlying operations; `rsync` is responsible for the actual synchronization of data.
+Before commencing the use of RsyncUI, it is imperative to thoroughly comprehend the following key notes. This section specifically highlights the most crucial ones.
 
-<div class="alert alert-danger" role="alert">
+The User Interface of RsyncUI may pose challenges for users unfamiliar with the `rsync` command-line tool. The primary objective is to simplify the usage of `rsync`, rather than providing a comprehensive introduction to `rsync` for macOS users. This scope is beyond the intended purpose of the interface.
 
-Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. *Kindly review the MIT license* before commencing to use RsyncUI.
+### Not a backup tool for everyone
 
-</div>
+RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can *create a complete image* of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
 
-Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
-
-<div class="alert alert-danger" role="alert">
-
-For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
-
-</div>
-
-### The delete parameter
+### Delete parameter 
 
 The --delete parameter, herein referred to as the *delete parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *delete parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *delete parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
 
 Therefore, it is crucial to ascertain whether the *delete parameter* is enabled or disabled. Enabling the *delete parameter* ensures complete synchronization between the source and destination directories.
+
+<div class="alert alert-danger" role="alert">
+  
+As a safety precaution, the --delete parameter is *not* set as a default parameter when adding new tasks.  To ensure that the source and destination are in complete synchronization, the --delete parameter must be *enabled*.
+
+</div>
 
 #### How to remove and add the delete parameter
 
@@ -36,6 +34,16 @@ Select *Rsync parameters* from the primary Sidebar menu. Select the task for whi
 - if OFF, the --delete parameter is removed
 
 {{< figure src="/images/rsyncparameters/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+### Verify all new tasks
+
+Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
+
+<div class="alert alert-danger" role="alert">
+
+Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
+
+</div>
 
 ### Temporary halt tasks
 
