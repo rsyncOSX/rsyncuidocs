@@ -6,7 +6,7 @@ tags = ["changelog","version 2.7.9"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.9 (build 170) - 27 Nov 2025 release candidate
+### Version 2.7.9 (build 170) - November 27, 2025 release candidate
 
 Scheduled for release in first week of December 2025.
 
@@ -15,6 +15,8 @@ The Full Changelog, in Release page, shows details about all changes.
 The real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 
 Additionally, a gesture has been added to indicate when buttons are selected.
+
+And there are a few other internal refactors as well. 
 
 The primary modification between this version and *version 2.7.8* (released version) is the utilization of the most recent refactored Swift Packages (SPM). All SPM packages include their own testing mechanisms, and all tests have been successfully passed. SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios.
 
