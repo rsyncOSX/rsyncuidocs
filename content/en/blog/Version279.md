@@ -14,7 +14,7 @@ The Full Changelog, in Release page, shows details about all changes.
 
 The real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 
-Additionally, a gesture has been added to indicate when buttons are selected.
+Additionally, a gesture has been added to indicate when buttons are pressed.
 
 And there are a few other internal refactors as well. 
 
