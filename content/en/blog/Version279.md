@@ -1,20 +1,22 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.9"
-date = "2025-11-26"
+date = "2025-11-27"
 tags = ["changelog","version 2.7.9"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.9 (build 170) - in development and test
+### Version 2.7.9 (build 170) - 27 Nov 2025 release candidate
 
-Scheduled for release in about mid December 2025.
+Scheduled for release in first week of December 2025.
 
-Currently, the main modification between this version and *version 2.7.8* (released version) is the utilization of the most recent refactored Swift Packages (SPM). It is important to note that this version is still under testing. All SPM packages include their own testing mechanisms, and all tests have been successfully passed. However, a test is only as reliable as the methodology employed to develop it. Testing SW is a science in itself, and test SW for all possible input is not possible. Nevertheless, Swift Testing and using SPM's are excellent tools for code quality and identifying potential bugs.
+The Full Changelog, in Release page, shows details about all changes.
 
-Therefore, there may still be undiscovered bugs.
+The real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 
-SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios. Nevertheless, it is crucial to remember that no code is entirely bug-free. 
+Additionally, a gesture has been added to indicate when buttons are selected.
+
+The primary modification between this version and *version 2.7.8* (released version) is the utilization of the most recent refactored Swift Packages (SPM). All SPM packages include their own testing mechanisms, and all tests have been successfully passed. SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios.
 
 #### Main Repository
 
