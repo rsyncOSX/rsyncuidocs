@@ -8,7 +8,13 @@ categories = ["general information"]
 
 For new users, kindly refer to the *Important* section. Additionally, please refer to the *Latest version of rsync* section for information about installing the latest version.
 
-The primary Sidebar menu is context-sensitive. The rationale behind a context-sensitive Sidebar menu is to conceal menu options that may be distracting to the user. See last on this page about the sidebar menu options.
+### Concealing Actions
+
+The rationale behind concealing actions is to minimize clutter in menus and enhance user focus.
+
+By utilizing the shortcut `⌘S` (for displaying or hiding) or accessing the Task main menu, the Charts, Quick task, view logfile, and several other options will be revealed. These options are concealed by default. To reveal them, simply toggle the show or hide option using the shortcut.
+
+The primary Sidebar menu is also context-sensitive. Refer to the concealing options mentioned at the end of this page for further details.
 
 ### New Tasks and Verification
 
@@ -68,7 +74,9 @@ Version openrsync:
 
 {{< figure src="/images/gettingstarted/linesopenrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-### The Sidebar Menu options
+### Concealing Options
+
+#### The Sidebar Menu options
 
 There are three Sidebar menu options that are contingent upon the properties of a task. It is sufficient as long as one of the tasks satisfies one of the prerequisites.
 
@@ -84,3 +92,12 @@ There are three Sidebar menu options that are contingent upon the properties of 
 The Sidebar menu may be hidden, either click on the Hide Sidebar icon top left or enable *Hide the Sidebar on startup* within the *RsyncUI settings*.
 
 </div>
+
+#### The menu bar
+
+Toggle the shortcut `⌘S`:
+
+{{< figure src="/images/gettingstarted/hidden.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/gettingstarted/presented.png" alt="" position="center" style="border-radius: 8px;" >}}
+
