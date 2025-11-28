@@ -14,6 +14,14 @@ The Full Changelog, in Release page, shows details about all changes.
 
 The real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 
+<div class="alert alert-secondary" role="alert">
+
+Please be aware that real-time logging to file and view incurs a performance penalty. In certain instances, the termination signal may precede the complete draining of input from the filehandle, resulting in the absence of data for logging. While data synchronization is ensured, there may be no logging regarding the synchronization process.
+
+My recommendation is to utilize this feature exclusively during the testing of new tasks and `—dry-run` tasks.
+
+</div>
+
 Additionally, a gesture has been added to indicate when buttons are pressed.
 
 And there are a few other internal refactors as well. 
