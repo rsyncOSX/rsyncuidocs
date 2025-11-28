@@ -20,6 +20,8 @@ Please be aware that real-time logging to file and view incurs a performance pen
 
 My recommendation is to utilize this feature exclusively during the testing of new tasks and `—dry-run` tasks.
 
+This feature is automatically disabled when the view is closed or switched off by buttons in the view.
+
 </div>
 
 Additionally, a gesture has been added to indicate when buttons are pressed.
