@@ -1,16 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.7.9"
-date = "2025-11-27"
+date = "2025-11-30"
 tags = ["changelog","version 2.7.9"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.9 (build 170) - November 27, 2025 release candidate
+### Version 2.7.9 (build 170) - November 30, 2025 release candidate (updated)
 
-Scheduled for release in first week of December 2025.
-
-The Full Changelog, in Release page, shows details about all changes.
+A bug in the restore data functionality has been resolved, and unused code has been removed. The full changelog, located on the release page, provides comprehensive details about all modifications.
 
 The real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 
