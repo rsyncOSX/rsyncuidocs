@@ -37,6 +37,17 @@ This feature is automatically disabled when the view is closed or switched off b
 
 </div>
 
+
+<div class="alert alert-secondary" role="alert">
+
+Regarding logging, a *previous bug* occurred when the termination signal was detected. This signal indicates that the external rsync process has completed and the process has been terminated. However, before all output from the process was captured, this could cause a crash of RsyncUI. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
+
+Occasionally, when synchronizing data to fast SSDs, the termination signal is detected before all data has been received. While RsyncUI does not crash, the separate logging may be missing. After data synchronization and you don’t see a log, you can verify the synchronization of data by making a new estimate. The termination signal also serves as a message to perform logging, but if the last summarized rsync data is missing, there is nothing to log. 
+
+Normally, the logging works as expected.
+
+</div>
+
 ### Swift Packages
 
 All SPM packages include their own testing mechanisms, and all tests have been successfully passed. SPM packages are generally small and focused on a specific purpose, which simplifies testing for edge cases and typical usage scenarios.
