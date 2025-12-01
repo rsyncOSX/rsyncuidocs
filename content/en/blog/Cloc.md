@@ -6,28 +6,28 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: November 30, 2025, version 2.7.9
+Numbers updated: December 1, 2025, version 2.8.0
 
 There is a very nice and excellent tool, [cloc](https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
 cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources
  SSHCreateKey/Sources RsyncProcess/Sources ProcessCommand/Sources
-     202 text files.
-     202 unique files.                                          
+     203 text files.
+     203 unique files.                                          
       16 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.06 s (3496.4 files/s, 392604.8 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.06 s (3643.4 files/s, 408581.0 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          196           2499           2738          17020
+Swift                          197           2522           2751          17067
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           202           2536           2813          17333
+SUM:                           203           2559           2826          17380
 -------------------------------------------------------------------------------
 ```
 
