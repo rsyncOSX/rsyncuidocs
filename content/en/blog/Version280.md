@@ -15,7 +15,7 @@ The release candidate is not updated, but there have been more updates in the co
 Here are all details about the [changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.8…main) since release *version 2.7.8*. The main GitHub repository is updated to version 2.8.0, and a new release is planned for some days. The following now summarizes all changes compared to the last release version 2.7.8:
 
 - The major update within this release is that all seven Swift Packages (SPM) are updated to version 2.0.
-  - All SPM are validated by their own test, using the new Swift Testing library.
+  - All SPM are validated by their own test, using the new Swift Testing framework.
 - Several cleanups and refactorings have been made in the code.
   - There are approximately 17,300 lines of code, and some code has not been reviewed for some time.
     - It has been about five years since I commenced development of RsyncUI, based on code end experience from my previous project.
