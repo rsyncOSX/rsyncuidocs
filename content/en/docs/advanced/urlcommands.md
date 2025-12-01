@@ -14,16 +14,15 @@ There are three methods of using deep links:
 - use URL functions direct within RsyncUI
 - save an URL-link in e.g. Notepad
 
-#### RsyncUI widgets
+#### RsyncUI Widget
 
-Two widgets are embedded in RsyncUI: 
+One widget is embedded in RsyncUI: 
 
-- one for *estimating and synchronizing*
-- and the second for *verifying remote* repository
+- *estimating and synchronizing*
 
-Both widgets retrieve a saved URL link from storage. Within the Tasks view, there is a view for URLs. Within this view, you can save the required URLs. The widgets display whether a validated URL is present. To enable the widgets on macOS, click on the date and time icon located in the upper right corner of your screen. Edit the widgets and select RsyncUI. Then, add the widgets.
+The widget retrieve a saved URL link from storage. Within the Tasks view, there is a view for URL. Within this view, you can save the required URL. The widgets display whether a validated URL is present. To enable the widgets on macOS, click on the date and time icon located in the upper right corner of your screen. Edit the widgets and select RsyncUI. Then, add the widgets.
 
-After enabling the widgets, a single click on the widget will launch RsyncUI and execute the corresponding action. To modify the URLs, update and save the new URLs.
+After enabling the widget, a single click on the widget will launch RsyncUI and execute the corresponding action. To modify the URL, update and save the new URL.
 
 #### Execute URL´s from within RsyncUI
 
@@ -33,25 +32,16 @@ Deep links also enable automation of actions within RsyncUI. A single click on t
 
 #### URL´s  and Notepad
 
-URL´s must start with `rsyncuiapp://`. The two URL´s actions are:
+URL´s must start with `rsyncuiapp://`:
 
 | Action                                             | URL                                                                     |
 |----------------------------------------------------|-------------------------------------------------------------------------|
 | Estimate all tasks, automatically synchronize data | `rsyncuiapp://loadprofileandestimate?profile=Pictures`                  |
-| Verify  a task                                     | `rsyncuiapp://loadprofileandverify?profile=Pictures&id=Pictures_backup` |
 
 - *Estimate all tasks and automatically synchronize data*
   - load profile, estimate all tasks and automatically synchronize data
-- *Verify task, as an example, with Synchronize ID=Pictures backup*
-    - load profile and verify  task with synchronizeID=Pictures backup*, the space in synchronize ID on task is converted to `_` when searching for task in RsyncUI
-      
-There is a count down in  *six* seconds to abort the synchronize task after estimate. The count down may be bypassed by toggle switch in Settings view.
- 
-**Note**: If only the default profile is in use, parameter is `profile=default`
 
-**Note**: If there is space in Synchronize ID, like "Pictures backup", the URL-parameter is `id=Pictures_backup`. RsyncUI automatically replaces the `_` with space when searching for the ID.
-
-#### View URLs
+#### View URL
 
 You may copy the correct URLs and save the URLs in e.g Notepad for easy access to start a synchronize task. 
 
