@@ -24,7 +24,7 @@ Here are all details about the [changed files](https://github.com/rsyncOSX/Rsync
 - A bug in the restore data functionality has been resolved.
 - Only one Widget is now available, Estimate and Execute.
 - All synchronization, such as quicktask and restore, now includes a progress bar if there has been an estimate ahead.
-- Real-time capture of rsync includes capturing to a file. Servers can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
+- Real-time capture of rsync includes capturing to a file. Users can view either the RsyncUI logfile or the rsync capture to file in the view logfile.
 - A gesture has been added to indicate when buttons are pressed.
 
 <div class="alert alert-secondary" role="alert">
