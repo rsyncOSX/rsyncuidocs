@@ -6,7 +6,7 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: December 1, 2025, version 2.8.0
+Numbers updated: December 2, 2025, version 2.8.0
 
 There is a very nice and excellent tool, [cloc](https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
@@ -17,17 +17,17 @@ cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources
      203 unique files.                                          
       16 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.06 s (3643.4 files/s, 408581.0 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.05 s (4239.5 files/s, 475137.0 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          197           2522           2751          17067
+Swift                          197           2518           2750          17058
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           203           2559           2826          17380
+SUM:                           203           2555           2825          17371
 -------------------------------------------------------------------------------
 ```
 
