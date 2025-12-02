@@ -50,7 +50,7 @@ Please note that this is an external task not controlled by RsyncUI, which execu
 
 The user can abort a task at any time. However, it is essential to allow the task to complete and perform any necessary cleanup operations before starting a new task. This process may take a few seconds, and if you don't wait, the application may become unresponsive.
 
-### There are errors in tagging data
+### Errors in tagging data
 
 Sometimes you may get the error:
 ```

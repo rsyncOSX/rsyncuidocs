@@ -7,13 +7,7 @@ categories = ["synchronize"]
 lastmod = "2024-03-18"
 +++
 
-<div class="alert alert-secondary" role="alert">
-
-The QuickTask function in this release is not functioning as intended due to an oversight on my part. Although it is a minor function and only applicable to remote servers, if you occasionally utilize it, version 2.6.5 is available for download and addresses the issue. If you do not require the QuickTask function, there is no need to download the updated version.
-
-</div>
-
-Use QuickTask to quickly copy or transfer files to either source or destination. QuickTask will save the last executed quick task as default values. Default values can be cleared by the toolbar function.
+Utilize QuickTask to swiftly duplicate or transfer files between the source and destination. QuickTask will retain the most recently executed quick task as default settings. Default settings can be cleared through the toolbar function. QuickTask is exclusively applicable to remote servers and necessitates the activation of Passwordless login via SSH.
 
 There are two types of quick tasks:
 

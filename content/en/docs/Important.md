@@ -35,9 +35,9 @@ Select *Rsync parameters* from the primary Sidebar menu. Select the task for whi
 
 {{< figure src="/images/rsyncparameters/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-### Verify all new tasks
+### Always verify new task
 
-Before executing a new task in RsyncUI, please perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
+Before executing a new task in RsyncUI, for your own safety perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
 
 <div class="alert alert-danger" role="alert">
 
@@ -65,8 +65,16 @@ There are two options to automatically save changes to data when it is changed o
 
 </div>
 
-### Remote servers
+### Remote servers and SSH
 
 RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter `-e ssh` to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
 
 Through the SSH tunnel, the transfer is encrypted when transmitted over a network connection. Refer to the *Passwordless login* section for further information on SSH and SSH-keys. This feature cannot be disabled.
+
+### Missing log statement
+
+The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
+
+Occasionally, when synchronizing data to fast SSDs, the termination signal is detected before all data has been received. The separate logging *may be missing*. After data synchronization and you don’t see a log, you can verify the synchronization of data by making a new estimate. 
+
+The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
