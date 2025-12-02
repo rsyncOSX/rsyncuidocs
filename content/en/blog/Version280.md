@@ -6,15 +6,11 @@ tags = ["changelog","version 2.8.0"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.0 (build 171) - not yet released
-
-**Update: December 2, 2025**
+### Version 2.8.0 (build 171) - Dec 2, 2025
 
 *There is a new issue summarizing, by GitHub Copilot, all changes since version 2.7.8.*
 
-The release candidate is not updated, but there have been more updates in the code *after the v2.7.9rc2 release*. However, the v2.7.9rc2 utilizes the most important part to test, which are all new updates to Swift Packages.
-
-Here are all details about the [changed files](https://github.com/rsyncOSX/RsyncUI/compare/v2.7.8…main) since release *version 2.7.8*. The main GitHub repository is updated to version 2.8.0, and a new release is planned for some days. The following now summarizes all changes compared to the last release version 2.7.8:
+The following summarizes changes in this release:
 
 - The major update within this release is that all seven Swift Packages (SPM) are updated to version 2.0.
   - All SPM are validated by their own test, using the new Swift Testing framework.
