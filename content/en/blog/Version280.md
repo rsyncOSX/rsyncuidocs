@@ -37,7 +37,7 @@ This feature is automatically disabled when the view is closed or switched off b
 
 ### No stats
 
-*In the upcoming maintenance release, version 2.8.1, an alert will be introduced to notify users when RsyncUI detects a lack of data to write logdata. While still in development, RsyncUI in version 2.8.1 will now throw an error when this condition is met. Notably, the loop for executing and estimating will continue to run even after the error is encountered.*
+*There is more info about the upcoming maintenance release, version 2.8.1, about this issue in the blog about version 2.8.1*
 
 <div class="alert alert-secondary" role="alert">
 
@@ -52,10 +52,6 @@ The process termination signal serves as a message to perform logging, but if th
 Normally, the logging works as expected.
 
 </div>
-
-In the upcoming version of RsyncUI, a new error will be introduced. If logging fails due to the aforementioned reason, this error will be generated. Notably, I am unable to produce this error when executing RsyncUI within Xcode. However, it is only when running RsyncUI as an application compiled for release that this error is encountered. Executing RsyncUI within Xcode results in increased code execution time, and the summarized output from rsync is captured when the termination signal is detected.
-
-{{< figure src="/images/gettingstarted/nostats.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Swift Packages
 
