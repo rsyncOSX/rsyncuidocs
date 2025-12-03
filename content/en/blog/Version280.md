@@ -35,6 +35,9 @@ This feature is automatically disabled when the view is closed or switched off b
 
 </div>
 
+### No stats
+
+*In the upcoming maintenance release, version 2.8.1, an alert will be introduced to notify users when RsyncUI detects a lack of data to write logdata. While still in development, RsyncUI in version 2.8.1 will now throw an error when this condition is met. Notably, the loop for executing and estimating will continue to run even after the error is encountered.*
 
 <div class="alert alert-secondary" role="alert">
 
@@ -49,6 +52,10 @@ The process termination signal serves as a message to perform logging, but if th
 Normally, the logging works as expected.
 
 </div>
+
+A new error, in next version of RsyncUI, if logging fails due to the above reason. 
+
+{{< figure src="/images/gettingstarted/nostats.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Swift Packages
 
