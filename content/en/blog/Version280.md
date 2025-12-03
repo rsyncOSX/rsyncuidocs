@@ -53,7 +53,7 @@ Normally, the logging works as expected.
 
 </div>
 
-A new error, in next version of RsyncUI, if logging fails due to the above reason. 
+In the upcoming version of RsyncUI, a new error will be introduced. If logging fails due to the aforementioned reason, this error will be generated. Notably, I am unable to produce this error when executing RsyncUI within Xcode. However, it is only when running RsyncUI as an application compiled for release that this error is encountered. Executing RsyncUI within Xcode results in increased code execution time, and the summarized output from rsync is captured when the termination signal is detected.
 
 {{< figure src="/images/gettingstarted/nostats.png" alt="" position="center" style="border-radius: 8px;" >}}
 
