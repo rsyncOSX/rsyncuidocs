@@ -40,7 +40,7 @@ This feature is automatically disabled when the view is closed or switched off b
 
 The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
 
-Occasionally, when synchronizing data to fast SSDs, the termination signal is detected before all *output from rsync* has been received. The separate logging *may be missing*. After data synchronization and you don’t see a log, you can verify the synchronization of data by making a new estimate. 
+Occasionally, when synchronizing a small amount of data to fast SSDs, the termination signal is detected before all output from rsync has been received. In such cases, the separate logging may be missing. After data synchronization and the absence of a log, you can verify the synchronization of data by recalculating the estimate. 
 
 The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
 

@@ -26,7 +26,7 @@ As a safety precaution, the --delete parameter is *not* set as a default paramet
 
 </div>
 
-#### How to remove and add the delete parameter
+#### Add and remove the delete parameter
 
 Select *Rsync parameters* from the primary Sidebar menu. Select the task for which you want to add or remove the `--delete` parameter. Then toggle *Add --delete parameter* (**ON** means added). After toggling, *remember to update the task*.
 
@@ -44,6 +44,17 @@ Before executing a new task in RsyncUI, for your own safety perform an estimatio
 Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
 
 </div>
+
+### Missing log statement
+
+The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
+
+Occasionally, when synchronizing a small amount of data to fast SSDs, the termination signal is detected before all output from rsync has been received. In such cases, the separate logging may be missing. After data synchronization and the absence of a log, you can verify the synchronization of data by recalculating the estimate. 
+
+The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
+
+*Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
+
 
 ### Temporary halt tasks
 
@@ -70,13 +81,3 @@ There are two options to automatically save changes to data when it is changed o
 RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter `-e ssh` to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
 
 Through the SSH tunnel, the transfer is encrypted when transmitted over a network connection. Refer to the *Passwordless login* section for further information on SSH and SSH-keys. This feature cannot be disabled.
-
-### Missing log statement
-
-The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
-
-Occasionally, when synchronizing data to fast SSDs, the termination signal is detected before all *output from rsync* has been received. The separate logging *may be missing*. After data synchronization and you don’t see a log, you can verify the synchronization of data by making a new estimate. 
-
-The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
-
-*Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
