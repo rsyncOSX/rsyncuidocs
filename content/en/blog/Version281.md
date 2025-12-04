@@ -14,7 +14,9 @@ There are both positive and negative aspects to consider. On the positive side, 
 
 *In the upcoming maintenance release, version 2.8.1, an alert will be introduced to notify users when RsyncUI detects a lack of data to write logdata.*
 
-Additionally, RsyncUI has been updated to remove two bothersome messages that appear when it fails to locate either the configuration file or the log records file. These messages are typically encountered when creating a new profile. 
+In addition, RsyncUI has been updated to eliminate two inconvenient messages that are displayed when it fails to locate either the configuration file or the log records file. These messages are commonly encountered when creating a new profile.
+
+Furthermore, the “check network” feature has been removed, as it is unnecessary when RsyncUI issues a warning if data from the rsync output is missing. It is always advantageous to remove unused code, which simplifies the code base.
 
 <div class="alert alert-danger" role="alert">
 
