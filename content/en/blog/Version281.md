@@ -12,13 +12,9 @@ An AI-generated changelog is available at the bottom of this page. Some info abo
 
 The RC1 has been *updated*, and all annoying messages regarding missing files should be resolved. This release candidate will be upgraded to a new maintenance release tomorrow, provided that no bugs are identified within the *next 24 hours*.
 
-There are both positive and negative aspects to consider. On the positive side, I have successfully identified the occurrence of the issue and can notify the user accordingly. However, I am **unable** to modify the `try? await Task.sleep(nanoseconds: sleeptime)` code to resolve the problem. To be candid, I am somewhat lost why this issue arises. Nevertheless, the positive aspect is that RsyncUI is actively notifying the user, and the user has the ability to initiate a synchronization manually when the issue occurs. 
-
-*In the upcoming maintenance release, version 2.8.1, an alert will be introduced to notify users when RsyncUI detects a lack of data to write logdata.*
-
 <div class="alert alert-danger" role="alert">
 
-The alert is currently disabled by default in version 2.8.1. However, version 2.8.2 will introduce an option to enable it. If RsyncUI detects an empty statistics file, it will append a default log record stating `0 files : 0.00 MB in 0.00 seconds`.
+The alert is *currently disabled by default in version 2.8.1*. However, version 2.8.2 will introduce an option to enable it. If RsyncUI detects an empty statistics file, it will append a default log record stating `0 files : 0.00 MB in 0.00 seconds`.
 
 If you encounter this issue, the data is synchronized, but RsyncUI alerts about a missing loggdata file. For your safety confirm data synchronization, perform another estimate and execute or force an execute without estimation.
 
