@@ -6,9 +6,11 @@ tags = ["changelog","version 2.8.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.1 (build 172) - Dec 4, 2025 release candidate 1
+### Version 2.8.1 (build 172) - Dec 4, 2025 Release Candidate 1 (RC1)
 
-An AI-generated changelog is available at the bottom of this page.
+An AI-generated changelog is available at the bottom of this page. 
+
+The RC1 has been updated once, and all annoying messages regarding missing files should be resolved. This release candidate will be upgraded to a new maintenance release tomorrow, provided that no bugs are identified within the next 24 hours.
 
 Some info about the *no stats, no log* issue. There will be a maintenance release in some days.
 
