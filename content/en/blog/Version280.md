@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.0 (build 171) - Dec 2, 2025
 
-*There is a new issue summarizing, by GitHub Copilot, all changes since version 2.7.8.*
+An AI-generated changelog is available at the bottom of this page.
 
 The following summarizes changes in this release:
 
