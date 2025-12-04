@@ -6,7 +6,7 @@ tags = ["changelog","version 2.8.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.1 (build 172) - not yet released
+### Version 2.8.1 (build 172) - release candidate 1
 
 Some info about the *no stats, no log* issue. There will be a maintenance release in some days.
 
@@ -24,7 +24,7 @@ If you encounter this issue, the data is synchronized, but RsyncUI is reporting 
 
 </div>
 
-In the upcoming version of RsyncUI, a new error will be introduced. If logging fails due to the aforementioned reason, this error will be generated.
+If logging fails due to the aforementioned reason, this error will be generated.
 
 {{< figure src="/images/gettingstarted/nostats.png" alt="" position="center" style="border-radius: 8px;" >}}
 
