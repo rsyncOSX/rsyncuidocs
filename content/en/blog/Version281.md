@@ -6,7 +6,7 @@ tags = ["changelog","version 2.8.1"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.1 (build 172) - release candidate 1
+### Version 2.8.1 (build 172) - Dec 4, 2025 release candidate 1
 
 An AI-generated changelog is available at the bottom of this page.
 

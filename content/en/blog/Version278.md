@@ -6,7 +6,7 @@ tags = ["changelog","version 2.7.8"]
 categories = ["changelog"]
 +++
 
-### Version 2.7.8 (build 169) - November 19, 2025
+### Version 2.7.8 (build 169) - Nov 19, 2025
 
 There have been updates to the Swift Packages, and the logging section has been cleaned up and several unnecessary log statements have been removed. Additionally, the release build does not contain any log statements, and the make procedure (building a new release) omits all logger DEBUG statements.
 
