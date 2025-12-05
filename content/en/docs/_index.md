@@ -14,6 +14,10 @@ RsyncUI is *digitally signed* and *notarized* by Apple, ensuring its security an
 
 </div>
 
+### Concealing Actions
+
+Additional information regarding Concealing Actions can be found in the *Getting started* section. To toggle the visibility of actions on the main toolbar in RsyncUI, press the shortcut `⌘S`.
+
 ### Privacy statement
 
 RsyncUI is a desktop application only, there is no server component. It does not generate any logs that are transmitted from your Mac. Data pertaining to tasks and logs is stored locally on your Mac as files. You can backup all files created by RsyncUI to the Document directory on your Mac from the Settings view. The sole data transferred from your Mac to a server occurs only if you enable tasks with a remote server destination. You bear sole responsibility for securing your own data if synchronized to a remote server.

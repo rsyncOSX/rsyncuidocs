@@ -12,7 +12,7 @@ The User Interface of RsyncUI may pose challenges for users unfamiliar with the 
 
 ### Not a backup tool for everyone
 
-RsyncUI is a specialized application designed exclusively for backup and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can *create a complete image* of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
+RsyncUI is a specialized application designed exclusively for synchronize and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can *create a complete image* of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
 
 ### Delete parameter 
 
@@ -44,17 +44,6 @@ Before executing a new task in RsyncUI, for your own safety perform an estimatio
 Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
 
 </div>
-
-### Missing log statement
-
-The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
-
-Occasionally, when synchronizing a small amount of data to fast SSDs, the termination signal is detected before all output from rsync has been received. In such cases, the separate logging may be missing. After data synchronization and the absence of a log, you can verify the synchronization of data by recalculating the estimate. 
-
-The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
-
-*Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
-
 
 ### Temporary halt tasks
 

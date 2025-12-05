@@ -1,8 +1,8 @@
 +++
 author = "Thomas Evensen"
 date = "2025-02-05"
-title =  "Monitor and log"
-tags = ["monitoring and logging"]
+title =  "Log settings"
+tags = ["logging"]
 categories = ["usersettings"]
 +++
 
