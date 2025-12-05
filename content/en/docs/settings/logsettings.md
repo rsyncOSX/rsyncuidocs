@@ -8,12 +8,7 @@ categories = ["usersettings"]
 
 After changing a setting, you have to save the changes to keep it next time you use RsyncUI.
 
-{{< figure src="/images/usersettings/network.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-**Monitor Network:**
-
-- Monitor network connection during task execution.
-- If a network connection is dropped during execution, RsyncUI sends an interrupt signal to the task, halting it with an error.
+{{< figure src="/images/usersettings/logsettings.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 **Check for Errors in Output:**
 
