@@ -9,7 +9,7 @@ categories = ["usersettings"]
 There are several settings that can be adjusted. After changing a setting, you have to save the changes to keep it next time you use RsyncUI. Users can access their settings by default using the shortcut `⌘,`.
 
 - *Rsync and path* - settings for rsync and path
-- *Monitor and log* - settings for monitoring and logging
+- *Log settings* - settings logging
 - *SSH* - settings for SSH
 - *Environment* - setting environment variables for SSH, there are several variables that can be set, but RsyncUI only supports one environment variable
 

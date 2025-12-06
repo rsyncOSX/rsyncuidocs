@@ -8,7 +8,7 @@ categories = ["advanced features"]
 
 <div class="alert alert-secondary" role="alert">
 
-The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Monitor and log* to enable. This function also necessitates that the destination be located on a remote server.
+The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Log settings* to enable. This function also necessitates that the destination be located on a remote server.
 
 </div>
 
