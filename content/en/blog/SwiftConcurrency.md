@@ -40,12 +40,13 @@ Asynchronous execution can be performed on both the main thread and background t
 
 ### Cooperative Thread Pool (CTP)
 
-The following tasks are executed *asynchronously* on threads from the CTP, adhering to the actor protocol:
+The following RsyncUI tasks are executed *asynchronously* on threads from the CTP, adhering to the actor protocol:
 
 - read synchronization tasks from file
 	- JSON data *decoding*: asynchronous decoding that inherits the thread from the actor reading data
     - JSON data *encoding*: synchronous encoding on the *main thread*
 - read and sort log records
+- delete log records
 - preparing *output from rsync* for display
 - preparing *data from the log file* for display
 - checking for updates to RsyncUI
@@ -57,4 +58,66 @@ Adhering to the actor protocol, all access to properties within an actor must be
 Some concurrent functions within RsyncUI are structured using `async let`. You may have several `async let` statements, and they will all execute in *parallel* or *concurrently*. When all `async let` tasks are completed, the root task or parent task will continue execution.
 
 Structured concurrency might also dictate the order of execution. The keyword `await` is a suspension point where execution waits until the asynchronous function is completed before continuing. If there are several `await` statements in sequence, the next one will execute when the current asynchronous task is completed.
-```swift
+
+#### Example of structured concurrency
+
+Approximately 800 log records, comprising the total of 1500, are selected for deletion. Two operations are concurrently executed on a background thread: the actual deletion of log records and the updating of non-deleted records for display.
+
+The deletion of logs commences on the main thread. The user selects the logs to be deleted, and the delete button either initiates the deletion process or aborts it. The `deletelogs()` function, an asynchronous function, is initiated on the main thread.
+
+```
+Button("Delete", role: .destructive) {
+      	Task {
+              await deletelogs(selectedloguuids)
+            }
+  }
+```
+The deletelogs starts on the main thread and jumps off to an background thread inside the `Task {}`. 
+
+```
+func deletelogs(_ uuids: Set<UUID>) async {
+        Task {
+        
+            print("(1) start async let updatedRecords deletelogs")
+            
+            async let updatedRecords: [LogRecords]? = ActorReadLogRecordsJSON().deletelogs(
+                uuids,
+                logrecords: logrecords,
+                profile: rsyncUIdata.profile,
+                validhiddenIDs: validhiddenIDs
+            )
+            let records = await updatedRecords
+            
+            print("(2) awaited updatedRecords deletelogs from (1))")
+            print("(3) start async let updatedRecords updatelogsbyhiddenID)")
+            
+            async let updatedLogs: [Log]? = ActorReadLogRecordsJSON().updatelogsbyhiddenID(records, hiddenID)
+            logrecords = records
+            logs = await (updatedLogs ?? [])
+            
+            print("(4) awaited updatedLogs from (3)")
+
+            WriteLogRecordsJSON(rsyncUIdata.profile, records)
+            selectedloguuids.removeAll()
+        }
+    }
+```
+The debug windows in Xcode display the following:
+
+The actors also print whether they execute on the main thread. The first `async let` statement initiates execution, and the subsequent `await` statement for the result above (2) suspends the function's execution until the asynchronous result is computed. The `await` statement is crucial for suspending the execution of the function until the asynchronous result is available. And then the next (3) and (4).
+
+```
+(1) start async let updatedRecords deletelogs
+ActorReadLogRecordsJSON: deletelogs() NOT on main thread, currently on <NSThread: 0xa49e3c200>{number = 18}
+ActorReadLogRecordsJSON: DEINIT
+(2) awaited updatedRecords deletelogs from (1))
+(3) start async let updatedRecords updatelogsbyhiddenID)
+ActorReadLogRecordsJSON: updatelogsbyhiddenID() NOT on main thread, currently on <NSThread: 0xa49e3c280>{number = 17}
+ActorReadLogRecordsJSON: DEINIT
+(4) awaited updatedLogs from (3)
+WriteLogRecordsJSON: writeJSONToPersistentStore file:///Users/thomas/.rsyncosx/VPxxxxxxxx/WDBackup/logrecords.json
+WriteLogRecordsJSON DEINIT
+ActorReadLogRecordsJSON: updatelogsbyhiddenID() NOT on main thread, currently on <NSThread: 0xa4bb72800>{number = 19}
+ActorReadLogRecordsJSON: DEINIT
+```
+
