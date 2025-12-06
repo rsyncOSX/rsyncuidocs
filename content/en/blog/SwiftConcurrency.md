@@ -28,6 +28,12 @@ Most work in RsyncUI is executed on the main thread. By default, SwiftUI ensures
 
 Swift version 6 introduced strict concurrency checking. By enabling *Swift 6 language mode* and *strict concurrency checking*, Xcode assists in identifying and resolving possible data races at compile time.
 
+<div class="alert alert-danger" role="alert">
+
+However, it is important to note that there are several compiler directives, configured within Xcode, that pertain to concurrency. I strongly recommend researching these directives and their respective meanings. Additionally, if you are migrating an existing project to the new concurrency settings, I suggest researching the process of migrating projects. I recommend reading blog posts about Swift concurrency from [Matt Massicotte](https://www.massicotte.org) and [Antoine van der Lee](https://www.avanderlee.com).
+
+</div>
+
 Quote from swift.org: *"More formally, a data race occurs when one thread accesses memory while the same memory is being modified by another thread. The Swift 6 language mode eliminates these issues by preventing data races at compile time."*
 
 RsyncUI adheres to the new concurrency model of Swift 6.
