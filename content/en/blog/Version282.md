@@ -1,22 +1,37 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.2"
-date = "2025-12-07"
+date = "2025-12-09"
 tags = ["changelog","version 2.8.2"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.2 (build 173) - not yet released
+### Version 2.8.2 (build 173) - release candidate 1
 
-Why are these blogs about RsyncUI? I am writing these blogs primarily to document my work, but I believe it is important to be transparent about how I develop RsyncUI. I am not sure who reads these blogs, but I know that the changelogs are frequently read when there are new releases. Additionally, I am learning every day and consider myself an average competent Swift developer. I commenced use Visual Studio Code and MCP because I "stumbled" upon an YouTube video about them. In essence, my primary method of staying informed about Swift development involves reading blogs and watching videos created by other developers.
+<div class="alert alert-secondary" role="alert">
 
-I have commenced a comprehensive code formatting cleanup utilizing [SwiftLint](https://github.com/realm/SwiftLint), [SwiftFormat](https://github.com/nicklockwood/SwiftFormat), and [periphery](https://github.com/peripheryapp/periphery). Despite using these tools for several years, some cleanup was still required. 
+I am releasing this version as a release candidate due to the numerous code updates. To ensure its quality, I require the assistance of several users for testing. I am currently using the latest build daily, and to date, I have not encountered any bugs.
 
-All of the aforementioned tools are widely recognized and utilized by numerous developers. 
+The error related to missing statistics is enabled in this release candidate. Prior to a new release, this error will be a configurable setting for enabling and disabling this function. If this error is encountered, the logfile will be updated with default values.
 
-The periphery application is employed to eliminate unused code. SwiftFormat is utilized for code formatting and SwiftLint code quality. All instructions for SwiftFormat in code are removed, and both tools now have a single configuration file each containing instructions. They work very well together.
+The plan is to release version 2.8.2 most likely last week of December 2025. The detailed changelog is available on the release page on GitHub.
 
-As a result, numerous code modifications have been made, primarily due to the formatting adjustments implemented using the aforementioned tools.
+</div>
+
+As part of my ongoing experimentation with Visual Studio Code (VSC) and the GitHub MCP services for direct integration with GitHub Copilot (AI), several code updates have been made. The majority of these updates are attributed to the implementation of additional SwiftLint rules. VSC has proven to be an effective tool for identifying and resolving linting issues and updating code.
+
+From this version, VSC has become an integral part of my development tools for the RsyncUI project. While Xcode 26 remains my primary development environment, all release builds, including notifications and signing, are executed via command line and a Makefile.
+
+The primary supporting tools include:
+
+- [SwiftLint](https://github.com/realm/SwiftLint): Utilized for code quality assurance.
+- [SwiftFormat](https://github.com/nicklockwood/SwiftFormat): Employed for code formatting.
+- [periphery](https://github.com/peripheryapp/periphery): Utilized to eliminate unused code.
+
+All of these tools are widely recognized and utilized by numerous developers.
+
+The periphery application is specifically designed to eliminate unused code. SwiftFormat is utilized for code formatting, while SwiftLint ensures code quality. All instructions for SwiftFormat within the code have been removed, and both tools now share a single configuration file containing their respective instructions. This integration has proven to be highly effective.
+
 
 ### Visual Studio Code (VSC) and GitHub MCP services
 
