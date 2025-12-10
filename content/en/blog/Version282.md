@@ -40,3 +40,54 @@ Model Context Protocol (MCP) is an open standard, introduced in November 2024 by
 I have recently begun utilizing Visual Studio Code (VSC) and its integration with GitHub MCP services. I initiated a request to VSC, utilizing the MCP services, to analyze the codebase for RsyncUI and identify issues in naming conventions. I am highly impressed by the capabilities of AI in supporting developers. The aforementioned request resulted in several code updates, and two reports have been generated as a result. These reports are authored by AI and are accessible from the root directory of the RsyncUI repository.
 
 Although Xcode remains my primary development tool, Visual Studio Code (VSC) is also officially supported by [swift.org](https://www.swift.org/install/macos/). Utilizing Xcode ensures that the latest Swift toolchain is always up-to-date. VSC can also utilize the Xcode-installed toolchain, and it offers a wide range of extensions. 
+
+### Highlights since v2.8.1 (toward v2.8.2rc1)
+
+- Architecture: 355+ method renames across 76 files (100% camelCase); zero force unwraps/casts with SwiftLint enforcement; output parsing hardened (`PrepareOutputFromRsync`, `TrimOutputFromRsync`, restore trim).
+- Execution & data flow: clearer handler creation, safer rsync termination paths, refined argument builders for sync/restore/snapshot/verify, safer storage encode/decode for configs, schedules, widgets, and logs.
+- UI/UX: consistent SwiftUI bindings in Sidebar/Quicktask/Verify/Restore/Output views; menu polish for About/Docs; progress/verify views surface rsync errors better; WidgetEstimate decode made safer.
+- Features: stabilized deep-link estimate/sync (`URL_estimate`); SSH key flows (create/validate/copy/verify) cleaned up; logging hardened with optional summary logs; scheduling/snapshot validation improved.
+- Quality: code quality ~9.1–9.2/10; 500+ call sites updated; builds clean post-refactor.
+
+```mermaid
+flowchart LR
+	A[App UI] --> B[RsyncProcess (pkg)]
+	A --> C[Arguments Builders]
+	A --> D[Output Processing]
+	B --> D
+	B --> E[Logging]
+	C --> B
+	E --> F[Storage IO]
+	F --> A
+	subgraph Safety & Lint
+	  G[SwiftLint rules]
+	end
+	G -.enforce.-> A
+	G -.enforce.-> B
+	G -.enforce.-> D
+```
+
+```mermaid
+flowchart TB
+	Sidebar -->|selects task| Quicktask
+	Sidebar --> Verify
+	Sidebar --> Restore
+	Quicktask --> ProgressView
+	Verify --> ProgressView
+	Restore --> ProgressView
+	ProgressView --> OutputLog
+	OutputLog -->|open docs| DocsSite
+	WidgetEstimate -->|URL strings| OutputLog
+```
+
+```mermaid
+timeline
+	title Feature Flow toward 2.8.2rc1
+	2025-11 : Deep-link estimate stabilize
+	2025-11 : SSH key flow tighten
+	2025-12 : Naming refactor 355+ methods
+	2025-12 : Output parsing hardening
+	2025-12 : Logging & storage safety
+	2025-12 : WidgetEstimate polish
+```
+
