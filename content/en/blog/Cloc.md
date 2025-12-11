@@ -6,28 +6,28 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: December 2, 2025, version 2.8.0
+Numbers updated: December 11, 2025, version 2.8.2
 
 There is a very nice and excellent tool, [cloc](https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
-cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources
- SSHCreateKey/Sources RsyncProcess/Sources ProcessCommand/Sources
-     203 text files.
-     203 unique files.                                          
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources R
+syncProcess/Sources ProcessCommand/Sources
+     204 text files.
+     204 unique files.                                          
       16 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.05 s (4239.5 files/s, 475137.0 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.06 s (3570.2 files/s, 390900.4 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          197           2518           2750          17058
+Swift                          198           2499           2471          16941
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           203           2555           2825          17371
+SUM:                           204           2536           2546          17254
 -------------------------------------------------------------------------------
 ```
 
