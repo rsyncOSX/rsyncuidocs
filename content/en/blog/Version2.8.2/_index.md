@@ -12,9 +12,17 @@ Some AI-generated documents about Version 2.8.2.
 
 <div class="alert alert-secondary" role="alert">
   
-The plan is to release version 2.8.2 before Christmas. The detailed changelog is available on the release page on GitHub. A detailed summarized changelog is last on this page.
+The plan is to release version `2.8.2` next week. The detailed changelog is available on the release page on GitHub. If no bugs are reported, the rc2 will become the next release version 2.8.2, and no new builds. Therefore, please download and test the build.
 
-If no bugs are reported, the rc2 will become the next release version 2.8.2, and no new builds will be released. Therefore, please download and test the build.
+</div>
+
+<div class="alert alert-secondary" role="alert">
+
+The primary objective of the RsyncUI codebase is to utilize SwiftLint, applying only the fundamental rules to the entire codebase. 
+
+However, this will necessitate at least one additional version release in January 2026. At least two of the Swift Packages and the codebase for RsyncUI require further refinement. In version 2.8.2 (the upcoming release), significant progress has been made in adapting to the basic SwiftLint rules. Nevertheless, when I execute SwiftLint with the basic rules applied to the RsyncUI code base today, numerous complaints are still encountered, such as `Done linting! Found 272 violations, 68 serious in 173 files.`
+
+All new linting is applied to the branch `v2.8.3`, including the final linting of the remaining SPMs. The next version, `2.8.2`, is built and ready for release after a few more days of testing.
 
 </div>
 
