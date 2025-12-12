@@ -24,6 +24,8 @@ However, this will necessitate at least one additional version release in Januar
 
 All new linting is applied to the branch `v2.8.3`, including the final linting of the remaining SPMs. The next version, `2.8.2`, is built and ready for release after a few more days of testing.
 
+Adherence to SwitLint's fundamental principles is paramount for ensuring code readability, maintenance, and enhancement, particularly in extensive code bases such as RsyncUI.
+
 </div>
 
 As part of my ongoing experimentation with Visual Studio Code (VSC) and the GitHub MCP services for direct integration with GitHub Copilot (AI), several code updates have been made. The majority of these updates are attributed to the implementation of additional SwiftLint rules. VSC has proven to be an effective tool for identifying and resolving linting issues and updating code.
