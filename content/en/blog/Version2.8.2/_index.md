@@ -20,11 +20,9 @@ The plan is to release version `2.8.2` next week. The detailed changelog is avai
 
 The primary objective of the RsyncUI codebase is to utilize SwiftLint, applying only the fundamental rules to the entire codebase. 
 
-However, this will necessitate at least one additional version release in January 2026. At least two of the Swift Packages and the codebase for RsyncUI require further refinement. In version 2.8.2 (the upcoming release), significant progress has been made in adapting to the basic SwiftLint rules. Nevertheless, when I execute SwiftLint with the basic rules applied to the RsyncUI code base today, numerous complaints are still encountered, such as `Done linting! Found 272 violations, 68 serious in 173 files.`
+However, this will necessitate at one additional version release in January 2026. When I execute SwiftLint with the basic SwiftLint rules applied to the RsyncUI code base today, numerous complaints are still encountered: `Done linting! Found 272 violations, 68 serious in 173 files`. Most linting complains are due to `identifier_name` and `line_length` violations. None of the linting errors are difficult to fix, but it takes some time. 
 
-All new linting is applied to the branch `v2.8.3`, including the final linting of the remaining SPMs. The next version, `2.8.2`, is built and ready for release after a few more days of testing.
-
-Adherence to SwitLint's fundamental principles is paramount for ensuring code readability, maintenance, and enhancement, particularly in extensive code bases such as RsyncUI.
+All new linting is applied to the branch `v2.8.3`. Adherence to SwitLint's fundamental principles is paramount for ensuring code readability, maintenance, and enhancement, particularly in extensive code bases such as RsyncUI.
 
 </div>
 
