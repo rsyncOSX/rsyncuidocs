@@ -6,19 +6,15 @@ tags = ["changelog","version 2.8.2"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.2 (build 173) - release candidate 2
+### Version 2.8.2 (build 173) - Dec 14, 2025
 
-<div class="alert alert-secondary" role="alert">
-  
-The plan is to release version `2.8.2` next week. The detailed changelog is available on the release page on GitHub. If no bugs are reported, the rc2 will become the next release version 2.8.2, and no new builds. Therefore, please download and test the build.
-
-</div>
+This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `--delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter now generates an error.
 
 <div class="alert alert-secondary" role="alert">
 
 The primary objective of the RsyncUI codebase is to utilize SwiftLint, applying only the fundamental rules to the entire codebase. 
 
-However, this will necessitate at one additional version release in January 2026. When I execute SwiftLint with the basic SwiftLint rules applied to the RsyncUI code base today, numerous complaints are still encountered: `Done linting! Found 73 violations, 61 serious in 177 files`. Most remaining linting complains is due to `identifier_name` violations. None of the linting errors are difficult to fix, but it takes some time. 
+However, this will necessitate one additional version release in January 2026. When I execute SwiftLint with the basic SwiftLint rules applied to the RsyncUI code base today, numerous complaints are still encountered: `Done linting! Found 73 violations, 61 serious in 177 files`. Most remaining linting complains is due to `identifier_name` violations. None of the linting errors are difficult to fix, but it takes some time. 
 
 All new linting is applied to the branch `v2.8.3`. Adherence to SwitLint's fundamental principles is paramount for ensuring code readability, maintenance, and enhancement, particularly in extensive code bases such as RsyncUI.
 
