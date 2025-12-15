@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.2 (build 173) - Dec 14, 2025
 
-This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `--delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter now generates an error.
+This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `—delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter, which generates an error if the summarized stats file is empty. Please refer to the following for further details:
 
 <div class="alert alert-secondary" role="alert">
 
@@ -42,3 +42,15 @@ Model Context Protocol (MCP) is an open standard, introduced in November 2024 by
 I have recently begun utilizing Visual Studio Code (VSC) and its integration with GitHub MCP services. I initiated a request to VSC, utilizing the MCP services, to analyze the codebase for RsyncUI and identify issues in naming conventions. I am highly impressed by the capabilities of AI in supporting developers. The aforementioned request resulted in several code updates, and two reports have been generated as a result. These reports are authored by AI and are accessible from the root directory of the RsyncUI repository.
 
 Although Xcode remains my primary development tool, Visual Studio Code (VSC) is also officially supported by [swift.org](https://www.swift.org/install/macos/). Utilizing Xcode ensures that the latest Swift toolchain is always up-to-date. VSC can also utilize the Xcode-installed toolchain, and it offers a wide range of extensions. 
+
+### Empty stats file
+
+The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
+
+Occasionally, when synchronizing a small amount of data to fast SSDs, the termination signal is detected before all output from rsync has been received. In such cases, the separate logging may be missing. After data synchronization and the absence of a log, you can verify the synchronization of data by recalculating the estimate. 
+
+The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
+
+*Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
+
+Normally, the logging works as expected.
