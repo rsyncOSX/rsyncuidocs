@@ -10,7 +10,9 @@ categories = ["changelog"]
 
 <div class="alert alert-secondary" role="alert">
 
-The version 2.8.3 may be released as a maintenance release in later December. However, it is more likely that it will not be released until version 2.8.4 is completed. If any issues are discovered in the current release, a bug fix in version 2.8.3 will be released.
+The version 2.8.3 *was planned* to a maintenance release in December. However, it is more likely that it will not be released until version 2.8.4 is completed. If any issues are discovered in the current release, a bug fix in version 2.8.3 will be released.
+
+One discovery utilizing the new RsyncProcessStreaming appears to resolve the issue of missing statistics. This is also one benefit documented within the blog post titled “Streaming Rsync Process, section 2. Better Resource Management".
 
 </div>
 
@@ -27,7 +29,7 @@ Additionally, unused properties have been removed from the task itself. The requ
 
 ### Version 2.8.4 - work in progress
 
-All of the aforementioned features are also included in the branch for version 2.8.4. However, there is a significant refactor for version 2.8.4: the Swift Package Manager (SPM) for the rsync process has been refactored. The blog post titled “RsyncProcess vs RsyncProcessStreaming” outlines the key differences and the rationale behind the refactor.
+All of the aforementioned features are also included in the branch for version 2.8.4. However, there is a significant refactor for version 2.8.4: the Swift Package Manager (SPM) for the rsync process has been refactored. The blog post titled “Streaming Rsync Process” outlines the key differences and the rationale behind the refactor.
 
 Version 2.8.4 is scheduled for release sometime in January 2026.
 
@@ -35,7 +37,6 @@ Version 2.8.4 is scheduled for release sometime in January 2026.
 
 All SPM packages are refactored, updated, and checked into the main branch. RsyncUI is a depended on all packages, but the last one is not mandatory. SSH keys can be generated via command line.
 
-- ~~*RsyncProcess* (https://github.com/rsyncOSX/RsyncProcess) - A minor package but a core function of RsyncUI~~
 - *RsyncProcessStreaming* (https://github.com/rsyncOSX/RsyncProcessStreaming) - A minor package but a core function of RsyncUI
 	- listens for output from the rsync process as well as termination signal
 - *ProcessCommand* (https://github.com/rsyncOSX/ProcessCommand) - As above, but for commands other than rsync

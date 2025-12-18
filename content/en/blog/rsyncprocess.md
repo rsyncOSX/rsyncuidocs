@@ -1,6 +1,6 @@
 +++
 author = "Thomas Evensen"
-title = "RsyncProcess vs RsyncProcessStreaming"
+title = “Streaming Rsync Process”
 date = "2025-12-16"
 tags = ["version 2.8.4"]
 categories = ["technical details"]
