@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 <div class="alert alert-secondary" role="alert">
 
-The version 2.8.3 *was planned* to a maintenance release in December. However, it is more likely that it will not be released until version 2.8.4 is completed. If any issues are discovered in the current release, a bug fix in version 2.8.3 will be released.
+The version 2.8.3 *was planned* to be a maintenance release in December. However, it is more likely that it will not be released until version 2.8.4 is completed. If any issues are discovered in the current release, a bug fix in version 2.8.3 will be released.
 
 One discovery utilizing the new RsyncProcessStreaming appears to resolve the issue of missing statistics. This is also one benefit documented within the blog post titled “Streaming Rsync Process, section 2. Better Resource Management".
 
