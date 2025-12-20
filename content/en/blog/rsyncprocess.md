@@ -54,19 +54,25 @@ while true {
 
 #### RsyncProcessStreaming Solution
 ```swift
-process.terminationHandler = { task in
+process.terminationHandler = { [weak self] task in
+    // Read any remaining data in pipes before cleanup
+    let finalOutputData = outputPipe.fileHandleForReading.readDataToEndOfFile()
+    let finalErrorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
+    
+    // Now safe to remove handlers
     outputPipe.fileHandleForReading.readabilityHandler = nil
     errorPipe.fileHandleForReading.readabilityHandler = nil
     
-    if let trailing = await accumulator.flushTrailing() {
-        deliverLine(trailing)
+    // Process any final output and flush trailing partial line
+    if let text = String(data: finalOutputData, encoding: .utf8), !text.isEmpty {
+        await self.handleOutputData(text)
     }
-    // Clean termination...
+    _ = await self.accumulator.flushTrailing()
 }
 ```
-- Automatic cleanup when handlers are set to `nil`
+- Reads final data from pipes using `readDataToEndOfFile()` before cleanup
 - No artificial delays needed
-- Proper handling of any trailing data
+- Proper handling of all remaining data and trailing partial lines
 
 **Benefit**: More reliable, no data loss, cleaner shutdown.
 
@@ -85,7 +91,10 @@ Appends directly to output array without handling partial lines that may span mu
 #### RsyncProcessStreaming Solution
 ```swift
 actor StreamAccumulator {
+    private var lines: [String] = []
     private var partialLine: String = ""
+    private var errorLines: [String] = []
+    private var lineCounter: Int = 0
     
     func consume(_ text: String) -> [String] {
         let combined = partialLine + text  // Handles splits mid-line
@@ -102,6 +111,15 @@ actor StreamAccumulator {
         partialLine = ""
         lines.append(trailing)
         return trailing
+    }
+    
+    func recordError(_ text: String) {
+        errorLines.append(text)
+    }
+    
+    func incrementLineCounter() -> Int {
+        lineCounter += 1
+        return lineCounter
     }
 }
 ```
@@ -125,24 +143,42 @@ let errorPipe = Pipe()  // Separate pipe for errors
 process.standardOutput = outputPipe
 process.standardError = errorPipe
 
-// Dedicated error accumulation
-errorPipe.fileHandleForReading.readabilityHandler = { handle in
-    // ... record errors separately ...
-    await accumulator.recordError(text)
+// Dedicated error accumulation from stderr
+errorPipe.fileHandleForReading.readabilityHandler = { [weak self] handle in
+    Task {
+        await self?.accumulator.recordError(text.trimmingCharacters(in: .whitespacesAndNewlines))
+    }
 }
 
-// Structured error on failure
-if task.terminationStatus != 0 {
-    self?.handlers.propagateError(
-        RsyncProcessError.processFailed(
-            exitCode: task.terminationStatus,
-            errors: errors
-        )
+// Check each line for errors during processing
+private func handleOutputData(_ text: String) async {
+    let lines = await accumulator.consume(text)
+    for line in lines {
+        do {
+            try handlers.checkLineForError(line)
+        } catch {
+            hasErrorOccurred = true
+            await MainActor.run {
+                self.handlers.propagateError(error)
+            }
+            break
+        }
+    }
+}
+
+// Structured error on process failure
+if task.terminationStatus != 0, handlers.checkForErrorInRsyncOutput == true {
+    let error = RsyncProcessError.processFailed(
+        exitCode: task.terminationStatus,
+        errors: errors
     )
+    await MainActor.run {
+        self.handlers.propagateError(error)
+    }
 }
 ```
 
-**Benefit**: Better error diagnostics, separation of stdout/stderr, structured error types.
+**Benefit**: Better error diagnostics, separation of stdout/stderr, structured error types. Errors are caught immediately during streaming rather than waiting for process termination.
 
 ---
 
@@ -160,11 +196,12 @@ if task.terminationStatus != 0 {
 
 #### RsyncProcessStreaming
 - Single consistent data handling path
-- No version-specific logic
+- Version information stored in `ProcessHandlers` (not processed internally)
+- Delegates version-specific behavior to handler callbacks
 - Simpler, more predictable behavior
 - Easy to extend if needed
 
-**Benefit**: Lower maintenance burden, fewer edge cases, easier to reason about.
+**Benefit**: Lower maintenance burden, fewer edge cases, easier to reason about. Version-specific logic is externalized to handlers.
 
 ---
 
@@ -183,25 +220,33 @@ public final class RsyncProcess {
 
 #### RsyncProcessStreaming
 ```swift
-public final class RsyncProcess {
-    // Not bound to main actor
+public final class RsyncProcess: @unchecked Sendable {
+    private let accumulator = StreamAccumulator()
+    private var currentProcess: Process?
+    private let processLock = NSLock()
+    private var isCancelled = false
+    private var hasErrorOccurred = false
     
-    outputPipe.fileHandleForReading.readabilityHandler = { handle in
-        Task.detached {  // Process off main thread
-            let lines = await accumulator.consume(text)
+    outputPipe.fileHandleForReading.readabilityHandler = { [weak self] handle in
+        Task {  // Process on background thread
+            let lines = await self.accumulator.consume(text)
             
             for line in lines {
-                // Only dispatch to main when needed
-                Task { @MainActor in
-                    self.handlers.fileHandler(self.lineCounter)
+                if useFileHandler {
+                    let count = await self.accumulator.incrementLineCounter()
+                    // Only dispatch to main when calling handlers
+                    await MainActor.run {
+                        self.handlers.fileHandler(count)
+                    }
                 }
             }
         }
     }
 }
 ```
-- Uses `Task.detached` for data processing
-- Only dispatches to `@MainActor` when calling handlers
+- Marked `@unchecked Sendable` with internal synchronization via `NSLock`
+- Uses `Task` for data processing on background threads
+- Only dispatches to `@MainActor` when calling handlers via `MainActor.run`
 - Thread-safe with `actor StreamAccumulator`
 
 **Benefit**: Better performance, no UI blocking, proper use of Swift concurrency.
@@ -245,15 +290,15 @@ Done (system continues monitoring)
 | Feature | RsyncProcess | RsyncProcessStreaming |
 |---------|--------------|----------------------|
 | **Architecture** | Notification-based | Callback-based |
-| **Lines of Code** | ~350 | ~180 |
-| **State Flags** | 6+ flags | 1 counter |
+| **Lines of Code** | ~350 | ~260 |
+| **State Flags** | 6+ flags | 2 (isCancelled, hasErrorOccurred) |
 | **Async Tasks** | 2 coordinated tasks | 0 (uses handlers) |
-| **Thread Model** | @MainActor (blocking) | Detached + targeted @MainActor |
-| **Partial Line Handling** | ❌ No | ✅ Yes |
+| **Thread Model** | @MainActor (blocking) | @unchecked Sendable with NSLock |
+| **Partial Line Handling** | ❌ No | ✅ Yes (via StreamAccumulator) |
 | **Separate stderr** | ❌ No | ✅ Yes |
 | **Error Structure** | Generic Error | RsyncProcessError with details |
-| **Version-Specific Code** | ✅ Yes | ❌ No (simpler) |
-| **Manual Draining** | ✅ Yes (with delay) | ❌ No (automatic) |
+| **Error Checking** | Post-processing | Per-line during streaming |
+| **Manual Draining** | ✅ Yes (with delay) | ❌ No (readDataToEndOfFile) |
 | **Maintenance Complexity** | High | Low |
 
 ---
@@ -263,9 +308,9 @@ Done (system continues monitoring)
 The only scenarios where the original might be preferred:
 
 1. **Summary Suppression**: If you specifically need the `isRealRun` and `hasSeenSummaryStart` logic to suppress final summary lines during progress reporting
-2. **Version-Specific Behavior**: If you need different behavior for openrsync vs rsync3
+2. **Legacy Code Compatibility**: Existing implementations that depend on specific RsyncProcess behavior
 
-**However**: These features can easily be added to RsyncProcessStreaming if needed, and the architecture is much cleaner for doing so.
+**However**: Any needed features can easily be added to RsyncProcessStreaming if needed, and the architecture is much cleaner for doing so.
 
 ---
 
