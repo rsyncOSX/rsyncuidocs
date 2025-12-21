@@ -38,9 +38,20 @@ After changing a setting, you have to save the changes to keep it next time you 
 
 - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
-**Hide Schedule:**
+**Silence missing stats**
 
-- refer to section *"Schedule"*, hide the Schedule, default **not** enabled
+- stats is the summarized output from rsync, if on RsyncUI will notify if stats is missing after the termination signal is received
+- in version 2.8.4 the missing stats is *not likely* to happen du to the new *RsyncProcessStreaming*
+
+**Validate arguments**
+
+A user-selected verification mechanism for default parameters, such as `—delete`:
+
+- If the `—delete` parameter is included in the task configuration, the verification checks its presence or absence based on the task configuration’s state, which specifies whether a delete operation is required.
+- Other default validated parameters include `—archive`, `—compress`, and `—dry-run`.
+  - The `—archive` parameter is always enabled.
+  - The `—compress` parameter is only applicable for remote tasks.
+  - If RsyncUI requests an estimate, the validation checks that the `—dry-run` parameter is included within the arguments.
 
 **Confirm Execution:**
 
