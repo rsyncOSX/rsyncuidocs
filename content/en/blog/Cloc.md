@@ -6,28 +6,28 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: December 11, 2025, version 2.8.2
+Numbers updated: December 21, 2025, version 2.8.4
 
-There is a very nice and excellent tool, [cloc](https://github.com/AlDanial/cloc), for counting of files and lines of code. Below are the numbers for Swift files which are part of the repository for compiling RsyncUI. RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
+RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
 
 ```
-cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources R
-syncProcess/Sources ProcessCommand/Sources
-     204 text files.
-     204 unique files.                                          
-      16 files ignored.
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/
+Sources RsyncProcessStreaming/Sources ProcessCommand/Sources
+     207 text files.
+     207 unique files.                                          
+      15 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.06 s (3570.2 files/s, 390900.4 lines/s)
+github.com/AlDanial/cloc v 2.06  T=0.06 s (3336.2 files/s, 362295.4 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          198           2499           2471          16941
+Swift                          201           2551           2447          17056
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           204           2536           2546          17254
+SUM:                           207           2588           2522          17369
 -------------------------------------------------------------------------------
 ```
 
@@ -35,11 +35,11 @@ SUM:                           204           2536           2546          17254
 
 - RsyncUI (https://github.com/rsyncOSX/RsyncUI) - the main repository for RsyncUI
 
-#### Swift Packages used by RsyncUI
+##### Swift Packages used by RsyncUI
 
 All SPM packages are refactored, updated, and checked into the main branch. RsyncUI is a depended on all packages, but the last one is not mandatory. SSH keys can be generated via command line.
 
-- *RsyncProcess* (https://github.com/rsyncOSX/RsyncProcess) - A minor package but a core function of RsyncUI
+- *RsyncProcessStreaming* (https://github.com/rsyncOSX/RsyncProcessStreaming) - A core function of RsyncUI
 	- listens for output from the rsync process as well as termination signal
 - *ProcessCommand* (https://github.com/rsyncOSX/ProcessCommand) - As above, but for commands other than rsync
 - *RsyncArguments* (https://github.com/rsyncOSX/RsyncArguments) - Generate parameters for `rsync` based on configurations
