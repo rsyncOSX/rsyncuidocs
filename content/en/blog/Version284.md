@@ -2,7 +2,7 @@
 author = "Thomas Evensen"
 title = "Version 2.8.4"
 date = "2025-12-21"
-tags = ["changelog","version 2.8.3"]
+tags = ["changelog","version 2.8.4"]
 categories = ["changelog"]
 +++
 
@@ -11,8 +11,9 @@ categories = ["changelog"]
 Version 2.8.4 is scheduled for release sometime later in December 2025, *the Changelog is compiled by AI*.
 All notable changes to RsyncUI will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+In response to the significant modifications, a release candidate has been released. Below is a comprehensive changelog, highlighting the most notable change: the introduction of the *RsyncProcessStreaming* package. Additionally, a blog post has been published documenting the primary accomplishments of eliminating the previous *RsyncProcess* package. The primary objective of the new package is to maintain its simplicity and safety.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Major Changes
 
