@@ -6,62 +6,69 @@ tags = ["logging"]
 categories = ["usersettings"]
 +++
 
-After changing a setting, you have to save the changes to keep it next time you use RsyncUI.
+After changing a setting, save the changes to keep it next time you use RsyncUI.
 
 {{< figure src="/images/usersettings/logsettings.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 **Check for Errors in Output:**
 
-- If the word "error" is discovered in the output from rsync, it is notified.
+- default "off"
+- if the word "error" is discovered in the output from rsync, it is notified
 
 **Add Summary Log Record:**
 
-- By default, "on," a summary of each synchronization is added to the log records. View "Log Listings" from the Sidebar.
+- default "on"
+- a summary of each synchronization is added to the log records. View "Log Listings" from the Sidebar
 
 **No time delay Synchronize URL-actions**
 
-- If "on", the estimated tasks, by URL-action, will be Synchronized without any possibility to abort the action.
+- default "off"
+- if "on", the estimated tasks, by URL-action, will be Synchronized without any possibility to abort the action
 
 **Hide the Sidebar on startup**
 
+- default "off"
 - the sidebar may be concealed, when on the sidebar will be hidden when RsyncUI start
 
 **Observe mounting of external drives**
 
+- default "off"
 - automatic selection of a profile when RsyncUI detects a new mount of a local attached disc
 
 **Always present the summarized estimate view**
 
+- default "on"
 - after an estimate, by selecting the Magic Wand on toolbar Synchronize task view, always present the summarized view
 
 **Hide Verify remote:**
 
+- default "on"
 - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
 **Silence missing stats**
 
+- default "off"
 - stats is the summarized output from rsync, if on RsyncUI will notify if stats is missing after the termination signal is received
 - in version 2.8.4 the missing stats is *not likely* to happen du to the new *RsyncProcessStreaming*
 
 **Validate arguments**
 
-A user-selected verification mechanism for default parameters, such as `—delete`:
-
-- If the `—delete` parameter is included in the task configuration, the verification checks its presence or absence based on the task configuration’s state, which specifies whether a delete operation is required.
-- Other default validated parameters include `—archive`, `—compress`, and `—dry-run`.
-  - The `—archive` parameter is always enabled.
-  - The `—compress` parameter is only applicable for remote tasks.
-  - If RsyncUI requests an estimate, the validation checks that the `—dry-run` parameter is included within the arguments.
+- default "on", a validation for default parameters
+- if the `—delete` parameter is included in the task configuration, the validation checks its presence or absence based on the task configuration’s state, which specifies whether a delete operation is required
+- other default validated parameters include `—archive`, `—compress`, and `—dry-run`
+  - the `—archive` parameter is always enabled
+  - the `—compress` parameter is only applicable for remote tasks
+  - if the user requests an estimate, the validation checks that the `—dry-run` parameter is included within the arguments
 
 **Confirm Execution:**
 
-- See below.
-
-The log file is stored at `$HOME/.rsyncosx/macserial/rsyncui.txt`. The log file can be opened from the main view.
+- see below
 
 **Error Output from rsync:**
 
 Sample of an error in output from rsync. If the switch "Check for error in output" is enabled, RsyncUI writes the output to the log file and alerts the user about any errors in rsync.
+
+The log file is stored at `$HOME/.rsyncosx/macserial/rsyncui.txt`. The log file can be opened from the main view.
 
 {{< figure src="/images/usersettings/errorinrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
 
