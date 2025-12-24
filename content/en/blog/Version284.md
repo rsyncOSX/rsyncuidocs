@@ -1,17 +1,18 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.4"
-date = "2025-12-21"
+date = "2025-12-24"
 tags = ["changelog","version 2.8.4"]
 categories = ["changelog"]
 +++
 
 ### Version 2.8.4 - In Development (Build 175)
 
-Version 2.8.4 is scheduled for release sometime later in December 2025, *the Changelog is compiled by AI*.
-All notable changes to RsyncUI will be documented in this file.
+Version 2.8.4 is scheduled for release early in January 2026, *the Changelog is compiled by AI*. All notable changes to RsyncUI will be documented in this file.
 
 In response to the significant modifications, a release candidate has been released. Below is a comprehensive changelog, highlighting the most notable change: the introduction of the *RsyncProcessStreaming* package. The primary objective of the new package is to maintain its simplicity and safety.
+
+The updated RC2 is du to updates in the *RsyncProcessStreaming* package.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -159,56 +160,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - **Stats Handling**: Better handling of missing rsync statistics
 - **Error Variable Naming**: Refactored error variable naming in catch blocks for consistency
-
----
-
-## Version History Summary
-
-### Development Timeline
-- **v2.8.4** (In Development): Major streaming architecture overhaul, comprehensive testing
-- **v2.8.3** (Dec 12, 2025): User-configurable error handling improvements
-- **v2.8.2** (Dec 14, 2025): Configuration model enhancements
-
----
-
-## Migration Notes
-
-### From 2.8.2 to 2.8.4
-
-#### Breaking Changes
-None - backward compatible with existing configurations
-
-#### New Features to Explore
-1. **Argument Validation**: Enable in Settings → "Validate arguments"
-2. **Silent Stats Mode**: Configure error handling in Settings
-3. **Profile Configuration View**: View all configurations in ProfileView
-4. **Improved Testing**: Enhanced reliability through comprehensive test coverage
-
-#### Performance Improvements
-- **Streaming Output**: Real-time progress updates without polling
-- **Memory Management**: Improved handler lifecycle prevents leaks
-- **Efficient Processing**: Event-driven architecture reduces overhead
-
----
-
-## Development Philosophy
-
-### Code Quality Principles
-- **Safety First**: Zero force unwraps, zero force casts
-- **Modern Swift**: Async/await, actors, @MainActor where appropriate
-- **Professional Logging**: OSLog throughout, no print statements
-- **Clean Architecture**: Clear separation of concerns
-- **Automated Quality**: SwiftLint enforcement
-- **Comprehensive Testing**: Unit and UI test coverage
-
-### Ongoing Improvements
-- Extracting output processing into reusable Swift Package
-- Adding unit tests for output processing
-- Introducing error telemetry hooks
-- Extracting magic constants to centralized configuration
-- Standardizing optional handling patterns
-
----
-
-*For detailed technical documentation, see `AIDocuments/CODE_QUALITY_ANALYSIS_COMPREHENSIVE.md` and `AIDocuments/TODO.md`*
-
