@@ -1,18 +1,26 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.4"
-date = "2025-12-24"
+date = "2025-12-25"
 tags = ["changelog","version 2.8.4"]
 categories = ["changelog"]
 +++
 
 ### Version 2.8.4 - In Development (Build 175)
 
-Version 2.8.4 is scheduled for release early in January 2026, *the Changelog is compiled by AI*. All notable changes to RsyncUI will be documented in this file.
+Version 2.8.4 is scheduled for release in a few days. The Changelog is compiled by AI. All notable changes to RsyncUI will be documented in this file. If no issues are found in the rc2, this will become the new released version.
+
+<div class="alert alert-secondary" role="alert">
+
+In the current release, there is an issue with the "empty stats file." For more information, please refer to the blog posts about version 2.8.1 and 2.8.2. I believe I have identified the cause of this issue. During the development of the new *RsyncProcessStreaming* package, I did not encounter the problem when using and testing the new package. The previous *RsyncProcess* utilized AsyncSequence (AsyncStream), a feature that continuously listens for data. The current version utilizes AsyncSequence, and yesterday, I modified parts of the new package to use it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new *RsyncProcessStreaming* package caused the "empty stats file" issue again. 
+
+I belive that the aforementioned solution has resolved the issue. The latest version, 2.8.4 rc2, incorporates the correct version of the *RsyncProcessStreaming* package, thereby eliminating the occurrence of the issue.
+
+</div>
 
 In response to the significant modifications, a release candidate has been released. Below is a comprehensive changelog, highlighting the most notable change: the introduction of the *RsyncProcessStreaming* package. The primary objective of the new package is to maintain its simplicity and safety.
 
-The updated RC2 is du to updates in the *RsyncProcessStreaming* package.
+The updated RC2 is out due to updates in the *RsyncProcessStreaming* package.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
