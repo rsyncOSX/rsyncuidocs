@@ -8,17 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.2 (build 173) - Dec 14, 2025
 
-This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `—delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter, which generates an error if the summarized stats file is empty. Please refer to the following for further details:
-
-<div class="alert alert-secondary" role="alert">
-
-The primary objective of the RsyncUI codebase is to utilize SwiftLint, applying only the fundamental rules to the entire codebase. 
-
-However, this will necessitate one additional version release in January 2026. When I execute SwiftLint with the basic SwiftLint rules applied to the RsyncUI code base today, numerous complaints are still encountered: `Done linting! Found 73 violations, 61 serious in 177 files`. Most remaining linting complains is due to `identifier_name` violations. None of the linting errors are difficult to fix, but it takes some time. 
-
-All new linting is applied to the branch `v2.8.3`. Adherence to SwitLint's fundamental principles is paramount for ensuring code readability, maintenance, and enhancement, particularly in extensive code bases such as RsyncUI.
-
-</div>
+This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `—delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter, which generates an error if the summarized stats file is empty.
 
 As part of my ongoing experimentation with Visual Studio Code (VSC) and the GitHub MCP services for direct integration with GitHub Copilot (AI), several code updates have been made. The majority of these updates are attributed to the implementation of additional SwiftLint rules. VSC has proven to be an effective tool for identifying and resolving linting issues and updating code.
 
@@ -33,15 +23,6 @@ The primary supporting tools include:
 All of these tools are widely recognized and utilized by numerous developers.
 
 The periphery application is specifically designed to eliminate unused code. SwiftFormat is utilized for code formatting, while SwiftLint ensures code quality. All instructions for SwiftFormat within the code have been removed, and both tools now share a single configuration file containing their respective instructions. This integration has proven to be highly effective.
-
-
-### Visual Studio Code (VSC) and GitHub MCP services
-
-Model Context Protocol (MCP) is an open standard, introduced in November 2024 by Anthropic. Quote Google *"The Model Context Protocol (MCP) is an open standard designed to solve this. Introduced by Anthropic in November 2024, MCP provides a secure and standardized "language" for LLMs to communicate with external data, applications, and services. It acts as a bridge, allowing AI to move beyond static knowledge and become a dynamic agent that can retrieve current information and take action, making it more accurate, useful, and automated."*
-
-I have recently begun utilizing Visual Studio Code (VSC) and its integration with GitHub MCP services. I initiated a request to VSC, utilizing the MCP services, to analyze the codebase for RsyncUI and identify issues in naming conventions. I am highly impressed by the capabilities of AI in supporting developers. The aforementioned request resulted in several code updates, and two reports have been generated as a result. These reports are authored by AI and are accessible from the root directory of the RsyncUI repository.
-
-Although Xcode remains my primary development tool, Visual Studio Code (VSC) is also officially supported by [swift.org](https://www.swift.org/install/macos/). Utilizing Xcode ensures that the latest Swift toolchain is always up-to-date. VSC can also utilize the Xcode-installed toolchain, and it offers a wide range of extensions. 
 
 ### Empty stats file
 
