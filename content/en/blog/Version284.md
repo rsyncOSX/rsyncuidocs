@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.4 - In Development (Build 175)
 
-Version 2.8.4 is scheduled for release in a few days. The Changelog is compiled by AI. All notable changes to RsyncUI will be documented in this file. If no issues are found in the rc2, this will become the new released version.
+Version 2.8.4 is scheduled for release in a few days. The Changelog is compiled by AI. If no issues are found in the rc2, this will become the new released version.
 
 <div class="alert alert-secondary" role="alert">
 
