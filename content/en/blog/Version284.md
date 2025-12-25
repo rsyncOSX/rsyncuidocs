@@ -18,6 +18,16 @@ I belive that the aforementioned solution has resolved the issue. The latest ver
 
 </div>
 
+<div class="alert alert-secondary" role="alert">
+
+I am uncertain as to why the AsyncStream encounters issues with the aforementioned problem. However, the underlying cause is that the process receives a termination signal while the AsyncStream has not yet exhausted all data. The termination signal automatically indicates that the task has been completed and prepares the output. If the final summarized output is missing, RsyncUI will notify the user.
+
+Nevertheless, I intend to investigate and determine if I can resolve this issue for my own learning and interest. Specifically, I will implement a mechanism to halt the process and drain any remaining data before the termination task is executed.
+
+This solution will eventually be incorporated into a future version of RsyncProcessStreaming. The current version of RsyncProcessStreaming functions effectively, but I am eager to investigate and identify the reason behind the persistence of this issue.
+
+</div>
+
 In response to the significant modifications, a release candidate has been released. Below is a comprehensive changelog, highlighting the most notable change: the introduction of the *RsyncProcessStreaming* package. The primary objective of the new package is to maintain its simplicity and safety.
 
 The updated RC2 is out due to updates in the *RsyncProcessStreaming* package.
