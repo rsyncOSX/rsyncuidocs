@@ -23,15 +23,3 @@ The primary supporting tools include:
 All of these tools are widely recognized and utilized by numerous developers.
 
 The periphery application is specifically designed to eliminate unused code. SwiftFormat is utilized for code formatting, while SwiftLint ensures code quality. All instructions for SwiftFormat within the code have been removed, and both tools now share a single configuration file containing their respective instructions. This integration has proven to be highly effective.
-
-### Empty stats file
-
-The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
-
-Occasionally, when synchronizing a small amount of data to fast SSDs, the termination signal is detected before all output from rsync has been received. In such cases, the separate logging may be missing. After data synchronization and the absence of a log, you can verify the synchronization of data by recalculating the estimate. 
-
-The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
-
-*Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
-
-Normally, the logging works as expected.
