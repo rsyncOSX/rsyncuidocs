@@ -6,19 +6,15 @@ tags = ["changelog","version 2.8.4"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.4 - In Development (Build 175)
-
-Version 2.8.4 is scheduled for release in a few days. The Changelog is compiled by AI. If no issues are found in the rc2, this will become the new released version.
+### Version 2.8.4 - Dec 26, 2025
 
 <div class="alert alert-secondary" role="alert">
 
-In the current release, there is an issue with the "empty stats file." For more information, please refer to the blog posts about version 2.8.1 and 2.8.2. I believe I have identified the cause of this issue. During the development of the new *RsyncProcessStreaming* package, I did not encounter the problem when using and testing the new package. The previous *RsyncProcess* utilized AsyncSequence (AsyncStream), which is part of current release, a feature that continuously listens for data. Yesterday, I modified parts of the new package to try it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new *RsyncProcessStreaming* package caused the "empty stats file" issue again. 
+In version 2.8.2, there is an issue with the "empty stats file." For more information, please refer to the blog posts about version 2.8.1 and 2.8.2. I believe I have identified the cause of this issue. The previous *RsyncProcess* utilize AsyncSequence (AsyncStream), which is part of version 2.8.2, a feature that continuously listens for data. A few days ago, I modified parts of the new *RsyncProcessStreaming* package to try it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new package caused the "empty stats file" issue again. 
 
-I belive that the aforementioned solution has resolved the issue. The latest version, 2.8.4 rc2, incorporates the correct version of the *RsyncProcessStreaming* package, thereby eliminating the occurrence of the issue.
+I belive that the aforementioned solution has resolved the issue. The latest version, 2.8.4, incorporates the correct version of the *RsyncProcessStreaming* package, thereby eliminating the occurrence of the issue.
 
 </div>
-
-<div class="alert alert-secondary" role="alert">
 
 I am uncertain as to why the AsyncStream encounters issues with the aforementioned problem. However, the underlying cause is that the process receives a termination signal while the AsyncStream has not yet exhausted all data. The termination signal automatically indicates that the task has been completed and prepares the output. If the final summarized output is missing, RsyncUI will notify the user.
 
@@ -26,155 +22,93 @@ Nevertheless, I intend to investigate and determine if I can resolve this issue 
 
 This solution will eventually be incorporated into a future version of RsyncProcessStreaming. The current version of RsyncProcessStreaming functions effectively, but I am eager to investigate and identify the reason behind the persistence of this issue.
 
-</div>
+### Major Features & Improvements
 
-In response to the significant modifications, a release candidate has been released. Below is a comprehensive changelog, highlighting the most notable change: the introduction of the *RsyncProcessStreaming* package. The primary objective of the new package is to maintain its simplicity and safety.
+- **Total Commits (git) Since 2.8.2**: 137+
+- **Development Period**: December 12-24, 2025
 
-The updated RC2 is out due to updates in the *RsyncProcessStreaming* package.
+#### 🔄 RsyncProcessStreaming Migration - Complete
+- **Unified Process Execution Model**: All process execution now uses the `RsyncProcessStreaming` package for event-driven, streaming process handling
+- **Simplified Handler Management**: Introduced `ProcessHandlers` factory with built-in cleanup hooks to prevent memory leaks and retain cycles
+- **Real-time Output Streaming**: Process output is now streamed in real-time, enabling immediate UI updates and better user feedback
+- **Files Updated**: Estimate.swift, Execute.swift, RestoreTableView.swift, OneTaskDetailsView.swift, ExecutePushPullView.swift, VerifyTasks.swift
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+#### 📦 ParseRsyncOutput Swift Package Integration
+- **Extracted rsync output parsing** into a reusable Swift Package for improved code reusability and testability
+- **Unified parsing logic** across all rsync output processing operations
+- **Package repository**: [ParseRsyncOutput](https://github.com/rsyncOSX/ParseRsyncOutput)
 
-### Major Changes
+#### ✅ Comprehensive Testing Framework
+- **New RsyncUITests target** added with initial test suite
+- **UI tests** for arguments and deeplink URLs
+- **Output processing tests** covering:
+  - Tail trimming (20-line limit)
+  - Directory line filtering
+  - Error detection patterns
+  - Malformed/empty output edge cases
 
-#### RsyncProcessStreaming Migration - Complete Overhaul
-- **Unified Process Execution**: Migrated entire codebase from legacy `RsyncProcess` to modern `RsyncProcessStreaming` package
-- **Event-Driven Architecture**: Implemented streaming handlers with real-time output capture
-  - Process output handler for live data streaming
-  - Process termination handler for cleanup
-- **Memory Management**: Resolved retain cycles with proper handler cleanup and weak reference patterns
-- **Handler Lifecycle**: Simplified handler creation via `ProcessHandlers` factory with built-in cleanup hooks
+### Core Changes
 
-#### New Testing Infrastructure
-- **RsyncUITests Target**: Added comprehensive UI test suite
-  - Argument validation tests
-  - Deeplink URL handling tests
-  - Configuration validation tests
-  - Profile management tests
+#### Process Execution & Streaming
+- Refactored `ObservableRestore` to use `RsyncProcessStreaming`
+- Refactored task verification to use streaming process handlers
+- Added streaming support to QuicktaskView
+- Refactored rsync version check to use streaming process
+- Remove RsyncProcess dependency - replaced with RsyncProcessStreaming
+- Streaming handler cleanup refactoring to prevent retain cycles and memory leaks
 
-### Added
+#### UI/UX Enhancements
+- **Improved UI feedback** for task progress and completion
+- **Enhanced progress view** with better styling and layout
+- Added configuration table view to ProfileView
+- Renamed table column from 'Time' to 'Time last' across multiple views
+- Refactored profile deletion UI in ProfileView
+- Improved help text for --delete parameter usage
+- Better handling of hiddenID in Estimate and Execute operations
+- Removed RsyncRealtimeView and related obsolete UI references
 
-#### Features
-- **Configuration Table View**: New table view in ProfileView showing all configurations per profile
-- **Argument Validation**: Toggle for validating rsync arguments before execution
-  - Added user-configurable setting: "Validate arguments"
-  - Dry-run validation to check argument validity
-  - Prevents execution of invalid argument combinations
-- **Silent Stats Mode**: User setting to silence missing stats errors without stopping error counting
-- **Improved Help Text**: Enhanced documentation for `--delete` parameter usage in UI
+#### Code Quality & Refactoring
+- **Refactor optional handling patterns** with guard-chain flattening and single binding for counts
+- **Refactor enum cases** to camelCase: RsyncCommand, PushPullCommand, OtherRsyncCommand, PlanSnapshots, DayOfWeek
+- **Variable naming improvements** for consistency and clarity across codebase
+- **Removed unnecessary whitespace** and improved code formatting
+- **SwiftLint configuration updates** and inline rule directives
+- **Refactored UI views** for improved readability (AddTaskView, SidebarMainView, TasksView, QuicktaskView)
+- **Refactored parameter field handling** in configuration models with optional fields
 
-#### Code Quality & Documentation
-- **Comprehensive Code Quality Analysis**: Added detailed analysis document
-  - Zero force unwraps and force casts
-  - Zero TODO/FIXME markers
-  - Modern Swift concurrency throughout
-  - Professional OSLog logging
-- **Code Quality Reports**: Updated TODO.md with detailed technical roadmap
+#### Configuration & Settings
+- **New argument validation feature**: Added toggle for argument validation in execution flow
+- Added 'validate arguments' setting to user configuration
+- Improved argument validation with nil checks and proper error handling
+- Add dry-run validation to argument checks
+- Configuration model improvements with optional parameter handling
 
-### Changed
-
-#### UI/UX Improvements
-- **Column Renaming**: Renamed table column from "Time executed" to "Time last" across multiple views
-- **Profile Deletion UI**: Refactored profile deletion workflow for better user experience
-- **Progress View**: Enhanced styling and layout for synchronization progress
-- **ExecuteEstTasksView**: Various UI refinements and updates
-- **Settings Views**: Improved code formatting and readability
-
-#### Refactoring - Code Quality & Consistency
-
-**Naming Conventions**:
-- **Enum Cases**: Refactored all enum cases to use camelCase (Swift naming guidelines)
-  - `RsyncCommand` enum cases
-  - `PushPullCommand` enum cases
-  - `OtherRsyncCommand` enum cases
-  - `PlanSnapshots` enum case names
-  - Day of week enums
-- **Variable Names**: Standardized variable naming for clarity
-  - Loop variable names improved
-  - RemoteDataNumbers integer property names
-  - FileManager variable naming consistency
-  - Hidden ID handling improvements
-
-**Code Organization**:
-- **View Extensions**: Extracted complex view logic into separate extension files
-  - TasksView toolbar → extension file
-  - QuicktaskView toolbar and logic → extension file
-  - SidebarMainView extension → separate file
-  - AddTaskView logic → extension
-- **SwiftLint Compliance**: Extensive SwiftLint cleanup
-  - Removed inline line_length directives
-  - Applied proper formatting rules
-  - Added SwiftLint directives where appropriate
-  - Updated .swiftlint.yml configuration
-
-**Optional Handling**:
-- Refactored optional handling patterns throughout codebase
-- Improved guard statement ordering
-- Safe optional unwrapping for URL and date creation
-- Safe unwrapping of streamingHandlers before use
-
-**Process Execution**:
-- Refactored Estimate and Execute classes for streaming
-- Simplified handler creation patterns
-- Removed unnecessary `[weak self]` in termination handlers
-- Refactored ObservableRestore to use RsyncProcessStreaming
-- Updated task verification to use streaming process
-- Rsync version check refactored to use streaming
-
-**Configuration & Data Models**:
-- Made parameter4 optional to better handle delete flag
-- Use DefaultRsyncParameters enum for rsync flags
-- Removed unused parameter1-3 from configuration models
-- Refactored parameter fields to be optional
-- Refactored default value assignment in RemoteDataNumbers
-
-**Logging & Error Handling**:
-- Refactored logging to use errorMessageOnly parameter
-- Improved logging consistency throughout
-- Silenced debug print statements in streaming handlers
+#### Logging & Debugging
+- Refactored and cleaned up logging and test code
+- Removed rsync output logfile support from log views
 - Gated per-line streaming logs behind DEBUG flag
-- Enhanced stats error handling and alert threshold logic
+- Added debug threading check for streaming handlers
+- Silenced debug print statements in streaming handlers
+- Improved logging to use `errorMessageOnly` with better formatting
 
-**File Management**:
-- Refactored log deletion to simplify parameters and usage
-- Updated file headers and SwiftLint config
-- Removed NSLocalizedString from UI labels (simplified)
+#### Dependencies & Version Updates
+- Updated all Swift package dependencies to main branch
 
-### Removed
-- **RsyncRealtimeView**: Removed obsolete real-time view and related UI references
-- **Rsync Output Logfile Support**: Removed from log views (replaced by streaming)
-- **RsyncProcess Dependency**: Fully migrated to RsyncProcessStreaming
-- **Legacy Code**: Cleaned up unused code and test artifacts
-- **Obsolete Parameters**: Removed unused parameter1-3 fields from configuration models
+### Bug Fixes & Stability
+- Fixed guard statement order and typo in snapshot and restore operations
+- Safely unwrap streamingHandlers before use
+- Remove unnecessary `[weak self]` in processTermination handlers
+- Made parameter4 optional to better handle delete flag
+- Fix potential nil issues in argument execution
 
-### Fixed
-- **Guard Statement Order**: Fixed ordering and typos in snapshot and restore logic
-- **Memory Leaks**: Released streaming references to prevent retain cycles
-- **Nil Safety**: Added nil checks for arguments in executestreaming
-- **Threading**: Added debug threading checks for streaming handlers
-- **Actor Isolation**: Removed inappropriate @MainActor from TrimOutputFromRsync class
-- **Typos**: Fixed typos and formatting issues in TasksView files
-- **Deeplink Handling**: Refactored URL handling in SidebarMainView
+### Architecture Improvements
+- **Unified streaming architecture** with simplified process lifecycle
+- **Improved memory management** through explicit cleanup patterns
+- **Enhanced testability** with extracted ParseRsyncOutput package
+- **Better separation of concerns** through handler factory pattern
 
-### Dependencies
-- **Swift Package Updates**: Multiple updates to Package.resolved
-  - Updated RsyncProcessStreaming package revisions
-  - Updated Swift package dependencies to main branch
-  - Updated RsyncArguments package to branch v283
-  - Updated RsyncProcess package to v283 branch
-
----
-
-## [2.8.3] - December 12, 2025 (Build 174)
-
-### Added
-- **Silence Missing Stats**: New user-configurable setting to silence error alerts when rsync stats are missing
-- **Error Control**: Improved user-configurable error handling for rsync operations
-
-### Changed
-- **Progress View**: Added vertical padding and compact ratio to progress columns
-- **SwiftLint Configuration**: Updated rules and enforcement
-- **Package Dependencies**: Updated all Swift packages to latest stable versions
-
-### Fixed
-- **Stats Handling**: Better handling of missing rsync statistics
-- **Error Variable Naming**: Refactored error variable naming in catch blocks for consistency
+## Dependencies Updated
+- RsyncProcessStreaming (streaming process execution)
+- ParseRsyncOutput (output parsing and processing)
+- RsyncArguments (rsync command arguments)
+- RsyncProcess (legacy - being phased out in favor of streaming)
