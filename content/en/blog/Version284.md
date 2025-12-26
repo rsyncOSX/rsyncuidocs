@@ -8,19 +8,17 @@ categories = ["changelog"]
 
 ### Version 2.8.4 - Dec 26, 2025
 
+Version 2.8.4rc2 has been released as the new version, with no new builds released.
+
 <div class="alert alert-secondary" role="alert">
 
-In version 2.8.2, there is an issue with the "empty stats file." For more information, please refer to the blog posts about version 2.8.1 and 2.8.2. I believe I have identified the cause of this issue. The previous *RsyncProcess* utilize AsyncSequence (AsyncStream), which is part of version 2.8.2, a feature that continuously listens for data. A few days ago, I modified parts of the new *RsyncProcessStreaming* package to try it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new package caused the "empty stats file" issue again. 
+In version 2.8.2, there is an issue with the "empty stats file". For more information, please refer to the blog posts about version 2.8.1 and 2.8.2. I believe I have identified the cause of this issue. The previous *RsyncProcess* utilize AsyncSequence (AsyncStream), which is part of version 2.8.2, a feature that continuously listens for data. A few days ago, I modified parts of the new *RsyncProcessStreaming* package to try it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new package caused the "empty stats file" issue again. 
 
-I belive that the aforementioned solution has resolved the issue. The latest version, 2.8.4, incorporates the correct version of the *RsyncProcessStreaming* package, thereby eliminating the occurrence of the issue.
+The latest version, 2.8.4, incorporates the version of the *RsyncProcessStreaming* package that eliminates the occurrence of the "empty stats file."
 
 </div>
 
-I am uncertain as to why the AsyncStream encounters issues with the aforementioned problem. However, the underlying cause is that the process receives a termination signal while the AsyncStream has not yet exhausted all data. The termination signal automatically indicates that the task has been completed and prepares the output. If the final summarized output is missing, RsyncUI will notify the user.
-
-Nevertheless, I intend to investigate and determine if I can resolve this issue for my own learning and interest. Specifically, I will implement a mechanism to halt the process and drain any remaining data before the termination task is executed.
-
-This solution will eventually be incorporated into a future version of RsyncProcessStreaming. The current version of RsyncProcessStreaming functions effectively, but I am eager to investigate and identify the reason behind the persistence of this issue.
+I am uncertain as to why the AsyncStream encounters issues with the aforementioned problem. Nevertheless, I intend to investigate and determine if I can resolve this issue for my own learning and interest. Specifically, I will implement a mechanism to halt the process and drain any remaining data before the termination task is executed.
 
 ### Major Features & Improvements
 
