@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.5"
-date = "2025-12-29"
+date = "2025-12-31"
 tags = ["changelog","version 2.8.5"]
 categories = ["changelog"]
 +++
@@ -11,6 +11,8 @@ categories = ["changelog"]
 <div class="alert alert-danger" role="alert">
   
 This version introduces several modifications. Additionally, I anticipate the implementation of minor updates and bug fixes, as well as a quality assurance and review process of changes. A release candidate is scheduled for early January 2026, followed by a final release in January 2026.
+
+I have encountered an unforeseen issue that renders RsyncUI unresponsive. The cause of this issue remains unknown, and I require some time to investigate further. The issue manifests when attempting to close the Inspector in the Parameters view. Upon doing so, RsyncUI becomes unresponsive, displaying a "bounching beach ball" and force quit RsyncUI is requiered.
 
 </div>
 
@@ -23,4 +25,6 @@ The detail views are implemented by utilizing SwiftUI Inspector view.
 {{< figure src="/images/v285/nr1.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 {{< figure src="/images/v285/nr2.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v285/nr3.png" alt="" position="center" style="border-radius: 8px;" >}}
 
