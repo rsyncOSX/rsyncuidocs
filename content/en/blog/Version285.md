@@ -14,7 +14,7 @@ This version introduces several modifications. Additionally, I anticipate the im
 
 I have encountered an unforeseen issue that renders RsyncUI unresponsive. The cause of this issue remains unknown, and I require some time to investigate further. The issue manifests when attempting to close the Inspector in the Parameters view. Upon doing so, RsyncUI becomes unresponsive, displaying a "bounching beach ball" and force quit RsyncUI is requiered.
 
-The good news is I most likely have found which code cause the issue.
+The positive news is that I have likely identified the code responsible for the issue.
 
 </div>
 
