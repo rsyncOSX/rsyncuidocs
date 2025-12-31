@@ -22,6 +22,14 @@ The primary advancement in this version is the implementation of significant use
 
 The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. Selecting a task displays its associated details. Additionally, a toggle on the toolbar allows users to switch between viewing task data and parameters.
 
+<div class="alert alert-danger" role="alert">
+  
+There are two potential outcomes, as outlined below. I am uncertain which one to select. 
+
+</div>
+
+### Display tables in both tabs
+
 The detail views are implemented by utilizing SwiftUI Inspector view.
 
 {{< figure src="/images/v285/nr1.png" alt="" position="center" style="border-radius: 8px;" >}}
@@ -30,3 +38,10 @@ The detail views are implemented by utilizing SwiftUI Inspector view.
 
 {{< figure src="/images/v285/nr3.png" alt="" position="center" style="border-radius: 8px;" >}}
 
+### Display one table on the Inspector by tab
+
+{{< figure src="/images/v285/nr4.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v285/nr5.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v285/nr6.png" alt="" position="center" style="border-radius: 8px;" >}}
