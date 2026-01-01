@@ -6,13 +6,13 @@ tags = ["files", "JSON"]
 categories = ["general information"]
 +++
 
-RsyncUI stores all its data locally on your Mac in [JSON](https://en.wikipedia.org/wiki/JSON) format. This includes task configurations, log records, and user settings. Understanding the file structure can be helpful for backup or troubleshooting purposes.
+RsyncUI stores all data locally on your Mac in [JSON](https://en.wikipedia.org/wiki/JSON) format, including task configurations, logs, and settings. Understanding the file structure helps with backup and troubleshooting.
 
 ## File Locations
 
-All RsyncUI files are stored in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number. RsyncUI retrieves this serial number automatically at startup.
+All RsyncUI files are in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number retrieved at startup.
 
-At startup, RsyncUI reads the user settings and default configuration from JSON files. Log records are only loaded when viewing logs or when updating logs after a synchronization task.
+At startup, RsyncUI reads user settings and the default configuration from JSON files. Log records load only when viewing or updating logs.
 
 ### Configuration Files
 

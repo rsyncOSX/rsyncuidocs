@@ -7,7 +7,7 @@ categories = ["synchronize"]
 lastmod = "2024-03-18"
 +++
 
-Utilize QuickTask to swiftly duplicate or transfer files between the source and destination. QuickTask will retain the most recently executed quick task as default settings. Default settings can be cleared through the toolbar function. QuickTask is exclusively applicable to remote servers and necessitates the activation of Passwordless login via SSH.
+Use QuickTask to quickly copy or transfer files. QuickTask remembers the last task as defaults; you can clear them via the toolbar. QuickTask works only with remote servers and requires passwordless SSH login.
 
 There are two types of quick tasks:
 
@@ -22,14 +22,14 @@ There are two types of quick tasks:
 
 {{< figure src="/images/quicktask/quicktask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-After entering data, the default task is a `--dry-run` task. It is recommended to inspect the result before executing the actual run.
+After entering data, the default task is a `--dry-run` task. Inspect the result before executing the actual run.
 
 ### Folder Parameters
 
-- *Source folder* - required field
-- *Destination folder* - required field
-  - a `~` is expanded as the home directory with the full path by the remote operating system
-  - the remote directory may also be specified by full path, depending on where the backup directory is located on the remote server
+- *Source folder* - required
+- *Destination folder* - required
+  - `~` expands to the remote home directory
+  - you can also use the full path, depending on where the backup is stored on the remote
 
 ### Remote Parameters
 

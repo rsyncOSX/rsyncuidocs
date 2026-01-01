@@ -6,7 +6,7 @@ tags = ["passwordless","ssh-key", "tools","remote servers"]
 categories = ["advanced features"]
 +++
 
-RsyncUI uses the standard SSH tools `ssh-keygen` and `ssh-copy-id` to help you establish passwordless login to remote servers via SSH key authentication.
+RsyncUI uses standard SSH tools `ssh-keygen` and `ssh-copy-id` to help you set up passwordless login via SSH key authentication.
 
 <div class="alert alert-secondary" role="alert">
 
@@ -21,7 +21,7 @@ RsyncUI supports two approaches:
 1. **Default SSH keys**: Uses the standard RSA key location (`~/.ssh/id_rsa`)
 2. **Custom SSH keys**: Uses a user-specified location (e.g., `~/.ssh_rsyncosx/rsyncosx`)
 
-When using default keys, RsyncUI doesn't add extra SSH parameters to rsync commands. Custom keys require additional parameters to tell rsync where to find them.
+With default keys, RsyncUI doesn't add extra SSH parameters. Custom keys require additional parameters.
 
 ## Step-by-Step: Creating Custom SSH Keys
 

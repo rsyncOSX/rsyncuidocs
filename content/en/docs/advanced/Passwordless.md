@@ -6,9 +6,9 @@ tags = ["passwordless","ssh-key", "remote servers"]
 categories = ["advanced features"]
 +++
 
-To synchronize data to a remote server using RsyncUI, passwordless login via SSH key authentication is required. RsyncUI does not support password-based authentication during data synchronization. SSH key authentication is generally considered more secure than password-based authentication.
+To synchronize to a remote server using RsyncUI, passwordless SSH key authentication is required. RsyncUI does not support password-based authentication. SSH keys are generally more secure than passwords.
 
-If *default values* for RSA-based SSH key authentication are used, no additional information about the SSH key is required in RsyncUI. However, it is necessary to provide information if a custom SSH keypath, identity file, or port number is used.
+If *default values* for RSA-based SSH keys are used, no additional SSH info is needed in RsyncUI. Custom SSH keypaths, identity files, or port numbers must be configured.
 
 The SSH keypath and identity file are specified as follows:
 ```bash

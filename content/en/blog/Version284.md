@@ -8,21 +8,21 @@ categories = ["changelog"]
 
 ### Version 2.8.4 - Dec 26, 2025
 
-Version 2.8.4rc2 has been released as the new version, with no new builds released.
+Version 2.8.4rc2 has been promoted to the new release; no additional builds were produced.
 
 <div class="alert alert-secondary" role="alert">
 
-In version 2.8.2, there is an issue with the "empty stats file". For more information, please refer to last on this page. I believe I have identified the cause of this issue. The previous *RsyncProcess* utilize AsyncSequence (AsyncStream), which is part of version 2.8.2, a feature that continuously listens for data. A few days ago, I modified parts of the new *RsyncProcessStreaming* package to try it as well. AsyncSequence is a robust concurrency feature, but attempting to use it in the new package caused the "empty stats file" issue again. 
+Version 2.8.2 has an "empty stats file" issue (details at the end of this page). I believe the root cause is the use of `AsyncSequence`/`AsyncStream` in the legacy *RsyncProcess* code from 2.8.2. A recent experiment to try the same approach in the new *RsyncProcessStreaming* package reproduced the problem.
 
 </div>
 
 <div class="alert alert-danger" role="alert">
   
-Version, 2.8.4 incorporates the version of the *RsyncProcessStreaming* package that eliminates the occurrence of the "empty stats file". 
+Version 2.8.4 ships the *RsyncProcessStreaming* package variant that avoids the "empty stats file" issue.
 
 </div>
 
-I am uncertain as to why the AsyncStream encounters issues with the aforementioned problem. Nevertheless, I intend to investigate and determine if I can resolve this issue for my own learning and interest. Specifically, I will implement a mechanism to halt the process and drain any remaining data before the termination task is executed.
+I do not yet know why `AsyncStream` misbehaves here. I plan to investigate and add a mechanism to pause the process and drain remaining data before termination.
 
 ### Major Features & Improvements
 

@@ -8,18 +8,18 @@ categories = ["changelog"]
 
 ### Version 2.8.2 (build 173) - Dec 14, 2025
 
-This version has undergone numerous linting updates. Additionally, a bug related to enabling or disabling the `—delete` parameter has been resolved. Furthermore, a user settings flag for enabling or disabling the `Silence missing stats` parameter, which generates an error if the summarized stats file is empty.
+This release includes extensive linting updates. A bug related to toggling the `—delete` parameter is fixed. A new user setting controls `Silence missing stats`, which triggers an error if the summarized stats file is empty.
 
-As part of my ongoing experimentation with Visual Studio Code (VSC) and the GitHub MCP services for direct integration with GitHub Copilot (AI), several code updates have been made. The majority of these updates are attributed to the implementation of additional SwiftLint rules. VSC has proven to be an effective tool for identifying and resolving linting issues and updating code.
+During ongoing experimentation with Visual Studio Code (VSC) and the GitHub MCP services for GitHub Copilot integration, I made several code updates. Most stem from adding SwiftLint rules. VSC has been effective for spotting and fixing lint issues.
 
-From this version, VSC has become an integral part of my development tools for the RsyncUI project. While Xcode 26 remains my primary development environment, all release builds, including notifications and signing, are executed via command line and a Makefile.
+From this version on, VSC is part of my toolchain. Xcode 26 remains the primary IDE, while release builds, signing, and notifications run via the command line and a Makefile.
 
 The primary supporting tools include:
 
-- [SwiftLint](https://github.com/realm/SwiftLint): Utilized for code quality assurance.
-- [SwiftFormat](https://github.com/nicklockwood/SwiftFormat): Employed for code formatting.
-- [periphery](https://github.com/peripheryapp/periphery): Utilized to eliminate unused code.
+- [SwiftLint](https://github.com/realm/SwiftLint): code quality
+- [SwiftFormat](https://github.com/nicklockwood/SwiftFormat): formatting
+- [periphery](https://github.com/peripheryapp/periphery): unused-code detection
 
-All of these tools are widely recognized and utilized by numerous developers.
+All are widely used tools.
 
-The periphery application is specifically designed to eliminate unused code. SwiftFormat is utilized for code formatting, while SwiftLint ensures code quality. All instructions for SwiftFormat within the code have been removed, and both tools now share a single configuration file containing their respective instructions. This integration has proven to be highly effective.
+Periphery removes unused code, SwiftFormat handles formatting, and SwiftLint enforces style and safety. Inline SwiftFormat directives were removed; both tools now share a single configuration file, which has worked well.

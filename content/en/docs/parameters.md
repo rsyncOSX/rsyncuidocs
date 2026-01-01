@@ -6,23 +6,23 @@ tags = ["parameters"]
 categories = ["rsync parameters"]
 +++
 
-RsyncUI provides default parameters for data synchronization. However, the actual default parameters utilized in tasks are determined by whether the rsync operation is performed over a network connection or to a local attached disk.
+RsyncUI provides sensible defaults for synchronization. The defaults applied to a task depend on whether rsync runs over a network or to a local disk.
 
-Users have the ability to modify default parameters as necessary. Parameters to rsync are stored in tasks, including a local ssh parameter if set. The local ssh parameter overrides a global ssh parameter if set.
+You can adjust the defaults. Task configurations store their parameters, including any task-specific SSH option, which overrides the global SSH setting.
 
 <div class="alert alert-danger" role="alert">
 
-Always verify the result of changing parameters to rsync before executing. Select *"Verify tasks"* from the primary Sidebar menu.
+Always verify the result after changing rsync parameters. Select *"Verify tasks"* from the Sidebar.
 
 </div>
 
 ### Task-Specific Parameters to rsync
 
-To add a parameter to rsync, enter it in the corresponding field. RsyncUI supports seven user-defined parameters. Users can add parameters using any of the fields. However, users are responsible for verifying the accuracy of the added parameters. If an incorrect parameter is added, rsync will generate an error message.
+To add a parameter, enter it in a field. RsyncUI supports seven user-defined parameters across the fields. You are responsible for correctness—invalid values will cause rsync errors.
 
 {{< figure src="/images/rsyncparameters/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-Parameters to rsync are typically constructed as follows. The following are examples only; `rsync` supports many parameters.
+Parameters to rsync are typically constructed as follows (examples only—`rsync` supports many options):
 
 - parameter=value
 	- `--exclude-from=/Volumes/home/user/exclude-list.txt` - exclude list for rsync
@@ -34,9 +34,9 @@ For a comprehensive list of parameters for `rsync`, please refer to the official
 
 ### Task-Specific SSH Parameter 
 
-If default ssh-key values are used and no ssh-key information is provided in RsyncUI, the parameter `-e ssh` is appended to the rsync command to ensure data is tunneled and encrypted using ssh. This applies exclusively to remote servers and data restoration from remote servers.
+If you rely on default SSH keys and no SSH info is set in RsyncUI, the parameter `-e ssh` is appended so data is tunneled and encrypted. This applies only to remote tasks and restores.
 
-Task-specific ssh parameters override global ssh parameters configured in the user settings.
+Task-specific SSH parameters override global SSH settings.
 
 - ssh-port: specify if ssh uses a port other than the default port 22
 - ssh-keypath and identity file: typically, these are `.ssh/id_rsa`; set only if alternative ssh-keypath and identity file are to be used by ssh
@@ -51,7 +51,7 @@ The values are marked red until validated OK. Refer to the *"Tools passwordless 
 
 The `rsync` command allows you to instruct it to save modified and deleted files in a separate backup directory prior to the synchronization process. This feature can be enabled by setting the following parameters:
 
-- `--backup` - Enables the saving of modified files
-- `--backup-dir` - Specifies the directory where modified or deleted files should be saved before synchronization
+- `--backup` - Enables saving modified files
+- `--backup-dir` - Directory where modified or deleted files are saved before synchronization
 
 RsyncUI provides a default value for this parameter, but you can customize it as needed. For a synchronized directory named `<directory to synchronize>`, the default backup directory is `../backup_<directory to synchronize>`, which is relative to the synchronized directory.

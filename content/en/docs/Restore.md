@@ -7,11 +7,11 @@ categories = ["synchronize"]
 lastmod = "2024-03-18"
 +++
 
-Data restoration from within RsyncUI is only available for remote servers. For data stored on attached volumes, use macOS Finder to restore files. A restore operation must be executed to a temporary restore path to prevent overwriting your original data.
+RsyncUI restores only from remote servers. For local attached volumes, use Finder. Always restore to a temporary path to avoid overwriting your original data.
 
 ### How to Restore Files
 
-1. **Filter files**: Use the filter field to search for specific files or directories. The filter retrieves only filenames containing the specified string.
+1. **Filter files**: Use the filter field to search for files or directories. The filter shows only filenames containing the search string.
 
 {{< figure src="/images/restore/restore_filter_all.png" alt="" position="center" style="border-radius: 8px;" >}}
 

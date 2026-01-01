@@ -12,13 +12,13 @@ The schedule function is disabled by default. Please refer to the *RsyncUI setti
 
 </div>
 
-Schedules are automatically saved to disk. RsyncUI loads the schedule file and reloads scheduled tasks that are due. Tasks that were scheduled to run while the Mac was shut down are not loaded. If the Mac enters sleep mode, RsyncUI will display unexecuted tasks in the Schedule view. There is *no automatic execution* of scheduled tasks that have not been executed.
+Schedules are saved automatically. RsyncUI loads tasks that are due. Tasks scheduled while the Mac was shut down are not loaded. If the Mac sleeps, unexecuted tasks appear in the Schedule view. *Missed tasks do not run automatically.*
 
 <div class="alert alert-secondary" role="alert">
 
-The scheduler is implemented using the Timer library. According to Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."* The timer has a strong reference to the run loop on the main thread. This means that if the application goes to sleep, so does the run loop. The timer is only active as long as RsyncUI is running.
+The scheduler uses the Timer library. According to Apple: *"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object."* The timer has a strong reference to the run loop on the main thread. If the app goes to sleep, so does the run loop. The timer is active only while RsyncUI is running.
 
-If scheduled tasks are not executed when the Mac enters sleep mode, they will be displayed in the Schedule view.
+If the Mac sleeps before scheduled tasks execute, they will appear in the Schedule view.
 
 </div>
 

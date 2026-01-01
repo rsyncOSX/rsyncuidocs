@@ -6,4 +6,4 @@ tags = ["general information"]
 categories = ["general information"]
 +++
 
-There are some general information which might be nice to know.
+General information that may be useful.

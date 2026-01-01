@@ -6,7 +6,7 @@ tags = ["url commands","deep links","synchronize","widget"]
 categories = ["advanced features"]
 +++
 
- Deep links facilitate direct access to application features via URL links. By utilizing deep links, users can execute an estimate and synchronize actions in a single click. Deep links in RsyncUI enable the grouping of actions that typically require multiple user inputs.
+ Deep links provide direct access to app features via URL. Using deep links, you can estimate and synchronize in a single click. Deep links in RsyncUI group actions that typically require multiple steps.
 
 There are three methods of using deep links:
 
@@ -16,11 +16,11 @@ There are three methods of using deep links:
 
 #### RsyncUI Widget
 
-One widget is embedded in RsyncUI: 
+One widget is embedded in RsyncUI:
 
 - *estimating and synchronizing*
 
-The widget retrieve a saved URL link from storage. Within the Tasks view, there is a view for URL. Within this view, you can save the required URL. The widgets display whether a validated URL is present. To enable the widgets on macOS, click on the date and time icon located in the upper right corner of your screen. Edit the widgets and select RsyncUI. Then, add the widgets.
+The widget retrieves a saved URL from storage. In the Tasks view, there is a URL view where you can save the required URL. The widget shows whether a validated URL is present. To enable the widget on macOS, click the date and time icon in the upper right corner of your screen. Edit widgets and select RsyncUI, then add the widget.
 
 After enabling the widget, a single click on the widget will launch RsyncUI and execute the corresponding action. To modify the URL, update and save the new URL.
 

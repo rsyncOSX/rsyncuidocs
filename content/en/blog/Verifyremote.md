@@ -18,11 +18,11 @@ I back up my bird photography to multiple locations:
 - a remote cloud service (JottaCloud)
 - two 1TB NVMe external SSD drives attached to my computers
 
-The first two locations are updated whenever data changes. JottaCloud updates are managed by a service running on my Macs. Updates to the Raspberry Pi 5 server are performed using RsyncUI.
+The first two locations are updated whenever data changes. JottaCloud updates run via a service on my Macs, while RsyncUI updates the Raspberry Pi 5 server.
 
-Currently, my bird photography consists of 140GB and 8,000 files, including RAW and sidecar files. During travel, I use my MacBook Pro for photo editing, while at home, I use my Mac Mini M4. I always keep track of which Mac has been updated and stores the most recent files.
+Currently, my bird photos total 140 GB across 8,000 RAW and sidecar files. I edit on a MacBook Pro while traveling and on a Mac Mini M4 at home. I keep track of which Mac holds the latest edits.
 
-For this post, I am using my MacBook Pro as the local device, while the remote server contains more recently updated data.
+For this walkthrough, the MacBook Pro is local and the remote server has the newer data.
 
 ### Requirements for Using Verify Remote
 

@@ -12,13 +12,13 @@ menu: {main: {weight: 10}}
 
 Hello,
 
-If you have any ideas or thoughts about RsyncUI, please do not hesitate to contact me at thomeven@gmail.com.
+If you have ideas or feedback about RsyncUI, feel free to reach me at thomeven@gmail.com.
 
-I commenced the development of RsyncOSX in August 2016, which was archived and development ceased after 8 years in August 2024, as a project to learn about Swift development. The development of RsyncUI, which is based upon SwiftUI, commenced in late 2020 and remains in active development.
+I started RsyncOSX in August 2016 as a way to learn Swift. After eight years of releases, it was archived in August 2024. RsyncUI, built with SwiftUI, began in late 2020 and is still actively developed.
 
-I hold a master's degree in computing science, but I am not a professional developer. I completed my master's degree during the early 1990s, when Linux was released and the Internet became a public service. A few years prior to that, in 1989, the Web was invented at CERN. I am the sole developer of RsyncUI, and I am committed to ensuring its stability and user-friendliness. While I am not a UI designer, some users may find the UI complex and less user-friendly.
+I hold a master's degree in computing science, earned in the early 1990s when Linux and the public Internet were emerging. The Web itself was invented just a few years earlier, in 1989 at CERN. I'm a solo developer focused on keeping RsyncUI stable and usable. I'm not a professional UI designer, so parts of the interface may feel dense.
 
-The maintenance and development of RsyncUI are among my hobbies. If you find RsyncUI useful, I would appreciate it if you could consider giving the project a star on GitHub. Each star serves as motivation for me to continue developing RsyncUI. In May 2022, I retired from work at the age of 62. In my spare time, I am a passionate [photographer of birds](https://birdsofprey.netlify.app) and enjoy spending time in the Norwegian mountains. My grandchildren, photography, the development of RsyncUI, and cross-country skiing are some of the activities that keep me occupied.
+Maintaining RsyncUI is a hobby. If you find it helpful, a GitHub star is appreciated—it keeps me motivated. I retired in May 2022 at age 62. Outside coding, I am a [bird photographer](https://birdsofprey.netlify.app) who enjoys time in the Norwegian mountains. Grandchildren, photography, RsyncUI, and cross-country skiing keep me busy.
 
 {.text-center}
 
@@ -26,9 +26,9 @@ The maintenance and development of RsyncUI are among my hobbies. If you find Rsy
 
 {{% blocks/section color="white" %}}
 
-Although I am an educated IT professional, my professional experience has primarily been as an IT manager rather than a developer. My coding experience has been limited to private projects such as RsyncUI and RsyncOSX. Google has been an invaluable resource for research and guidance on solving specific problems. Reading about other developers' code and participating in discussions has provided me with valuable insights.
+Although I am an educated IT professional, most of my career was in IT management, not hands-on development. My coding experience comes from personal projects like RsyncUI and RsyncOSX. Search, documentation, and learning from other developers' examples have been invaluable.
 
-I am continuously learning and adapting to new releases of Swift, SwiftUI, and Xcode, which introduce new features to master. Major changes and updates are documented in the [changelog](/blog/). Additionally, I utilize tools such as [SwiftLint](https://github.com/realm/SwiftLint), [SwiftFormat](https://github.com/nicklockwood/SwiftFormat), and [periphery](https://github.com/peripheryapp/periphery) to enhance my coding practices.
+I keep learning with every Swift, SwiftUI, and Xcode release. Major changes and updates are logged in the [changelog](/blog/). I rely on tools such as [SwiftLint](https://github.com/realm/SwiftLint), [SwiftFormat](https://github.com/nicklockwood/SwiftFormat), and [periphery](https://github.com/peripheryapp/periphery) to improve code quality.
 
 **Why Not the App Store?**
 

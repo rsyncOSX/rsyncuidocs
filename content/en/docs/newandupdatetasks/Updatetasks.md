@@ -6,13 +6,13 @@ tags = ["update","profile"]
 categories = ["synchronize"]
 +++
 
-To update a task, select the task.  Press the update button to write updates to storage.
+To update a task, select it and press the update button to write changes to storage.
 
 {{< figure src="/images/add/update.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Global Changes
 
-Global Changes, choose the Global icon on toolbar, applies to either *all* or *selected tasks*. Global changes, either partial or complete string modifications, can be applied to all tasks simultaneously. While updating tasks individually may be feasible, this method is more effective for modifying all tasks in one go.
+Global Changes (the Global icon on the toolbar) apply to *all* or *selected tasks*. Global changes can apply partial or complete string modifications to all tasks simultaneously. This is more effective than updating tasks individually.
 
 #### Directories
 

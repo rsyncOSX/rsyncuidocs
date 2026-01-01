@@ -6,29 +6,29 @@ tags = ["important"]
 categories = ["general information"]
 +++
 
-Before commencing the use of RsyncUI, it is imperative to thoroughly comprehend the following key notes. This section specifically highlights the most crucial ones.
+Before using RsyncUI, review these key notes.
 
-The User Interface of RsyncUI may pose challenges for users unfamiliar with the `rsync` command-line tool. The primary objective is to simplify the usage of `rsync`, rather than providing a comprehensive introduction to `rsync` for macOS users. This scope is beyond the intended purpose of the interface.
+The interface may feel challenging if you are new to the `rsync` command-line tool. RsyncUI focuses on making `rsync` easier to use, not on teaching every `rsync` concept.
 
 ### Not a backup tool for everyone
 
-RsyncUI is a specialized application designed exclusively for synchronize and secure file management. It operates in conjunction with the command-line tool rsync, which is responsible for the actual synchronization process. If you are seeking a comprehensive backup solution that can *create a complete image* of your drive for restoration in the event of a catastrophic event, RsyncUI is not the appropriate tool for your needs.
+RsyncUI specializes in synchronization and file management. The command-line tool rsync performs the actual work. If you need a full system backup tool that creates complete disk images, RsyncUI is not the right fit.
 
 ### Delete parameter 
 
-The --delete parameter, herein referred to as the *delete parameter*, enables rsync to maintain absolute synchronization between the source and destination directories. When a file is deleted from the source, the *delete parameter* instructs rsync to delete the corresponding file from the destination. Conversely, if the *delete parameter* is disabled, the destination directory will contain additional data after deleting files from the source.
+The `--delete` parameter keeps the destination in exact sync with the source. When a file is removed from the source, rsync removes it from the destination. With `--delete` disabled, the destination will accumulate files removed from the source.
 
-Therefore, it is crucial to ascertain whether the *delete parameter* is enabled or disabled. Enabling the *delete parameter* ensures complete synchronization between the source and destination directories.
+Know whether `--delete` is on or off before you run; it controls whether the destination mirrors the source.
 
 <div class="alert alert-danger" role="alert">
   
-As a safety precaution, the --delete parameter is *not* set as a default parameter when adding new tasks.  To ensure that the source and destination are in complete synchronization, the --delete parameter must be *enabled*.
+As a safety precaution, `--delete` is *not* enabled by default on new tasks. Turn it on if you need the destination to mirror the source.
 
 </div>
 
 #### Add and remove the delete parameter
 
-Select *Rsync parameters* from the primary Sidebar menu. Select the task for which you want to add or remove the `--delete` parameter. Then toggle *Add --delete parameter* (**ON** means added). After toggling, *remember to update the task*.
+Select *Rsync parameters* from the Sidebar, choose a task, and toggle *Add --delete parameter* (**ON** means included). After toggling, remember to update the task.
 
 - if ON, the --delete parameter is included
 - if OFF, the --delete parameter is removed
@@ -37,17 +37,17 @@ Select *Rsync parameters* from the primary Sidebar menu. Select the task for whi
 
 ### Always verify new task
 
-Before executing a new task in RsyncUI, for your own safety perform an estimation run, a --dry-run, and inspect the result. If you inadvertently set an empty directory as the source and the *delete parameter* is *enabled*, rsync will delete all files in the destination.
+Before running a new task, perform a `--dry-run` and inspect the result. If you set an empty source and `--delete` is enabled, rsync will delete all files in the destination.
 
 <div class="alert alert-danger" role="alert">
 
-Setting incorrect parameters for rsync can result in the deletion of data. Furthermore, RsyncUI does not prevent you from performing such actions. RsyncUI is a complimentary and open-source application. For instructions on how to *verify a task*, new or changed tasks, refer to the *Getting started* or *New tasks* section. 
+Incorrect rsync parameters can delete data, and RsyncUI does not block such choices. See *Getting started* or *New tasks* for how to verify a task before running it.
 
 </div>
 
 ### Temporary halt tasks
 
-A task can be temporarily halted. Within the primary Synchronize view, select the task and right-click. Halting a task will retain the type of task that was halted when the task is resumed. A halted task displays a red stop sign in the action column.
+You can temporarily halt a task. In the Synchronize view, right-click a task to halt it; the task keeps its type when resumed. Halted tasks display a red stop sign in the action column.
 
 {{< figure src="/images/important/halttask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -61,12 +61,10 @@ There are two options to automatically save changes to data when it is changed o
 
 **Option 1:** `rsync` supports a *backup* flag. Switching this *on* in the *Rsync parameters* view adds the required parameters. You may change the backup directory to any location you want.  
 
-**Option 2:** Using *snapshots* requires that the latest version 3.x of `rsync` is installed. Please refer to the *Snapshots* section for information on how to enable and use snapshots.
+**Option 2:** *Snapshots* require rsync 3.x. See *Snapshots* for details on enabling and using them.
 
 </div>
 
 ### Remote servers and SSH
 
-RsyncUI compels data transfer via SSH if the destination is a remote server. The parameter `-e ssh` to rsync enables data transfer to be tunneled via SSH. It appears that recent versions of rsync or SSH do not require this parameter, but for safety, RsyncUI appends it if the destination is a remote server.
-
-Through the SSH tunnel, the transfer is encrypted when transmitted over a network connection. Refer to the *Passwordless login* section for further information on SSH and SSH-keys. This feature cannot be disabled.
+For remote destinations, RsyncUI enforces SSH transport by adding `-e ssh` to rsync. Newer rsync/SSH versions may not require it, but RsyncUI appends it for safety. Transfers are encrypted through the SSH tunnel. See *Passwordless login* for more details. This behavior cannot be disabled.

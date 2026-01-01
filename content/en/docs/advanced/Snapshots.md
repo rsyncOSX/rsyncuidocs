@@ -8,11 +8,11 @@ categories = ["advanced features"]
 
 <div class="alert alert-secondary" role="alert">
 
-Utilizing snapshots is an effective method for restoring previous versions of data and deleted files. Snapshots employ [hardlinks](https://en.wikipedia.org/wiki/Hard_link) to save copies of only modified and deleted files as separate files in a snapshot. Files that remain unchanged are hardlinks to the original file.
+Snapshots are an effective way to restore previous data and deleted files. They use [hardlinks](https://en.wikipedia.org/wiki/Hard_link) to save copies of only modified and deleted files. Unchanged files are hardlinks to the original.
 
 </div>
 
-In every snapshot task, RsyncUI stores the next available snapshot number. The snapshot number is a sequential number incremented by one after each snapshot task execution. The rsync command automatically creates the next snapshot directory by number, and RsyncUI updates the stored snapshot number for the next run. The snapshot number is displayed as part of the log timestamp.
+In each snapshot task, RsyncUI stores the next snapshot number. The number increments by one after each run. Rsync automatically creates the next snapshot directory, and RsyncUI updates the stored number. The number is displayed as part of the log timestamp.
 
 If a file named "file.txt" is saved in the initial snapshot and remains unchanged or is deleted, the "file.txt" in the latest snapshot is a hardlink to the original file in the first snapshot.
 

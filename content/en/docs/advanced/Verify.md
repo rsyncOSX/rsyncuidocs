@@ -8,7 +8,7 @@ categories = ["advanced features"]
 
 <div class="alert alert-secondary" role="alert">
 
-The Verify remote function is by default disabled. Please refer to section *RsyncUI settings, Log settings* to enable. This function also necessitates that the destination be located on a remote server.
+The Verify remote function is disabled by default. See *RsyncUI settings, Log settings* to enable. This function requires the destination to be on a remote server.
 
 </div>
 
@@ -16,11 +16,11 @@ The Verify remote function is by default disabled. Please refer to section *Rsyn
 
 Prior to utilizing this function, kindly consult its documentation to ensure you make the appropriate decision.
 
-The Verify remote function is a specialized tool designed to assist in synchronizing multiple Mac computers to a single remote repository, excluding Git repositories. Additionally, it updates local data from the same remote repository.
+The Verify remote function helps synchronize multiple Macs to a single remote repository (excluding Git repositories) and update local data from the same remote.
 
-This functionality was developed due to a personal need. The developer utilizes two Macs for photo development and data synchronization to a remote folder. The remote repository is not a Git repository, necessitating a tool to determine whether to push or pull data.
+This was built for a personal need. I use two Macs for photo development and synchronize data to a remote folder. The remote is not a Git repository, so a tool was needed to decide whether to push or pull data.
 
-Important: Using the above method requires you to remember from which Mac the latest synchronization was executed. If not, you will most likely lose data. Additionally, you should establish a procedure for using this function. For instance, at home, I always use my Mac Mini M4 to edit photos. When traveling, I always use my MacBook Pro, and it is fully synchronized with my Mac Mini when I leave for travel.
+Important: This method requires you to remember which Mac last synced. If not, you risk data loss. Establish a procedure. For example, at home I always use my Mac Mini M4 to edit photos. When traveling, I always use my MacBook Pro, fully synced with my Mac Mini before I leave.
 
 </div>
 

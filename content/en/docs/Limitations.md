@@ -6,17 +6,17 @@ tags = ["limitations"]
 categories = ["general information"]
 +++
 
-There are a few limitations or constraints to be aware of when using RsyncUI. None of these limitations can result in data corruption or trouble. However, they may inadvertently halt an ongoing synchronization process.
+There are a few limitations to keep in mind. None will corrupt data, but they may interrupt synchronization.
 
 ### Long running tasks and sleep
 
-Upon each Mac sleep, RsyncUI synchronization tasks cease. An active rsync process does not prevent the Mac from sleeping. If the Mac sleeps during a synchronization task, rsync likely generates an error, halting the task. The only method to resume synchronization is to restart it via RsyncUI. RsyncUI will resume and synchronize data not yet transferred. Rsync is adept and resumes from its previous state.
+When the Mac sleeps, RsyncUI tasks stop. An active rsync process does not block sleep. If sleep occurs during sync, rsync will likely error out and stop. Restart the task in RsyncUI; rsync will resume from its previous state.
 
-If the above occurs, RsyncUI will not generate any logs. RsyncUI logs only upon detecting a termination signal from rsync. If the Mac enters sleep during data synchronization, there will be no termination signal and no logging by RsyncUI.
+If this happens, RsyncUI will not log the run because it only logs after receiving a termination signal from rsync.
 
 <div class="alert alert-secondary" role="alert">
 
-You may modify your Mac's sleep settings to control when it sleeps.
+Adjust your Mac's sleep settings to avoid interruptions.
 
 </div>
 
@@ -24,12 +24,12 @@ The above will also be true if you are using the Calendar function.
 
 ### The Schedule
 
-A note about the Schedule and scheduling of actions. There are some limitations on how the scheduler works due to how the Timer library is developed. Refer to the *Schedule* section for more information about this function.
+A note about scheduling: the scheduler relies on the Timer library. See *Schedule* for details.
 
-Its primary function is to automate synchronization of selected tasks as long as RsyncUI is running and you are logged in. It *may* prove useful for users who require scheduled synchronization of data during work. If there are scheduled tasks not executed when the Mac enters sleep mode, they will be explicitly displayed in the Schedule view when the Mac wakes up. 
+The scheduler automates chosen tasks while RsyncUI is running and you are logged in. If the Mac sleeps and a scheduled task is missed, it will be listed in the Schedule view after wake.
 
 ### Aborting Tasks
 
-Please be cognizant that this is an external task not under the control of RsyncUI. It executes the command-line tool `rsync`. RsyncUI monitors the task for progress and termination.
+RsyncUI launches the `rsync` command-line tool and monitors it.
 
-The user has the authority to abort a task at any time. Please allow the abort process to complete and execute any necessary cleanup operations before initiating a new task. This process may take a few seconds. If you don't wait, RsyncUI may become unresponsive.
+You can abort a task at any time. Let the abort finish before starting another task; otherwise RsyncUI may become unresponsive.

@@ -6,9 +6,9 @@ tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: December 21, 2025, version 2.8.4
+Numbers updated: December 21, 2025 (version 2.8.4).
 
-RsyncUI does not rely on external libraries; it is constructed using default Swift libraries and Swift/SwiftUI code exclusively.
+RsyncUI depends only on the standard Swift and SwiftUI toolchain—no external libraries.
 
 ```
 cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/
@@ -37,7 +37,7 @@ SUM:                           207           2588           2522          17369
 
 ##### Swift Packages used by RsyncUI
 
-All SPM packages are refactored, updated, and checked into the main branch. RsyncUI is a depended on all packages, but the last one is not mandatory. SSH keys can be generated via command line.
+All SPM packages are refactored, updated, and tracked in the main branch. RsyncUI depends on all of them except the last, which is optional because SSH keys can be generated from the command line.
 
 - *RsyncProcessStreaming* (https://github.com/rsyncOSX/RsyncProcessStreaming) - A core function of RsyncUI
 	- listens for output from the rsync process as well as termination signal

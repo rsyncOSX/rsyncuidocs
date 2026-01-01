@@ -10,11 +10,11 @@ categories = ["technical details"]
 
 {{% pageinfo color="info" %}}
 
-It is imperative that RsyncUI correctly tags tasks with data to be synchronized. If the tagging fails, some source data may not be synchronized. RsyncUI supports both the latest version of rsync and the older default version included in macOS.
+RsyncUI must tag data accurately; otherwise some source data might not synchronize. RsyncUI supports both the latest rsync release and the legacy macOS default.
 
 {{% /pageinfo %}}
 
-The tagging of data to be synchronized is computed within the ParseRsyncOutput package, a local Swift Package for RsyncUI.
+Tagging is computed in the ParseRsyncOutput Swift package bundled with RsyncUI.
 
 **Example:**
 
@@ -41,7 +41,7 @@ public func returnIntNumber(_ input: String) -> [Int] {
 }
 ```
 
-The parsing of rsync output is not particularly complex, though it differs somewhat between the latest version of rsync and the default versions.
+Parsing the rsync output is straightforward, but the formats differ between the latest rsync release and the default macOS version.
 
 ### Version 3.4.x 
 
@@ -91,8 +91,8 @@ The output from rsync is parsed and numbers are extracted. After parsing, these 
 
 #### Latest Version of rsync
 
-Three numbers determine whether data needs to be synchronized: the number of updates (regular files transferred), new files, and deleted files. Each can be either 0 or a positive number, and all three must be verified.
+Three numbers decide whether data needs synchronization: updates (regular files transferred), new files, and deleted files. Each can be zero or positive, and all three are checked.
 
 #### Default Versions
 
-Only one number determines whether data needs to be synchronized: the number of updates (files transferred).
+Only one number decides: the updates (files transferred).
