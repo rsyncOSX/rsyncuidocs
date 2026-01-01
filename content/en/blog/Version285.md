@@ -27,3 +27,15 @@ Please test the release candidate and report any bugs or other comments via emai
 The primary advancement in this version is the implementation of significant user interface (UI) enhancements. These updates were requested by GitHub user @timreichen (Tim Reichen) to enhance the intuitiveness of RsyncUI. Tim Reichen's input is greatly appreciated. 
 
 The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
+
+### One table
+
+In this version, each tab is assigned a separate table, and only the Inspectors are present on each tabview. I personally find this version to be the most intuitive.
+
+{{< figure src="/images/v285/one.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+### Two tables
+
+The tables are duplicated within each tabview. 
+
+{{< figure src="/images/v285/two.png" alt="" position="center" style="border-radius: 8px;" >}}
