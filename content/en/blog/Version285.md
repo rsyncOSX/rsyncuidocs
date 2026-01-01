@@ -16,12 +16,11 @@ The Add tasks, Update tasks, and Add Parameters to task functionalities have bee
 
 The following features are missing within the release candidate and will be added soon:
 
-1. Validation of SSH parameters within the Parameter view.
-2. A view for displaying the complete rsync command.
-3. Enable full log of output from rsync to file, not part of settings, only valid for current run.
+- validation of SSH parameters within the Parameter view, in code now (not rc)
+- a view for displaying the complete rsync command, in code now (not rc)
+- Enable full log of output from rsync to file, not part of settings, only valid for current run, to be implemented
 
 Please test the release candidate and report any bugs or other comments via email or by adding an Issue. The table and Inspectors may be flipped, but I am uncertain about the optimal arrangement.
-
 
 </div>
 
