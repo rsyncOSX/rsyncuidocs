@@ -18,6 +18,7 @@ The following features are missing within the release candidate and will be adde
 
 1. Validation of SSH parameters within the Parameter view.
 2. A view for displaying the complete rsync command.
+3. Enable full log of output from rsync to file, not part of settings, only valid for current run.
 
 Please test the release candidate and report any bugs or other comments via email or by adding an Issue. The table and Inspectors may be flipped, but I am uncertain about the optimal arrangement.
 
