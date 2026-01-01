@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.5"
-date = "2025-12-31"
+date = “2026-01-01"
 tags = ["changelog","version 2.8.5"]
 categories = ["changelog"]
 +++
@@ -24,19 +24,12 @@ The UI improvements utilize the Inspector view to provide detailed information a
 
 <div class="alert alert-danger" role="alert">
   
-There are two potential outcomes, as outlined below. I am uncertain which one to select. 
+There are two potential outcomes, as outlined below. I am uncertain which one to select. After some consideration and utilizing the “one table” approach, I believe this is the most intuitive version to use.
+
+Please let me know if you have any thoughts on this matter. The plan is to release a test version most likely today, January 1, 2026. 
+
 
 </div>
-
-### Display tables in both tabs
-
-The detail views are implemented by utilizing SwiftUI Inspector view.
-
-{{< figure src="/images/v285/nr1.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v285/nr2.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/v285/nr3.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ### Display one table on the Inspector by tab
 
@@ -44,4 +37,12 @@ The detail views are implemented by utilizing SwiftUI Inspector view.
 
 {{< figure src="/images/v285/nr5.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/v285/nr6.png" alt="" position="center" style="border-radius: 8px;" >}}
+### Display tables in both tabs
+
+The detail views are implemented by utilizing SwiftUI Inspector view.
+
+{{< figure src="/images/v285/nr1.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+{{< figure src="/images/v285/nr3.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+
