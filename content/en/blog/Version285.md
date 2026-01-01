@@ -30,7 +30,7 @@ The UI improvements utilize the Inspector view to provide detailed information a
 
 ### One table
 
-In this version, each tab is assigned a separate table, and only the Inspectors are present on each tabview. I personally find this version to be the most intuitive.
+In this version, only the Inspectors are present on each tabview. I personally find this version to be the most intuitive.
 
 {{< figure src="/images/v285/one.png" alt="" position="center" style="border-radius: 8px;" >}}
 
