@@ -8,9 +8,11 @@ categories = ["changelog"]
 
 ### Version 2.8.5 - Jan 2, 2026 (updated)
 
-Release Candidate 2 introduces a new feature in the user settings, allowing users to select between two versions of Inspector views (as detailed below). A restart of RsyncUI is necessary for the changes to take effect. Additionally, validation of SSH parameters has been incorporated. 
+Release Candidate 2 introduces a new feature in the user settings, allowing users to select between two versions of Inspector views (as detailed below). A restart of RsyncUI is necessary for the changes to take effect. Remeber to save settings before restart. Additionally, validation of SSH parameters has been incorporated. 
 
-The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
+The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet.
+
+If you have any other comments, suggestions regarding the user interface, please send an email or create an issue.
 
 <div class="alert alert-danger" role="alert">
 
