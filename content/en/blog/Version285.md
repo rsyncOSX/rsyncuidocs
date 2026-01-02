@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.5 - Jan 2, 2026
 
-The release candidate is the “one table” version. However, after updating both versions, I am uncertain which one is superior. I have included side-by-side views of both to facilitate comparison below. Please share any feedback you may have. 
+The release candidate is the "one table" version. The code has been updated to support both versions, and I need to determine how to switch between them. It is likely that this will be a user setting. Therefore, there is no longer a need to make a decision, as both versions are supported. 
 
 <div class="alert alert-danger" role="alert">
 
@@ -18,7 +18,7 @@ The following items are missing in this release candidate and will be added soon
 
 - validation of SSH parameters within the Parameter view, in code now (not rc)
 - a view for displaying the complete rsync command, in code now (not rc)
-- Enable full log of output from rsync to file, not part of settings, only valid for current run, to be implemented
+- enable full log of output from rsync to file, not part of settings, only valid for current run, to be implemented
 
 Please test the release candidate and report bugs or feedback via email or GitHub Issues. The table and Inspectors may still change places; I am testing the best layout.
 
