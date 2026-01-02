@@ -6,9 +6,9 @@ tags = ["changelog","version 2.8.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.5 - Jan 2, 2026
+### Version 2.8.5 - Jan 2, 2026 (updated)
 
-The release candidate is the "one table" version. The code has been updated to support both versions, and I need to determine how to switch between them. It is likely that this will be a user setting. Therefore, there is no longer a need to make a decision, as both versions are supported. 
+Release Candidate 2 introduces a new feature in the user settings, allowing users to select between two versions of Inspector views (as detailed below). A restart of RsyncUI is necessary for the changes to take effect. Additionally, validation of SSH parameters has been incorporated. 
 
 The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
 
@@ -16,10 +16,8 @@ The main change in this version is significant UI refinement inspired by feedbac
 
 Add Tasks, Update Tasks, and Add Parameters now live in the main Tasks sidebar. To add a task, use the "+" button on the toolbar. This release brings many adjustments; expect additional small updates, bug fixes, and follow-up QA.
 
-The following items are missing in this release candidate and will be added soon:
+The following function is missing in this release candidate and will be added before release:
 
-- validation of SSH parameters within the Parameter view, in code now (not rc)
-- a view for displaying the complete rsync command, in code now (not rc)
 - enable full log of output from rsync to file, not part of settings, only valid for current run, to be implemented
 
 Please test the release candidate and report bugs or feedback via email or GitHub Issues. The table and Inspectors may still change places; I am testing the best layout.
