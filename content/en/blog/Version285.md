@@ -10,6 +10,8 @@ categories = ["changelog"]
 
 The release candidate is the "one table" version. The code has been updated to support both versions, and I need to determine how to switch between them. It is likely that this will be a user setting. Therefore, there is no longer a need to make a decision, as both versions are supported. 
 
+The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
+
 <div class="alert alert-danger" role="alert">
 
 Add Tasks, Update Tasks, and Add Parameters now live in the main Tasks sidebar. To add a task, use the "+" button on the toolbar. This release brings many adjustments; expect additional small updates, bug fixes, and follow-up QA.
@@ -23,8 +25,6 @@ The following items are missing in this release candidate and will be added soon
 Please test the release candidate and report bugs or feedback via email or GitHub Issues. The table and Inspectors may still change places; I am testing the best layout.
 
 </div>
-
-The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
 
 ### What are the main difference
 
