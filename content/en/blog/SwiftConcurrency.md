@@ -21,7 +21,7 @@ Most work in RsyncUI runs on the main thread. SwiftUI keeps UI updates there by 
 
 - preparing and executing `rsync` synchronization tasks (including building arguments)
 - monitoring progress and termination of `rsync` tasks
-    - progress is tracked via an asynchronous sequence on the main thread driven by notification center events
+    - the collection of output from rsync is performed by an actor, while the actual reporting of the number of files transferred is executed on a main thread for UI updates
 - some write and read operations
 
 ### Swift Version 6 and the New Concurrency Model
