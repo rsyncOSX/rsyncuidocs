@@ -1,14 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.5"
-date = "2026-01-01"
+date = "2026-01-02"
 tags = ["changelog","version 2.8.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.5 - Jan 1, 2026
+### Version 2.8.5 - Jan 2, 2026
 
-The release candidate is the "one table" version described below.
+The release candidate is the “one table” version. However, after updating both versions, I am uncertain which one is superior. I have included side-by-side views of both to facilitate comparison below. Please share any feedback you may have. 
 
 <div class="alert alert-danger" role="alert">
 
@@ -24,18 +24,18 @@ Please test the release candidate and report bugs or feedback via email or GitHu
 
 </div>
 
-The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions.
+The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
 
-The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet. 
+### What are the main difference
 
-### One table
+The “one table” Inspector utilizes a single table for both Tasks and Parameters, and the Inspector is presented within each tab. In contrast, the “two table” version employs two tables, each tab presenting a table and Inspector when selected. This version provides more space for the Inspector.
 
-In this version, only the Inspectors are present on each tabview. I personally find this version to be the most intuitive.
+### Add and Edit tasks
 
-{{< figure src="/images/v285/one.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v285/one1.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v285/two1.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-### Two tables
+### Add and Edit parameters for rsync
 
-The tables are duplicated within each tabview. 
-
-{{< figure src="/images/v285/two.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v285/one2.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v285/two2.png" alt="" position="center" style="border-radius: 8px;" >}}
