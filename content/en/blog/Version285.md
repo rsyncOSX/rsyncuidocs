@@ -18,6 +18,14 @@ Add Tasks and Update Tasks, Add and Update Parameters now live in the main Tasks
 
 </div>
 
+### Documents by AI
+
+With the assistance of AI, there may be approximately three documents of interest.
+
+- a detailed [Changelog](https://github.com/rsyncOSX/RsyncUI/blob/main/CHANGELOG.md)
+- a [TODO list](https://github.com/rsyncOSX/RsyncUI/blob/main/TODO.md)
+- a [Code Quality Report](https://github.com/rsyncOSX/RsyncUI/blob/main/CODE_QUALITY_ANALYSIS_COMPREHENSIVE.md)
+
 ### What are the main difference
 
 The “one table” Inspector utilizes a single table for both Tasks and Parameters, and the Inspector is presented within each tab. In contrast, the “two table” version employs two tables, each tab presenting a table and Inspector when selected. This version provides more space for the Inspector.
