@@ -45,6 +45,11 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 - default "on"
 - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
+**Use two tavles Inspector**
+
+- apply to main Sidebar menu Tasks
+- utlize one or two tables for select Inspector for edit tasks and parameters
+
 **Silence missing stats**
 
 - default: off
