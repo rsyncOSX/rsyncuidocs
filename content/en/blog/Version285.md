@@ -1,28 +1,20 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.5"
-date = "2026-01-02"
+date = "2026-01-03"
 tags = ["changelog","version 2.8.5"]
 categories = ["changelog"]
 +++
 
-### Version 2.8.5 - Jan 2, 2026 (updated)
+### Version 2.8.5 - Jan 3, 2026
 
-Release Candidate 2 introduces a new feature in the user settings, allowing users to select between two versions of Inspector views (as detailed below). A restart of RsyncUI is necessary for the changes to take effect. Remeber to save settings before restart. Additionally, validation of SSH parameters has been incorporated. 
+The release introduces a new feature in the user settings, allowing users to select between two versions of Inspector views (as detailed below). A restart of RsyncUI is necessary for the changes to take effect. Remeber to save settings before restart. Additionally, validation of SSH parameters has been incorporated. 
 
 The main change in this version is significant UI refinement inspired by feedback from GitHub user @timreichen (Tim Reichen). Thank you for the suggestions. The UI improvements utilize the Inspector view to provide detailed information about tasks. Adding new tasks is now facilitated through a dedicated sheet.
 
-If you have any other comments, suggestions regarding the user interface, please send an email or create an issue.
-
 <div class="alert alert-danger" role="alert">
 
-Add Tasks, Update Tasks, and Add Parameters now live in the main Tasks sidebar. To add a task, use the "+" button on the toolbar. This release brings many adjustments; expect additional small updates, bug fixes, and follow-up QA.
-
-The following function is missing in this release candidate and will be added before release:
-
-- enable full log of output from rsync to file, not part of settings, only valid for current run, to be implemented
-
-Please test the release candidate and report bugs or feedback via email or GitHub Issues. The table and Inspectors may still change places; I am testing the best layout.
+Add Tasks and Update Tasks, Add and Update Parameters now live in the main Tasks sidebar menu. To add a task, use the "+" button on the toolbar. This release brings many adjustments.
 
 </div>
 
