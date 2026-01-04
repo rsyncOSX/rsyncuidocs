@@ -28,7 +28,7 @@ As a safety precaution, `--delete` is *not* enabled by default on new tasks. Tur
 
 #### Add and remove the delete parameter
 
-Select *Rsync parameters* from the Sidebar, choose a task, and toggle *Add --delete parameter* (**ON** means included). After toggling, remember to update the task.
+Select *Parameters* tab within the Tasks menu, select the task, and toggle *Add --delete parameter* (**ON** means included). After toggling, remember to update the task.
 
 - if ON, the --delete parameter is included
 - if OFF, the --delete parameter is removed
@@ -64,7 +64,3 @@ There are two options to automatically save changes to data when it is changed o
 **Option 2:** *Snapshots* require rsync 3.x. See *Snapshots* for details on enabling and using them.
 
 </div>
-
-### Remote servers and SSH
-
-For remote destinations, RsyncUI enforces SSH transport by adding `-e ssh` to rsync. Newer rsync/SSH versions may not require it, but RsyncUI appends it for safety. Transfers are encrypted through the SSH tunnel. See *Passwordless login* for more details. This behavior cannot be disabled.

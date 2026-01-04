@@ -12,7 +12,7 @@ New users should read *Important* first, then see *Latest version of rsync* for 
 
 Concealing actions reduces menu clutter and keeps focus on common tasks.
 
-Use `⌘S` or the Task main menu to show or hide Charts, Quick task, log view, and other options that are hidden by default. The primary Sidebar menu is also context-sensitive; see the concealing options at the end of this page.
+Use `⌘S` or the Task main menu to show or hide Charts, Quick task, log view, and other options that are hidden by default. The primary Sidebar menu is also context-sensitive.
 
 ### New Tasks and Verification
 
@@ -30,7 +30,7 @@ To sync to a local attached disk, connect the disk, add *source* and *destinatio
 
 To sync to a remote server (internet or LAN), set up passwordless SSH. With SSH keys in place, add *source*, *destination*, *login id*, and *server name* and you can synchronize. Without passwordless login, additional setup is required.
 
-**Verify tasks**
+#### Verify tasks
 
 <div class="alert alert-danger" role="alert">
 
@@ -68,8 +68,6 @@ Version openrsync:
 
 {{< figure src="/images/gettingstarted/linesopenrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-### Concealing Options
-
 #### The Sidebar Menu options
 
 Three Sidebar menu options depend on task properties. If any task meets the requirement, the option appears.
@@ -86,12 +84,3 @@ Three Sidebar menu options depend on task properties. If any task meets the requ
 If the Sidebar is hidden, click the Hide Sidebar icon (top left) or toggle *Hide the Sidebar on startup* in Settings.
 
 </div>
-
-#### The menu bar
-
-Toggle the shortcut `⌘S`:
-
-{{< figure src="/images/gettingstarted/hidden.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-{{< figure src="/images/gettingstarted/presented.png" alt="" position="center" style="border-radius: 8px;" >}}
-
