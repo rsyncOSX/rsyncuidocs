@@ -20,11 +20,7 @@ Add Tasks and Update Tasks, Add and Update Parameters now live in the main Tasks
 
 ### Documents by AI
 
-With the assistance of AI, there may be approximately three documents of interest.
-
-- a detailed [Changelog](https://github.com/rsyncOSX/RsyncUI/blob/main/CHANGELOG.md)
-- a [TODO list](https://github.com/rsyncOSX/RsyncUI/blob/main/TODO.md)
-- a [Code Quality Report](https://github.com/rsyncOSX/RsyncUI/blob/main/CODE_QUALITY_ANALYSIS_COMPREHENSIVE.md)
+With the assistance of AI, a [Code Quality Report](https://github.com/rsyncOSX/RsyncUI/blob/main/QUALITY_ANALYSIS_DETAILED.md) may be of interest.
 
 ### What are the main difference
 
