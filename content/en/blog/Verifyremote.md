@@ -8,6 +8,12 @@ categories = ["technical details"]
 
 ### Overview
 
+<div class="alert alert-danger" role="alert">
+
+This function has been removed from RsyncUI version 2.8.6  (January 8, 2026). It will be developed as a standalone application and may delete data if used improperly.
+
+</div>
+
 This post describes how I use the *Verify remote* function.
 
 ### The Remote Setup

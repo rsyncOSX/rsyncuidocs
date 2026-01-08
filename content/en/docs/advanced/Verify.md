@@ -6,7 +6,9 @@ tags = ["verify remote","synchronize"]
 categories = ["advanced features"]
 +++
 
-<div class="alert alert-secondary" role="alert">
+<div class="alert alert-danger" role="alert">
+
+This function has been removed from RsyncUI version 2.8.6  (January 8, 2026). It will be developed as a standalone application and may delete data if used improperly.
 
 The Verify remote function is disabled by default. See *RsyncUI settings, Log settings* to enable. This function requires the destination to be on a remote server.
 
