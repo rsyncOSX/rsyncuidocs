@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ### Version 2.8.6 - Jan 9, 2026
 
-This release is a maintenance update.
+This release is a maintenance update. *The previous release candidate has been upgraded to the new release without the need for a new build.*
 
 There are a few UI updates.
 
