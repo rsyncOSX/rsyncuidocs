@@ -23,6 +23,8 @@ For further details, please refer to the following documents:
 
 The "missing stats alert" continues to occasionally appear. The package responsible for controlling the rsync process has been updated in development to resolve this issue. While I am aware of the cause of the problem, finding a solution that does not require setting a dedicated wait time appears to be somewhat challenging. However, I am actively working on this matter. To be released in next version.
 
+In addition (in development), I have incorporated writing debug data within the package that processes the output from rsync. Whenever the "no stats" error is encountered, the package writes the complete output to storage for further investigation.
+
 </div>
 
 ### Empty stats file (no stats)
