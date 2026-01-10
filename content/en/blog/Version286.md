@@ -21,9 +21,9 @@ For further details, please refer to the following documents:
 
 <div class="alert alert-danger" role="alert">
 
-The "missing stats alert" continues to occasionally appear. The package responsible for controlling the rsync process has been updated in development to resolve this issue. While I am aware of the cause of the problem, finding a solution that does not require setting a dedicated wait time appears to be somewhat challenging. However, I am actively working on this matter. To be released in next version.
+The “missing stats alert” continues to occasionally appear. The data synchronization is complete, but RsyncUI is reporting missing summary data. The package responsible for controlling the rsync process has been updated in development to resolve this issue. While I am aware of the cause of the problem, finding a solution that does not require setting a dedicated wait time appears to be somewhat challenging. However, I am actively working on this matter. The solution is scheduled to be released in the next version, 2.8.7, which is expected to be released later in January 2026.
 
-In addition (in development), I have incorporated writing debug data within the package that processes the output from rsync. Whenever the "no stats" error is encountered, the package writes the complete output to storage for further investigation.
+Additionally (in development), I have incorporated writing debug data within the package that processes the output from rsync. Whenever the “no stats” error is encountered, the package writes the complete output to storage for further investigation.
 
 </div>
 
@@ -56,14 +56,9 @@ Matched data: 0 bytes
 File list size: 280,193
 ```
 
-This is what the output should be:
+This is what the trailing output should be:
 
 ```
-sending incremental file list
-RsyncUI/.git/
-rsyncuidocs/content/en/blog/
-rsyncuidocs/content/en/blog/Version286.md
-
 Number of files: 34,463 (reg: 28,218, dir: 6,201, link: 44)
 Number of created files: 0
 Number of deleted files: 0
@@ -72,7 +67,7 @@ Total file size: 2,578,505,001 bytes
 Total transferred file size: 3,957 bytes
 Literal data: 0 bytes
 Matched data: 0 bytes
-File list size: 24,576
+File list size: 24,576 <-- "This is were the above trailing ouput is cut off and causing an error"
 File list generation time: 0.002 seconds
 File list transfer time: 0.000 seconds
 Total bytes sent: 1,261,175
