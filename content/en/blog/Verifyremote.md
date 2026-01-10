@@ -10,7 +10,7 @@ categories = ["technical details"]
 
 <div class="alert alert-danger" role="alert">
 
-This function has been removed from RsyncUI version 2.8.6  (January 8, 2026). It will be developed as a standalone application and may delete data if used improperly.
+This function has been removed from RsyncUI version 2.8.6  (January 8, 2026).
 
 Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to utilize it independently rather than as a component of RsyncUI.
 
