@@ -14,7 +14,7 @@ Custom SSH key pairs must follow the format `~/.ssh_keypath/identityfile`, and t
 
 </div>
 
-## SSH Key Methods
+### SSH Key Methods
 
 RsyncUI supports two approaches:
 
@@ -23,15 +23,15 @@ RsyncUI supports two approaches:
 
 With default keys, RsyncUI doesn't add extra SSH parameters. Custom keys require additional parameters.
 
-## Step-by-Step: Creating Custom SSH Keys
+### Step-by-Step: Creating Custom SSH Keys
 
-### Step 1: Create the SSH Directory
+#### Step 1: Create the SSH Directory
 ```bash
 cd
 mkdir .ssh_rsyncosx
 ```
 
-### Step 2: Generate the Key Pair
+#### Step 2: Generate the Key Pair
 ```bash
 ssh-keygen -t rsa -N "" -f ~/.ssh_rsyncosx/rsyncosx
 ```
@@ -41,7 +41,7 @@ ssh-keygen -t rsa -N "" -f ~/.ssh_rsyncosx/rsyncosx
 - `-N ""` - Sets no password (empty passphrase)
 - `-f ~/.ssh_rsyncosx/rsyncosx` - Specifies where to save the keys
 
-### Step 3: Copy Public Key to Server
+#### Step 3: Copy Public Key to Server
 ```bash
 ssh-copy-id -i ~/.ssh_rsyncosx/rsyncosx.pub -p NN user@server
 ```
@@ -51,12 +51,21 @@ Replace:
 - `user` with your remote username
 - `server` with your server address
 
-### Step 4: Set Correct Permissions
+#### Step 4: Set Correct Permissions
 ```bash
 chmod 700 ~/.ssh_rsyncosx
 ```
 
-### Step 5: Configure RsyncUI
+#### Step 5: Verify the SSH-key
+```bash
+/usr/bin/ssh -p NN -i ~/.ssh_rsyncosx/rsyncosx user@server
+```
+Replace:
+- `NN` with your SSH port number (default is 22)
+- `user` with your remote username
+- `server` with your server address
+
+#### Step 6: Configure RsyncUI
 
 Add your custom SSH keypath and identity file in RsyncUI's user configuration. RsyncUI will automatically apply these settings.
 
