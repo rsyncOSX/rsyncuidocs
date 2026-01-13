@@ -10,6 +10,14 @@ categories = ["changelog"]
 
 I am releasing this as a development build for testing purposes. The two packages listed below are essential for the proper functioning of RsyncUI. The updated package should resolve the issue “no stats”.
 
+<div class="alert alert-danger" role="alert">
+
+It appears that the updated package fulfills its intended purpose. I have not encountered the "no stats" issue after the update, and several users have downloaded it. For the time being, it will remain a release candidate. However, without a new build, it will become the next release if no issues are reported.
+
+It is anticipated that it will become the next release in approximately one week. 
+
+</div>
+
 In contrast to version 2.8.6, this development build introduces only two updates: an updated [package RsyncProcessStreaming](https://github.com/rsyncOSX/RsyncProcessStreaming) and a function in [package ParseRsyncOutput](https://github.com/rsyncOSX/ParseRsyncOutput) that writes debug data to a text file if the “no stats” issue occurs.
 
 For further details about RsyncProcessStreaming, please refer to the following document:

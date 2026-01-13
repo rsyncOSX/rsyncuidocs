@@ -41,7 +41,7 @@ The function is not intended to be automated. Users must verify their subsequent
 
 </div>
 
-#### Synchronization of Multiple Macs to a Remote Server
+### Synchronization of Multiple Macs to a Remote Server
 
 I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
 
@@ -64,7 +64,7 @@ The outcome is as follows:
 
 If there are zero rows, most likely, *source*  and *destination* are in sync. 
 
-#### Itemized output - push or pull
+### Itemized output - push or pull
 
 The parameter `-i` or `--itemize-changes` produces details about each file. The format of the output is:
 
@@ -100,3 +100,17 @@ YXcstpoguax
         `--- u: The u slot is reserved for future use.
          `-- a: The ACL information changed
 ```
+
+### The Stand alone application
+
+<div class="alert alert-danger" role="alert">
+
+Utilize RsyncUI to create tasks. The application necessitates RsyncUI for task creation and the activation of version 3.x of rsync. Furthermore, it is imperative that you thoroughly review the introductory section of this blog post, which elucidates the application's usage. I exclusively employ this application for synchronizing my bird photographs.
+
+</div>
+
+This application is currently in development. The majority of the code is derived from the code base of RsyncUI, and there are some new code modules associated with the Verify Remote function. Additionally, some new views have been added for evaluation purposes.
+
+{{< figure src="/images/verifyremote/main.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/pushpull.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/pushonly.png" alt="" position="center" style="border-radius: 8px;" >}}
