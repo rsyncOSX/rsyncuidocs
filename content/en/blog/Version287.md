@@ -1,12 +1,14 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.8.7"
-date = "2026-01-10"
+date = "2026-01-13"
 tags = ["changelog","version 2.8.7"]
 categories = ["changelog"]
 +++
 
 ### Version 2.8.7 - Jan 10, 2026 dev build
+
+Update Jan 13, 2026
 
 I am releasing this as a development build for testing purposes. The two packages listed below are essential for the proper functioning of RsyncUI. The updated package should resolve the issue “no stats”.
 
