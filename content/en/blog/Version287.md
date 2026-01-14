@@ -8,9 +8,9 @@ categories = ["changelog"]
 
 ### Version 2.8.7 - Jan 10, 2026 dev build
 
-Update Jan 13, 2026
+Update Jan 14, 2026
 
-I am releasing this as a development build for testing purposes. The two packages listed below are essential for the proper functioning of RsyncUI. The updated package should resolve the issue “no stats”.
+In the coming days, I will release a release candidate for the new application, [RsyncVerify](https://github.com/rsyncOSX/RsyncVerify). This application replaces the functionality that was removed from RsyncUI. You can read about the application in the blog post titled “Verify remote.” The application includes parsing and tagging of each line of output. It is important to note that RsyncVerify is **not** a replacement for RsyncUI. The motivation for developing VerifyRemote is outlined in the blog post.
 
 <div class="alert alert-danger" role="alert">
 
