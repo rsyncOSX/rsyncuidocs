@@ -14,6 +14,8 @@ This function has been removed from RsyncUI version 2.8.6  (January 8, 2026).
 
 Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to utilize it independently rather than as a component of RsyncUI.
 
+Utilizing the rsync parameter `--itemize-changes` will result in increased output from rsync. This parameter instructs rsync to generate a summary of changes for each file or directory it processes.
+
 </div>
 
 ### The Remote Setup
