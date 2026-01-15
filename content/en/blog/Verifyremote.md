@@ -107,3 +107,352 @@ This application is currently in development. The majority of the code is derive
 {{< figure src="/images/verifyremote/details1.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/verifyremote/details2.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/verifyremote/details3.png" alt="" position="center" style="border-radius: 8px;" >}}
+
+
+# rsync --itemize-changes Output Documentation
+
+## Overview
+
+The `--itemize-changes` (or `-i`) option in rsync provides a detailed, itemized list of changes being made to each file during synchronization. The output format is an 11-character string followed by the file path. 
+
+## Output Format
+
+```
+YXcstpoguax  path/to/file
+```
+
+Where:
+- **Y** = Update type (what operation is being performed)
+- **X** = File type (what kind of item is being updated)
+- **cstpoguax** = Attribute changes (what properties have changed)
+
+---
+
+## Position 1: Update Type (Y)
+
+The first character indicates the type of update operation. 
+
+| Character | Meaning | Description |
+|-----------|---------|-------------|
+| `<` | Sent | File is being transferred to the remote host (sent) |
+| `>` | Received | File is being transferred to the local host (received) |
+| `c` | Local change | Local change/creation occurring (e.g., creating a directory, changing a symlink) |
+| `h` | Hard link | Item is a hard link to another item (requires `--hard-links` option) |
+| `.` | Not updated | Item is not being updated (though attributes may be modified) |
+| `*` | Message | Rest of line contains a message (e.g., "deleting") |
+
+---
+
+## Position 2: File Type (X)
+
+The second character indicates what type of filesystem object is being updated.
+
+| Character | Type | Description |
+|-----------|------|-------------|
+| `f` | File | Regular file |
+| `d` | Directory | Directory |
+| `L` | Symlink | Symbolic link |
+| `D` | Device | Device file |
+| `S` | Special | Special file (e.g., named sockets, fifos) |
+
+---
+
+## Position 3: Checksum/Content (c)
+
+| Character | Meaning | Context |
+|-----------|---------|---------|
+| `c` | Changed | Checksum differs (regular files) OR changed value (symlinks, devices, special files) |
+| `+` | New | New item being created |
+| `.` | Unchanged | No change to content/checksum |
+| ` ` (space) | Same | Content is the same |
+
+---
+
+## Position 4: Size (s)
+
+| Character | Meaning |
+|-----------|---------|
+| `s` | Size differs from source |
+| `+` | New item |
+| `.` | Size unchanged |
+
+---
+
+## Position 5:  Modification Time (t)
+
+| Character | Meaning |
+|-----------|---------|
+| `t` | Modification time is different (lowercase) |
+| `T` | Modification time is different (uppercase variant) |
+| `+` | New item |
+| `.` | Time unchanged |
+
+---
+
+## Position 6: Permissions (p)
+
+| Character | Meaning |
+|-----------|---------|
+| `p` | Permissions are different |
+| `+` | New item |
+| `.` | Permissions unchanged |
+
+---
+
+## Position 7: Owner (o)
+
+| Character | Meaning |
+|-----------|---------|
+| `o` | Owner is different |
+| `+` | New item |
+| `.` | Owner unchanged |
+
+---
+
+## Position 8: Group (g)
+
+| Character | Meaning |
+|-----------|---------|
+| `g` | Group is different |
+| `+` | New item |
+| `.` | Group unchanged |
+
+---
+
+## Position 9: User/Reserved (u)
+
+| Character | Meaning |
+|-----------|---------|
+| `u` | Reserved for future use (may indicate access time or creation time in some rsync versions) |
+| `+` | New item |
+| `.` | Unchanged |
+
+**Note:** This position is reserved and its behavior may vary between rsync versions.
+
+---
+
+## Position 10: ACL (a)
+
+| Character | Meaning |
+|-----------|---------|
+| `a` | ACL (Access Control List) information changed |
+| `+` | New item with ACL |
+| `.` | ACL unchanged |
+
+**Note:** Requires ACL support to be compiled into rsync.
+
+---
+
+## Position 11: Extended Attributes (x)
+
+| Character | Meaning |
+|-----------|---------|
+| `x` | Extended attribute (xattr) information changed |
+| `+` | New item with extended attributes |
+| `.` | Extended attributes unchanged |
+
+**Note:** Requires extended attribute support to be compiled into rsync.
+
+---
+
+## Common Examples
+
+### New Files
+
+```
+>f+++++++++ documents/report.pdf
+```
+- `>` = Receiving from remote
+- `f` = Regular file
+- `+++++++++` = All attributes are new (new file)
+
+### Updated File
+
+```
+>f. st.. .... images/photo.jpg
+```
+- `>` = Receiving from remote
+- `f` = Regular file
+- `s` = Size changed
+- `t` = Modification time changed
+- Other attributes unchanged
+
+### Directory Timestamp Change
+
+```
+.d..t...... src/components/
+```
+- `.` = Not being transferred (no update)
+- `d` = Directory
+- `t` = Modification time changed
+- Other attributes unchanged
+
+### Permission Change
+
+```
+.f... p. .... scripts/deploy.sh
+```
+- `.` = Not being transferred
+- `f` = Regular file
+- `p` = Permissions changed (e.g., made executable)
+- Other attributes unchanged
+
+### New Directory
+
+```
+cd+++++++++ backup/2024/
+```
+- `c` = Local creation
+- `d` = Directory
+- `+++++++++` = All attributes are new
+
+### Symlink Changes
+
+```
+cLc.t...... config/current -> v2.0
+```
+- `c` = Local change
+- `L` = Symlink
+- `c` = Target/value changed (position 3)
+- `t` = Modification time changed
+- Other attributes unchanged
+
+### Hard Link
+
+```
+hf...... .... docs/readme.txt => docs/README.txt
+```
+- `h` = Hard link
+- `f` = File
+- Other positions indicate which attributes differ between the link and its target
+
+### Deletion
+
+```
+*deleting   old/obsolete.txt
+```
+- `*` = Special message
+- Message indicates file is being deleted
+
+### File Being Sent
+
+```
+<f. st...... data/export.csv
+```
+- `<` = Sending to remote
+- `f` = Regular file
+- `s` = Size differs
+- `t` = Time differs
+
+### Complex Example:  Multiple Changes
+
+```
+>f.stpog...  /var/www/index.html
+```
+- `>` = Receiving file
+- `f` = Regular file
+- `s` = Size changed
+- `t` = Modification time changed
+- `p` = Permissions changed
+- `o` = Owner changed
+- `g` = Group changed
+
+---
+
+## Tips for Parsing
+
+### Using with rsync
+
+```bash
+# Show itemized changes during sync
+rsync -avhi source/ destination/
+
+# Dry run to see what would change
+rsync -avhin source/ destination/
+
+# Show only transferred files
+rsync -avhi source/ destination/ | grep '^>'
+
+# Show only new files
+rsync -avhi source/ destination/ | grep '+++++++'
+```
+
+### Filtering Output
+
+```bash
+# Files with size changes
+rsync -avhi source/ dest/ | grep '^. f..s'
+
+# Files with permission changes
+rsync -avhi source/ dest/ | grep '^. f.... p'
+
+# New files only
+rsync -avhi source/ dest/ | grep '^>f+++++++'
+
+# Directories with timestamp changes
+rsync -avhi source/ dest/ | grep '^.d..t'
+```
+
+### Regular Expression for Parsing
+
+For parsing in scripts, the format follows this pattern:
+
+```regex
+^[<>ch.]f[c. +][s.+][tT. +][p.+][o. +][g.+][uz.+][a.+]? [x.+]?\s(. +)$
+```
+
+**Note:** The `a` and `x` positions may be absent in older rsync versions (2.x), which used a 9-character format instead of 11.
+
+---
+
+## Version Differences
+
+### rsync 3.0.9+ (Modern)
+- Uses 11 characters:  `YXcstpoguax`
+- Includes ACL (`a`) and extended attributes (`x`)
+
+### rsync 2.6.8 and earlier (Legacy)
+- Uses 9 characters: `YXcstpogz`
+- No ACL or extended attribute indicators
+- Position 9 was `z` (related to compression)
+
+---
+
+## Quick Reference Card
+
+```
+Position  Letter  Meaning
+--------  ------  ----------------------------------
+    1       Y     Update type (<, >, c, h, ., *)
+    2       X     File type (f, d, L, D, S)
+    3       c     Checksum/content
+    4       s     Size
+    5       t     Time (modification)
+    6       p     Permissions
+    7       o     Owner
+    8       g     Group
+    9       u     Reserved/user time
+   10       a     ACL
+   11       x     Extended attributes
+
+Special:  '.' = unchanged, '+' = new item
+```
+
+Key Fixes
+Format String Length: Fixed all records to have exactly 11 characters in the format part
+
+Attribute Positions: Corrected positions for attributes in the rsync format:
+
+- Position 0: Update type (., >, <, c, h, *)
+- Position 1: File type (f, d, L, D, S)
+- Position 2: Checksum (c)
+- Position 3: Size (s)
+- Position 4: Time (t or T)
+- Position 5: Permissions (p)
+- Position 6: Owner (o)
+- Position 7: Group (g)
+- Position 8: Reserved (u)
+- Position 9: ACL (a)
+- Position 10: Extended attributes (x)
+- Position 11: MUST be a space
+- Position 12+: File path
