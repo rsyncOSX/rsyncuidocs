@@ -91,6 +91,23 @@ YXcstpoguax
         `--- u: The u slot is reserved for future use.
          `-- a: The ACL information changed
 ```
+```
+Position  Letter  Meaning
+--------  ------  ----------------------------------
+    1       Y     Update type (<, >, c, h, ., *)
+    2       X     File type (f, d, L, D, S)
+    3       c     Checksum/content
+    4       s     Size
+    5       t     Time (modification)
+    6       p     Permissions
+    7       o     Owner
+    8       g     Group
+    9       u     Reserved/user time
+   10       a     ACL
+   11       x     Extended attributes
+
+Special:  '.' = unchanged, '+' = new item
+```
 
 ### The Stand alone application
 
@@ -103,32 +120,14 @@ Utilize RsyncUI to create tasks. The application necessitates RsyncUI for task c
 This application is currently in development. The majority of the code is derived from the code base of RsyncUI, and there are some new code modules associated with the Verify Remote function. Additionally, some new views have been added for evaluation purposes.
 
 {{< figure src="/images/verifyremote/main.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/pushpull.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/details1.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/details2.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/details3.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-
-# rsync --itemize-changes Output Documentation
+{{< figure src="/images/verifyremote/tagged.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/notag.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 ## Overview
 
 The `--itemize-changes` (or `-i`) option in rsync provides a detailed, itemized list of changes being made to each file during synchronization. The output format is an 11-character string followed by the file path. 
 
-## Output Format
-
-```
-YXcstpoguax  path/to/file
-```
-
-Where:
-- **Y** = Update type (what operation is being performed)
-- **X** = File type (what kind of item is being updated)
-- **cstpoguax** = Attribute changes (what properties have changed)
-
----
-
-## Position 1: Update Type (Y)
+### Position 1: Update Type (Y)
 
 The first character indicates the type of update operation. 
 
@@ -143,7 +142,7 @@ The first character indicates the type of update operation.
 
 ---
 
-## Position 2: File Type (X)
+### Position 2: File Type (X)
 
 The second character indicates what type of filesystem object is being updated.
 
@@ -157,7 +156,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 3: Checksum/Content (c)
+### Position 3: Checksum/Content (c)
 
 | Character | Meaning | Context |
 |-----------|---------|---------|
@@ -168,7 +167,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 4: Size (s)
+### Position 4: Size (s)
 
 | Character | Meaning |
 |-----------|---------|
@@ -178,7 +177,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 5:  Modification Time (t)
+### Position 5:  Modification Time (t)
 
 | Character | Meaning |
 |-----------|---------|
@@ -189,7 +188,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 6: Permissions (p)
+### Position 6: Permissions (p)
 
 | Character | Meaning |
 |-----------|---------|
@@ -199,7 +198,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 7: Owner (o)
+### Position 7: Owner (o)
 
 | Character | Meaning |
 |-----------|---------|
@@ -209,7 +208,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 8: Group (g)
+### Position 8: Group (g)
 
 | Character | Meaning |
 |-----------|---------|
@@ -219,7 +218,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 9: User/Reserved (u)
+### Position 9: User/Reserved (u)
 
 | Character | Meaning |
 |-----------|---------|
@@ -231,7 +230,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 10: ACL (a)
+### Position 10: ACL (a)
 
 | Character | Meaning |
 |-----------|---------|
@@ -243,7 +242,7 @@ The second character indicates what type of filesystem object is being updated.
 
 ---
 
-## Position 11: Extended Attributes (x)
+### Position 11: Extended Attributes (x)
 
 | Character | Meaning |
 |-----------|---------|
@@ -357,54 +356,6 @@ hf...... .... docs/readme.txt => docs/README.txt
 - `o` = Owner changed
 - `g` = Group changed
 
----
-
-## Tips for Parsing
-
-### Using with rsync
-
-```bash
-# Show itemized changes during sync
-rsync -avhi source/ destination/
-
-# Dry run to see what would change
-rsync -avhin source/ destination/
-
-# Show only transferred files
-rsync -avhi source/ destination/ | grep '^>'
-
-# Show only new files
-rsync -avhi source/ destination/ | grep '+++++++'
-```
-
-### Filtering Output
-
-```bash
-# Files with size changes
-rsync -avhi source/ dest/ | grep '^. f..s'
-
-# Files with permission changes
-rsync -avhi source/ dest/ | grep '^. f.... p'
-
-# New files only
-rsync -avhi source/ dest/ | grep '^>f+++++++'
-
-# Directories with timestamp changes
-rsync -avhi source/ dest/ | grep '^.d..t'
-```
-
-### Regular Expression for Parsing
-
-For parsing in scripts, the format follows this pattern:
-
-```regex
-^[<>ch.]f[c. +][s.+][tT. +][p.+][o. +][g.+][uz.+][a.+]? [x.+]?\s(. +)$
-```
-
-**Note:** The `a` and `x` positions may be absent in older rsync versions (2.x), which used a 9-character format instead of 11.
-
----
-
 ## Version Differences
 
 ### rsync 3.0.9+ (Modern)
@@ -416,43 +367,5 @@ For parsing in scripts, the format follows this pattern:
 - No ACL or extended attribute indicators
 - Position 9 was `z` (related to compression)
 
----
 
-## Quick Reference Card
 
-```
-Position  Letter  Meaning
---------  ------  ----------------------------------
-    1       Y     Update type (<, >, c, h, ., *)
-    2       X     File type (f, d, L, D, S)
-    3       c     Checksum/content
-    4       s     Size
-    5       t     Time (modification)
-    6       p     Permissions
-    7       o     Owner
-    8       g     Group
-    9       u     Reserved/user time
-   10       a     ACL
-   11       x     Extended attributes
-
-Special:  '.' = unchanged, '+' = new item
-```
-
-Key Fixes
-Format String Length: Fixed all records to have exactly 11 characters in the format part
-
-Attribute Positions: Corrected positions for attributes in the rsync format:
-
-- Position 0: Update type (., >, <, c, h, *)
-- Position 1: File type (f, d, L, D, S)
-- Position 2: Checksum (c)
-- Position 3: Size (s)
-- Position 4: Time (t or T)
-- Position 5: Permissions (p)
-- Position 6: Owner (o)
-- Position 7: Group (g)
-- Position 8: Reserved (u)
-- Position 9: ACL (a)
-- Position 10: Extended attributes (x)
-- Position 11: MUST be a space
-- Position 12+: File path
