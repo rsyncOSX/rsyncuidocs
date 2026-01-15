@@ -18,7 +18,11 @@ Utilizing the rsync parameter `--itemize-changes` will result in increased outpu
 
 </div>
 
-### The Remote Setup
+### Synchronization of Multiple Macs to a Remote Server
+
+I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
+
+### My Setup for securing bird photos
 
 I back up my bird photography to multiple locations:
 
@@ -43,11 +47,7 @@ The function is not intended to be automated. Users must verify their subsequent
 
 </div>
 
-### Synchronization of Multiple Macs to a Remote Server
-
-I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
-
-#### Arguments for rsync
+### Arguments for rsync
 
 The following arguments are used in both push and pull.
 
@@ -55,18 +55,7 @@ The following arguments are used in both push and pull.
 - `--dry-run` - rsync execute an estimate run
 - `--update` - evaluates the timestamp
 
-The result from the `pull` command is subtracted from the result of the `push` command. Conversely, the `push` command is subtracted
-from the result of the `pull` command. After both subtractions, the resulting arrays are compared based on the number of rows.
-
-The outcome is as follows:
-
-- If `pull` has more data than `push`, it is *likely* that the *destination* is more up-to-date than the *source*
-- If `push` has more data than `pull`, it is *likely* that the *source* is more up-to-date than the *destination*
-- If the number of rows is equal, it is *likely* that the *source* is more up-to-date than the *destination*
-
-If there are zero rows, most likely, *source*  and *destination* are in sync. 
-
-### Itemized output - push or pull
+#### Itemized output - push or pull
 
 The parameter `-i` or `--itemize-changes` produces details about each file. The format of the output is:
 
@@ -115,4 +104,6 @@ This application is currently in development. The majority of the code is derive
 
 {{< figure src="/images/verifyremote/main.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/verifyremote/pushpull.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/pushonly.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/details1.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/details2.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/verifyremote/details3.png" alt="" position="center" style="border-radius: 8px;" >}}
