@@ -34,7 +34,7 @@ For a comprehensive list of parameters for `rsync`, please refer to the official
 
 ### Task-Specific SSH Parameter 
 
-If you rely on default SSH keys and no SSH info is set in RsyncUI, the parameter `-e ssh` is appended so data is tunneled and encrypted. This applies only to remote tasks and restores.
+If you use default SSH keys and no custom SSH settings are configured in RsyncUI, the parameter `-e ssh` is appended so data is tunneled and encrypted. This applies only to remote tasks and restores.
 
 Task-specific SSH parameters override global SSH settings.
 

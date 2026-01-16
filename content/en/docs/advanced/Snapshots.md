@@ -8,7 +8,7 @@ categories = ["advanced features"]
 
 <div class="alert alert-secondary" role="alert">
 
-Snapshots are an effective way to restore previous data and deleted files. They use [hardlinks](https://en.wikipedia.org/wiki/Hard_link) to save copies of only modified and deleted files. Unchanged files are hardlinks to the original.
+Snapshots are an effective way to restore previous data and deleted files. They use [hardlinks](https://en.wikipedia.org/wiki/Hard_link) to save copies of only modified and deleted files. Unchanged files remain as hardlinks to the original.
 
 </div>
 

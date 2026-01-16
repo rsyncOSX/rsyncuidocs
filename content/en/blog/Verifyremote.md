@@ -10,9 +10,9 @@ categories = ["technical details"]
 
 <div class="alert alert-danger" role="alert">
 
-This function has been removed from RsyncUI version 2.8.6  (January 8, 2026).
+This function has been removed from RsyncUI version 2.8.6 (January 8, 2026).
 
-Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to utilize it independently rather than as a component of RsyncUI.
+Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to use it independently rather than as a component of RsyncUI.
 
 Utilizing the rsync parameter `--itemize-changes` will result in increased output from rsync. This parameter instructs rsync to generate a summary of changes for each file or directory it processes.
 
@@ -20,7 +20,7 @@ Utilizing the rsync parameter `--itemize-changes` will result in increased outpu
 
 ### Synchronization of Multiple Macs to a Remote Server
 
-I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to sidecars of the photos.  As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both Macs to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
+I have over 3,000 bird photos (130 GB) from the past four years that are synchronized using RsyncUI to a local remote server at home. New photos are added, old photos are deleted, and updates are made to photo sidecars. As long as I was using only one Mac, all updates were made on that Mac. However, with two Macs, I now use both to work on my photos. When I synchronize my changes, I need to transfer those changes to my second Mac.
 
 ### My Setup for securing bird photos
 
@@ -30,7 +30,7 @@ I back up my bird photography to multiple locations:
 - a remote cloud service (JottaCloud)
 - two 1TB NVMe external SSD drives attached to my computers
 
-Typically, a synchronize action operates in a *one-way* direction of data. Local data is synchronized to a backup media, such as an attached disc or a remote server. Restoring data, for instance, involves retrieving data from a backup when local data has become corrupted or inaccessible.  
+Typically, a synchronization action operates in a *one-way* direction. Local data is synchronized to backup media, such as an attached disk or a remote server. Restoring data, for instance, involves retrieving data from a backup when local data has become corrupted or inaccessible.  
 
 If you are using multiple Macs, as I do, and all Macs synchronize data to the same remote storage, there may be challenges maintaining synchronization
 and preventing data loss, particularly if the remote storage is **not** a Git server, such as GitHub and Gitea. If the remote destinations are stored on a Git server, regular `git push` and `git pull` commands will suffice. 

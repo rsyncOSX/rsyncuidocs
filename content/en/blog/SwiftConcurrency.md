@@ -8,7 +8,7 @@ categories = ["technical details"]
 
 {{% pageinfo color="info" %}}
 
-My understanding of Swift concurrency is modest. If you want deeper coverage, I recommend exploring articles from authors who specialize in the topic.
+My understanding of Swift concurrency is modest. If you want deeper coverage, I recommend exploring articles from authors who specialize in this topic.
 
 {{% /pageinfo %}}
 
@@ -26,7 +26,7 @@ Most work in RsyncUI runs on the main thread. SwiftUI keeps UI updates there by 
 
 ### Swift Version 6 and the New Concurrency Model
 
-Swift version 6 introduced strict concurrency checking. By enabling *Swift 6 language mode* and *strict concurrency checking*, Xcode assists in identifying and resolving possible data races at compile time.
+Swift version 6 introduced strict concurrency checking. By enabling *Swift 6 language mode* and *strict concurrency checking*, Xcode helps identify and resolve possible data races at compile time.
 
 <div class="alert alert-danger" role="alert">
 

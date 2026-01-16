@@ -10,7 +10,7 @@ categories = ["synchronize"]
 
 The *Synchronize* view runs all or selected tasks in a single operation via *shortcut actions* or toolbar *functions*.
 
-For a single task, double-click to initiate a `--dry-run` estimate; the second double-click executes the actual run.
+For a single task, the first double-click initiates a `--dry-run` estimate; a second double-click executes the actual run.
 
 </div>
 

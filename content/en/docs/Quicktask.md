@@ -11,8 +11,8 @@ Use QuickTask to quickly copy or transfer files. QuickTask remembers the last ta
 
 There are two types of quick tasks:
 
-- *synchronize* - synchronize local files to remote, aka *push* data
-- *syncremote* - synchronize remote files to local, aka *pull* data
+- *synchronize* - synchronize local files to remote (push data)
+- *syncremote* - synchronize remote files to local (pull data)
 
 ### Trailing Slash Options
 

@@ -12,7 +12,7 @@ The schedule function is disabled by default. Please refer to the *RsyncUI setti
 
 </div>
 
-Schedules are saved automatically. RsyncUI loads tasks that are due. Tasks scheduled while the Mac was shut down are not loaded. If the Mac sleeps, unexecuted tasks appear in the Schedule view. *Missed tasks do not run automatically.*
+Schedules are saved automatically. RsyncUI loads tasks that are due. Tasks scheduled while the Mac was shut down are not loaded. If the Mac sleeps, missed tasks appear in the Schedule view. *Missed tasks do not run automatically.*
 
 <div class="alert alert-secondary" role="alert">
 
@@ -28,15 +28,15 @@ To add a schedule, click on the date, set the time, and schedule the task. When 
 
 Tasks added to the schedule are validated. The planned next task schedule must either:
 
-- be *10 minutes ahead* of the first schedule in queue
-	- the first schedule in queue is always ahead of the current time	
+- be *at least 10 minutes after* the first schedule in queue
+	- the first schedule in queue is always later than the current time	
 - be *within 10 minutes before* the first schedule in queue
-	- as above, the planned next schedule must also be later than the current time
+	- the planned next schedule must also be later than the current time
 
 The Schedule function is designed to handle Mac sleep mode:
 
-- when a scheduled task is not executed because the Mac enters sleep mode, the Schedule function retrieves unexecuted tasks and displays them in a table
-- the user may move the unexecuted tasks to the schedule table
+- when a scheduled task is not executed because the Mac enters sleep mode, the Schedule function retrieves missed tasks and displays them in a table
+- the user can move the missed tasks back to the schedule table
 
 The Schedule view visually distinguishes invalid times in red font. Only validated task schedules are incorporated into the schedule.
 

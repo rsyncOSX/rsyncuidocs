@@ -10,7 +10,7 @@ categories = ["technical details"]
 
 {{% pageinfo color="info" %}}
 
-RsyncUI must tag data accurately; otherwise some source data might not synchronize. RsyncUI supports both the latest rsync release and the legacy macOS default.
+RsyncUI must tag data accurately; otherwise some source data might not synchronize. RsyncUI supports both the latest rsync release and the legacy macOS default version.
 
 {{% /pageinfo %}}
 

@@ -24,7 +24,7 @@ To use custom SSH key and keypath data, add the following information to RsyncUI
 
 {{< figure src="/images/usersettings/ssh.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-To configure the SSH keypath and identity file, refer to the user configuration in the SSH settings. When enabling a custom SSH keypath and identity file, please ensure they follow this format:
+To configure the SSH keypath and identity file, refer to the user configuration in the SSH settings. When enabling a custom SSH keypath and identity file, ensure they follow this format:
 ```bash
 ~/.mynewsshdirectory/mynewkey
 ```

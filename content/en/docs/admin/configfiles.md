@@ -10,7 +10,7 @@ RsyncUI stores all data locally on your Mac in [JSON](https://en.wikipedia.org/w
 
 ## File Locations
 
-All RsyncUI files are in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number retrieved at startup.
+All RsyncUI files are stored in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number, which is retrieved at startup.
 
 At startup, RsyncUI reads user settings and the default configuration from JSON files. Log records load only when viewing or updating logs.
 

@@ -8,11 +8,11 @@ categories = ["changelog"]
 
 ### Version 2.8.6 - Jan 9, 2026
 
-This release is a maintenance update. *The previous release candidate has been upgraded to the new release without the need for a new build.*
+This release is a maintenance update. *The previous release candidate has been upgraded to the new release.*
 
 There are a few UI updates.
 
-The [Verify remote](https://rsyncui.netlify.app/docs/advanced/verify/) functionality has been removed and will be integrated into its own application. This change will enhance RsyncUI's focus on its core functionality, which is data synchronization.
+The [Verify remote](https://rsyncui.netlify.app/docs/advanced/verify/) functionality has been removed and will be integrated into its own standalone application. This change will enhance RsyncUI's focus on its core functionality: data synchronization.
 
 For further details, please refer to the following documents:
 
@@ -21,9 +21,9 @@ For further details, please refer to the following documents:
 
 <div class="alert alert-danger" role="alert">
 
-The “missing stats alert” continues to occasionally appear. The data synchronization is complete, but RsyncUI is reporting missing summary data. The package responsible for controlling the rsync process has been updated in development to resolve this issue. While I am aware of the cause of the problem, finding a solution that does not require setting a dedicated wait time appears to be somewhat challenging. However, I am actively working on this matter. The solution is scheduled to be released in the next version, 2.8.7, which is expected to be released later in January 2026.
+The "missing stats alert" continues to occasionally appear. The data synchronization is complete, but RsyncUI is reporting missing summary data. The package responsible for controlling the rsync process has been updated in development to resolve this issue. While I am aware of the cause, finding a solution that does not require setting a dedicated wait time appears to be challenging. However, I am actively working on this matter. The solution is scheduled to be released in the next version, 2.8.7, which is expected in late January 2026.
 
-Additionally (in development), I have incorporated writing debug data within the package that processes the output from rsync. Whenever the “no stats” error is encountered, the package writes the complete output to storage for further investigation.
+Additionally (in development), I have incorporated debug data writing within the package that processes the output from rsync. Whenever the "no stats" error is encountered, the package writes the complete output to storage for further investigation.
 
 </div>
 
@@ -82,9 +82,9 @@ total size is 2,578,505,001  speedup is 2,033.62 (DRY RUN)
 
 ### Empty stats file (no stats)
 
-The process termination signal indicates that the external rsync process has completed and the process has been terminated. All tasks within the main synchronize view are updated with the latest run, but there is also a separate logging that records the main result of each task with a timestamp.
+The process termination signal indicates that the external rsync process has completed and terminated. All tasks within the main synchronize view are updated with the latest run, but there is also separate logging that records the main result of each task with a timestamp.
 
-Occasionally, when synchronizing a small amount of data, the termination signal is detected before all output from rsync has been drained. In such cases, the separate logging may be missing. The process termination signal serves as a message to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
+Occasionally, when synchronizing a small amount of data, the termination signal is detected before all output from rsync has been read. In such cases, the separate logging may be incomplete. The process termination signal serves as a trigger to perform logging, but if the last summarized rsync output is missing, there is nothing to log. 
 
 *Output from rsync* refers to the information that rsync provides to the terminal during the execution of a task.
 

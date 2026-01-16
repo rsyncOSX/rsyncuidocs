@@ -45,10 +45,10 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 - default "on"
 - refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
 
-**Use two tavles Inspector**
+**Use two tables Inspector:**
 
-- apply to main Sidebar menu Tasks
-- utlize one or two tables for select Inspector for edit tasks and parameters
+- applies to main Sidebar menu Tasks
+- utilize one or two tables to select Inspector for editing tasks and parameters
 
 **Silence missing stats**
 
@@ -58,12 +58,12 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 
 **Validate arguments**
 
-- default "on", a validation for default parameters
-- if the `—delete` parameter is included in the task configuration, the validation checks its presence or absence based on the task configuration’s state, which specifies whether a delete operation is required
-- other default validated parameters include `—archive`, `—compress`, and `—dry-run`
-  - the `—archive` parameter is always enabled
-  - the `—compress` parameter is only applicable for remote tasks
-  - if the user requests an estimate, the validation checks that the `—dry-run` parameter is included within the arguments
+- default: on - validates default parameters
+- if the `--delete` parameter is included in the task configuration, the validation checks its presence or absence based on the task's state, which specifies whether a delete operation is required
+- other default validated parameters include `--archive`, `--compress`, and `--dry-run`
+  - the `--archive` parameter is always enabled
+  - the `--compress` parameter is only applicable for remote tasks
+  - if the user requests an estimate, the validation checks that the `--dry-run` parameter is included within the arguments
 
 **Confirm Execution:**
 

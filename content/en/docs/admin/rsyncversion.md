@@ -10,7 +10,7 @@ lastmod = "2024-09-10"
 The default `/usr/bin/rsync` differs between macOS versions:
 
 - **macOS Sonoma**: Uses rsync version 2.6.9 (released November 2006)
-- **macOS Sequoia and Tahoe**: Use `openrsync`, a BSD-licensed implementation compatible with rsync protocol 29 and version 2.6.9
+- **macOS Sequoia and later**: Use `openrsync`, a BSD-licensed implementation compatible with rsync protocol 29 and version 2.6.9
 
 <div class="alert alert-secondary" role="alert">
 

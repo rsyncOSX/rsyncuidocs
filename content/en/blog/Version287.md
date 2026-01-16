@@ -10,13 +10,13 @@ categories = ["changelog"]
 
 <div class="alert alert-danger" role="alert">
 
-It appears that the updated package successfully addresses the issue of missing statistics. I have not encountered the “no stats” problem after the update, and several users have downloaded the release candidate. The release candidate has now been released as the new release without a new build.
+It appears that the updated package successfully addresses the issue of missing statistics. I have not encountered the "no stats" problem after the update, and several users have downloaded the release candidate. The release candidate has been promoted to the official release.
 
 </div>
 
 In contrast to version 2.8.6, this release introduces only two updates: an updated [package RsyncProcessStreaming](https://github.com/rsyncOSX/RsyncProcessStreaming) and a function in [package ParseRsyncOutput](https://github.com/rsyncOSX/ParseRsyncOutput) that writes debug data to a text file if the “no stats” issue occurs.
 
-Additionally, there is a fixed issue with the command strings for `Copy public SSHKey` and `Verify Public SSHKey` within the “Verify Tasks” menu. The issue is that the command displayed also adds the keygen command in front of the command. 
+Additionally, there is a fixed issue with the command strings for `Copy public SSH Key` and `Verify Public SSH Key` within the "Verify Tasks" menu. The issue is that the displayed command incorrectly added the keygen command in front of the actual command.
 
 For additional information regarding RsyncUI’s Swift Packages, kindly refer to the accompanying document.
 
@@ -24,4 +24,4 @@ For additional information regarding RsyncUI’s Swift Packages, kindly refer to
 
 ### Rsync Verify
 
-In the coming days, I will release a release candidate for the new application, [RsyncVerify](https://github.com/rsyncOSX/RsyncVerify). This application replaces the functionality that was removed from RsyncUI. You can read about the application in the blog post titled “Verify remote.” The application includes parsing and tagging of each line of output. It is important to note that RsyncVerify is **not** a replacement for RsyncUI. The motivation for developing VerifyRemote is outlined in the blog post.
+In the coming days, I will release a release candidate for the new application, [RsyncVerify](https://github.com/rsyncOSX/RsyncVerify). This application replaces the functionality that was removed from RsyncUI. You can read about the application in the blog post titled "Verify remote." The application includes parsing and tagging of each line of output. It is important to note that RsyncVerify is **not** a replacement for RsyncUI. The motivation for developing RsyncVerify is outlined in the blog post.

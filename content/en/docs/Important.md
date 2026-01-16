@@ -53,7 +53,7 @@ You can temporarily halt a task. In the Synchronize view, right-click a task to 
 
 ### Two options to save updates to data
 
-This option applies to the data synchronized by RsyncUI. By enabling either of these options, you can save changes to data, such as deletions or updates, prior to a synchronization task.
+These options apply to the data synchronized by RsyncUI. By enabling either of these options, you can save changes to data, such as deletions or updates, prior to a synchronization task.
 
 <div class="alert alert-secondary" role="alert">
 

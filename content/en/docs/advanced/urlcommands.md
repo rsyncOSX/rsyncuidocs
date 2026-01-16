@@ -6,7 +6,7 @@ tags = ["url commands","deep links","synchronize","widget"]
 categories = ["advanced features"]
 +++
 
- Deep links provide direct access to app features via URL. Using deep links, you can estimate and synchronize in a single click. Deep links in RsyncUI group actions that typically require multiple steps.
+Deep links provide direct access to app features via URL. Using deep links, you can estimate and synchronize in a single click. Deep links in RsyncUI group actions that typically require multiple steps.
 
 There are three methods of using deep links:
 
@@ -30,9 +30,9 @@ Deep links also enable automation of actions within RsyncUI. A single click on t
 
 {{< figure src="/images/url/urlcommand.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-#### URL´s  and Notepad
+#### URLs and Notepad
 
-URL´s must start with `rsyncuiapp://`:
+URLs must start with `rsyncuiapp://`:
 
 | Action                                             | URL                                                                     |
 |----------------------------------------------------|-------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ URL´s must start with `rsyncuiapp://`:
 
 #### View URL
 
-You may copy the correct URLs and save the URLs in e.g Notepad for easy access to start a synchronize task. 
+You can copy the correct URLs and save them in an application like Notepad for easy access to start a synchronization task. 
 
 #### Errors in URL link
 
