@@ -8,11 +8,11 @@ categories = ["technical details"]
 
 ### Overview
 
-{{% pageinfo color="info" %}}
+<div class="alert alert-danger" role="alert">
 
 RsyncUI must tag data accurately; otherwise some source data might not synchronize. RsyncUI supports both the latest rsync release and the legacy macOS default version.
 
-{{% /pageinfo %}}
+</div>
 
 Tagging is computed in the ParseRsyncOutput Swift package bundled with RsyncUI.
 

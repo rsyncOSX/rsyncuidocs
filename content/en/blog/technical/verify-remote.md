@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Verify remote"
-date = "2025-10-27"
+date = "2026-01-15"
 tags = ["verify remote"]
 categories = ["technical details"]
 +++
