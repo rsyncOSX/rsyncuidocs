@@ -1,33 +1,33 @@
 +++
 author = "Thomas Evensen"
 title = "Number of files"
-date = "2025-10-17"
+date = "2026-01-15"
 tags = ["number of files"]
 categories = ["technical details"]
 +++
 
-Numbers updated: December 21, 2025 (version 2.8.4).
+Numbers updated: January 15, 2026 (version 2.9.0).
 
 RsyncUI depends only on the standard Swift and SwiftUI toolchain—no external libraries.
 
 ```
-cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/
-Sources RsyncProcessStreaming/Sources ProcessCommand/Sources
-     207 text files.
-     207 unique files.                                          
-      15 files ignored.
+cloc DecodeEncodeGeneric/Sources ParseRsyncOutput/Sources RsyncArguments/Sources RsyncUI/RsyncUI RsyncUIDeepLinks/Sources SSHCreateKey/Sources RsyncProcessStreaming/Sources ProcessCommand/Sources RsyncAnalyse/Sources
 
-github.com/AlDanial/cloc v 2.06  T=0.06 s (3336.2 files/s, 362295.4 lines/s)
+     210 text files.
+     209 unique files.                                          
+      12 files ignored.
+
+github.com/AlDanial/cloc v 2.06  T=0.07 s (3067.2 files/s, 358028.7 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Swift                          201           2551           2447          17056
+Swift                          203           2824           2713          18434
 C                                2             36             72            254
 XML                              2              0              0             53
 JSON                             1              0              0              6
 C/C++ Header                     1              1              3              0
 -------------------------------------------------------------------------------
-SUM:                           207           2588           2522          17369
+SUM:                           209           2861           2788          18747
 -------------------------------------------------------------------------------
 ```
 
