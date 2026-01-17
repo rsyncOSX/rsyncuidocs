@@ -37,6 +37,8 @@ After creating the app-specific password, execute the following command and foll
 
 - Replace "youremail@gmail.com" and "A1B2C3D4E5" with your actual credentials.
 
+Name the certificate `RsyncUI`.
+
 Following the above steps, there are two make commands available from the root of RsyncUI's source catalog:
 
 - `make` - will generate a signed and notified DMG file including the release version of RsyncUI.
