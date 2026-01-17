@@ -35,7 +35,7 @@ After creating the app-specific password, execute the following command and foll
 
 `xcrun notarytool store-credentials --apple-id "youremail@gmail.com" --team-id "A1B2C3D4E5"`
 
-- Replace "youremail@gmail.com" and "A1B2C3D4E5" with your actual credentials.
+- Replace `youremail@gmail.com` and `A1B2C3D4E5` with your actual credentials.
 
 Name the certificate `RsyncUI`.
 

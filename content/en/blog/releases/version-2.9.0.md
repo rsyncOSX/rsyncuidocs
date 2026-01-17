@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 To compile your own version, please refer to the blog post titled "*Compiling RsyncUI*". The main branch is consistently updated with the latest code revisions.
 
-The development of the next version has commenced. Currently, several enhancements have been implemented in this version. The version is scheduled for release by the end of January. It is likely that more updates will be committed in the future.
+The development of the next version has commenced. Currently, a few enhancements have been implemented in this version. The version is scheduled for release by the end of January. It is likely that more updates will be committed in the future.
 
 - In the Tasks menu, when using a single table for tasks, the "Use two tables Inspector" setting is disabled. Consequently, the Inspectors for Edit and Parameters are not closed when the tab is changed. Screenshots are provided below for reference.
 - If the Parameters include the two parameters `--itemize-changes` and `--update`, the output from rsync is enhanced. Please note that these parameters will increase the output from rsync. For more information, refer to the blog post titled "*Verify remote*".
