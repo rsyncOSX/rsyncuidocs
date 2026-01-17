@@ -37,15 +37,37 @@ SUM:                           209           2861           2788          18747
 
 ##### Swift Packages used by RsyncUI
 
-All SPM packages are refactored, updated, and tracked in the main branch. RsyncUI depends on all of them except the last, which is optional because SSH keys can be generated from the command line.
+All packages track the `main` branch and are updated to latest revisions as of v2.9.0:
 
-- *RsyncProcessStreaming* (https://github.com/rsyncOSX/RsyncProcessStreaming) - A core function of RsyncUI
-	- listens for output from the rsync process as well as termination signal
-- *ProcessCommand* (https://github.com/rsyncOSX/ProcessCommand) - As above, but for commands other than rsync
-- *RsyncArguments* (https://github.com/rsyncOSX/RsyncArguments) - Generate parameters for `rsync` based on configurations
-- *DecodeEncodeGeneric* (https://github.com/rsyncOSX/DecodeEncodeGeneric) - Generic code for decoding and encoding JSON data
-- *ParseRsyncOutput* (https://github.com/rsyncOSX/ParseRsyncOutput) - Parse and extract numerical values from the output of `rsync`
-	- this data is used to display details and log results for synchronized tasks
-- *RsyncUIDeepLinks* (https://github.com/rsyncOSX/RsyncUIDeepLinks) - Parse and return valid URL deeplinks to execute tasks directly within RsyncUI
-- *sshCreateKey* (https://github.com/rsyncOSX/sshCreateKey) - Assist in creating an SSH identity file and key using RsyncUI
-	- generate an RSA-based SSH key for default and user-defined keys, including the SSH port number
+1. **SSHCreateKey** - SSH key generation and management
+   - Repository: https://github.com/rsyncOSX/SSHCreateKey
+   - Purpose: Public/private SSH key pair creation
+
+2. **DecodeEncodeGeneric** - Generic JSON codec
+   - Repository: https://github.com/rsyncOSX/DecodeEncodeGeneric
+   - Purpose: Reusable JSON encoding/decoding utilities
+
+3. **ParseRsyncOutput** - Rsync output parser
+   - Repository: https://github.com/rsyncOSX/ParseRsyncOutput
+   - Purpose: Extract statistics from rsync output
+
+4. **RsyncUIDeepLinks** - Deep linking support
+   - Repository: https://github.com/rsyncOSX/RsyncUIDeepLinks
+   - Purpose: URL scheme handling for widgets and automation
+
+5. **ProcessCommand** - Process execution wrapper
+   - Repository: https://github.com/rsyncOSX/ProcessCommand
+   - Purpose: Command-line process management
+
+6. **RsyncArguments** - Rsync argument builder
+   - Repository: https://github.com/rsyncOSX/RsyncArguments
+   - Purpose: Type-safe rsync command generation
+
+7. **RsyncProcessStreaming** - Streaming process handler
+   - Repository: https://github.com/rsyncOSX/RsyncProcessStreaming
+   - Purpose: Real-time rsync output streaming and progress tracking
+
+8. **RsyncAnalyse** - Enhanced rsync output analysis
+   - Repository: https://github.com/rsyncOSX/RsyncAnalyse
+   - Purpose: Advanced parsing and analysis of rsync command output
+  
