@@ -37,7 +37,21 @@ After creating the app-specific password, execute the following command and foll
 
 - Replace `youremail@gmail.com` and `A1B2C3D4E5` with your actual credentials.
 
-Name the certificate `RsyncUI`.
+Name the app-specific password  `RsyncUI` (in appleid.apple.com) and set `Profile name: RsyncUI` when executing the above command.
+
+The following dialog will appear:
+
+```
+This process stores your credentials securely in the Keychain. You reference these credentials later using a profile name.
+
+Profile name:
+RsyncUI
+App-specific password for youremail@gmail.com: 
+Validating your credentials...
+Success. Credentials validated.
+Credentials saved to Keychain.
+To use them, specify `--keychain-profile "RsyncUI"`
+```
 
 Following the above steps, there are two make commands available from the root of RsyncUI's source catalog:
 
