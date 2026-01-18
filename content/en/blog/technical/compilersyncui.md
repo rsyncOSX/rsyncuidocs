@@ -22,6 +22,8 @@ If you have an Apple Developer account, you should open the RsyncUI project and 
 
 The use of the make command necessitates the application-specific password. There are two commands available for use with make: one creates a release build exclusively for RsyncUI, while the other generates a signed version that includes a DMG file.
 
+If only utilizing the `make archive` command did not necessitate the application-specific password, it would suffice to update only the `Signing & Capabilities` section. It is highly probable that the `make archive` command will still function even if set to `Sign to Run Locally`.
+
 To create a DMG file, the make command is dependent on the [create-dmg](https://github.com/create-dmg/create-dmg) tool. The instructions for create-dmg are included in the Makefile. Ensure that the fork of create-dmg is on the same level as the fork of RsyncUI. Before using make, create and store an app-specific password.
 
 The following procedure creates and stores an app-specific password:
@@ -53,7 +55,7 @@ Credentials saved to Keychain.
 To use them, specify `--keychain-profile "RsyncUI"`
 ```
 
-Following the above steps, there are two make commands available from the root of RsyncUI's source catalog:
+Following the above steps, the following make commands are available from the root of RsyncUI's source catalog:
 
 - `make` - will generate a signed and notified DMG file including the release version of RsyncUI.
 - `make archive` - will produce a release version, removing all debug information, without signing within the `build` catalog.
