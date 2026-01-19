@@ -70,7 +70,7 @@ Version openrsync:
 
 #### The Sidebar Menu options
 
-Three Sidebar menu options depend on task properties. If any task meets the requirement, the option appears.
+Two Sidebar menu options depend on task properties. If any task meets the requirement, the option appears.
 
 - *Snapshot*: available only for *snapshot* tasks
 	- requires rsync 3.x
