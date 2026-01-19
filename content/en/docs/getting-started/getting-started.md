@@ -76,8 +76,6 @@ Three Sidebar menu options depend on task properties. If any task meets the requ
 	- requires rsync 3.x
 - *Restore*: available for *synchronize* and *snapshot* tasks where the *destination* is on a *remote server*
 	- also available for openrsync, but only for synchronize tasks
-- *Verify remote*: available for *synchronize* tasks where the *destination* is on a *remote server*
-	- requires rsync 3.x
 
 <div class="alert alert-secondary" role="alert">
 
