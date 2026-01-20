@@ -12,7 +12,7 @@ The development of the next version has commenced. Currently, a few enhancements
 
 In addition, there have been several linting updates. Only a few linting issues remain, all linting rules have been deleted from the code, and there is now only one `.swiftlint.yml` file containing all rules for all code.
 
-- Tagging of output from rsync, refer to the blog post titled "[Verify Remote](https://rsyncui.netlify.app/blog/2026/01/15/verify-remote/)" for more info about the tagging
+- Tagging of output from rsync, refer to the blog post titled "[Verify Remote](https://rsyncui.netlify.app/blog/2026/01/15/verify-remote/)" for more info about the tagging. It is only the *tagging* within this blog which are relevant, not the function described in the post.
   - The tagging is depended upon two parameters for rsync
   - `--itemize-changes` and `--update`
   - It is important to note that rsync generates more output when parameters above are set. However, this does not imply that more data is being synchronized; it simply indicates that rsync is producing more output.
