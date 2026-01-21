@@ -16,9 +16,12 @@ In addition, there have been several linting updates. Only a few linting issues 
   - The tagging is depended upon two parameters for rsync
   - `--itemize-changes` and `--update`
   - It is important to note that rsync generates more output when parameters above are set. However, this does not imply that more data is being synchronized; it simply indicates that rsync is producing more output.
-- In the Tasks menu, when using a *single table* for tasks, the "Use two tables Inspector" setting is disabled. Consequently, the Inspectors for Edit and Parameters are not closed when the tab is changed. Screenshots are provided below for reference.
+- In the Tasks menu, when using a *single table* for tasks, the "Use two tables Inspector" setting is disabled. Consequently, the Inspectors for Edit and Parameters are not closed when the tab is changed.
 
 For further details, please refer to the following documents:
 
 - a detailed [Changelog](https://github.com/rsyncOSX/RsyncUI/blob/main/CHANGELOG.md)
 - a [Code Quality Report](https://github.com/rsyncOSX/RsyncUI/blob/main/QUALITY_ANALYSIS_DETAILED.md)
+
+{{< figure src="/images/v290/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v290/tagged.png" alt="" position="center" style="border-radius: 8px;" >}}
