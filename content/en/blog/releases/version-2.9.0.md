@@ -14,9 +14,7 @@ At present, I am engaged in the development of another application. The latest r
 
 </div>
 
-The development of the next version has commenced. Currently, a few enhancements have been implemented in this version. The version is scheduled for release by the end of January. It is likely that more updates will be committed in the future.
-
-In addition, there have been several linting updates. Only a few linting issues remain, all linting rules have been deleted from the code, and there is now only one `.swiftlint.yml` file containing all rules for all code.
+There have been several linting updates. Only a few linting issues remain, all linting rules have been deleted from the code, and there is now only one `.swiftlint.yml` file containing all rules for all code.
 
 - Tagging of output from rsync, refer to the blog post titled "[Verify Remote](https://rsyncui.netlify.app/blog/2026/01/15/verify-remote/)" for more info about the tagging. It is only the *tagging* within this blog which are relevant, not the function described in the post.
   - The tagging is depended upon two parameters for rsync
