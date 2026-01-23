@@ -1,12 +1,18 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.9.0"
-date = "2026-01-20"
+date = "2026-01-23"
 tags = ["changelog","version 2.9.0"]
 categories = ["changelog"]
 +++
 
 ### Version 2.9.0 - Jan 20, 2026 release candidate
+
+<div class="alert alert-danger" role="alert">
+
+At present, I am engaged in the development of another application. The latest release candidate version 2.9.0 appears to be quite stable. It is highly probable that this release candidate will be released as the next release sometime next week without the need for a new build.
+
+</div>
 
 The development of the next version has commenced. Currently, a few enhancements have been implemented in this version. The version is scheduled for release by the end of January. It is likely that more updates will be committed in the future.
 

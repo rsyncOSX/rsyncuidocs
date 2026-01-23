@@ -10,7 +10,7 @@ categories = ["technical details"]
 
 <div class="alert alert-danger" role="alert">
 
-This function has been removed from RsyncUI version 2.8.6 (January 8, 2026).
+The "verify remote" function has been removed in RsyncUI version 2.8.6, which was released on January 8, 2026. A new application, RsyncVerify, is scheduled for release in February. Further refinement of the user interface is still required.
 
 Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to use it independently rather than as a component of RsyncUI.
 
@@ -52,14 +52,32 @@ The function is not intended to be automated. Users must verify their subsequent
 The following arguments are used in both push and pull.
 
 - `--itemize-changes` - output change-summary for all updates
-- `--dry-run` - rsync execute an estimate run
 - `--update` - evaluates the timestamp
+- `--dry-run` - rsync execute an estimate run
 
 #### Itemized output - push or pull
 
 The parameter `-i` or `--itemize-changes` produces details about each file. The format of the output is:
 
-```bash
+```
+Position  Letter  Meaning
+--------  ------  ----------------------------------
+    1       Y     Update type (<, >, c, h, ., *)
+    2       X     File type (f, d, L, D, S)
+    3       c     Checksum/content
+    4       s     Size
+    5       t     Time (modification)
+    6       p     Permissions
+    7       o     Owner
+    8       g     Group
+    9       u     Reserved/user time
+   10       a     ACL
+   11       x     Extended attributes
+
+Special:  '.' = unchanged, '+' = new item
+```
+
+```
 YXcstpoguax
 |||||||||||
 `-------------------------- the TYPE OF UPDATE:
@@ -91,23 +109,7 @@ YXcstpoguax
         `--- u: The u slot is reserved for future use.
          `-- a: The ACL information changed
 ```
-```
-Position  Letter  Meaning
---------  ------  ----------------------------------
-    1       Y     Update type (<, >, c, h, ., *)
-    2       X     File type (f, d, L, D, S)
-    3       c     Checksum/content
-    4       s     Size
-    5       t     Time (modification)
-    6       p     Permissions
-    7       o     Owner
-    8       g     Group
-    9       u     Reserved/user time
-   10       a     ACL
-   11       x     Extended attributes
 
-Special:  '.' = unchanged, '+' = new item
-```
 
 ### The Stand alone application
 
