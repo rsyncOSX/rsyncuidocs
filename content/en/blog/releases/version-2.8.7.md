@@ -21,7 +21,3 @@ Additionally, there is a fixed issue with the command strings for `Copy public S
 For additional information regarding RsyncUI’s Swift Packages, kindly refer to the accompanying document.
 
 - a [Code Quality Report](https://github.com/rsyncOSX/RsyncUI/blob/main/QUALITY_ANALYSIS_DETAILED.md)
-
-### Rsync Verify
-
-In the coming days, I will release a release candidate for the new application, [RsyncVerify](https://github.com/rsyncOSX/RsyncVerify). This application replaces the functionality that was removed from RsyncUI. You can read about the application in the blog post titled "Verify remote." The application includes parsing and tagging of each line of output. It is important to note that RsyncVerify is **not** a replacement for RsyncUI. The motivation for developing RsyncVerify is outlined in the blog post.
