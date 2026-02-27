@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.9.0"
-date = "2026-01-29"
+date = "2026-02-27"
 tags = ["changelog","version 2.9.0"]
 categories = ["changelog"]
 +++
@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 <div class="alert alert-danger" role="alert">
 
-The previous release candidate, version 2.9.0rc, has been released as version 2.9.0 without the need for a new build.
+An update to the 2.9.1 repository has been updated, enabling tagging for the default `/usr/bin/rsync` as per the rsync version 3.x. I have not yet released version 2.9.1, but if there are any requests for tagging as outlined below for the default version of rsync, please inform me. Then I will make a new release version 2.9.1.
 
 </div>
 
