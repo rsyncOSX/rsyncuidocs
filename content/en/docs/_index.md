@@ -16,7 +16,7 @@ RsyncUI is *digitally signed* and *notarized* by Apple to protect against tamper
 
 ### Concealing Actions
 
-See *Getting started* for details on Concealing Actions. Toggle action visibility on the main toolbar with `⌘S`.
+> See *Getting started* for details on Concealing Actions. Toggle action visibility on the main toolbar with `⌘S`.
 
 ### Privacy statement
 
