@@ -52,23 +52,6 @@ Thanks to GitHub user [Tim Reichen](https://github.com/timreichen) for valuable 
 
 ---
 
-### File Change Table
-
-| File/Folder                                               | Change Type   | Description/Notes                                 |
-|-----------------------------------------------------------|--------------|---------------------------------------------------|
-| RsyncUI/Views/InspectorViews/DefaultView.swift            | Deleted      | Old inspector view removed                        |
-| RsyncUI/Views/InspectorViews/EditTabView.swift            | Added        | New main inspector tab view                       |
-| RsyncUI/Views/InspectorViews/LogRecords/LogRecordsTabView.swift | Added/Move | Log records inspector tab (was LogsbyConfigurationView) |
-| RsyncUI/Views/InspectorViews/VerifyTask/VerifyTaskTabView.swift | Added/Move | Verify task inspector tab (was VerifyTasks.swift)  |
-| RsyncUI/Views/InspectorViews/RsyncParameters/extensionRsyncParametersView.swift | Modified | Refactored into new tabbed structure              |
-| RsyncUI/Model/Global/ObservableAddConfigurations.swift    | Modified     | State changes for new inspector                   |
-| RsyncUI/Model/Global/ObservableParametersRsync.swift      | Modified     | State changes for new inspector                   |
-| RsyncUI.xcodeproj/project.pbxproj                         | Modified     | Project file updates for new/removed files        |
-| Makefile, versionRsyncUI.json                             | Modified     | Version/build updates                             |
-| README.md, QUALITY_ANALYSIS_DETAILED.md                   | Modified     | Documentation and quality analysis updates        |
-
----
-
 ### Quality & Architecture
 
 - Refactor improves modularity, maintainability, and user experience in Inspector area.
@@ -77,5 +60,9 @@ Thanks to GitHub user [Tim Reichen](https://github.com/timreichen) for valuable 
 
 ---
 
-*For a file-by-file or code-diff summary, ask for a specific file or feature.*
+{{< figure src="/images/v292/edit.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v292/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v292/logs.png" alt="" position="center" style="border-radius: 8px;" >}}
+{{< figure src="/images/v292/verify.png" alt="" position="center" style="border-radius: 8px;" >}}
+
 
