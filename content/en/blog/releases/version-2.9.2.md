@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
 title = "Version 2.9.2"
-date = "2026-03-05"
+date = "2026-03-11"
 tags = ["changelog","version 2.9.2"]
 categories = ["changelog"]
 +++
 
-### Version 2.9.2 - March 5, 2026 - development build
+### Version 2.9.2 - March 11, 2026 
 
 <div class="alert alert-danger" role="alert">
 
@@ -14,7 +14,9 @@ Thanks to GitHub user [Tim Reichen](https://github.com/timreichen) for valuable 
 
 </div>
 
-## Detailed Code Changes: v2.9.1 → 2.9.2dev1
+## Detailed Code Changes: v2.9.1 → 2.9.2
+
+There are no changes to the model, only UI-updates. All details about a task is now moved to the Tasks menu. Cleaned up the Sidebar. There is a link to info about the `--delete` parameter. 
 
 **Summary:**
 - Major refactor of Inspector views: new tabbed interface, modular SwiftUI views.
@@ -60,6 +62,7 @@ Thanks to GitHub user [Tim Reichen](https://github.com/timreichen) for valuable 
 
 ---
 
+{{< figure src="/images/v292/first.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v292/edit.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v292/parameters.png" alt="" position="center" style="border-radius: 8px;" >}}
 {{< figure src="/images/v292/logs.png" alt="" position="center" style="border-radius: 8px;" >}}
