@@ -11,3 +11,5 @@ categories = ["changelog"]
 > If no bugs are reported during this week, this release will be released without a new build.
 
 This prerelease addresses a logical error in the Tasks menu when selected from the sidebar. The Add tasks button on the toolbar is now consistently visible when in the Tasks menu. 
+
+In version 2.9.2, the “Add tasks” button on the toolbar is only visible when a task is selected and when the “Edit” tab is selected.
