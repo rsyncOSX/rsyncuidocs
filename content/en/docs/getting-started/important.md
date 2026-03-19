@@ -41,7 +41,7 @@ Before running a new task, perform a `--dry-run` and inspect the result. If you 
 
 <div class="alert alert-danger" role="alert">
 
-Incorrect rsync parameters can delete data, and RsyncUI does not block such choices. See *Getting started* or *New tasks* for how to verify a task before running it.
+Incorrect rsync parameters can delete data, and RsyncUI does not block such choices. See *Getting started* or *Tasks* for how to verify a task before running it.
 
 </div>
 

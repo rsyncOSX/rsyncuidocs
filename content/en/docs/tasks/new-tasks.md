@@ -1,6 +1,6 @@
 +++
 author = "Thomas Evensen"
-title =  "New tasks"
+title = "New tasks"
 date = "2025-02-11"
 tags = ["new tasks","profile"]
 categories = ["synchronize"]
@@ -10,7 +10,7 @@ A task requires a minimum of a source directory and a destination directory. The
 
 <div class="alert alert-danger" role="alert">
 
-Always verify the result of a new task before executing. Select the *"Verify tasks"* from the primary Sidebar menu.
+Always verify the result of a new task before executing. Select *"Verify tasks"* from the primary Sidebar menu.
 
 </div>
 
@@ -58,4 +58,3 @@ The following data pertains to tasks:
 ### Copy and Paste Tasks
 
 Shortcuts for copy and paste are `⌘C` and `⌘V`, or from the Edit menu. The copy and paste operation creates a copy of the selected tasks and marks them with the "copy" status. The copied tasks retain all parameters.
-

@@ -6,7 +6,7 @@ tags = ["getting started"]
 categories = ["general information"]
 +++
 
-New users should read *Important* first, then see *Latest version of rsync* for installation guidance.
+New users should read *Important* first, then *Latest version of rsync* for installation guidance, then *Tasks* to create their first task.
 
 ### Concealing Actions
 

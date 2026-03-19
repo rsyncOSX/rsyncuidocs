@@ -7,7 +7,7 @@ categories = ["usersettings"]
 +++
 After changing a setting, save the changes to keep them next time you use RsyncUI.
 
-In this view, you can use RsyncUI to help create an SSH key and set up a global SSH keypath and identity file. SSH keys are required for passwordless logins. You can use default SSH key values or define your own. For more information, see *Passwordless login*.
+This view configures the global SSH keypath and identity file used by RsyncUI for all remote tasks. For a guide on creating SSH keys, see *SSH keys and passwordless login*.
 
 {{< figure src="/images/usersettings/ssh.png" alt="" position="center" style="border-radius: 8px;" >}}
 
