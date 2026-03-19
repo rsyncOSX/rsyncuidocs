@@ -12,7 +12,7 @@ New users should read *Important* first, then see *Latest version of rsync* for 
 
 Concealing actions reduces menu clutter and keeps focus on common tasks.
 
-Use `⌘S` or the Task main menu to show or hide Charts, Quick task, log view, and other options that are hidden by default. The primary Sidebar menu is also context-sensitive.
+> Use `⌘S` or the Task main menu to show or hide Charts, Quick task, log view, and other options that are hidden by default. The primary Sidebar menu is also context-sensitive.
 
 ### New Tasks and Verification
 
