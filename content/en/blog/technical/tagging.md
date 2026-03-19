@@ -8,7 +8,7 @@ categories = ["technical details"]
 
 ### Overview
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-secondary" role="alert">
 
 RsyncUI must tag data accurately; otherwise some source data might not synchronize. RsyncUI supports both the latest rsync release and the legacy macOS default version.
 

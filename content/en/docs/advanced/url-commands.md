@@ -12,7 +12,7 @@ There are three methods of using deep links:
 
 - enable RsyncUI widgets
 - use URL functions direct within RsyncUI
-- save an URL-link in e.g. Notepad
+- save a URL link in e.g., Notes
 
 #### RsyncUI Widget
 
@@ -24,9 +24,9 @@ The widget retrieves a saved URL from storage. In the Tasks view, there is a URL
 
 After enabling the widget, a single click on the widget will launch RsyncUI and execute the corresponding action. To modify the URL, update and save the new URL.
 
-#### Execute URL´s from within RsyncUI
+#### Execute URLs from within RsyncUI
 
-Deep links also enable automation of actions within RsyncUI. A single click on the toolbar icon executes  the URL  action. RsyncUI generates the necessary URL based on the loaded profile and the required action. The two yellow toolbar icons allow execution of URL commands from within RsyncUI, as demonstrated in section above.
+Deep links also enable automation of actions within RsyncUI. A single click on the toolbar icon executes the URL action. RsyncUI generates the necessary URL based on the loaded profile and the required action. The two yellow toolbar icons allow execution of URL commands from within RsyncUI, as demonstrated in section above.
 
 {{< figure src="/images/url/urlcommand.png" alt="" position="center" style="border-radius: 8px;" >}}
 
@@ -43,7 +43,7 @@ URLs must start with `rsyncuiapp://`:
 
 #### View URL
 
-You can copy the correct URLs and save them in an application like Notepad for easy access to start a synchronization task. 
+You can copy the correct URLs and save them in an application like Notes for easy access to start a synchronization task.
 
 #### Errors in URL link
 

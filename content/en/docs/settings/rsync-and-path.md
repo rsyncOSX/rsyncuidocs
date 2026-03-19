@@ -6,7 +6,7 @@ tags = ["rsync and path"]
 categories = ["usersettings"]
 +++
 
-After changing a setting, you have to save the changes to keep it next time you use RsyncUI.
+After changing a setting, save the changes to keep them next time you use RsyncUI.
 
 {{< figure src="/images/usersettings/settings.png" alt="" position="center" style="border-radius: 8px;" >}}
 

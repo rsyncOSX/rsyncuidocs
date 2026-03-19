@@ -16,4 +16,14 @@ $HOME/.rsyncosx/<macserialnumber>/newprofile
 
 where `<macserialnumber>` is your Mac's serial number. All tasks and log files for that profile are stored within this directory.
 
-The list on the right shows tasks not updated within the number of days configured under "Mark days after" in Settings.
+### Why use profiles?
+
+Profiles are useful for separating unrelated sets of tasks — for example, one profile for work backups and another for personal photos. Switching profiles loads only the tasks for that profile, keeping the task list focused.
+
+### Creating and switching profiles
+
+Open the profile picker from the toolbar or the File menu. Enter a name and confirm to create a new profile. Selecting an existing profile loads its tasks immediately.
+
+### Stale task indicator
+
+The list on the right shows tasks not updated within the number of days set under "Mark days after" in Settings. Tasks older than that threshold are highlighted in red as a reminder to run them.

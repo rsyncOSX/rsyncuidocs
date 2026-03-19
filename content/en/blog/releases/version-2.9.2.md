@@ -16,7 +16,7 @@ Thanks to GitHub user [Tim Reichen](https://github.com/timreichen) for valuable 
 
 ## Detailed Code Changes: v2.9.1 → 2.9.2
 
-There are no changes to the model, only UI-updates. All details about a task is now moved to the Tasks menu. Cleaned up the Sidebar. There is a link to info about the `--delete` parameter. 
+There are no changes to the model, only UI-updates. All details about a task are now moved to the Tasks menu. Cleaned up the Sidebar. There is a link to info about the `--delete` parameter. 
 
 **Summary:**
 - Major refactor of Inspector views: new tabbed interface, modular SwiftUI views.

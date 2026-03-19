@@ -20,7 +20,7 @@ RsyncUI can synchronize data to:
 
 - local attached disk
 - remote servers on the Internet or local LAN
-    - require *passwordless login* by ssh-key
+    - requires *passwordless login* by ssh-key
 
 #### Local attached disk
 

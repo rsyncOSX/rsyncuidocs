@@ -4,7 +4,7 @@ date = "2025-01-30"
 title =  "Latest version of rsync"
 tags = ["rsync version"]
 categories = ["general information"]
-lastmod = "2024-09-10"
+lastmod = "2025-01-30"
 +++
 
 The default `/usr/bin/rsync` differs between macOS versions:

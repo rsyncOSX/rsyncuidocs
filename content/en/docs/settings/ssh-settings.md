@@ -13,7 +13,7 @@ In this view, you can use RsyncUI to help create an SSH key and set up a global 
 
 #### Local SSH Key Present
 
-If "on" is selected in RsyncUI, it has detected a local SSH key.
+When this is "on", RsyncUI has detected a local SSH key.
 
 The default RSA-based SSH key values are `~/.ssh/id_rsa` and port `22`. These are not required if you use the defaults. If you do not specify your own keypath and identity file, RsyncUI uses the defaults. If a local SSH key is present, leave the settings as-is or set your own keypath and identity file. RsyncUI will mark the selected settings as default.
 

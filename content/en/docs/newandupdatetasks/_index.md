@@ -6,7 +6,7 @@ tags = ["new tasks","profile"]
 categories = ["synchronize"]
 +++
 
-A task requires a minimum of a local directory, the source, and a remote directory, the destination.
+A task requires a minimum of a source directory and a destination directory. The destination can be a local attached disk or a remote server.
 
 <div class="alert alert-danger" role="alert">
 

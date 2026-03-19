@@ -10,7 +10,7 @@ categories = ["technical details"]
 
 <div class="alert alert-danger" role="alert">
 
-The "verify remote" function has been removed in RsyncUI version 2.8.6, which was released on January 8, 2026. A new application, RsyncVerify, is scheduled for release in February. Further refinement of the user interface is still required.
+The "verify remote" function has been removed in RsyncUI version 2.8.6, which was released on January 8, 2026. It is now being developed as a standalone application, RsyncVerify. Further refinement of the user interface is still required.
 
 Currently, the function is being developed as a standalone application. Its continued use is essential, and it is preferable to use it independently rather than as a component of RsyncUI.
 
@@ -57,59 +57,7 @@ The following arguments are used in both push and pull.
 
 #### Itemized output - push or pull
 
-The parameter `-i` or `--itemize-changes` produces details about each file. The format of the output is:
-
-```
-Position  Letter  Meaning
---------  ------  ----------------------------------
-    1       Y     Update type (<, >, c, h, ., *)
-    2       X     File type (f, d, L, D, S)
-    3       c     Checksum/content
-    4       s     Size
-    5       t     Time (modification)
-    6       p     Permissions
-    7       o     Owner
-    8       g     Group
-    9       u     Reserved/user time
-   10       a     ACL
-   11       x     Extended attributes
-
-Special:  '.' = unchanged, '+' = new item
-```
-
-```
-YXcstpoguax
-|||||||||||
-`-------------------------- the TYPE OF UPDATE:
- ||||||||||   <: file is being transferred to the remote host (pushed).
- ||||||||||   >: file is being transferred to the local host (pulled).
- ||||||||||   c: local change/creation for the item, such as:
- ||||||||||      - the creation of a directory
- ||||||||||      - the changing of a symlink,
- ||||||||||      - etc.
- ||||||||||   h: the item is a hard link to another item (requires --hard-links).
- ||||||||||   "+" - the file is newly created
- ||||||||||   .: the item is not being updated (though it might have attributes that are being modified).
- ||||||||||   *: means that the rest of the itemized-output area contains a message (e.g. "deleting").
- ||||||||||
- `----------------------------- the FILE TYPE:
-  |||||||||   f for a file,
-  |||||||||   d for a directory,
-  |||||||||   L for a symlink,
-  |||||||||   D for a device,
-  |||||||||   S for a special file (e.g. named sockets and fifos).
-  |||||||||
-  `--------- c: different checksum (for regular files)
-   ||||||||     CHANGED VALUE (for symlink, device, and special file)
-   `-------- s: Size is different
-    `------- t: Modification time is different
-     `------ p: Permission are different
-      `----- o: Owner is different
-       `---- g: Group is different
-        `--- u: The u slot is reserved for future use.
-         `-- a: The ACL information changed
-```
-
+The parameter `-i` or `--itemize-changes` produces an 11-character summary string for each file. See the detailed breakdown in the [Overview](#overview) section below.
 
 ### The Stand alone application
 

@@ -65,7 +65,7 @@ After changing a setting, save the changes to keep them next time you use RsyncU
   - the `--compress` parameter is only applicable for remote tasks
   - if the user requests an estimate, the validation checks that the `--dry-run` parameter is included within the arguments
 
-**Confirm Execution:**
+**Confirm Execute:**
 
 - see below
 
@@ -90,6 +90,6 @@ If a local disk is not attached, `rsync` will attempt to synchronize the data to
 /dev/disk5s2 on /Volumes/Import bilder (apfs, local, nodev, nosuid, journaled, noowners)
 /dev/disk6s1 on /Volumes/Backups (apfs, local, nodev, nosuid, journaled, noowners)
 ```
-Below the local attached volume is not connected, and the estimate may interpret this as a new synchronize task. If you have simply forgotten to attach the disk, you do not want `RsyncUI` to synchronize data to the `/Volume` directory.
+Below the local attached volume is not connected, and the estimate may interpret this as a new synchronize task. If you have simply forgotten to attach the disk, you do not want `RsyncUI` to synchronize data to the `/Volumes` directory.
 
 {{< figure src="/images/usersettings/summarizedview.png" alt="" position="center" style="border-radius: 8px;" >}}

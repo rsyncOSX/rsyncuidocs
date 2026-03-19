@@ -8,13 +8,13 @@ categories = ["technical details"]
 
 ### Overview
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-secondary" role="alert">
 
 There are at least three methods to compile RsyncUI, one without an Apple Developer account and two with an Apple Developer account. Regardless of the method used, it is straightforward to compile RsyncUI, as it is not dependent on any third-party code or library.
 
 </div>
 
-The easist method is by using the included Makefile. The default make in `/usr/bin/make` does the job. 
+The easiest method is by using the included Makefile. The default make in `/usr/bin/make` does the job. 
 
 ### Compile by make
 
@@ -57,7 +57,7 @@ To use them, specify `--keychain-profile "RsyncUI"`
 
 Following the above steps, the following make commands are available from the root of RsyncUI's source catalog:
 
-- `make` - will generate a signed and notified DMG file including the release version of RsyncUI.
+- `make` - will generate a signed and notarized DMG file including the release version of RsyncUI.
 - `make archive` - will produce a release version, removing all debug information, without signing within the `build` catalog.
 - `make clean` - will delete all build data.
 

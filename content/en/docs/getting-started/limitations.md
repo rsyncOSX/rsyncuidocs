@@ -20,7 +20,7 @@ Adjust your Mac's sleep settings to avoid interruptions.
 
 </div>
 
-The above will also be true if you are using the Calendar function.
+Sleep interrupting an active rsync process will also affect scheduled tasks when using the Calendar function.
 
 ### The Schedule
 
