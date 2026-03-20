@@ -6,14 +6,12 @@ tags = ["changelog","version 2.9.3"]
 categories = ["changelog"]
 +++
 
-### Version 2.9.3 - March 16, 2026 (prerelease)
+### Version 2.9.3 - March 20, 2026 (prerelease)
 
-> If no bugs are reported during this week, this release will be the next version 2.9.3 without a new build.
+This prerelease addresses a logical error in the Tasks menu when selected from the sidebar. The Add tasks button on the toolbar is now consistently visible when in the Tasks menu.  In version 2.9.2, the “Add tasks” button on the toolbar is only visible when a task is selected and when the “Edit” tab is selected.
 
-This prerelease addresses a logical error in the Tasks menu when selected from the sidebar. The Add tasks button on the toolbar is now consistently visible when in the Tasks menu. 
+### Update: March 20, 2026 
 
-In version 2.9.2, the “Add tasks” button on the toolbar is only visible when a task is selected and when the “Edit” tab is selected.
+I have now subscribed to Claude code and have requested assistance from Claude to verify the RsyncUI codebase over the past week. I instructed Claude to document any issues in [report.md](https://github.com/rsyncOSX/RsyncUI/blob/main/report.md), and most issues have been resolved. Additionally, notifications regarding Extraction Candidates will be included in a future release, 2.9.4.
 
-Additionally, this release introduces two builds: one exclusively for Apple Silicon (arm64) and the other for both Apple Silicon and Intel architectures. The arm64 build is approximately 2MB smaller than the standard build.
 
-The [Full Changelog](https://github.com/rsyncOSX/RsyncUI/compare/v2.9.2...v2.9.3) shows many files changed, but only a minor update addresses the issue above. The remaining changes are code quality and refactoring improvements that extract reusable components.
