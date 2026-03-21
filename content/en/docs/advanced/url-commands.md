@@ -26,13 +26,11 @@ After enabling the widget, a single click on the widget will launch RsyncUI and 
 
 #### Execute URLs from within RsyncUI
 
-Deep links also enable automation of actions within RsyncUI. A single click on the toolbar icon executes the URL action. RsyncUI generates the necessary URL based on the loaded profile and the required action. The two yellow toolbar icons allow execution of URL commands from within RsyncUI, as demonstrated in section above.
+Deep links also enable automation of actions within RsyncUI. A single click on the toolbar icon executes the URL action. RsyncUI generates the necessary URL based on the loaded profile and the required action. The yellow toolbar icon allow execution of URL commands from within RsyncUI, as demonstrated in section above.
 
 {{< figure src="/images/url/urlcommand.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### URLs and Notepad
-
-URLs must start with `rsyncuiapp://`:
 
 | Action                                             | URL                                                                     |
 |----------------------------------------------------|-------------------------------------------------------------------------|

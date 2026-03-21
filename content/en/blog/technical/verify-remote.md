@@ -69,10 +69,6 @@ Utilize RsyncUI to create tasks. The application necessitates RsyncUI for task c
 
 This application is currently in development. The majority of the code is derived from the code base of RsyncUI, and there are some new code modules associated with the Verify Remote function. Additionally, some new views have been added for evaluation purposes.
 
-{{< figure src="/images/verifyremote/main.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/tagged.png" alt="" position="center" style="border-radius: 8px;" >}}
-{{< figure src="/images/verifyremote/notag.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 ## Overview
 
 The `--itemize-changes` (or `-i`) option in rsync provides a detailed, itemized list of changes being made to each file during synchronization. The output format is an 11-character string followed by the file path. 

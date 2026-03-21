@@ -8,6 +8,8 @@ categories = ["general information"]
 
 RsyncUI stores all data locally on your Mac in [JSON](https://en.wikipedia.org/wiki/JSON) format, including task configurations, logs, and settings. Understanding the file structure helps with backup and troubleshooting.
 
+> Due to historical reasons, the location of configuration files is `.rsyncosx` and not `.rsyncui`. This is because the development of RsyncUI commenced with the now-archived application RsyncOSX. 
+
 ## File Locations
 
 All RsyncUI files are stored in: `$HOME/.rsyncosx/<macserialnumber>`, where `<macserialnumber>` is your Mac's serial number, which is retrieved at startup.
