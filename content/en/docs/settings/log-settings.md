@@ -75,7 +75,6 @@ Sample of an error in output from rsync. If the switch "Check for error in outpu
 
 The log file is stored at `$HOME/.rsyncosx/macserial/rsyncui.txt`. The log file can be opened from the main view.
 
-{{< figure src="/images/usersettings/errorinrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
 
 #### Confirm Execute
 
@@ -92,4 +91,3 @@ If a local disk is not attached, `rsync` will attempt to synchronize the data to
 ```
 Below the local attached volume is not connected, and the estimate may interpret this as a new synchronize task. If you have simply forgotten to attach the disk, you do not want `RsyncUI` to synchronize data to the `/Volumes` directory.
 
-{{< figure src="/images/usersettings/summarizedview.png" alt="" position="center" style="border-radius: 8px;" >}}
