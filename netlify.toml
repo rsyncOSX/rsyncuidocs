@@ -1,9 +1,9 @@
 [build]
-command = "HUGO_PARAMS='--allow-fs-read /opt/build/cache/hugo_cache/modules/filecache/modules' npm run build:preview"
+command = "HUGO_ARGS='--allow-fs-read /opt/build/cache/hugo_cache/modules/filecache/modules' npm run build:preview"
 publish = "public"
 
 [build.environment]
 GO_VERSION = "1.23.2"
 
 [context.production]
-command = "HUGO_PARAMS='--allow-fs-read /opt/build/cache/hugo_cache/modules/filecache/modules' npm run build:production"
+command = "HUGO_ARGS='--allow-fs-read /opt/build/cache/hugo_cache/modules/filecache/modules' npm run build:production"
