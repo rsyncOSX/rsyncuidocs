@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 ## Version 2.9.5 - May 03, 2026 - test release
 
+I am using all release candidates myself. 
+
 ### Improved log and chart handling
  - Unified log-store loading behind a shared `LogStoreService`, so logging, log records, snapshots, and chart views now read from the same  source.
  - Centralized task/log lookup helpers for `hiddenIDs`, selected task resolution, and backup IDs, reducing repeated logic across the app.
