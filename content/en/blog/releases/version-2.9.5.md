@@ -1,12 +1,14 @@
 +++
 author = "Thomas Evensen"
-title = "Version 2.9.4"
-date = "2026-05-02"
-tags = ["changelog","version 2.9.4"]
+title = "Version 2.9.5rc"
+date = "2026-05-03"
+tags = ["changelog","version 2.9.5rc"]
 categories = ["changelog"]
 +++
 
-### Version 2.9.4 - May 02, 2026 (not released)
+## Version 2.9.5 - May 03, 2026 - test release
+
+The release includes removal of warning 20 lines.
 
 A cleanup of code in RsyncUI is underway. RsyncUI is stable and has many downloads, but I learned more about concurrency and caching while working on another project that requires it. RsyncUI lacks caching, and most work is done on the main thread. There’s a minor need for concurrency and isolation mechanisms like actors in the code. However, concurrency is used to avoid blocking the UI during reading, writing, and sorting log records. All other read and sorting are executed on the main actor. As well as the real synchronization tasks and updates during synchronization.
 
