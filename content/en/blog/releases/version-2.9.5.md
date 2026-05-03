@@ -36,10 +36,11 @@ categories = ["changelog"]
 
 A cleanup of code in RsyncUI is underway. RsyncUI is stable and has many downloads, but I learned more about concurrency and caching while working on another project that requires it. RsyncUI lacks caching, and most work is done on the main thread. There’s a minor need for concurrency and isolation mechanisms like actors in the code. However, concurrency is used to avoid blocking the UI during reading, writing, and sorting log records. All other read and sorting are executed on the main actor. As well as the real synchronization tasks and updates during synchronization.
 
-The cleanup will take time, and I’m unsure how aggressive I’ll be. I’m doing it in between projects. I don’t know when an updated version will be released, so don’t hold your breath. The most important thing is to keep the code updated.
+*The cleanup process will require time and may vary in its intensity. I intend to undertake it during my project intervals. The release of a final, updated version is uncertain, so please refrain from holding your breath. The primary objective of the cleanup is to ensure the code's ongoing maintenance and future updates.*
 
 There has also been an update in package RsyncAnalyse due to changes in the output by applying the `--itemize-changes` in newly released rsync version 3.4.2. Apart from that there are no changes in the output in version 3.4.2 of rsync and there is no need for other updates in RsyncUi due to this release of rsync.
 
 ### AI
 
-I use AI to discover and plan updates. Follow the updates in the markdown docs like `phase1.md` and `phase4.md` in the `version 2.9.4-cleanup` branch. The next version will be a release candidate when ready. There will be several updates, with two or three releases before completion. I won't make a major new release until I'm certain no bugs are introduced.
+Utilizing artificial intelligence, I am responsible for identifying and orchestrating updates. Please refer to the markdown documentation, specifically `phase1.md` and `phase4.md`, located within the `main` branch. Multiple updates will be released, with two or three prior to the finalization of the project. A significant new release will not be issued until I have thoroughly verified the absence of any bugs.
+
