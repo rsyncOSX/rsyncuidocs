@@ -10,6 +10,11 @@ Before using RsyncUI, review these key notes.
 
 The interface may feel challenging if you are new to the `rsync` command-line tool. RsyncUI focuses on making `rsync` easier to use, not on teaching every `rsync` concept.
 
+<div class="alert alert-secondary" role="alert">
+
+A user found that real-time progress updates don't work properly with the default `/usr/bin/rsync` (openrsync). The progress is visible during synchronization in the main view. Consider updating rsync, as mentioned in section "Latest version of rsync".
+
+</div>
 ### Not a backup tool for everyone
 
 RsyncUI specializes in synchronization and file management. The command-line tool rsync performs the actual work. If you need a full system backup tool that creates complete disk images, RsyncUI is not the right fit.
