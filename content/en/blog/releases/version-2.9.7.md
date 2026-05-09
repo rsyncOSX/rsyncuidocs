@@ -10,6 +10,8 @@ categories = ["changelog"]
 
 <div class="alert alert-secondary" role="alert">
 
+Kindly download and test the application. My intention is to release this build as the next public release within the next few days.
+
 This version is currently set as prereleased until a sufficient number of users have downloaded it and have not identified any bugs. There are only  internal updates to prepare the codebase for future maintenance and enhancements. 
 
 If no bugs are reported, there will be no new builds. The status will only change to "released" from "prerelease". The rest of cleanup will continue, but the new version will be released in a few weeks.
