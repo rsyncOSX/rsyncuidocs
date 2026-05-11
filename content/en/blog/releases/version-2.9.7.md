@@ -13,7 +13,7 @@ categories = ["changelog"]
 
 Update May 11, 2026:
 
-As a non-UI designer, I am seeking assistance and feedback to enhance the user interface (UI) of RsyncUI. With the support of [Open-design](https://github.com/nexu-io/open-design), I requested suggestions for modifications to the Main Synchronize view and Task menu. I am particularly impressed with the redesign. Open-design provided two sketches, resulting in two new version 2.9.7 DMG files for testing. It is only the UI which are updated, the model part is frozen and not changed.
+As a non-UI designer, I am seeking assistance and feedback to enhance the user interface (UI) of RsyncUI. With the support of [Open-design](https://github.com/nexu-io/open-design), I requested suggestions for modifications to the main Synchronize and Tasks view. Open-design provided two sketches, resulting in two new version 2.9.7 files for testing. It is only the UI which are updated, the model part is frozen and not changed.
 
 Please download a test. Let me know if you have any comments about the redesign. Due to UI updates, there’ll likely be a new public release version 2.9.8 after testing. If I keep the UI updates, which I intend to do.
 
