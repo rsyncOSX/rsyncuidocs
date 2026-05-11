@@ -8,14 +8,13 @@ categories = ["changelog"]
 
 ## Version 2.9.7 - May 11, 2026
 
+Update May 11, 2026:
 
 <div class="alert alert-secondary" role="alert">
 
-Update May 11, 2026:
+As a non-UI designer, I'm seeking feedback to improve RsyncUI's UI. With [Open-design](https://github.com/nexu-io/open-design), I requested suggestions for modifications to the main Synchronize and Tasks view. Open-design provided two sketches for updates which are implemented. The model part is frozen since the previous release candidate, only the UI is updated in version 2.9.7's republish.
 
-As a non-UI designer, I am seeking assistance and feedback to enhance the user interface (UI) of RsyncUI. With the support of [Open-design](https://github.com/nexu-io/open-design), I requested suggestions for modifications to the main Synchronize and Tasks view. Open-design provided two sketches, resulting in two new version 2.9.7 files for testing. It is only the UI which are updated, the model part is frozen and not changed.
-
-Please download a test. Let me know if you have any comments about the redesign. Due to UI updates, there’ll likely be a new public release version 2.9.8 after testing. If I keep the UI updates, which I intend to do.
+Please download a test. Please let me know your comments about the UI redesign if you have any. Due to UI updates, there'll be a new release version 2.9.8 after testing. 
 
 </div>
 
