@@ -12,7 +12,7 @@ Update May 12, 2026:
 
 <div class="alert alert-secondary" role="alert">
 
-This version primarily focuses on refactoring and cleaning up the model component of RsyncUI. Additionally, there are some updates to the main Synchronize and Tasks view. There are several updates planned, and a final cleanup of the code is scheduled for June. 
+This version primarily focuses on refactoring and cleaning up the model component of RsyncUI. Additionally, there are some updates to the main Synchronize and Tasks view. There are more [internal updates planned](https://github.com/rsyncOSX/RsyncUI/blob/main/documents/version300.md), and the next and hopefully final cleanup of the code is scheduled for June or July. 
 
 </div>
 
