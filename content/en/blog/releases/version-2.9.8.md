@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 ## Version 2.9.8 - May 12, 2026
 
-Update May 12, 2026:
+In this release, there are a few minor UI updates. If you prefer the update without the UI updates, please inform me, and I can create an updated version without the UI updates.
 
 <div class="alert alert-secondary" role="alert">
 

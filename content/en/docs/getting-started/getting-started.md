@@ -48,26 +48,6 @@ RsyncUI executes the command-line tool `rsync` and monitors progress and termina
 
 You can abort a task at any time. Allow the abort to complete and cleanup to finish before starting another task; otherwise the app may become unresponsive.
 
-### Errors in tagging data
-
-Sometimes you may get the error:
-```
-There are errors in tagging data
-for synchronize ID XXXX
-Most likely number of rows
-> 20 lines and no data to synchronize
-```
-
-The message confirms that all data appears synchronized. RsyncUI bases this on rsync summary output. If there are more than ~20 lines yet no data tagged for sync, the message reminds you to double-check. To verify, run the task without an estimate.
-
-Version 3.x of rsync:
-
-{{< figure src="/images/gettingstarted/linesver3x.png" alt="" position="center" style="border-radius: 8px;" >}}
-
-Version openrsync:
-
-{{< figure src="/images/gettingstarted/linesopenrsync.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 #### The Sidebar Menu options
 
 Two Sidebar menu options depend on task properties. If any task meets the requirement, the option appears.
