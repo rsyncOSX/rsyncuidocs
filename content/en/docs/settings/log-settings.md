@@ -20,7 +20,7 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 - default: on
 - a summary of each synchronization is added to the log records; view "Log Listings" from the Sidebar
 
-**No time delay Synchronize URL-actions**
+**Skip time delay for URL-triggered sync**
 
 - default: off
 - if on, estimated tasks triggered by URL-actions will synchronize without any chance to abort
@@ -35,28 +35,18 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 - default: off
 - automatic profile selection when RsyncUI detects a new mount of a local attached disk
 
-**Always present the summarized estimate view**
+**Always show estimate summary**
 
 - default "on"
 - after an estimate, by selecting the Magic Wand on toolbar Synchronize task view, always present the summarized view
 
-**Hide Verify remote:**
-
-- default "on"
-- refer to section *"Verify remote"*, this is a kind of special function, default **not** enabled
-
-**Use two tables Inspector:**
-
-- applies to main Sidebar menu Tasks
-- utilize one or two tables to select Inspector for editing tasks and parameters
-
-**Silence missing stats**
+**Suppress missing stats warnings**
 
 - default: off
 - stats is the summarized output from rsync; if on, RsyncUI notifies if stats are missing after termination
 - in version 2.8.4, missing stats are *unlikely* due to the new *RsyncProcessStreaming*
 
-**Validate arguments**
+**Validate rsync arguments**
 
 - default: on - validates default parameters
 - if the `--delete` parameter is included in the task configuration, the validation checks its presence or absence based on the task's state, which specifies whether a delete operation is required
@@ -65,7 +55,7 @@ After changing a setting, save the changes to keep them next time you use RsyncU
   - the `--compress` parameter is only applicable for remote tasks
   - if the user requests an estimate, the validation checks that the `--dry-run` parameter is included within the arguments
 
-**Confirm Execute:**
+**Confirm execute:**
 
 - see below
 
