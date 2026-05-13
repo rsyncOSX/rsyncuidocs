@@ -10,12 +10,12 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 
 {{< figure src="/images/usersettings/logsettings.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-**Check for Errors in Output:**
+**Check for error in output:**
 
 - default: off
 - if the word "error" is found in rsync output, you are notified
 
-**Add Summary Log Record:**
+**Add Summary log record:**
 
 - default: on
 - a summary of each synchronization is added to the log records; view "Log Listings" from the Sidebar
@@ -54,7 +54,7 @@ After changing a setting, save the changes to keep them next time you use RsyncU
   - the `--compress` parameter is only applicable for remote tasks
   - if the user requests an estimate, the validation checks that the `--dry-run` parameter is included within the arguments
 
-**Confirm execute:**
+**Confirm execute**
 
 - see below
 
