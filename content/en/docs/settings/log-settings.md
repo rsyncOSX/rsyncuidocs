@@ -44,7 +44,6 @@ After changing a setting, save the changes to keep them next time you use RsyncU
 
 - default: off
 - stats is the summarized output from rsync; if on, RsyncUI notifies if stats are missing after termination
-- in version 2.8.4, missing stats are *unlikely* due to the new *RsyncProcessStreaming*
 
 **Validate rsync arguments**
 
