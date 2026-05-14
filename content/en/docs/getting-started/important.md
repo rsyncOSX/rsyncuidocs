@@ -53,7 +53,7 @@ Incorrect rsync parameters can delete data, and RsyncUI does not block such choi
 
 ### Temporary halt tasks
 
-You can temporarily halt a task. In the Synchronize view, right-click a task to halt it; the task keeps its type when resumed. Halted tasks display a red stop sign in the action column.
+You can temporarily halt a task. In the Synchronize view, right-click a task to toggle halt; the task keeps its type when resumed. Halted tasks are greyed out.
 
 {{< figure src="/images/important/halttask.png" alt="" position="center" style="border-radius: 8px;" >}}
 
