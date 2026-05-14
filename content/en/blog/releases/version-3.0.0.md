@@ -8,4 +8,4 @@ categories = ["changelog"]
 
 ## Version 3.0.0 - May 14, 2026
 
-Bufix: fixed the issue with Add tasks. Also removed an anoynig message about missing config file.Bufix: fixed the issue with Add tasks. Also removed an anoynig message about missing config file.
+Bugix: Resolved the issue with adding tasks. Additionally, removed an annoying message regarding the missing configuration file.
