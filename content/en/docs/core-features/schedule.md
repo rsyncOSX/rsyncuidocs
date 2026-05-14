@@ -36,8 +36,6 @@ The Schedule view visually distinguishes invalid times in red font. Only validat
 
 {{< figure src="/images/calendar/addcalendar.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-{{< figure src="/images/calendar/hidesidebar.png" alt="" position="center" style="border-radius: 8px;" >}}
-
 ### Delete Schedules
 
 Select one or more schedules and press the backspace key.
