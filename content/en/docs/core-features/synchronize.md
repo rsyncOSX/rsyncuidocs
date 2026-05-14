@@ -31,7 +31,7 @@ By selecting a row within the estimate view, you will be presented with detailed
 
 {{< figure src="/images/tasks/estimate.png" alt="" position="center" style="border-radius: 8px;" >}}
 
-The output from rsync is as follows due to the addition of parameters to rsync. Refer to the blog post titled “Verify Remote” for further details. The parameters cause rsync to output more data.
+The output from rsync is as follows due to the addition of parameters to rsync. The parameters cause rsync to output more data.
 
 {{< figure src="/images/tasks/estimatedetails.png" alt="" position="center" style="border-radius: 8px;" >}}
 

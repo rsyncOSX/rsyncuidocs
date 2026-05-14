@@ -12,7 +12,7 @@ You can adjust the defaults. Task configurations store their parameters, includi
 
 <div class="alert alert-danger" role="alert">
 
-Always verify the result after changing rsync parameters. Select *"Verify tasks"* from the Sidebar.
+Always verify the result after changing rsync parameters. Select *"Verify tasks"* from the primary Sidebar menu.
 
 </div>
 
@@ -43,7 +43,7 @@ Task-specific SSH parameters override global SSH settings.
 
 <div class="alert alert-secondary" role="alert">
 
-The values are marked red until validated OK. Refer to the *"Tools passwordless login"* section for information about validated values.
+The values are marked red until validated OK. Refer to [*SSH keys and passwordless login*](/docs/ssh-setup/ssh-keys/) for information about validated values.
 
 </div>
 

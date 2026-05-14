@@ -8,7 +8,7 @@ categories = ["general information"]
 The MIT License (MIT), also explained on [Wikipedia](https://en.wikipedia.org/wiki/MIT_License).
 
 ```code
-Copyright (c) 2020 - 2025 - Thomas Evensen
+Copyright (c) 2020 - 2026 - Thomas Evensen
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

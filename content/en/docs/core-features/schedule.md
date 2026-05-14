@@ -6,12 +6,6 @@ tags = ["schedule"]
 categories = ["synchronize"]
 +++
 
-<div class="alert alert-secondary" role="alert">
-
-The schedule function is disabled by default. Please refer to the *RsyncUI settings, Monitor and log* section to enable it.
-
-</div>
-
 Schedules are saved automatically. RsyncUI loads tasks that are due. Tasks scheduled while the Mac was shut down are not loaded. If the Mac sleeps, missed tasks appear in the Schedule view. *Missed tasks do not run automatically.*
 
 <div class="alert alert-secondary" role="alert">
