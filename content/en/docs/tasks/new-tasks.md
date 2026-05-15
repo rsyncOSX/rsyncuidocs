@@ -42,6 +42,13 @@ The following data pertains to tasks:
 
 ##### Trailing /
 
+A trailing `/` on the *source* changes what rsync copies:
+
+- *source with trailing slash* (`source/`) - copies the **contents** of the source directory into the destination
+- *source without trailing slash* (`source`) - copies the source directory **itself**, including its name, into the destination, creating `destination/source/...`
+
+A trailing slash on the destination has no effect.
+
 - *Add*  - add a trailing slash to both the source and destination
 - *Do not add* - do not add a trailing slash, or if added remove it
 - *Do not check* - do not check for trailing slash or not on either the source or destination
