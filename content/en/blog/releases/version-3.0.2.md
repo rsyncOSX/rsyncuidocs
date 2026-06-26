@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 # 🚀 Changelog: RsyncUI 3.0.0 → 3.0.2 (release candidate)
 
-Based on the actual Git diff from v3.0.0 to commit 64a97b8a dated June 24, 2026.
+This build is based on the actual Git diff from v3.0.0 to commit 64a97b8a (dated June 24, 2026). If no bugs are reported next week, this commit will become the next official release without requiring a new build. Consequently, users who download and test it now will not receive a notification to download a new version later.
 
 ## 📋 Improved rsync output
 
