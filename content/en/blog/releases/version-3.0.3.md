@@ -8,7 +8,9 @@ categories = ["changelog"]
 
 # 🚀 Changelog: RsyncUI 3.0.2 → 3.0.3 
 
-Thanks to [Tim Reichen](https://github.com/timreichen) for submitting PRs to this release. If no bugs are reported by next week, this commit will become the next official release without requiring a new build. Consequently, users who download and test it now will not receive a notification to download a new version later.
+Status changed from release candidate -> release without a new build August 7, 2026.
+
+Thanks to [Tim Reichen](https://github.com/timreichen) for submitting PRs to this release. ~~If no bugs are reported by next week, this commit will become the next official release without requiring a new build. Consequently, users who download and test it now will not receive a notification to download a new version later.~~
 
 # 📦 RsyncUI 3.0.3
 
