@@ -12,6 +12,8 @@ categories = ["changelog"]
 
 Changes since `v3.0.3` through commit `5cebb703` (August 12, 2026).
 
+The previous build had some issues with delete profiles, the new build fixes that (commit `cc9fc88 ` on branch version-3.0.4). The build number is `203`.
+
 ## 🐛 Crash fixes
 
 - Fixed the recurring AppKit `Update Constraints in Window` crash during startup.
