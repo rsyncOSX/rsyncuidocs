@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 3.0.4"
-date = "2026-08-12"
+date = "2026-08-13"
 tags = ["changelog","version 3.0.4"]
 categories = ["changelog"]
 +++
@@ -10,9 +10,9 @@ categories = ["changelog"]
 
 > This build is not a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. A new public release of RsyncUI will coincide with the general availability of macOS 27 in the coming weeks.
 
-Changes since `v3.0.3` through commit `5cebb703` (August 12, 2026).
+Changes since `v3.0.3` through commit `787bb03` (August 13, 2026).
 
-The previous build had some issues with delete profiles, the new build fixes that (commit `cc9fc88 ` on branch version-3.0.4). The build number is `203`.
+A general issue with delete arose from a missing focus state tied to a Swift update, which is resolved in the latest build this morning, August 13. A few additional updates may appear before the public release of macOS Golden Gate. A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), was released today, though I have not yet tested it.
 
 ## 🐛 Crash fixes
 
