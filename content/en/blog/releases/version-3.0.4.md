@@ -8,7 +8,11 @@ categories = ["changelog"]
 
 #  RsyncUI 3.0.4 — Changelog
 
-> This build is not a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. A new public release of RsyncUI will coincide with the general availability of macOS 27 in the coming weeks.
+<div class="alert alert-secondary" role="alert">
+
+This build is not a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. A new public release of RsyncUI will coincide with the general availability of macOS 27 in the coming weeks.
+
+</div>
 
 Changes since `v3.0.3` through commit `787bb03` (August 13, 2026).
 

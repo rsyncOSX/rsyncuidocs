@@ -10,6 +10,12 @@ categories = ["changelog"]
 
 Status changed from release candidate -> release without a new build August 7, 2026.
 
+<div class="alert alert-secondary" role="alert">
+
+Version 3.0.3 of RsyncUI exhibits a few user interface issues on the macOS Golden Gate beta. Users running RsyncUI on this beta release are advised to upgrade to version 3.0.4. This release remains in beta because it was compiled with Xcode 27 beta; a stable public release of version 3.0.4 will be issued as soon as Xcode 27 becomes publicly available.
+
+</div>
+
 Thanks to [Tim Reichen](https://github.com/timreichen) for submitting PRs to this release. ~~If no bugs are reported by next week, this commit will become the next official release without requiring a new build. Consequently, users who download and test it now will not receive a notification to download a new version later.~~
 
 # 📦 RsyncUI 3.0.3
