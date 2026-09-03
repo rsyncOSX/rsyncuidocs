@@ -16,7 +16,9 @@ This build is not a release candidate; it addresses a crash occurring during com
 
 Changes since `v3.0.3` through commit `787bb03` (August 13, 2026).
 
-A general issue with delete arose from a missing focus state tied to a Swift update, which is resolved in the latest build this morning, August 13. A few additional updates may appear before the public release of macOS Golden Gate. A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), was released today, though I have not yet tested it.
+A general issue with delete arose from a missing focus state tied to a Swift update, which is resolved in the latest build this morning, August 13. A few additional updates may appear before the public release of macOS Golden Gate. 
+
+A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), is released. No changes required in RsyncUI to support the new version of rsync.
 
 ## 🐛 Crash fixes
 
