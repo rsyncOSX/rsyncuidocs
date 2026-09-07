@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 3.0.4"
-date = "2026-08-13"
+date = "2026-09-07"
 tags = ["changelog","version 3.0.4"]
 categories = ["changelog"]
 +++
@@ -10,13 +10,15 @@ categories = ["changelog"]
 
 <div class="alert alert-secondary" role="alert">
 
-This build is not a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. A new public release of RsyncUI will coincide with the general availability of macOS 27 in the coming weeks.
+This build is a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. The latest build also includes restore, snapshot deletion, synchronization, logging, and shared widget storage fixes completed after the first 3.0.4 tag.
+
+There will be a new build and release of version 3.0.5 when Xcode 27 is released. 
 
 </div>
 
-Changes since `v3.0.3` through commit `787bb03` (August 13, 2026).
+Changes since `v3.0.3` through commit `194f3578` (September 7, 2026).
 
-A general issue with delete arose from a missing focus state tied to a Swift update, which is resolved in the latest build this morning, August 13. A few additional updates may appear before the public release of macOS Golden Gate. 
+A general issue with delete arose from a missing focus state tied to a Swift update, which was resolved in the August 13 build. Additional fixes through September 7 stabilize restore workflows, process completion handling, snapshot deletion, and shared JSON storage used by the widget.
 
 A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), is released. No changes required in RsyncUI to support the new version of rsync.
 
@@ -43,11 +45,28 @@ A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), 
 - Anchored the Synchronize play button directly to the divider between the two results tables.
 - The play button now remains centered between the tables when the window is resized.
 - Consolidated synchronization execution and confirmation handling.
+- Preserved process ownership while canceling remaining batch tasks.
+- Recorded backup success only after a successful process exit.
+- Fixed synchronization countdown behavior.
+
+## ♻️ Restore and snapshot fixes
+
+- Preserved the complete restore file list while searching.
+- Reset restore snapshot selection when the selected profile or restore context changes.
+- Validated restore operations against the currently displayed destination.
+- Fixed snapshot deletion path validation and shell quoting.
+- Added restore destination, restore search, restore selection, and snapshot deletion regression tests.
+
+## 🧾 Logging and storage
+
+- Fixed Swift concurrency issues in log storage.
+- Updated shared JSON storage used by RsyncUI and the widget for build 207.
+- Kept profile creation errors visible until the underlying issue is resolved.
 
 ## 📦 Version and update information
 
 - Updated the application version from `3.0.3` to `3.0.4`.
-- Updated the application and widget build number from `201` to `202`.
+- Updated the application and widget build number from `201` to `207`.
 - Updated the version feed so supported older releases point to the `v3.0.3` download.
 - Added `3.0.2` to the supported update-feed entries.
 - Updated README release information and download badges for `v3.0.3`.
@@ -61,5 +80,5 @@ A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), 
 ## ✅ Verification
 
 - Application builds successfully with Swift 6.
-- All 58 tests across 11 suites pass.
+- All 70 tests across 16 suites pass.
 - Startup was verified using existing profiles, configurations, and schedules without triggering the previous layout crash.
