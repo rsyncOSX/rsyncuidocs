@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 <div class="alert alert-secondary" role="alert">
 
-This build is the latest release; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. The latest build also includes restore, snapshot deletion, synchronization, logging, and shared widget storage fixes completed after the first 3.0.5 tag.
+This build is the latest release; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. The latest build also includes restore, snapshot deletion, synchronization, logging, and shared widget storage fixes completed after the first 3.0.5 tag.
 
 Build by Xcode 27 RC1 on macOS 27 RC (macOS Golden Gate).
 
