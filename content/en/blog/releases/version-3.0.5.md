@@ -1,28 +1,26 @@
 +++
 author = "Thomas Evensen"
-title = "Version 3.0.4"
-date = "2026-09-07"
-tags = ["changelog","version 3.0.4"]
+title = "Version 3.0.5"
+date = "2026-09-10"
+tags = ["changelog","version 3.0.5"]
 categories = ["changelog"]
 +++
 
-#  RsyncUI 3.0.4 — Changelog
+#  RsyncUI 3.0.5 — Changelog
 
 <div class="alert alert-secondary" role="alert">
 
-This build is a release candidate; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. The latest build also includes restore, snapshot deletion, synchronization, logging, and shared widget storage fixes completed after the first 3.0.4 tag.
+This build is the latest release; it addresses a crash occurring during compilation and execution of RsyncUI on macOS 27 beta releases. The issue manifested when selecting Tasks from the sidebar menu. Users running macOS 27 beta are advised to update to this version. The latest build also includes restore, snapshot deletion, synchronization, logging, and shared widget storage fixes completed after the first 3.0.5 tag.
 
-There will be a new build and release of version 3.0.5 when Xcode 27 is released. 
+Build by Xcode 27 RC1 on macOS 27 RC (macOS Golden Gate).
 
 </div>
 
-Changes since `v3.0.3` through commit `194f3578` (September 7, 2026).
+Changes since `v3.0.3` through commit `b3e9343` (September 10, 2026).
 
 A general issue with delete arose from a missing focus state tied to a Swift update, which was resolved in the August 13 build. Additional fixes through September 7 stabilize restore workflows, process completion handling, snapshot deletion, and shared JSON storage used by the widget.
 
-A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), is released. No changes required in RsyncUI to support the new version of rsync.
-
-## 🐛 Crash fixes
+## 🐛 Fxes
 
 - Fixed the recurring AppKit `Update Constraints in Window` crash during startup.
 - Replaced the problematic root `NavigationSplitView` implementation.
@@ -30,6 +28,7 @@ A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), 
 - Removed an invisible task editor that caused unnecessary Inspector layout updates.
 - Moved Add Task presentation into a dedicated sheet.
 - Added stable Inspector presentation state and column sizing.
+- Fixed a bug in deep links (URL), now executing the command from a terminal `open "rsyncuiapp://loadprofileandestimate?profile=AnyProfile"` will open RsyncUI and execute estimate & execute for profile `AnyProfile`
 
 ## 🎨 Interface improvements
 
@@ -65,8 +64,8 @@ A new version of rsync, [version 3.5.0](https://github.com/RsyncProject/rsync), 
 
 ## 📦 Version and update information
 
-- Updated the application version from `3.0.3` to `3.0.4`.
-- Updated the application and widget build number from `201` to `207`.
+- Updated the application version from `3.0.3` to `3.0.5`.
+- Updated the application and widget build number from `201` to `208`.
 - Updated the version feed so supported older releases point to the `v3.0.3` download.
 - Added `3.0.2` to the supported update-feed entries.
 - Updated README release information and download badges for `v3.0.3`.
