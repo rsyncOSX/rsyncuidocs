@@ -4,46 +4,44 @@ linkTitle: About
 menu: {main: {weight: 10}}
 ---
 
-{{% blocks/cover title="About" height="auto" %}}
+{{% about-document %}}
 
-{{% /blocks/cover %}}
+# About
 
-{{% blocks/section color="primary" %}}
+Hello! I’m the developer behind **RsyncUI**, **RawCull**, and **RawCullBrowse** — three focused macOS apps shaped by my interests in computing and photography.
 
-Hello,
+## The apps
 
-If you have ideas or feedback about RsyncUI, feel free to reach me at thomeven@gmail.com.
+### RsyncUI
 
-I started RsyncOSX in August 2016 as a way to learn Swift. After eight years of releases, it was archived in August 2024. RsyncUI, built with SwiftUI, began in late 2020 and is still actively developed.
+[RsyncUI](https://github.com/rsyncOSX/RsyncUI) provides a graphical interface for rsync on macOS, making it easier to organize and run file synchronization tasks. Built with SwiftUI, it began in late 2020 as the successor to RsyncOSX.
 
-I hold a master's degree in computing science, earned in the early 1990s when Linux and the public Internet were emerging. The Web itself was invented just a few years earlier, in 1989 at CERN. I'm a solo developer focused on keeping RsyncUI stable and usable. I'm not a professional UI designer, so parts of the interface may feel dense.
+### RawCull
 
-Maintaining RsyncUI is a hobby. If you find it helpful, a GitHub star is appreciated—it keeps me motivated. I retired in May 2022 at age 62. Outside coding, I am a [bird photographer](https://birdsofprey.netlify.app) who enjoys time in the Norwegian mountains. Grandchildren, photography, RsyncUI, and cross-country skiing keep me busy.
+[RawCull](https://github.com/rsyncOSX/RawCull) is built for quickly culling RAW photographs. After a day in the field with my Sony A1 Mk II, I often come home with several thousand ARW files. I wanted a focused app to help me review them and decide which photographs to keep.
 
-{.text-center}
+### RawCullBrowse
 
-{{% /blocks/section %}}
+[RawCullBrowse](https://github.com/rsyncOSX/RawCullBrowse) builds on code from RawCull. It is a photo browser for exploring local folders, inspecting photographs and camera information, and adjusting supported RAW files. Optional AI models run locally on your Mac to help with searching and reviewing photographs.
 
-{{% blocks/section color="white" %}}
+## Background
 
-Although I am an educated IT professional, most of my career was in IT management, not hands-on development. My coding experience comes from personal projects like RsyncUI and RsyncOSX. Search, documentation, and learning from other developers' examples have been invaluable.
+I started **RsyncOSX** in August 2016 as a way to learn Swift. After eight years of releases, it was archived in August 2024. RsyncUI carried that work forward, while RawCull and RawCullBrowse grew out of my photography.
 
-I keep learning with every Swift, SwiftUI, and Xcode release. Major changes and updates are logged in the [changelog](/blog/). I rely on tools such as [SwiftLint](https://github.com/realm/SwiftLint), [SwiftFormat](https://github.com/nicklockwood/SwiftFormat), and [periphery](https://github.com/peripheryapp/periphery) to improve code quality.
+I hold a master’s degree in computing science, earned in the early 1990s. Most of my career was spent in IT management rather than hands-on development. My coding experience comes from these personal projects, along with documentation, AI tools, and studying how other developers solve problems. I’m a solo developer, and user feedback helps me shape the apps and their interfaces.
 
-**Why Not the App Store?**
+I retired in May 2022 at age 62. Outside of code, I’m an avid [bird photographer](https://birdsofprey.netlify.app) who spends a lot of time in the Norwegian mountains. Grandchildren, photography, and cross-country skiing round out life alongside the coding projects.
 
-One crucial requirement for macOS applications on the Apple App Store, as outlined by Apple, is: *"To distribute a macOS app through the Mac App Store, you must enable the App Sandbox capability."* The App Sandbox imposes certain restrictions on the functionality of an application within its environment. While it is essential for enabling passwordless login via SSH to remote servers, it also causes some limitations with these features when enabled.
+## Development
 
-{.text-center}
+These projects are built with **Swift** and **SwiftUI**, using native macOS APIs. RawCull is digitally signed and notarized by Apple.
 
-{{% /blocks/section %}}
+## Get in touch
 
-{{% blocks/section color="primary" %}}
+Got ideas, feedback, or a bug to report? I’d love to hear from you at [thomeven@gmail.com](mailto:thomeven@gmail.com).
 
-**How are these pages constructed?**
+## About this website
 
-Hugo, a static site generator, serves as the web framework responsible for constructing these pages. The source code for this website is hosted on GitHub. Netlify, the web server, automatically detects changes made to the main branch and promptly rebuilds the server. The Hugo theme utilized is [docsy](https://github.com/google/docsy), another open-source project hosted on GitHub. Upon making modifications or additions to pages, I commit these changes to GitHub, and Netlify promptly constructs the new server within seconds.
+This documentation runs on **Hugo** with the [Docsy](https://github.com/google/docsy) theme. The source lives on GitHub, and Netlify rebuilds the site when changes are published to `main`.
 
-{.text-center}
-
-{{% /blocks/section %}}
+{{% /about-document %}}
