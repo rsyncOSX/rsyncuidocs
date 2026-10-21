@@ -8,7 +8,7 @@ menu: {main: {weight: 10}}
 
 # About
 
-Hello! I’m the developer behind **RsyncUI**, **RawCull**, and **RawCullBrowse** — three focused macOS apps shaped by my interests in computing and photography.
+Hello! I’m the developer behind **RsyncUI**, **RawCull**, and **RawBrowse** — three focused macOS apps shaped by my interests in computing and photography.
 
 ## macOS apps by Thomas (rsyncOSX)
 
