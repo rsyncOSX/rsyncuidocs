@@ -8,6 +8,8 @@ categories = ["changelog"]
 
 # RsyncUI 3.5.0 — Planned release
 
+**Versions 3.1.0 and 3.2.0 support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically close after each external URL command completes.**
+
 You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as:
 
 ```sh
@@ -47,7 +49,7 @@ Version 3.5.0 is a future release. Its main objective is to move scheduling out 
 
 ## Scheduling in ScheduleRsync
 
-The built-in scheduling function is planned to be removed from RsyncUI in version 3.5.0. Use ScheduleRsync to select an RsyncUI profile, choose its first run date and time, and create a schedule:
+The built-in scheduling function is removed from RsyncUI in version 3.5.0 in test. Use ScheduleRsync to select an RsyncUI profile, choose its first run date and time, and create a schedule:
 
 - **Once:** run at the selected date and time.
 - **Daily:** repeat each day.
@@ -82,16 +84,6 @@ When a schedule becomes due, the planned integration opens RsyncUI using its ext
 rsyncuiapp://loadprofileandestimate?profile=Default
 ```
 
-This is equivalent to running the following command in Terminal:
-
-```sh
-open "rsyncuiapp://loadprofileandestimate?profile=Default"
-```
-
 ScheduleRsync substitutes the selected profile name and URL-encodes it. macOS delivers the URL to RsyncUI, launching the application if needed. RsyncUI loads that profile, estimates its tasks, and automatically starts synchronization. RsyncUI must be installed and registered to handle the `rsyncuiapp` URL scheme. See [URL commands]({{< relref "/docs/advanced/url-commands.md" >}}) for more details.
 
-**New in version 3.5.0:** When launched through the external URL command for a scheduled backup, RsyncUI will automatically close after the profile’s tasks have completed. This changes the current behavior, where RsyncUI remains open after completion.
-
 ScheduleRsync manages the timing; RsyncUI performs the actual synchronization. RsyncUI may reject an incoming command if another operation is already in progress, so allow enough time between scheduled starts for your profiles to finish.
-
-**Current development status:** ScheduleRsync is in URL-only testing mode. When a schedule fires, it displays the generated URL instead of opening RsyncUI. Automatic launching is intended for the future integration described above.
