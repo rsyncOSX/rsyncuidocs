@@ -8,9 +8,11 @@ categories = ["changelog"]
 
 # RsyncUI 3.2.0 — Translation test release
 
-<div class="alert alert-secondary" role="alert">
+<div class="alert alert-warning" role="alert">
 
-This test release introduces a Simplified Chinese translation of RsyncUI. It is intended for reviewing the translation, and further updates may follow based on feedback.
+**Native Chinese speakers: please review the Simplified Chinese translation.**
+
+This is a translation test release. Native Chinese speakers are asked to check the interface and confirm whether the translation is accurate, natural, and clear. Please [open an issue in the RsyncUI repository](https://github.com/rsyncOSX/RsyncUI/issues) to confirm that the translation is suitable or to report any incorrect wording, unclear terminology, missing translations, or layout problems. For corrections, include the current text, your suggested wording, and a screenshot where helpful.
 
 </div>
 
