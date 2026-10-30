@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 # RsyncUI 3.5.0 — Planned release
 
-**Versions 3.1.0 and 3.2.0 support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically close after each external URL command completes.**
+*Versions 3.1.0 and 3.2.0 support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically close after each external URL command completes.*
 
 You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as:
 
