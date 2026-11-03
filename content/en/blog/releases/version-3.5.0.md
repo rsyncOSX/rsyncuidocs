@@ -45,8 +45,6 @@ func triggerRsyncUI(profile: String = "Default") {
 
 Version 3.5.0 is a future release. Its main objective is to move scheduling out of RsyncUI and into a separate application, **ScheduleRsync**. ScheduleRsync will keep track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks.
 
-**There are no compiled versions available to test yet.** If you need a proper scheduling function and would like to help test it, please [open an issue in the RsyncUI repository](https://github.com/rsyncOSX/RsyncUI/issues). Compiled versions will then be made available for testing.
-
 </div>
 
 ## Scheduling in ScheduleRsync
