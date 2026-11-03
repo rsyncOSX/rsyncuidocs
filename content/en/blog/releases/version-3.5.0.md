@@ -10,7 +10,13 @@ categories = ["changelog"]
 
 > **Built-in alternative:** On macOS Tahoe 26 or later, you can use Apple Shortcuts to schedule RsyncUI directly, without ScheduleRsync. See [Schedule with Apple Shortcuts](#schedule-with-apple-shortcuts) at the end of this changelog.
 
-*Versions 3.1.0 and 3.2.0 support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically close after each external URL command completes.*
+<div class="alert alert-info" role="alert">
+
+Version 3.5.0 is a future release. Its main objective is to move scheduling out of RsyncUI and into a separate application, **ScheduleRsync**. ScheduleRsync will keep track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks.
+
+Versions 3.1.0 and 3.2.0 of RsyncUI support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically close after each external URL command completes.
+
+</div>
 
 You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as:
 
@@ -40,12 +46,6 @@ func triggerRsyncUI(profile: String = "Default") {
 ```
 
 `URLComponents` encodes the profile name for the URL. Call `triggerRsyncUI(profile: "Default")` on the main actor when the schedule is due. Opening the URL hands the command to RsyncUI; it does not confirm that synchronization has completed.
-
-<div class="alert alert-info" role="alert">
-
-Version 3.5.0 is a future release. Its main objective is to move scheduling out of RsyncUI and into a separate application, **ScheduleRsync**. ScheduleRsync will keep track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks.
-
-</div>
 
 ## Scheduling in ScheduleRsync
 
