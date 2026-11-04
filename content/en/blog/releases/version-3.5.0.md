@@ -12,13 +12,15 @@ categories = ["changelog"]
 
 <div class="alert alert-info" role="alert">
 
-Version 3.5.0 will be the next release in a few weeks. Its main objective is the removal of scheduling code in RsyncUI. There is a new separate application, **ScheduleRsync**, which keeps track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks. Version 3.5.0 also includes localization for Simplified Chinese introduced in the version-3.2.0 pre-release. See below about more details about how to trigger RsyncUI external by URL.
+Version 3.5.0 will be the next release in a few weeks. Its main objective is the removal of scheduling code in RsyncUI. There is a new separate application, **ScheduleRsync**, which keeps track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks. Version 3.5.0 also includes localization for Simplified Chinese introduced in the version-3.2.0 pre-release. 
+
+See below about more details about how to trigger RsyncUI external by URL.
 
 Versions 3.1.0 and 3.2.0 of RsyncUI support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically closes after each external URL command completes.
 
 </div>
 
-You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as:
+You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as from a terminal view:
 
 ```sh
 open "rsyncuiapp://loadprofileandestimate?profile=Default"
