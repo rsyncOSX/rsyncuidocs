@@ -1,6 +1,6 @@
 +++
 author = "Thomas Evensen"
-title = "Version 3.5.0 — Remove Scheduling"
+title = "Version 3.5.0 — Scheduling changes and Simplified Chinese"
 date = "2026-10-30"
 tags = ["changelog","version 3.5.0","scheduling"]
 categories = ["changelog"]
@@ -8,19 +8,35 @@ categories = ["changelog"]
 
 # RsyncUI 3.5.0 — Planned release
 
-> **Built-in alternative for scheduling:** On macOS Tahoe 26 or later, you can use Apple Shortcuts to schedule RsyncUI directly, without ScheduleRsync. See [Schedule with Apple Shortcuts](#schedule-with-apple-shortcuts) at the end of this changelog.
-
 <div class="alert alert-info" role="alert">
 
-Version 3.5.0 will be the next release in a few weeks. Its main objective is the removal of scheduling code in RsyncUI. There is a new separate application, **ScheduleRsync**, which keeps track of when profiles should run, while RsyncUI will continue to estimate and synchronize their tasks. Version 3.5.0 also includes localization for Simplified Chinese introduced in the version-3.2.0 pre-release. 
+**Version 3.5.0 is a planned release.** It removes built-in scheduling from RsyncUI and includes the Simplified Chinese translation introduced in the 3.2.0 translation test release.
 
-See below for more details about how to trigger RsyncUI external by URL.
-
-Versions 3.1.0 and 3.2.0 of RsyncUI support external URL commands but require a manual restart of RsyncUI to apply new ones. Version 3.5.0 automatically closes after each external URL command completes.
+ScheduleRsync, a separate application, manages when profiles run. RsyncUI continues to estimate and synchronize their tasks. You can also trigger RsyncUI from another scheduling tool, including Apple Shortcuts on macOS Tahoe 26 or later.
 
 </div>
 
-You can use any scheduling tool to schedule backups with RsyncUI, provided it can run a command that macOS understands, such as from a terminal view:
+## Simplified Chinese translation
+
+The application interface now includes a Simplified Chinese translation. Many thanks to [@markawonge](https://github.com/markawonge) for contributing it.
+
+**Native Chinese speakers: please help review the translation.** Check whether the wording is accurate, natural, and clear. Please [open an issue in the RsyncUI repository](https://github.com/rsyncOSX/RsyncUI/issues) to confirm that the translation is suitable or to report incorrect wording, unclear terminology, missing translations, or layout problems. For corrections, include the current text, your suggested wording, and a screenshot where helpful.
+
+The translation may be revised in later updates based on feedback. It was first available for review in RsyncUI `3.2.0`, build `211`.
+
+## Scheduling changes
+
+Built-in scheduling is removed in version 3.5.0. Choose a scheduling tool to start your profiles:
+
+- **ScheduleRsync:** a dedicated application with a calendar, repeat schedules, spacing between starts, and quiet hours. See [Scheduling in ScheduleRsync](#scheduling-in-schedulersync).
+- **Apple Shortcuts:** an option for simple time-based schedules on macOS Tahoe 26 or later. See [Schedule with Apple Shortcuts](#schedule-with-apple-shortcuts).
+- **Other scheduling tools:** any tool that can open a macOS URL can trigger RsyncUI, as described below.
+
+Versions 3.1.0 and 3.2.0 support external URL commands but require a manual restart of RsyncUI before another command can run. Version 3.5.0 automatically quits after each external URL command completes, allowing the next scheduled command to launch it again.
+
+## Trigger RsyncUI with a URL
+
+You can use any scheduling tool to schedule backups with RsyncUI, provided it can open a URL through macOS. For example, run this command in Terminal:
 
 ```sh
 open "rsyncuiapp://loadprofileandestimate?profile=Default"
@@ -81,7 +97,7 @@ For background and setup information, see Apple's [Shortcuts User Guide for Mac]
 
 ## Scheduling in ScheduleRsync
 
-The built-in scheduling function is removed from RsyncUI in version 3.5.0 in test. Use ScheduleRsync to select an RsyncUI profile, choose its first run date and time, and create a schedule:
+In ScheduleRsync, select an RsyncUI profile, choose its first run date and time, and create a schedule:
 
 - **Once:** run at the selected date and time.
 - **Daily:** repeat each day.
@@ -110,7 +126,7 @@ ScheduleRsync uses the existing RsyncUI schedule file, `~/.rsyncosx/<Mac serial>
 
 ## How ScheduleRsync triggers RsyncUI
 
-When a schedule becomes due, the planned integration opens RsyncUI using its external URL command. For the Default profile, the command is:
+When a schedule becomes due, ScheduleRsync opens RsyncUI using its external URL command. For the Default profile, the command is:
 
 ```text
 rsyncuiapp://loadprofileandestimate?profile=Default
@@ -119,5 +135,3 @@ rsyncuiapp://loadprofileandestimate?profile=Default
 ScheduleRsync substitutes the selected profile name and URL-encodes it. macOS delivers the URL to RsyncUI, launching the application if needed. RsyncUI loads that profile, estimates its tasks, and automatically starts synchronization. RsyncUI must be installed and registered to handle the `rsyncuiapp` URL scheme. See [URL commands]({{< relref "/docs/advanced/url-commands.md" >}}) for more details.
 
 ScheduleRsync manages the timing; RsyncUI performs the actual synchronization. RsyncUI may reject an incoming command if another operation is already in progress, so allow enough time between scheduled starts for your profiles to finish.
-
-
