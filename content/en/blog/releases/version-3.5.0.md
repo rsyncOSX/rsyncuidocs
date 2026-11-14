@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 <div class="alert alert-info" role="alert">
 
-If no issues are reported in the next weeks, this will be the next release without a new build. There will be a universal macOS binary build as well at that time.
+RsyncUI 3.5.0 has been downloaded about 80 times, with no issues reported. The current build will become the next release before the end of November 2026 without a rebuild. The universal macOS build is already available.
 
 **Version 3.5.0 is a planned release.** It removes built-in scheduling from RsyncUI and includes the Simplified Chinese translation introduced in the 3.2.0 translation test release.
 
