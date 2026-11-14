@@ -1,12 +1,12 @@
 +++
 author = "Thomas Evensen"
-title = "Version 3.5.0 — Scheduling changes and Simplified Chinese"
-date = "2026-10-30"
+title = "Version 3.5.0 — Scheduling and Simplified Chinese"
+date = "2026-11-14"
 tags = ["changelog","version 3.5.0","scheduling"]
 categories = ["changelog"]
 +++
 
-# RsyncUI 3.5.0 — Planned release
+# RsyncUI 3.5.0
 
 <div class="alert alert-info" role="alert">
 
