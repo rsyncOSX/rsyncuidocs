@@ -12,7 +12,7 @@ categories = ["changelog"]
 
 RsyncUI 3.5.0 has been downloaded about 80 times, with no issues reported. The current build will become the next release before the end of November 2026 without a rebuild. The universal macOS build is already available.
 
-**Version 3.5.0 is a planned release.** It removes built-in scheduling from RsyncUI and includes the Simplified Chinese translation introduced in the 3.2.0 translation test release.
+It removes built-in scheduling from RsyncUI and includes the Simplified Chinese translation introduced in the 3.2.0 translation test release.
 
 ScheduleRsync, a separate application, manages when profiles run. RsyncUI continues to estimate and synchronize their tasks. You can also trigger RsyncUI from another scheduling tool, including Apple Shortcuts on macOS Tahoe 26 or later.
 
