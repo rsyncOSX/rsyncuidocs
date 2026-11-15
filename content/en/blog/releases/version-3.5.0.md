@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 3.5.0 — Scheduling and Simplified Chinese"
-date = "2026-11-14"
+date = "2026-11-15"
 tags = ["changelog","version 3.5.0","scheduling"]
 categories = ["changelog"]
 +++
@@ -10,7 +10,7 @@ categories = ["changelog"]
 
 <div class="alert alert-info" role="alert">
 
-RsyncUI 3.5.0 has been downloaded about 80 times, with no issues reported. The current build will become the next release before the end of November 2026 without a rebuild. The universal macOS build is already available.
+RsyncUI 3.5.0 has been downloaded about 100 times (Nov 15) , with no issues reported. The current build will become the next release before the end of November 2026 without a rebuild. The universal macOS build is already available.
 
 It removes built-in scheduling from RsyncUI and includes the Simplified Chinese translation introduced in the 3.2.0 translation test release.
 
