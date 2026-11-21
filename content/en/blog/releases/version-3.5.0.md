@@ -1,7 +1,7 @@
 +++
 author = "Thomas Evensen"
 title = "Version 3.5.0 — Scheduling and Simplified Chinese"
-date = "2026-11-18"
+date = "2026-11-21"
 tags = ["changelog","version 3.5.0","scheduling"]
 categories = ["changelog"]
 +++
@@ -11,10 +11,6 @@ categories = ["changelog"]
 <div class="alert alert-info" role="alert">
 
 This update removes built-in scheduling from RsyncUI and adds the Simplified Chinese translation from the 3.2.0 translation test release.  
-
-It will be released by the end of November. If you want the changes regarding the removed scheduler or prefer the Simplified Chinese translation, please download it.  
-
-The delay exists because I prefer not to contact too many people too often about new releases. This is why the release notice is postponed until late November.  
 
 ScheduleRsync, a separate application, handles when profiles run. RsyncUI still estimates and synchronizes their tasks. You may also launch RsyncUI from another scheduling tool, such as Apple Shortcuts on macOS Tahoe 26 or later.
 
