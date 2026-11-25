@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 # RsyncUI 3.5.0
 
- [@markawonge](https://github.com/markawonge) has provided an update for Simplified Chinese localization. **Version 3.5.1** contains the fix, and no additional changes appear in this release.
+ [@markawonge](https://github.com/markawonge) has provided an update for both *Traditional* and *Simplified Chinese* localization. **Version 3.5.1** contains the fix, and no additional changes appear in this release.
 
 <div class="alert alert-info" role="alert">
 
