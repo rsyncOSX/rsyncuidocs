@@ -8,7 +8,7 @@ categories = ["changelog"]
 
 # RsyncUI 3.5.0
 
-@markawonge has provided an update for Simplified Chinese localization. **Version 3.5.1** contains the fix, and no additional changes appear in this release.
+ [@markawonge](https://github.com/markawonge) has provided an update for Simplified Chinese localization. **Version 3.5.1** contains the fix, and no additional changes appear in this release.
 
 <div class="alert alert-info" role="alert">
 
@@ -20,7 +20,7 @@ ScheduleRsync, a separate application, handles when profiles run. RsyncUI still 
 
 ## Simplified Chinese translation
 
-The application interface now includes a Simplified Chinese translation. Many thanks to @markawonge  for contributing it.
+The application interface now includes a Simplified Chinese translation. Many thanks to  [@markawonge](https://github.com/markawonge)  for contributing it.
 
 **Native Chinese speakers: please help review the translation.** Check whether the wording is accurate, natural, and clear. Please [open an issue in the RsyncUI repository](https://github.com/rsyncOSX/RsyncUI/issues) to confirm that the translation is suitable or to report incorrect wording, unclear terminology, missing translations, or layout problems. For corrections, include the current text, your suggested wording, and a screenshot where helpful.
 
