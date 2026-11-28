@@ -1,17 +1,17 @@
 +++
 author = "Thomas Evensen"
-title = "Version 4.0.0 (test release)"
-linkTitle = "Version 4.0.0"
+title = "Version 3.6.0 (test release)"
+linkTitle = "Version 3.6.0"
 date = "2026-11-26"
 weight = 60
-description = "What is new in RsyncUI 4.0.0, and a step-by-step walk through the new version."
-tags = ["version 4.0.0"]
-categories = ["version 4.0.0"]
+description = "What is new in RsyncUI 3.6.0, and a step-by-step walk through the new version."
+tags = ["version 3.6.0"]
+categories = ["version 3.6.0"]
 +++
 
 <div class="alert alert-warning" role="alert">
 
-**This is a test release.** **RsyncUI 4.0.0** is a test version, planned for release in some weeks. It is published in [RsyncUI-next](https://github.com/rsyncOSX/RsyncUI-next/releases) so it can be tested before it is merged into RsyncUI. Please report problems in the [RsyncUI-next issues](https://github.com/rsyncOSX/RsyncUI-next/issues).
+**This is a test release.** **RsyncUI 3.6.0** is a test version, planned for release in December after a periode of user tests. It is published in [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases) so it can be tested before it is merged into RsyncUI. Please report problems in the [RsyncUI-next issues](https://github.com/rsyncOSX/RsyncUI/issues).
 
 </div>
 
