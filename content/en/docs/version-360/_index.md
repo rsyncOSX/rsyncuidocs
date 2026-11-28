@@ -11,7 +11,7 @@ categories = ["version 3.6.0"]
 
 <div class="alert alert-warning" role="alert">
 
-**This is a test release.** **RsyncUI 3.6.0** is a test version, planned for release in December after a periode tests. It is published in [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases/tag/v3.6.0) so it can be tested before it is merged into RsyncUI. Please report problems in the [RsyncUI issues](https://github.com/rsyncOSX/RsyncUI/issues).
+**This is a test release.** **RsyncUI 3.6.0** is a test version, planned for release in December after a periode tests. It is published in [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases/tag/v3.6.0) so it can be tested before release. Please report problems in the [RsyncUI issues](https://github.com/rsyncOSX/RsyncUI/issues).
 
 </div>
 
