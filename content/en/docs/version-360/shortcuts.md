@@ -11,6 +11,31 @@ categories = ["version 4.0.0"]
 
 RsyncUI adds two actions to the Shortcuts app. They also work from Siri and Spotlight, without opening the RsyncUI window, and RsyncUI quits by itself when the action is done.
 
+<div class="alert alert-info" role="alert">
+
+**"Unknown Action" in Shortcuts?** If a shortcut shows *Unknown Action* and stops with *The operation couldn't be completed. (WFActionErrorDomain error 1.)*, Shortcuts cannot load the RsyncUI action from macOS. There are two known causes.
+
+**1. The macOS App Intents service has lost its database.** The service *linkd* keeps the actions of all apps in a database. If that database is gone, Shortcuts lists the RsyncUI actions but cannot load them. This is a macOS problem, and it can affect actions from other apps too. Restart the services in Terminal. macOS starts them again by itself:
+```bash
+killall linkd siriactionsd
+```
+The message *No matching processes belonging to you were found* only means one of the services was not running, and can be ignored. If this does not help, log out and back in, or restart the Mac.
+
+**2. macOS has matched the action to another copy of RsyncUI.** This can be an older version, a mounted RsyncUI disk image or an Xcode build. Eject all mounted RsyncUI disk images, delete or move away other copies of RsyncUI.app, and keep the copy in */Applications*. Then register it again:
+```bash
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f -R /Applications/RsyncUI.app
+```
+
+**After either fix:** quit Shortcuts, open RsyncUI from */Applications* once and quit it. In the shortcut, delete the *Unknown Action* step with the ✕ and add **Synchronize Tasks** (or **Estimate Tasks**) again. A step that is already in a shortcut is not repaired automatically.
+
+To see which copies of RsyncUI macOS knows about:
+```bash
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -dump | grep -E "^path:.*RsyncUI\.app \("
+```
+A copy you cannot delete can be unregistered with `lsregister -u "<path to RsyncUI.app>"`.
+
+</div>
+
 | Action | What it does |
 | --- | --- |
 | **Estimate Tasks** | A dry run of a profile, or of selected tasks. Reports files to transfer, size and files to delete. Changes nothing, and works for every task. |
