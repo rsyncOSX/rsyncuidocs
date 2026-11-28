@@ -2,7 +2,7 @@
 author = "Thomas Evensen"
 title = "Version 3.6.0 (test release)"
 linkTitle = "Version 3.6.0"
-date = "2026-11-26"
+date = "2026-11-28"
 weight = 60
 description = "What is new in RsyncUI 3.6.0, and a step-by-step walk through the new version."
 tags = ["version 3.6.0"]
@@ -11,7 +11,7 @@ categories = ["version 3.6.0"]
 
 <div class="alert alert-warning" role="alert">
 
-**This is a test release.** **RsyncUI 3.6.0** is a test version, planned for release in December after a periode of user tests. It is published in [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases) so it can be tested before it is merged into RsyncUI. Please report problems in the [RsyncUI-next issues](https://github.com/rsyncOSX/RsyncUI/issues).
+**This is a test release.** **RsyncUI 3.6.0** is a test version, planned for release in December after a periode tests. It is published in [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases/tag/v3.6.0) so it can be tested before it is merged into RsyncUI. Please report problems in the [RsyncUI issues](https://github.com/rsyncOSX/RsyncUI/issues).
 
 </div>
 
@@ -47,8 +47,8 @@ Tasks must be verified and allowed in RsyncUI before *Synchronize Tasks* runs th
   ```bash
   cp -R ~/.rsyncosx ~/rsyncosx-backup
   ```
-- **Going back to 3.5.** Version 3.5 ignores the Shortcuts approvals and drops them if it saves the tasks, so they must be allowed again in 4.0.0. If anything else looks wrong after going back, restore your backup.
-- **Homebrew installs the stable version.** To test 4.0.0, download it from the [RsyncUI-next releases](https://github.com/rsyncOSX/RsyncUI-next/releases).
+- **Going back to 3.5.0.** Version 3.5.0 ignores the Shortcuts approvals and drops them if it saves the tasks, so they must be allowed again in 3.6.0. If anything else looks wrong after going back, restore your backup.
+- **Homebrew installs the stable version.** To test 3.6.0, download it from the  [RsyncUI ver 3.6.0 test](https://github.com/rsyncOSX/RsyncUI/releases/tag/v3.6.0).
 
 ## Step by step
 
